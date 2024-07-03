@@ -16,10 +16,10 @@ export const Navigation = () => {
               <HoverCardTrigger asChild>
                 <Button className="text-md">Правила</Button>
               </HoverCardTrigger>
-              <HoverCardContent className="w-80 border-green border-2 rounded-2xl">
+              <HoverCardContent className="w-80 border-green border-2 rounded-2xl trans">
                 <div className="flex justify-between rounded-md space-x-4">
                   <div className="space-y-1">
-                    <p className="text-sm">Discord-канал с основными правилами сервера!</p>
+                    <p className="text-sm">Discord-канал со всеми правилами сервера!</p>
                   </div>
                 </div>
               </HoverCardContent>
