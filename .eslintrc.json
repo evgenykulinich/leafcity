@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "@next/next/no-html-link-for-pages": ["error", "packages/my-app/pages/"],
+    "@next/next/no-img-element": 2,
+    "@next/next/no-async-client-component": 1,
+    "@next/next/no-page-custom-font": 1,
+    "@next/next/no-sync-scripts": 1
+  }
 }
