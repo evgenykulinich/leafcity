@@ -4,7 +4,7 @@
 
 @layer components {
   .border-green {
-    border-color:#31a649;
+    border-color:#67c960;
   }
 
   .link-animation {
@@ -12,10 +12,46 @@
     color: aliceblue;
     
     :hover {
-      color: #31a649;
+      color: #67c960;
     }
     :hover::after {
       width: 100%;
+    }
+  }
+
+  .version {
+    position: relative;
+    
+    &::before {
+      content: '1.13 – 1.21';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+      transition-delay: 0.2s;
+      font-size: 20px;
+      opacity: 0;;
+    }
+    &:hover::before {
+      top: -45px;
+      opacity: 0.8;
+    }
+
+    &::after {
+      content: 'Java/Bedrock';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+      transition-delay: 0.2s;
+      font-size: 20px;
+      opacity: 0;
+    }
+    &:hover::after {
+      bottom: -45px;
+      opacity: 0.8;
     }
   }
 }
