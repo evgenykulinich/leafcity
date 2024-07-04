@@ -66,8 +66,8 @@ export function Questions() {
           ))}
         </Accordion>
         <Link
-          href="https://discord.com/invite/8rx6xEsj2U"
-          className="lg:w-[40%] max-w-[450px]"
+          href="https://discord.gg/leaf-city"
+          className="lg:w-[40%] max-w-[450px] m-auto"
           target="_blank"
         >
           <Card className="w-full border-2 rounded-2xl border-purple bg-purple/10 hover:bg-purple/20 hover:scale-105 transition-all text-indigo-200">

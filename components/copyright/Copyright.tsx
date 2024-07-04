@@ -40,13 +40,15 @@ export function Copyright() {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        <Image
-          className="size-12 lg:size-14 cursor-pointer hover:scale-110 transition bg-slate-50 rounded-xl p-2"
-          src="/discord-icon.svg"
-          alt="Discord"
-          height={100}
-          width={100}
-        />
+        <Link href="https://discord.gg/leaf-city" target="_blank">
+          <Image
+            className="size-12 lg:size-14 cursor-pointer hover:scale-110 transition bg-slate-50 rounded-xl p-2"
+            src="/discord-icon.svg"
+            alt="Discord"
+            height={100}
+            width={100}
+          />
+        </Link>
       </div>
     </section>
   )

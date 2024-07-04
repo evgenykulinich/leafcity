@@ -12,7 +12,7 @@ import { Card } from '@/components/ui/card'
 
 const routes = [
   {
-    href: 'https://discord.com/invite/8rx6xEsj2U',
+    href: 'https://discord.gg/leaf-city',
     label: 'Правила',
     description: 'Discord-канал со всеми правилами сервера!'
   },
