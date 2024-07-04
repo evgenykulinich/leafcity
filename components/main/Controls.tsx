@@ -36,7 +36,7 @@ export function Controls() {
         variant="default"
         className="text-[20px] font-bold px-16 py-10 rounded-xl bg-green hover:bg-green/70 lg:w-[300px] w-full mb-4 lg:mr-10"
       >
-        <Link target="_blank" href="https://discord.com/invite/8rx6xEsj2U">
+        <Link target="_blank" href="https://discord.gg/leaf-city">
           Начать играть
         </Link>
       </Button>
