@@ -74,7 +74,7 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <ul className="text-lg flex gap-12">
+      <ul className="hidden text-lg lg:flex gap-12">
         {routes.map(route => (
           <li className="cursor-pointer" key={route.label}>
             <Link target="_blank" href={route.href} className="link-animation">
