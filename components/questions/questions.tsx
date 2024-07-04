@@ -50,41 +50,43 @@ const questionList = [
 
 export function Questions() {
   return (
-    <section className="flex flex-col lg:flex-row gap-12 mt-16 lg:mt-24">
+    <section className="mt-16 lg:mt-24">
       <h2 className="text-[26px] mt-10 lg:mt-24">Ответы на вопросы</h2>
-      <Accordion type="single" collapsible className="w-full">
-        {questionList.map(query => (
-          <AccordionItem
-            value={query.value}
-            key={query.value}
-            className="px-4 rounded-2xl overflow-hidden border-2 border-slate-200/30 hover:border-purple hover:bg-purple/20 transition mb-4"
-          >
-            <AccordionTrigger>{query.question}</AccordionTrigger>
-            <AccordionContent>{query.answer}</AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-      <Link href="https://discord.com/invite/8rx6xEsj2U" className="lg:w-[40%] max-w-[450px]">
-        <Card className="w-full border-2 rounded-2xl border-purple bg-purple/10 hover:bg-purple/20 hover:scale-105 transition-all text-indigo-200">
-          <CardHeader>
-            <div className="flex flex-row items-center justify-between mb-10">
-              <Image
-                src="/discord-icon.svg"
-                alt="Discord"
-                height={100}
-                width={100}
-                className="size-10"
-              />
-              <ExternalLink />
-            </div>
-            <CardTitle>Остались вопросы?</CardTitle>
-          </CardHeader>
-          <CardContent>
-            Заходи на наш Discord сервер и задавай вопросы в канале поддержки. Администратор Дашка17
-            обязательно тебе поможет!
-          </CardContent>
-        </Card>
-      </Link>
+      <div className="flex flex-col lg:flex-row gap-12 mt-10">
+        <Accordion type="single" collapsible className="w-full">
+          {questionList.map(query => (
+            <AccordionItem
+              value={query.value}
+              key={query.value}
+              className="px-4 rounded-2xl overflow-hidden border-2 border-slate-200/30 hover:border-purple hover:bg-purple/20 transition mb-4"
+            >
+              <AccordionTrigger>{query.question}</AccordionTrigger>
+              <AccordionContent>{query.answer}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+        <Link href="https://discord.com/invite/8rx6xEsj2U" className="lg:w-[40%] max-w-[450px]">
+          <Card className="w-full border-2 rounded-2xl border-purple bg-purple/10 hover:bg-purple/20 hover:scale-105 transition-all text-indigo-200">
+            <CardHeader>
+              <div className="flex flex-row items-center justify-between mb-10">
+                <Image
+                  src="/discord-icon.svg"
+                  alt="Discord"
+                  height={100}
+                  width={100}
+                  className="size-10"
+                />
+                <ExternalLink />
+              </div>
+              <CardTitle>Остались вопросы?</CardTitle>
+            </CardHeader>
+            <CardContent>
+              Заходи на наш Discord сервер и задавай вопросы в канале поддержки. Администратор
+              Дашка17 обязательно тебе поможет!
+            </CardContent>
+          </Card>
+        </Link>
+      </div>
     </section>
   )
 }
