@@ -4,16 +4,28 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useState } from 'react'
 
-export function Controls() {
-  const [copyMessage, setCopyMessage] = useState('Скопировать IP')
+const copyIpMessage = {
+  textToCopy: 'play.leafcity.ru',
+  default: 'Скопировать IP',
+  success: 'Скопировано!',
+  error: 'Ошибка :('
+}
 
-  const handleCopyIp = async () => {
+export function Controls() {
+  const [copyMessage, setCopyMessage] = useState(copyIpMessage.default)
+
+  const toggleCopyIp = async () => {
     try {
-      const textToCopy = 'play.leafcity.ru'
-      await navigator.clipboard.writeText(textToCopy)
-      setCopyMessage('Скопировано!')
+      if (copyMessage === copyIpMessage.default) {
+        await navigator.clipboard.writeText(copyIpMessage.textToCopy)
+        setCopyMessage(copyIpMessage.success)
+      }
+
+      if (copyMessage === copyIpMessage.success || copyMessage === copyIpMessage.error) {
+        setCopyMessage(copyIpMessage.default)
+      }
     } catch {
-      setCopyMessage('Ошибка :(')
+      setCopyMessage(copyIpMessage.error)
     }
   }
 
@@ -31,7 +43,7 @@ export function Controls() {
       <div className="version">
         <Button
           variant="outline"
-          onClick={handleCopyIp}
+          onClick={toggleCopyIp}
           className="block rounded-xl border-green hover:bg-green/15 text-[20px] w-[300px] h-[80px]"
         >
           <span>{copyMessage}</span>

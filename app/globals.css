@@ -29,7 +29,6 @@
       left: 50%;
       transform: translateX(-50%);
       transition: all 0.3s ease;
-      transition-delay: 0.2s;
       font-size: 20px;
       opacity: 0;;
     }
@@ -45,7 +44,6 @@
       left: 50%;
       transform: translateX(-50%);
       transition: all 0.3s ease;
-      transition-delay: 0.2s;
       font-size: 20px;
       opacity: 0;
     }
