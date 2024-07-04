@@ -19,7 +19,7 @@ export function Achievements() {
           </CardContent>
         </Card>
 
-        <Card className="w-full border-2 rounded-2xl bg-slate-300/10 hover:scale-105 transition-all">
+        <Card className="w-full border-2 rounded-2xl border-blue bg-blue/10 text-sky-200 hover:scale-105 transition-all">
           <CardHeader className="mb-2">
             <Handshake className="size-10 mb-10" />
             <CardTitle>Многогранное сообщество</CardTitle>
@@ -33,7 +33,7 @@ export function Achievements() {
           </CardContent>
         </Card>
 
-        <Card className="w-full border-2 rounded-2xl border-blue bg-blue/10 hover:scale-105 transition-all text-sky-200">
+        <Card className="w-full border-2 rounded-2xl border-mango bg-mango/5 text-yellow-200 hover:scale-105 transition-all">
           <CardHeader className="mb-2">
             <Earth className="size-10 mb-10" />
             <CardTitle>Разные миры</CardTitle>
