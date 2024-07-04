@@ -50,6 +50,14 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #67c960;
+  border-radius: 8px;
+}
+
 body {
   background-color: black;
   color: aliceblue;
