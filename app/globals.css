@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .border-green {
-    border-color:#67c960;
-  }
-
   .link-animation {
     position: relative;
     color: aliceblue;
