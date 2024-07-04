@@ -2,7 +2,7 @@ import { Header } from '@/components/main/Header'
 import { Preview } from '@/components/main/Preview'
 import { Controls } from '@/components/main/Controls'
 import { Achievements } from '@/components/achievements/Achievements'
-import { Questions } from '@/components/questions'
+import { Questions } from '@/components/questions/questions'
 
 export default function Main() {
   return (
