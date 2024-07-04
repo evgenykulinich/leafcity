@@ -2,7 +2,8 @@ import { Header } from '@/components/main/Header'
 import { Preview } from '@/components/main/Preview'
 import { Controls } from '@/components/main/Controls'
 import { Achievements } from '@/components/achievements/Achievements'
-import { Questions } from '@/components/questions/questions'
+import { Questions } from '@/components/questions/Questions'
+import { Copyright } from '@/components/copyright/Copyright'
 
 export default function Main() {
   return (
@@ -12,6 +13,7 @@ export default function Main() {
       <Controls />
       <Achievements />
       <Questions />
+      <Copyright />
     </main>
   )
 }
