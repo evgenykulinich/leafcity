@@ -1,8 +1,9 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useState } from 'react'
+
+import { Button } from '@/components/ui/button'
 
 const copyIpMessage = {
   textToCopy: 'play.leafcity.ru',
