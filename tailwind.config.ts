@@ -53,7 +53,8 @@ const config = {
           foreground: 'hsl(var(--card-foreground))'
         },
         blue: '#2e9fd2',
-        green: '#67c960'
+        green: '#67c960',
+        mango: '#fedf00'
       },
       borderRadius: {
         lg: 'var(--radius)',
