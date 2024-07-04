@@ -54,7 +54,8 @@ const config = {
         },
         blue: '#2e9fd2',
         green: '#67c960',
-        mango: '#fedf00'
+        mango: '#fedf00',
+        purple: '#7289DA'
       },
       borderRadius: {
         lg: 'var(--radius)',
