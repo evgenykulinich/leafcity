@@ -2,12 +2,12 @@
 
 import Link from 'next/link'
 import { useMedia } from 'react-use'
+import { useState } from 'react'
+import { Menu } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
-import { useState } from 'react'
-import { Menu } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 
 const routes = [

@@ -1,10 +1,44 @@
 {
-  "extends": ["next/core-web-vitals", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "plugins": [
+    "import"
+  ],
   "rules": {
-    "@next/next/no-html-link-for-pages": ["error", "packages/my-app/pages/"],
+    "@next/next/no-html-link-for-pages": [
+      "error",
+      "packages/my-app/pages/"
+    ],
     "@next/next/no-img-element": 2,
     "@next/next/no-async-client-component": 1,
     "@next/next/no-page-custom-font": 1,
-    "@next/next/no-sync-scripts": 1
+    "@next/next/no-sync-scripts": 1,
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 1
+      }
+    ],
+    "import/no-unresolved": 2,
+    "import/newline-after-import": 2,
+    "import/first": 2,
+    "import/order": [
+      2,
+      {
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ]
+      }
+    ]
   }
 }

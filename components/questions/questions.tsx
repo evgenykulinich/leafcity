@@ -1,3 +1,7 @@
+import { ExternalLink } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+
 import {
   Accordion,
   AccordionContent,
@@ -5,9 +9,6 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { ExternalLink, Wifi } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
 
 const questionList = [
   {
