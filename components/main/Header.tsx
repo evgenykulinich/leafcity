@@ -13,7 +13,7 @@ export function Header() {
             alt="LC"
             height={75}
             width={75}
-            className="cursor-pointer hover:scale-110 transition-all"
+            className="cursor-pointer hover:scale-110 transition-all duration-300"
           />
         </Link>
         <Navigation />

@@ -43,7 +43,7 @@ export const Navigation = () => {
           </Link>
         </li>
         <li className="cursor-pointer">
-          <Link target="_blank" href="https://wiki.leafcity.ru" className="link-animation">
+          <Link target="_blank" href="https://map.leafcity.ru" className="link-animation">
             <HoverCard>
               <HoverCardTrigger asChild>
                 <Button className="text-md">Веб-карта</Button>
@@ -59,7 +59,7 @@ export const Navigation = () => {
           </Link>
         </li>
         <li className="cursor-pointer">
-          <Link target="_blank" href="https://map.leafcity.ru" className="link-animation">
+          <Link target="_blank" href="https://wiki.leafcity.ru" className="link-animation">
             <HoverCard>
               <HoverCardTrigger asChild>
                 <Button className="text-md">Википедия</Button>
