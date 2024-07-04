@@ -2,7 +2,7 @@ import { Header } from '@/components/main/Header'
 import { Preview } from '@/components/main/Preview'
 import { Controls } from '@/components/main/Controls'
 import { Achievements } from '@/components/achievements/Achievements'
-import { Questions } from '@/components/questions/Questions'
+import { Questions } from '@/components/question/Questions'
 import { Copyright } from '@/components/copyright/Copyright'
 
 export default function Main() {
