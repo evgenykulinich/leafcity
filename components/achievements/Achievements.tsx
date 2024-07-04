@@ -6,8 +6,8 @@ export function Achievements() {
   return (
     <section>
       {/* <h2 className='text-[26px] mt-24'>Вот, почему мы тебе понравимся</h2> */}
-      <h2 className="text-[26px] mt-24">Вот, почему мы тебе не понравимся</h2>
-      <div className="flex justify-between gap-12 mt-10">
+      <h2 className="text-[26px] mt-16 lg:mt-24">Вот, почему мы тебе не понравимся</h2>
+      <div className="flex flex-col lg:flex-row lg:justify-between gap-12 mt-10">
         <Card className="w-full border-2 rounded-2xl border-green bg-green/10 hover:scale-105 transition-all text-emerald-200">
           <CardHeader className="mb-2">
             <Wifi className="size-10 mb-10" />

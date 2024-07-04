@@ -30,21 +30,21 @@ export function Controls() {
   }
 
   return (
-    <div className="flex mt-20">
+    <div className="flex flex-col lg:flex-row mt-10 lg:mt-20">
       <Button
         variant="default"
-        className="text-[20px] font-bold px-16 py-10 rounded-xl bg-green hover:bg-green/70 w-[300px] mr-10"
+        className="text-[20px] font-bold px-16 py-10 rounded-xl bg-green hover:bg-green/70 lg:w-[300px] w-full mb-4 lg:mr-10"
       >
         <Link target="_blank" href="https://discord.com/invite/8rx6xEsj2U">
           Начать играть
         </Link>
       </Button>
 
-      <div className="version">
+      <div className="hidden lg:block lg:version">
         <Button
           variant="outline"
           onClick={toggleCopyIp}
-          className="block rounded-xl border-green hover:bg-green/15 text-[20px] w-[300px] h-[80px]"
+          className="block rounded-xl border-green hover:bg-green/15 text-[20px] lg:w-[300px] w-full h-[80px]"
         >
           <span>{copyMessage}</span>
         </Button>

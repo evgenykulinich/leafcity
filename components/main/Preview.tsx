@@ -1,7 +1,7 @@
 export function Preview() {
   return (
     <section>
-      <h1 className="font-bold text-[64px] leading-tight mt-20">
+      <h1 className="font-bold text-[42px] lg:text-[64px] leading-tight mt-6 lg:mt-20">
         Уникальный{' '}
         <span className="text-blue">
           ванильный <br />{' '}
