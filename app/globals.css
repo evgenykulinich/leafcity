@@ -14,7 +14,7 @@
 
   .map-lg {
     @media (min-width: 1024px) {
-      height: calc(100vh - 123px);
+      height: calc(100vh - 98px);
     }
   }
 
