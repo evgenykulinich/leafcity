@@ -1,18 +1,21 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Navigation } from './Navigation'
 
 export function Header() {
   return (
     <main className="py-6">
-      <header className="flex justify-between items-center">
-        <Image
-          className="cursor-pointer hover:scale-110 transition-all duration-300 size-[60px] lg:size-[75px]"
-          src="/lc-logo.png"
-          alt="LC"
-          height={100}
-          width={100}
-        />
+      <header className="flex items-center justify-between">
+        <Link href="/">
+          <Image
+            className="size-[60px] cursor-pointer transition-all duration-300 hover:scale-110 lg:size-[75px]"
+            src="/lc-logo.png"
+            alt="LC"
+            height={100}
+            width={100}
+          />
+        </Link>
         <Navigation />
       </header>
     </main>
