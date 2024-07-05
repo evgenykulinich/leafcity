@@ -3,7 +3,7 @@ import { Header } from '@/components/main/Header'
 export default function MapPage() {
   return (
     <section className="h-screen w-screen overflow-hidden">
-      <div className="mx-auto max-w-screen-2xl px-2 lg:container">
+      <div className="container mx-auto max-w-screen-2xl px-2 lg:px-8">
         <Header />
       </div>
       <div className="map map-lg">
