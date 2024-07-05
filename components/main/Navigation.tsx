@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useMedia } from 'react-use'
 import { useState } from 'react'
 import { Menu } from 'lucide-react'
@@ -14,22 +15,26 @@ const routes = [
   {
     href: 'https://discord.gg/leaf-city',
     label: 'Правила',
-    description: 'Discord-канал со всеми правилами сервера!'
+    description: 'Discord-канал со всеми правилами сервера!',
+    icon: '/rules.png'
   },
   {
     href: 'https://shop.leafcity.ru',
     label: 'Магазин',
-    description: 'Лучший способ поддержать проект!'
+    description: 'Лучший способ поддержать проект!',
+    icon: '/shop.png'
   },
   {
-    href: 'https://map.leafcity.ru',
+    href: 'map',
     label: 'Веб-карта',
-    description: 'Карта сервера в реальном времени!'
+    description: 'Карта сервера в реальном времени!',
+    icon: '/map.png'
   },
   {
     href: 'https://wiki.leafcity.ru',
     label: 'Википедия',
-    description: 'Начни погружение в сообщество LEAF CITY уже сейчас!'
+    description: 'Начни погружение в сообщество LEAF CITY уже сейчас!',
+    icon: '/wiki.png'
   }
 ]
 
@@ -48,7 +53,7 @@ export const Navigation = () => {
           <Button
             variant="outline"
             size="sm"
-            className="font-normal border-none rounded-xl focus-visible:text-green hover:text-green focus-visible:scale-125 hover:scale-125 focus-visible:ring-offset-0 focus-visible:ring-transparent outline-none text-white transition"
+            className="rounded-xl border-none font-normal text-white outline-none transition hover:scale-125 hover:text-green focus-visible:scale-125 focus-visible:text-green focus-visible:ring-transparent focus-visible:ring-offset-0"
           >
             <Menu className="size-8" />
           </Button>
@@ -57,10 +62,19 @@ export const Navigation = () => {
           <nav className="pt-4">
             <ul>
               {routes.map(route => (
-                <li className="cursor-pointer text-2xl mb-5 text-center" key={route.label}>
-                  <Link target="_blank" href={route.href} className="link-animation">
+                <li className="mb-5 cursor-pointer text-center text-2xl" key={route.label}>
+                  <Link href={route.href} className="link-animation">
                     <Card onClick={handleClose} className="border-none">
-                      <Button className="text-md">{route.label}</Button>
+                      <Button className="text-md">
+                        <Image
+                          className="mr-4"
+                          src={route.icon}
+                          alt={route.label}
+                          width={30}
+                          height={30}
+                        />
+                        {route.label}
+                      </Button>
                     </Card>
                   </Link>
                 </li>
@@ -74,16 +88,20 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <ul className="hidden text-lg lg:flex gap-12">
+      <ul className="hidden gap-12 text-lg lg:flex">
         {routes.map(route => (
           <li className="cursor-pointer" key={route.label}>
-            <Link target="_blank" href={route.href} className="link-animation">
+            <Link
+              target={route.label === 'Веб-карта' ? '_self' : '_blank'}
+              href={route.href}
+              className="link-animation"
+            >
               <HoverCard>
                 <HoverCardTrigger asChild>
                   <Button className="text-md">{route.label}</Button>
                 </HoverCardTrigger>
-                <HoverCardContent className="w-80 border-green border-2 rounded-2xl">
-                  <div className="flex justify-between rounded-md space-x-4">
+                <HoverCardContent className="w-80 rounded-2xl border-2 border-green bg-black/70">
+                  <div className="flex justify-between space-x-4 rounded-md">
                     <div className="space-y-1">
                       <p className="text-sm">{route.description}</p>
                     </div>
