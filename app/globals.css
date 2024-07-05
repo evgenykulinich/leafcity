@@ -3,13 +3,29 @@
 @tailwind utilities;
 
 @layer components {
+  .map {
+    max-height: 100dvh;
+    height: 100%;
+
+    @media (max-width: 1024px) {
+      height: calc(100dvh - 106px);
+    }
+  }
+
+  .map-lg {
+    @media (min-width: 1024px) {
+      height: calc(100vh - 123px);
+    }
+  }
+
   .link-animation {
     position: relative;
     color: aliceblue;
-    
+
     :hover {
       color: #67c960;
     }
+
     :hover::after {
       width: 100%;
     }
@@ -17,7 +33,7 @@
 
   .version {
     position: relative;
-    
+
     &::before {
       content: '1.13 – 1.21';
       position: absolute;
@@ -28,6 +44,7 @@
       font-size: 20px;
       opacity: 0;;
     }
+
     &:hover::before {
       top: -45px;
       opacity: 0.8;
@@ -43,6 +60,7 @@
       font-size: 20px;
       opacity: 0;
     }
+
     &:hover::after {
       bottom: -45px;
       opacity: 0.8;
@@ -53,6 +71,7 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #67c960;
   border-radius: 8px;
