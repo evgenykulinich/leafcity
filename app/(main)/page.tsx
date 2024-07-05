@@ -16,9 +16,9 @@ export default function Main() {
       <Achievements />
       <Questions />
 
-      <div className="flex justify-center mt-12">
+      <div className="mt-12 flex justify-center">
         <Image
-          className="w-full lg:w-[512px] rounded-xl overflow-hidden"
+          className="w-full overflow-hidden rounded-xl lg:w-[512px]"
           src="/about-us.gif"
           alt="about"
           width={100}
