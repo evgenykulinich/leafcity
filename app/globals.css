@@ -8,7 +8,7 @@
     height: 100%;
 
     @media (max-width: 1024px) {
-      height: calc(100dvh - 106px);
+      height: calc(100dvh - 76px);
     }
   }
 

@@ -5,7 +5,7 @@ import { Navigation } from './Navigation'
 
 export function Header() {
   return (
-    <main className="py-6">
+    <main className="py-2 lg:py-3">
       <header className="flex items-center justify-between">
         <Link href="/">
           <Image
