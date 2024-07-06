@@ -1,15 +1,16 @@
-import { Header } from '@/components/main/Header'
+import { Header } from '@/components/Header'
 
 export default function MapPage() {
   return (
-    <section className="h-screen w-screen overflow-hidden">
-      <div className="container mx-auto max-w-screen-2xl px-2 lg:px-8">
+    <section className="flex h-screen w-screen flex-col overflow-hidden">
+      <div className="mx-auto w-full max-w-screen-2xl px-4 pt-4 lg:px-8">
         <Header />
       </div>
-      <div className="map map-lg">
+      <div className="flex-1 overflow-hidden">
         <iframe
           src="https://map.leafcity.ru/"
-          className="m-0 h-full w-full border-0 p-0 ring-offset-background focus-visible:outline-none"
+          className="h-[calc(100dvh-72px)] w-full border-0 sm:h-full"
+          title="Map"
         />
       </div>
     </section>

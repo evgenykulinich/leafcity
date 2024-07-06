@@ -31,21 +31,21 @@ export function Controls() {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row mt-10 lg:mt-20">
-      <Button
-        variant="default"
-        className="text-[20px] font-bold px-16 py-10 rounded-xl bg-green hover:bg-green/70 lg:w-[300px] w-full mb-4 lg:mr-10"
-      >
-        <Link target="_blank" href="https://discord.gg/leaf-city">
+    <div className="mt-8 flex flex-col lg:mt-12 lg:flex-row">
+      <Link target="_blank" href="https://discord.gg/leaf-city">
+        <Button
+          variant="default"
+          className="mb-4 w-full rounded-xl bg-green px-16 py-10 text-[20px] font-bold hover:bg-green/70 lg:mr-10 lg:w-[300px]"
+        >
           Начать играть
-        </Link>
-      </Button>
+        </Button>
+      </Link>
 
-      <div className="hidden lg:block version">
+      <div className="version hidden lg:block">
         <Button
           variant="outline"
           onClick={toggleCopyIp}
-          className="block rounded-xl border-green hover:bg-green/15 text-[20px] lg:w-[300px] w-full h-[80px]"
+          className="block h-[80px] w-full rounded-xl border-green text-[20px] hover:bg-green/10 lg:w-[300px]"
         >
           <span>{copyMessage}</span>
         </Button>

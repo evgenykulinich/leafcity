@@ -16,25 +16,25 @@ const routes = [
     href: 'https://discord.gg/leaf-city',
     label: 'Правила',
     description: 'Discord-канал со всеми правилами сервера!',
-    icon: '/rules.png'
+    icon: '/icon/rules.png'
   },
   {
     href: 'https://shop.leafcity.ru',
     label: 'Магазин',
     description: 'Лучший способ поддержать проект!',
-    icon: '/shop.png'
+    icon: '/icon/shop.png'
   },
   {
     href: 'map',
     label: 'Веб-карта',
     description: 'Карта сервера в реальном времени!',
-    icon: '/map.png'
+    icon: '/icon/map.png'
   },
   {
     href: 'https://wiki.leafcity.ru',
     label: 'Википедия',
     description: 'Начни погружение в сообщество LEAF CITY уже сейчас!',
-    icon: '/wiki.png'
+    icon: '/icon/wiki.png'
   }
 ]
 
@@ -53,7 +53,7 @@ export const Navigation = () => {
           <Button
             variant="outline"
             size="sm"
-            className="rounded-xl border-none font-normal text-white outline-none transition hover:scale-125 hover:text-green focus-visible:scale-125 focus-visible:text-green focus-visible:ring-transparent focus-visible:ring-offset-0"
+            className="rounded-xl border-none px-0 font-normal text-white outline-none transition hover:scale-125 hover:text-green focus-visible:scale-125 focus-visible:text-green focus-visible:ring-transparent focus-visible:ring-offset-0"
           >
             <Menu className="size-8" />
           </Button>
@@ -80,6 +80,21 @@ export const Navigation = () => {
                 </li>
               ))}
             </ul>
+            <Link target="_blank" href="https://discord.gg/leaf-city">
+              <Button
+                variant="default"
+                className="w-full rounded-xl bg-purple/80 py-6 text-lg hover:bg-purple/60"
+              >
+                <Image
+                  className="mr-2"
+                  src="/icon/discord.svg"
+                  alt="Discord"
+                  width={30}
+                  height={30}
+                />
+                Присоединиться
+              </Button>
+            </Link>
           </nav>
         </SheetContent>
       </Sheet>
@@ -96,7 +111,7 @@ export const Navigation = () => {
               href={route.href}
               className="link-animation"
             >
-              <HoverCard>
+              <HoverCard openDelay={200} closeDelay={200}>
                 <HoverCardTrigger asChild>
                   <Button className="text-md">{route.label}</Button>
                 </HoverCardTrigger>

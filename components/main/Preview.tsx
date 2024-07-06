@@ -4,13 +4,13 @@ export function Preview() {
   return (
     <section className="relative">
       <Image
-        className="hidden xl:block absolute right-0 top-0 xl:size-[576px]"
+        className="absolute right-0 top-[-60px] hidden cursor-pointer transition hover:scale-105 xl:block xl:size-[576px]"
         src="/animal.png"
         alt="animal"
         height={1024}
         width={1024}
       />
-      <h1 className="font-bold text-[42px] lg:text-[64px] leading-tight mt-6 lg:mt-20">
+      <h1 className="mt-4 text-5xl font-bold leading-tight lg:mt-24 lg:text-6xl">
         Уникальный{' '}
         <span className="text-blue">
           ванильный <br />{' '}
@@ -19,7 +19,7 @@ export function Preview() {
         <br />
         сообществом
       </h1>
-      <p className="mt-10 text-white/80 text-[18px]">
+      <p className="mt-8 text-[18px] text-white/80 lg:mt-12">
         Идеальное место для твоих идей.
         <br />
         Без привилегий, привата и лишних плагинов.

@@ -51,14 +51,14 @@ const questionList = [
 export function Questions() {
   return (
     <section className="mt-16 lg:mt-24">
-      <h2 className="text-[26px] mt-10 lg:mt-24">Ответы на вопросы</h2>
-      <div className="flex flex-col lg:flex-row gap-12 mt-10">
+      <h2 className="mt-10 text-[26px] lg:mt-24">Ответы на вопросы</h2>
+      <div className="mt-10 flex flex-col items-start gap-12 lg:flex-row">
         <Accordion type="single" collapsible className="w-full">
           {questionList.map(query => (
             <AccordionItem
               value={query.value}
               key={query.value}
-              className="px-4 rounded-2xl overflow-hidden border-2 border-slate-200/30 hover:border-purple hover:bg-purple/20 transition mb-4"
+              className="mb-4 overflow-hidden rounded-2xl border-2 border-white/20 px-4 transition hover:border-purple hover:bg-purple/20"
             >
               <AccordionTrigger>{query.question}</AccordionTrigger>
               <AccordionContent>{query.answer}</AccordionContent>
@@ -66,15 +66,15 @@ export function Questions() {
           ))}
         </Accordion>
         <Link
+          className="max-w-[450px] lg:w-[35%]"
           href="https://discord.gg/leaf-city"
-          className="lg:w-[40%] max-w-[450px] m-auto"
           target="_blank"
         >
-          <Card className="w-full border-2 rounded-2xl border-purple bg-purple/10 hover:bg-purple/20 hover:scale-105 transition-all text-indigo-200">
+          <Card className="w-full rounded-2xl border-2 border-purple bg-purple/10 text-purple transition-all hover:bg-purple/20 lg:hover:scale-[1.025]">
             <CardHeader>
-              <div className="flex flex-row items-center justify-between mb-10">
+              <div className="mb-10 flex flex-row items-center justify-between">
                 <Image
-                  src="/discord-icon.svg"
+                  src="/icon/discord-icon.svg"
                   alt="Discord"
                   height={100}
                   width={100}
@@ -86,7 +86,7 @@ export function Questions() {
             </CardHeader>
             <CardContent>
               Заходи на наш Discord сервер и задавай вопросы в канале поддержки. Администратор
-              Дашка17 обязательно тебе поможет!
+              Dashka17 обязательно тебе поможет!
             </CardContent>
           </Card>
         </Link>
