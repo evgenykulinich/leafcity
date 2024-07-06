@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-   .link-animation {
+  .link-animation {
     position: relative;
     color: aliceblue;
 
@@ -11,8 +11,21 @@
       color: #67c960;
     }
 
-    :hover::after {
-      width: 100%;
+    &::after {
+      content: '';
+      background-color: #67c960;
+      border-radius: 8px;
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      height: 3px;
+      width: 0;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 80%;
     }
   }
 

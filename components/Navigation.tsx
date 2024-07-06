@@ -102,6 +102,33 @@ export const Navigation = () => {
   }
 
   return (
+    // <nav>
+    //   <ul className="hidden gap-12 text-lg lg:flex">
+    //     { routes.map(route => (
+    //       <li className="cursor-pointer" key={ route.label }>
+    //         <Link
+    //           target={ route.label === 'Веб-карта' ? '_self' : '_blank' }
+    //           href={ route.href }
+    //           className="link-animation"
+    //         >
+    //           <HoverCard openDelay={ 200 } closeDelay={ 200 }>
+    //             <HoverCardTrigger asChild>
+    //               <Button className="text-md">{ route.label }</Button>
+    //             </HoverCardTrigger>
+    //             <HoverCardContent className="w-80 rounded-2xl border-2 border-green bg-black/70">
+    //               <div className="flex justify-between space-x-4 rounded-md">
+    //                 <div className="space-y-1">
+    //                   <p className="text-sm">{ route.description }</p>
+    //                 </div>
+    //               </div>
+    //             </HoverCardContent>
+    //           </HoverCard>
+    //         </Link>
+    //       </li>
+    //     )) }
+    //   </ul>
+    // </nav>
+
     <nav>
       <ul className="hidden gap-12 text-lg lg:flex">
         {routes.map(route => (
@@ -111,18 +138,7 @@ export const Navigation = () => {
               href={route.href}
               className="link-animation"
             >
-              <HoverCard openDelay={200} closeDelay={200}>
-                <HoverCardTrigger asChild>
-                  <Button className="text-md">{route.label}</Button>
-                </HoverCardTrigger>
-                <HoverCardContent className="w-80 rounded-2xl border-2 border-green bg-black/70">
-                  <div className="flex justify-between space-x-4 rounded-md">
-                    <div className="space-y-1">
-                      <p className="text-sm">{route.description}</p>
-                    </div>
-                  </div>
-                </HoverCardContent>
-              </HoverCard>
+              <Button className="text-md">{route.label}</Button>
             </Link>
           </li>
         ))}
