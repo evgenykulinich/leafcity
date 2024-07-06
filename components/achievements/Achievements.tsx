@@ -1,69 +1,33 @@
 import { Earth, Handshake, Wifi } from 'lucide-react'
 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-// import { Achievement } from './Achievement'
+import { Achievement } from '@/components/achievements/Achievement'
 
 export function Achievements() {
   return (
-    <section>
-      {/* <h2 className='text-[26px] mt-24'>Вот, почему мы тебе понравимся</h2> */}
-      <h2 className="text-[26px] mt-16 lg:mt-24">Вот, почему мы тебе не понравимся</h2>
-      <div className="flex flex-col lg:flex-row lg:justify-between gap-12 mt-10">
-        <Card className="w-full border-2 rounded-2xl border-green bg-green/10 hover:scale-105 transition-all text-emerald-200">
-          <CardHeader className="mb-2">
-            <Wifi className="size-10 mb-10" />
-            <CardTitle>Высокая стабильность</CardTitle>
-          </CardHeader>
-          {/* <CardContent>Мощное оборудование, детальная оптимизация без вреда для игры</CardContent> */}
-          <CardContent>
-            В лучшем случае 8 тпс и желание сломать свой монитор молотком из-за лагов
-          </CardContent>
-        </Card>
-
-        <Card className="w-full border-2 rounded-2xl border-blue bg-blue/10 text-sky-200 hover:scale-105 transition-all">
-          <CardHeader className="mb-2">
-            <Handshake className="size-10 mb-10" />
-            <CardTitle>Многогранное сообщество</CardTitle>
-          </CardHeader>
-          {/* <CardContent>
-            Постоянные события от игроков. Собрания всего сервера для обсуждения новвоведений
-          </CardContent> */}
-          <CardContent>
-            На сервере гриферы и дети на админах. Овнер сервера гей, пидорас и просто хороший
-            человек
-          </CardContent>
-        </Card>
-
-        <Card className="w-full border-2 rounded-2xl border-mango bg-mango/5 text-yellow-200 hover:scale-105 transition-all">
-          <CardHeader className="mb-2">
-            <Earth className="size-10 mb-10" />
-            <CardTitle>Разные миры</CardTitle>
-          </CardHeader>
-          {/* <CardContent>Всё для твоих задач. Мир выживания, ферм и ресурсов</CardContent> */}
-          <CardContent>
-            Можешь выбрать любой мир, в любом из них тебя всё равно забанят, потому что ты сломал не
-            тот блок
-          </CardContent>
-        </Card>
-
-        {/* <Achievement
+    <section className="mt-16 lg:mt-24">
+      <h2 className="text-[26px]">Вот, почему мы тебе понравимся</h2>
+      <div className="mt-8 flex flex-col gap-12 lg:mt-12 lg:flex-row lg:justify-between">
+        <Achievement
           title="Высокая стабильность"
           content="Мощное оборудование, детальная оптимизация без вреда для игры"
+          className="w-full flex-1 cursor-default rounded-2xl border-2 border-green bg-green/10 text-green transition-all hover:bg-green/20 lg:hover:scale-[1.025]"
         >
-          <Wifi />
+          <Wifi className="mb-10 size-10" />
         </Achievement>
         <Achievement
           title="Многогранное сообщество"
           content="Постоянные события от игроков. Собрания всего сервера для обсуждения новвоведений"
+          className="w-full flex-1 cursor-default rounded-2xl border-2 border-blue bg-blue/10 text-blue transition-all hover:bg-blue/20 lg:hover:scale-[1.025]"
         >
-          <Handshake />
+          <Handshake className="mb-10 size-10" />
         </Achievement>
         <Achievement
           title="Разные миры"
           content="Всё для твоих задач. Мир выживания, ферм и ресурсов"
+          className="w-full flex-1 cursor-default rounded-2xl border-2 border-mango bg-mango/10 text-mango transition-all hover:bg-mango/20 lg:hover:scale-[1.025]"
         >
-          <Earth />
-        </Achievement> */}
+          <Earth className="mb-10 size-10" />
+        </Achievement>
       </div>
     </section>
   )

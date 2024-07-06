@@ -1,37 +1,60 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { Button } from '@/components/ui/button'
 
 export function Copyright() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
-    <section className="flex flex-col lg:flex-row lg:justify-between bg-white/5 p-8 rounded-2xl mt-16 lg:mt-24">
-      <div>
-        <Image
-          className="cursor-pointer hover:scale-110 transition-all duration-300 size-[60px] lg:size-[75px] mb-10"
-          src="/lc-logo.png"
-          alt="LC"
-          height={100}
-          width={100}
-        />
-        <p className="text-white/50 text-sm">
+    <section className="mt-16 flex flex-col border-t-2 border-white/10 pt-4 lg:mt-24 lg:flex-row lg:justify-between lg:pt-8">
+      <div className="lg:flex lg:flex-col lg:items-start lg:justify-between">
+        <TooltipProvider>
+          <Tooltip delayDuration={200}>
+            <TooltipTrigger asChild>
+              <Button
+                className="mb-4 w-full text-center lg:mb-8 lg:w-auto lg:px-0"
+                onClick={scrollToTop}
+              >
+                <Image
+                  className="w-[150px] cursor-pointer transition-all duration-300 hover:scale-110 lg:w-[200px]"
+                  src="/logo/leafcity.png"
+                  alt="LC"
+                  height={1000}
+                  width={1000}
+                />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Наверх</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <p className="text-sm text-white/40">
           Copyright © LEAF CITY 2023-2024. Все права защищены.
           <br />
           Проект LEAF CITY не относиться к Mojang Studios.
         </p>
       </div>
-      <div className="flex justify-center gap-8 lg:block mt-10 lg:mt-0">
+      <div className="mt-6 flex justify-center gap-8 lg:mt-0 lg:block">
         <TooltipProvider>
-          <Tooltip>
+          <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <Link href="https://shop.leafcity.ru" target="_blank">
                 <Image
-                  src="/cart.svg"
+                  src="/icon/cart.svg"
                   alt="Cart"
                   height={100}
                   width={100}
-                  className="size-12 lg:size-14 lg:mb-6 cursor-pointer hover:scale-110 transition bg-green/80 rounded-xl p-2"
+                  className="size-12 cursor-pointer rounded-xl bg-green/80 p-2 transition hover:scale-110 lg:mb-6 lg:size-12"
                 />
               </Link>
             </TooltipTrigger>
@@ -40,10 +63,11 @@ export function Copyright() {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
+
         <Link href="https://discord.gg/leaf-city" target="_blank">
           <Image
-            className="size-12 lg:size-14 cursor-pointer hover:scale-110 transition bg-slate-50 rounded-xl p-2"
-            src="/discord-icon.svg"
+            className="size-12 cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110 lg:size-12"
+            src="/icon/discord-icon.svg"
             alt="Discord"
             height={100}
             width={100}
