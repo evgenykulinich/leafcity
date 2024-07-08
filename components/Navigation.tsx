@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useMedia } from 'react-use'
 import { useState } from 'react'
 import { Menu } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
@@ -41,6 +42,7 @@ const routes = [
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const isMobile = useMedia('(max-width: 1024px)', false)
+  const pathname = usePathname()
 
   const handleClose = () => {
     setIsOpen(false)
@@ -102,33 +104,6 @@ export const Navigation = () => {
   }
 
   return (
-    // <nav>
-    //   <ul className="hidden gap-12 text-lg lg:flex">
-    //     { routes.map(route => (
-    //       <li className="cursor-pointer" key={ route.label }>
-    //         <Link
-    //           target={ route.label === 'Веб-карта' ? '_self' : '_blank' }
-    //           href={ route.href }
-    //           className="link-animation"
-    //         >
-    //           <HoverCard openDelay={ 200 } closeDelay={ 200 }>
-    //             <HoverCardTrigger asChild>
-    //               <Button className="text-md">{ route.label }</Button>
-    //             </HoverCardTrigger>
-    //             <HoverCardContent className="w-80 rounded-2xl border-2 border-green bg-black/70">
-    //               <div className="flex justify-between space-x-4 rounded-md">
-    //                 <div className="space-y-1">
-    //                   <p className="text-sm">{ route.description }</p>
-    //                 </div>
-    //               </div>
-    //             </HoverCardContent>
-    //           </HoverCard>
-    //         </Link>
-    //       </li>
-    //     )) }
-    //   </ul>
-    // </nav>
-
     <nav>
       <ul className="hidden gap-12 text-lg lg:flex">
         {routes.map(route => (
@@ -136,7 +111,7 @@ export const Navigation = () => {
             <Link
               target={route.label === 'Веб-карта' ? '_self' : '_blank'}
               href={route.href}
-              className="link-animation"
+              className={`link-animation ${pathname === route.href ? 'text-green' : ''}`}
             >
               <Button className="text-md">{route.label}</Button>
             </Link>
