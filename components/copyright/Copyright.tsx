@@ -5,6 +5,7 @@ import Link from 'next/link'
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { Button } from '@/components/ui/button'
+import { url } from '@/constants/translation'
 
 export function Copyright() {
   const scrollToTop = () => {
@@ -48,7 +49,7 @@ export function Copyright() {
         <TooltipProvider>
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
-              <Link href="https://shop.leafcity.ru" target="_blank">
+              <Link href={url.shop} target="_blank">
                 <Image
                   src="/icon/cart.svg"
                   alt="Cart"
@@ -64,7 +65,7 @@ export function Copyright() {
           </Tooltip>
         </TooltipProvider>
 
-        <Link href="https://discord.gg/leaf-city" target="_blank">
+        <Link href={url.discord} target="_blank">
           <Image
             className="size-12 cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110 lg:size-12"
             src="/icon/discord-icon.svg"
