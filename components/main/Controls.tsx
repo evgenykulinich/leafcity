@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui/button'
+import { url } from '@/constants/translation'
 
 const copyIpMessage = {
   textToCopy: 'play.leafcity.ru',
@@ -32,7 +33,7 @@ export function Controls() {
 
   return (
     <div className="mt-8 flex flex-col lg:mt-12 lg:flex-row">
-      <Link target="_blank" href="https://discord.gg/leaf-city">
+      <Link target="_blank" href={url.discord}>
         <Button
           variant="default"
           className="mb-4 w-full rounded-xl bg-green px-16 py-10 text-[20px] font-bold hover:bg-green/70 lg:mr-10 lg:w-[300px]"
