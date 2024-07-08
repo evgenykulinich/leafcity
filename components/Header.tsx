@@ -7,14 +7,18 @@ import { url } from '@/constants/translation'
 export function Header() {
   return (
     <header className="flex items-center justify-between border-b-2 border-white/10 pb-4">
-      <Link href={url.baseUrl}>
+      <Link
+        className="flex items-center transition duration-300 hover:scale-110"
+        href={url.baseUrl}
+      >
         <Image
-          className="w-[150px] cursor-pointer transition duration-300 hover:scale-110 lg:w-[200px]"
-          src="/logo/leafcity.png"
+          className="mr-4 w-[40px] cursor-pointer"
+          src="/logo/lc.png"
           alt="LC"
           height={1000}
           width={1000}
         />
+        <p className="text-2xl font-bold">LEAF CITY</p>
       </Link>
       <Navigation />
     </header>
