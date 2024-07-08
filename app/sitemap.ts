@@ -5,7 +5,7 @@ import { url } from '@/constants/translation'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: url.baseUrl,
+      url: url.domain,
       lastModified: new Date(),
       changeFrequency: 'yearly'
     },
