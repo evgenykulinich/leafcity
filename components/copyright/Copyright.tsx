@@ -22,16 +22,17 @@ export function Copyright() {
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <Button
-                className="mb-4 w-full text-center lg:mb-8 lg:w-auto lg:px-0"
+                className="mb-4 w-full text-center transition-all duration-300 hover:scale-110 lg:mb-8 lg:w-auto lg:px-0"
                 onClick={scrollToTop}
               >
                 <Image
-                  className="w-[150px] cursor-pointer transition-all duration-300 hover:scale-110 lg:w-[200px]"
-                  src="/logo/leafcity.png"
+                  className="mr-4 w-[40px] cursor-pointer"
+                  src="/logo/lc.png"
                   alt="LC"
                   height={1000}
                   width={1000}
                 />
+                <p className="text-2xl font-bold">LEAF CITY</p>
               </Button>
             </TooltipTrigger>
             <TooltipContent>
