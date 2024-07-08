@@ -20,7 +20,7 @@ export default function MapPage() {
       </div>
       <div className="flex-1 overflow-hidden">
         <iframe
-          src="https://leafcity.ru/map"
+          src="https://leafcity.ru/backend"
           className="h-[calc(100dvh-72px)] w-full border-0 sm:h-full"
           title="Map"
         />
