@@ -4,7 +4,7 @@ export function Preview() {
   return (
     <section className="relative">
       <Image
-        className="absolute right-0 top-[-60px] hidden cursor-pointer transition hover:scale-105 xl:block xl:size-[576px]"
+        className="absolute right-0 top-[-60px] hidden cursor-pointer transition hover:scale-105 active:scale-95 xl:block xl:size-[576px]"
         src="/animal.png"
         alt="animal"
         height={1024}
