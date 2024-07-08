@@ -9,6 +9,7 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { url } from '@/constants/translation'
 
 const questionList = [
   {
@@ -65,11 +66,7 @@ export function Questions() {
             </AccordionItem>
           ))}
         </Accordion>
-        <Link
-          className="max-w-[450px] lg:w-[35%]"
-          href="https://discord.gg/leaf-city"
-          target="_blank"
-        >
+        <Link className="max-w-[450px] lg:w-[35%]" href={url.discord} target="_blank">
           <Card className="w-full rounded-2xl border-2 border-purple bg-purple/10 text-purple transition-all hover:bg-purple/20 lg:hover:scale-[1.025]">
             <CardHeader>
               <div className="mb-10 flex flex-row items-center justify-between">

@@ -8,30 +8,30 @@ import { Menu } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
 import { Card } from '@/components/ui/card'
+import { url } from '@/constants/translation'
 
 const routes = [
   {
-    href: 'https://discord.gg/leaf-city',
+    href: url.discord,
     label: 'Правила',
     description: 'Discord-канал со всеми правилами сервера!',
     icon: '/icon/rules.png'
   },
   {
-    href: 'https://shop.leafcity.ru',
+    href: url.shop,
     label: 'Магазин',
     description: 'Лучший способ поддержать проект!',
     icon: '/icon/shop.png'
   },
   {
-    href: 'map',
+    href: url.map,
     label: 'Веб-карта',
     description: 'Карта сервера в реальном времени!',
     icon: '/icon/map.png'
   },
   {
-    href: 'https://wiki.leafcity.ru',
+    href: url.wiki,
     label: 'Википедия',
     description: 'Начни погружение в сообщество LEAF CITY уже сейчас!',
     icon: '/icon/wiki.png'
@@ -80,7 +80,7 @@ export const Navigation = () => {
                 </li>
               ))}
             </ul>
-            <Link target="_blank" href="https://discord.gg/leaf-city">
+            <Link target="_blank" href={url.discord}>
               <Button
                 variant="default"
                 className="w-full rounded-xl bg-purple/80 py-6 text-lg hover:bg-purple/60"
