@@ -1,5 +1,4 @@
 import { Header } from '@/components/Header'
-import { url } from '@/constants/translation'
 
 import type { Metadata } from 'next'
 
@@ -21,7 +20,7 @@ export default function MapPage() {
       </div>
       <div className="flex-1 overflow-hidden">
         <iframe
-          src="https://map.leafcity.ru/"
+          src="https://leafcity.ru/map"
           className="h-[calc(100dvh-72px)] w-full border-0 sm:h-full"
           title="Map"
         />
