@@ -10,7 +10,7 @@ export function Preview() {
         height={1024}
         width={1024}
       />
-      <h1 className="mt-4 text-5xl font-bold leading-tight lg:mt-24 lg:text-6xl">
+      <h1 className="mt-4 text-[2.75rem] font-bold leading-tight sm:text-5xl lg:mt-24 lg:text-6xl">
         Уникальный{' '}
         <span className="text-blue">
           ванильный <br />{' '}
