@@ -45,6 +45,12 @@ export function Copyright() {
           <br />
           Проект LEAF CITY не относиться к Mojang Studios.
         </p>
+        <p className="mt-2 text-sm text-white/40">
+          Сайт разработан под брендом{' '}
+          <Link className="transition hover:text-mango" href="https://t.me/ratmoodfrontend">
+            RatMood 🤍
+          </Link>
+        </p>
       </div>
       <div className="mt-6 flex justify-center gap-8 lg:mt-0 lg:block">
         <TooltipProvider>
@@ -56,7 +62,7 @@ export function Copyright() {
                   alt="Cart"
                   height={100}
                   width={100}
-                  className="size-12 cursor-pointer rounded-xl bg-green/80 p-2 transition hover:scale-110 lg:mb-6 lg:size-12"
+                  className="size-12 w-full cursor-pointer rounded-xl bg-green/80 p-2 transition hover:scale-110 lg:mb-6"
                 />
               </Link>
             </TooltipTrigger>
@@ -68,7 +74,7 @@ export function Copyright() {
 
         <Link href={url.discord} target="_blank">
           <Image
-            className="size-12 cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110 lg:size-12"
+            className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110"
             src="/icon/discord-icon.svg"
             alt="Discord"
             height={100}
