@@ -1,7 +1,5 @@
 export const url = {
-  domain: 'https://leafcity.ru',
-  // domain: 'https://leafcity.vercel.app/',
-  baseUrl: '/',
+  baseUrl: 'https://leafcity.ru/',
   map: '/map',
   shop: 'https://shop.leafcity.ru/',
   wiki: 'https://wiki.leafcity.ru/',
