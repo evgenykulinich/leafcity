@@ -20,7 +20,7 @@ export default function MapPage() {
       </div>
       <div className="flex-1 overflow-hidden">
         <iframe
-          src="http://194.147.90.247:83/"
+          src="http://194.147.90.247:83/#minecraft_overworld;flat;-117,64,-18;3"
           className="h-[calc(100dvh-72px)] w-full border-0 sm:h-full"
           title="Map"
         />
