@@ -14,15 +14,18 @@ export const metadata: Metadata = {
   },
   description:
     'LEAF CITY - ванильный сервер, нацеленный на выживание и ламповое общение. Игровой процесс на проекте очень многогранный, ты можешь создать свое локальное сообщество, организовать поселение, продавать свой товар, строить огромные проекты, так и просто приятно общаться и проводить время.',
-  metadataBase: new URL(url.domain),
+  metadataBase: new URL(url.baseUrl),
   keywords: [
     'minecraft',
     'vanilla',
     'leafcity',
+    'leafcity minecraft',
     'leaf city',
+    'leaf city minecraft',
     'лиф сити',
     'сервер',
     'ванильное',
+    'приватное',
     'выживание',
     'карта'
   ],
