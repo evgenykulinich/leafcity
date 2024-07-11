@@ -53,26 +53,28 @@ export function Copyright() {
         </p>
       </div>
       <div className="mt-6 flex justify-center gap-8 lg:mt-0 lg:block">
-        <TooltipProvider>
-          <Tooltip delayDuration={200}>
-            <TooltipTrigger asChild>
-              <Link href={url.shop} target="_blank">
-                <Image
-                  src="/icon/cart.svg"
-                  alt="Cart"
-                  height={100}
-                  width={100}
-                  className="size-12 w-full cursor-pointer rounded-xl bg-green/80 p-2 transition hover:scale-110 lg:mb-6"
-                />
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Магазин</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+        <div className="flex-grow">
+          <TooltipProvider>
+            <Tooltip delayDuration={200}>
+              <TooltipTrigger asChild>
+                <Link href={url.shop} target="_blank">
+                  <Image
+                    src="/icon/cart.svg"
+                    alt="Cart"
+                    height={100}
+                    width={100}
+                    className="size-12 w-full cursor-pointer rounded-xl bg-green/80 p-2 transition hover:scale-110 lg:mb-6"
+                  />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Магазин</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
 
-        <Link href={url.discord} target="_blank">
+        <Link className="flex-grow" href={url.discord} target="_blank">
           <Image
             className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110"
             src="/icon/discord-icon.svg"
