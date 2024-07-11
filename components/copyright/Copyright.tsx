@@ -22,7 +22,7 @@ export function Copyright() {
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <Button
-                className="mb-4 w-full text-center transition-all duration-300 hover:scale-110 lg:mb-8 lg:w-auto lg:px-0"
+                className="mb-4 w-full text-center transition-all duration-300 hover:scale-90 lg:mb-8 lg:w-auto lg:px-0 lg:hover:scale-110"
                 onClick={scrollToTop}
               >
                 <Image
