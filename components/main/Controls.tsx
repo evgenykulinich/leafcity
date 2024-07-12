@@ -42,7 +42,7 @@ export function Controls() {
         </Button>
       </Link>
 
-      <div className="version hidden lg:block">
+      <div className="version lg:block">
         <Button
           variant="outline"
           onClick={toggleCopyIp}
