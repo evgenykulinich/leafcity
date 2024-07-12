@@ -96,6 +96,6 @@ body {
   }
 }
 
-.fade-in {
+.copy-fade-in {
   animation: fadeIn 0.2s ease-in-out;
 }

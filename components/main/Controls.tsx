@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { url } from '@/constants/translation'
@@ -22,23 +22,22 @@ export function Controls() {
       if (copyMessage === copyIpMessage.default) {
         await navigator.clipboard.writeText(copyIpMessage.textToCopy)
         setCopyMessage(copyIpMessage.success)
-        setAnimate(true)
-        setTimeout(() => setAnimate(false), 200)
-        return
-      }
-
-      if (copyMessage === copyIpMessage.success || copyMessage === copyIpMessage.error) {
+      } else if (copyMessage === copyIpMessage.success || copyMessage === copyIpMessage.error) {
         setCopyMessage(copyIpMessage.default)
       }
-
       setAnimate(true)
-      setTimeout(() => setAnimate(false), 200)
     } catch {
       setCopyMessage(copyIpMessage.error)
       setAnimate(true)
-      setTimeout(() => setAnimate(false), 200)
     }
   }
+
+  useEffect(() => {
+    if (animate) {
+      const timer = setTimeout(() => setAnimate(false), 200)
+      return () => clearTimeout(timer)
+    }
+  }, [animate])
 
   return (
     <div className="mt-8 flex flex-col lg:mt-12 lg:flex-row">
@@ -57,7 +56,7 @@ export function Controls() {
           onClick={toggleCopyIp}
           className="block h-[80px] w-full rounded-xl border-green text-[20px] hover:bg-green/10 lg:w-[300px]"
         >
-          <span className={animate ? 'fade-in' : ''}>{copyMessage}</span>
+          <span className={animate ? 'copy-fade-in' : ''}>{copyMessage}</span>
         </Button>
       </div>
     </div>
