@@ -30,39 +30,41 @@
   }
 
   .version {
-    position: relative;
+    @media (width > 1024px) {
+      position: relative;
 
-    &::before,
-    &::after {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: all 0.3s ease;
-      font-size: 20px;
-      opacity: 0;
-    }
+      &::before,
+      &::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s ease;
+        font-size: 20px;
+        opacity: 0;
+      }
 
-    &::before {
-      content: '1.13 – 1.21';
-      top: 0;
-    }
+      &::before {
+        content: '1.13 – 1.21';
+        top: 0;
+      }
 
-    &::after {
-      content: 'Java/Bedrock';
-      bottom: 0;
-    }
+      &::after {
+        content: 'Java/Bedrock';
+        bottom: 0;
+      }
 
-    &:hover::before,
-    &:hover::after {
-      opacity: 0.8;
-    }
+      &:hover::before,
+      &:hover::after {
+        opacity: 0.8;
+      }
 
-    &:hover::before {
-      top: -45px;
-    }
+      &:hover::before {
+        top: -45px;
+      }
 
-    &:hover::after {
-      bottom: -30px;
+      &:hover::after {
+        bottom: -30px;
+      }
     }
   }
 }
@@ -83,4 +85,17 @@ html {
 body {
   background-color: #131313;
   color: aliceblue;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.2s ease-in-out;
 }
