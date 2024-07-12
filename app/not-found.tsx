@@ -8,7 +8,7 @@ export default function Custom404() {
     <section className="flex h-dvh flex-col items-center justify-center py-2">
       <div className="flex items-center gap-4 text-3xl font-bold md:text-5xl lg:text-6xl">
         <Link
-          className="flex items-center justify-center transition duration-300 hover:scale-105 lg:active:scale-100"
+          className="flex items-center justify-center transition duration-300 lg:active:scale-95"
           href="/"
         >
           <Image

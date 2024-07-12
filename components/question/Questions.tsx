@@ -10,6 +10,8 @@ import {
 } from '@/components/ui/accordion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { url } from '@/constants/translation'
+import { getOnlineUsers } from '@/helpers/users'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 const questionList = [
   {
@@ -50,6 +52,8 @@ const questionList = [
 ]
 
 export function Questions() {
+  const onlineUsers = getOnlineUsers()
+
   return (
     <section className="mt-16 lg:mt-24">
       <h2 className="mt-10 text-[26px] lg:mt-24">Ответы на вопросы</h2>
@@ -66,17 +70,31 @@ export function Questions() {
             </AccordionItem>
           ))}
         </Accordion>
-        <Link className="max-w-[450px] lg:w-[35%]" href={url.discord} target="_blank">
+        <Link className="mx-auto max-w-[450px] lg:w-[35%]" href={url.discord} target="_blank">
           <Card className="w-full rounded-2xl border-2 border-purple bg-purple/10 text-purple transition-all hover:bg-purple/20 lg:hover:scale-[1.025]">
             <CardHeader>
-              <div className="mb-10 flex flex-row items-center justify-between">
-                <Image
-                  src="/icon/discord-icon.svg"
-                  alt="Discord"
-                  height={100}
-                  width={100}
-                  className="size-10"
-                />
+              <div className="mb-10 flex flex-row items-start justify-between">
+                <div className="flex items-center">
+                  <Image
+                    src="/icon/discord-icon.svg"
+                    alt="Discord"
+                    height={100}
+                    width={100}
+                    className="size-10"
+                  />
+                  <TooltipProvider>
+                    <Tooltip delayDuration={200}>
+                      <TooltipTrigger asChild>
+                        <p className="ml-2 rounded-2xl border-purple bg-purple/10 px-3">
+                          {onlineUsers}
+                        </p>
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-black/50 text-white">
+                        <p>Игроков онлайн</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
                 <ExternalLink />
               </div>
               <CardTitle>Остались вопросы?</CardTitle>
