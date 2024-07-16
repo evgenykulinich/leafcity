@@ -1,5 +1,6 @@
 export const url = {
   baseUrl: 'https://leafcity.ru',
+  rules: '/rules',
   map: '/map',
   shop: 'https://shop.leafcity.ru',
   wiki: 'https://wiki.leafcity.ru',

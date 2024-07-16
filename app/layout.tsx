@@ -1,5 +1,6 @@
 import { Montserrat } from 'next/font/google'
 
+import { Toaster } from '@/components/ui/sonner'
 import { url } from '@/constants/translation'
 
 import type { Metadata } from 'next'
@@ -27,7 +28,36 @@ export const metadata: Metadata = {
     'ванильное',
     'приватное',
     'выживание',
-    'карта'
+    'карта',
+    'приватный',
+    'майнкрафт',
+    'RP',
+    'РП',
+    'без доната',
+    'бесплатная проходка',
+    'лицензионный',
+    'мониторинг',
+    'без привата',
+    'топ',
+    'список',
+    'войс чат',
+    'ванила',
+    'без модов',
+    'выживание на сервере',
+    'официальный',
+    'оригинальный',
+    'без читеров',
+    'без гриферов',
+    'играть',
+    'лучший',
+    'топ сервера',
+    'лучшие сервера',
+    'мониторинг серверов',
+    'easydonate',
+    'онлайн-магазин',
+    'role',
+    'role-play',
+    'рейтинг'
   ],
   openGraph: {
     images: [
@@ -52,6 +82,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={font.className}>{children}</body>
+      <Toaster />
     </html>
   )
 }

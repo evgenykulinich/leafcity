@@ -16,7 +16,7 @@ export function Copyright() {
   }
 
   return (
-    <section className="mt-16 flex flex-col border-t-2 border-white/10 pt-4 lg:mt-24 lg:flex-row lg:justify-between lg:pt-8">
+    <section className="mt-12 flex flex-col border-t-2 border-white/10 pt-4 lg:mt-20 lg:flex-row lg:justify-between lg:pt-8">
       <div className="lg:flex lg:flex-col lg:items-start lg:justify-between">
         <TooltipProvider>
           <Tooltip delayDuration={200}>
