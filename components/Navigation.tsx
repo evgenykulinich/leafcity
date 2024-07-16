@@ -65,7 +65,7 @@ export const Navigation = () => {
             <ul>
               {routes.map(route => (
                 <li className="mb-5 cursor-pointer text-center text-2xl" key={route.label}>
-                  <Link href={route.href} className="link-animation">
+                  <Link href={route.href} className="hover:text-green">
                     <Card onClick={handleClose} className="border-none">
                       <Button className="text-md">
                         <Image
