@@ -314,8 +314,9 @@ export default function Rules() {
         <Header />
       </div>
       <section className="mt-8 text-center text-xl lg:mt-10 lg:text-2xl">
-        <span className="font-bold">LEAF CITY</span> стремится создать веселую и безопасную среду
-        для всех наших игроков ☘️
+        <span className="font-bold">LEAF CITY</span> стремится создать{' '}
+        <span className="text-green">ламповую</span> и <span className="text-blue">безопасную</span>{' '}
+        среду для всех наших игроков ☘️
       </section>
       <section className="mt-10">
         <Accordion

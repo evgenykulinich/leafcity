@@ -43,7 +43,7 @@ export function Copyright() {
         <p className="text-sm text-white/40">
           Copyright © LEAF CITY 2023-2024. Все права защищены.
           <br />
-          Проект LEAF CITY не относиться к Mojang Studios.
+          Проект LEAF CITY не относится к Mojang Studios.
         </p>
         <p className="mt-2 text-sm text-white/40">
           Сайт разработан под брендом{' '}
