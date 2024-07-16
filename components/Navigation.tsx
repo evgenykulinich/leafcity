@@ -14,7 +14,7 @@ import { url } from '@/constants/translation'
 
 const routes = [
   {
-    href: url.discord,
+    href: url.rules,
     label: 'Правила',
     description: 'Discord-канал со всеми правилами сервера!',
     icon: '/icon/rules.png'
@@ -109,7 +109,7 @@ export const Navigation = () => {
         {routes.map(route => (
           <li className="cursor-pointer" key={route.label}>
             <Link
-              target={route.label === 'Веб-карта' ? '_self' : '_blank'}
+              target={route.label === 'Веб-карта' || 'Правила' ? '_self' : '_blank'}
               href={route.href}
               className={`link-animation ${pathname === route.href ? 'text-green' : ''}`}
             >

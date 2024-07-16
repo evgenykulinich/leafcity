@@ -101,7 +101,7 @@ export function Questions() {
             </CardHeader>
             <CardContent>
               Заходи на наш Discord сервер и задавай вопросы в канале поддержки. Администратор
-              Dashka17 обязательно тебе поможет!
+              Дашенька обязательно тебе поможет!
             </CardContent>
           </Card>
         </Link>
