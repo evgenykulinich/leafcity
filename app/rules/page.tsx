@@ -355,7 +355,7 @@ export default function Rules() {
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-2">
                 {rule.section !== 'Пользовательское соглашение' && (
-                  <p className="text-md px-2 lg:text-lg">Запрещено:</p>
+                  <p className="text-md px-2 font-bold lg:text-lg">Запрещено:</p>
                 )}
                 {rule.rules?.map(item => (
                   <div
