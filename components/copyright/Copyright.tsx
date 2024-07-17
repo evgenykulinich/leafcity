@@ -32,12 +32,10 @@ export function Copyright() {
                   height={1000}
                   width={1000}
                 />
-                <p className="text-2xl font-bold">LEAF CITY</p>
+                <span className="text-2xl font-bold">LEAF CITY</span>
               </Button>
             </TooltipTrigger>
-            <TooltipContent>
-              <p>Наверх</p>
-            </TooltipContent>
+            <TooltipContent className="p-0">Наверх</TooltipContent>
           </Tooltip>
         </TooltipProvider>
         <p className="text-sm text-white/40">
@@ -67,22 +65,29 @@ export function Copyright() {
                   />
                 </Link>
               </TooltipTrigger>
-              <TooltipContent>
-                <p>Магазин</p>
-              </TooltipContent>
+              <TooltipContent className="p-0">Магазин</TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </div>
 
-        <Link className="flex-grow" href={url.discord} target="_blank">
-          <Image
-            className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110"
-            src="/icon/discord-icon.svg"
-            alt="Discord"
-            height={100}
-            width={100}
-          />
-        </Link>
+        <div className="flex-grow">
+          <TooltipProvider>
+            <Tooltip delayDuration={200}>
+              <TooltipTrigger asChild>
+                <Link href={url.discord} target="_blank">
+                  <Image
+                    className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110"
+                    src="/icon/discord-icon.svg"
+                    alt="Discord"
+                    height={100}
+                    width={100}
+                  />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent className="p-0">Discord</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
       </div>
     </section>
   )
