@@ -21,7 +21,7 @@ export default function MapPage() {
       <div className="flex-1 overflow-hidden">
         <iframe
           src="https://leafcity.ru/backend/survival"
-          className="h-[calc(100dvh-72px)] w-full border-0 sm:h-full"
+          className="h-[calc(100dvh-65px)] w-full border-0 sm:h-full"
           title="Map"
         />
       </div>

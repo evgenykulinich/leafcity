@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className="flex items-center justify-between border-b-2 border-white/10 pb-4">
       <Link
-        className="flex items-center transition duration-300 hover:scale-105 lg:active:scale-100"
+        className="flex items-center transition duration-300 active:scale-95 lg:hover:scale-105 lg:active:scale-100"
         href="/"
       >
         <Image

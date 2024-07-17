@@ -1,31 +1,31 @@
 import { MetadataRoute } from 'next'
 
-import { url } from '@/constants/translation'
+import { routes } from '@/constants/routes'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: url.baseUrl,
+      url: routes.baseUrl,
       lastModified: new Date(),
       changeFrequency: 'yearly'
     },
     {
-      url: url.discord,
+      url: routes.discord,
       lastModified: new Date(),
       changeFrequency: 'yearly'
     },
     {
-      url: url.map,
+      url: routes.map,
       lastModified: new Date(),
       changeFrequency: 'monthly'
     },
     {
-      url: url.shop,
+      url: routes.shop,
       lastModified: new Date(),
       changeFrequency: 'monthly'
     },
     {
-      url: url.wiki,
+      url: routes.wiki,
       lastModified: new Date(),
       changeFrequency: 'monthly'
     }

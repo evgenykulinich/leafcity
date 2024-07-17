@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-import { url } from '@/constants/translation'
+import { routes } from '@/constants/routes'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: ['/', '/map'],
       disallow: []
     },
-    sitemap: `${url.baseUrl}/sitemap.xml`
+    sitemap: `${routes.baseUrl}/sitemap.xml`
   }
 }

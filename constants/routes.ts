@@ -1,6 +1,6 @@
-export const url = {
+export const routes = {
   baseUrl: 'https://leafcity.ru',
-  main: '/',
+  home: '/',
   rules: '/rules',
   map: '/map',
   shop: 'https://shop.leafcity.ru',
