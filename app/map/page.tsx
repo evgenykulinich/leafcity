@@ -18,13 +18,13 @@ export default function MapPage() {
       <div className="mx-auto w-full max-w-screen-2xl px-4 pt-4 lg:px-8">
         <Header />
       </div>
-      <section className="flex-1 overflow-hidden">
+      <div className="flex-1 overflow-hidden">
         <iframe
           src="https://leafcity.ru/backend/survival"
           className="h-[calc(100dvh-72px)] w-full border-0 sm:h-full"
           title="Map"
         />
-      </section>
+      </div>
     </div>
   )
 }

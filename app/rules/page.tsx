@@ -313,15 +313,15 @@ export default function Rules() {
       <div>
         <Header />
       </div>
-      <section className="mt-8 text-center text-xl lg:mt-10 lg:text-2xl">
+      <div className="mt-8 text-center text-xl lg:mt-10 lg:text-2xl">
         <span className="font-bold">LEAF CITY</span> стремится создать{' '}
         <span className="text-green">ламповую</span> и <span className="text-blue">безопасную</span>{' '}
         среду для всех наших игроков ☘️
-      </section>
-      <section className="mt-10">
+      </div>
+      <div className="mt-10">
         <Accordion
           className="w-full"
-          // defaultValue="Пользовательское соглашение"
+          // defaultValue='Пользовательское соглашение'
           collapsible
           type="single"
         >
@@ -341,22 +341,22 @@ export default function Rules() {
               value={rule.value}
               key={rule.value}
             >
-              <AccordionTrigger className="flex flex-col text-justify">
-                <div className="flex items-center justify-center gap-2">
+              <AccordionTrigger className="flex flex-row items-center text-justify">
+                <span className="text-md flex items-center gap-2 lg:text-xl">
                   <Image
-                    className="size-6 lg:size-8"
+                    className="size-6 lg:size-6"
                     src={rule.image}
                     alt="tnt"
                     width={100}
                     height={100}
                   ></Image>
-                  <p className="text-lg lg:text-2xl">{rule.section}</p>
-                </div>
-                <p className="mt-4 hidden">{rule.description}</p>
+                  {rule.section}
+                </span>
+                {/*</div>*/}
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-2">
                 {rule.section !== 'Пользовательское соглашение' && (
-                  <p className="text-md px-2 font-bold lg:text-lg">Запрещено:</p>
+                  <p className="text-md mt-4 px-2 font-bold lg:text-lg">Запрещено:</p>
                 )}
                 {rule.rules?.map(item => (
                   <div
@@ -387,7 +387,7 @@ export default function Rules() {
             </AccordionItem>
           ))}
         </Accordion>
-      </section>
+      </div>
       <Copyright />
     </div>
   )
