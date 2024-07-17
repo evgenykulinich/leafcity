@@ -17,7 +17,7 @@ export function Header() {
           height={1000}
           width={1000}
         />
-        <p className="text-2xl font-bold">LEAF CITY</p>
+        <span className="text-2xl font-bold">LEAF CITY</span>
       </Link>
       <Navigation />
     </header>

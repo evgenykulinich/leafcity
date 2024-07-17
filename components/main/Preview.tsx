@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function Preview() {
   return (
-    <section className="relative">
+    <div className="relative">
       <Image
         className="absolute right-0 top-[-60px] hidden cursor-pointer transition hover:scale-105 active:scale-95 xl:block xl:size-[576px]"
         src="/animal.png"
@@ -24,6 +24,6 @@ export function Preview() {
         <br />
         Без привилегий, привата и лишних плагинов.
       </p>
-    </section>
+    </div>
   )
 }

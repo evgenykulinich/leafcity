@@ -9,7 +9,6 @@ import { usePathname } from 'next/navigation'
 
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Card } from '@/components/ui/card'
 import { url } from '@/constants/translation'
 
 const routes = [
@@ -65,20 +64,22 @@ export const Navigation = () => {
             <ul>
               {routes.map(route => (
                 <li className="mb-5 cursor-pointer text-center text-2xl" key={route.label}>
-                  <Link href={route.href} className="hover:text-green">
-                    <Card onClick={handleClose} className="border-none">
-                      <Button className="text-md">
-                        <Image
-                          className="mr-4"
-                          src={route.icon}
-                          alt={route.label}
-                          width={30}
-                          height={30}
-                        />
-                        {route.label}
-                      </Button>
-                    </Card>
-                  </Link>
+                  <Button className="text-md">
+                    <Link
+                      className="flex items-center justify-center hover:text-green"
+                      href={route.href}
+                      onClick={handleClose}
+                    >
+                      <Image
+                        className="mr-4"
+                        src={route.icon}
+                        alt={route.label}
+                        width={30}
+                        height={30}
+                      />
+                      {route.label}
+                    </Link>
+                  </Button>
                 </li>
               ))}
             </ul>
@@ -108,13 +109,15 @@ export const Navigation = () => {
       <ul className="hidden gap-12 text-lg lg:flex">
         {routes.map(route => (
           <li className="cursor-pointer" key={route.label}>
-            <Link
-              target={route.label === 'Веб-карта' || 'Правила' ? '_self' : '_blank'}
-              href={route.href}
-              className={`link-animation ${pathname === route.href ? 'text-green' : ''}`}
-            >
-              <Button className="text-md">{route.label}</Button>
-            </Link>
+            <Button className="text-md">
+              <Link
+                target={route.label === 'Веб-карта' || 'Правила' ? '_self' : '_blank'}
+                href={route.href}
+                className={`link-animation ${pathname === route.href ? 'text-green' : ''}`}
+              >
+                {route.label}
+              </Link>
+            </Button>
           </li>
         ))}
       </ul>
