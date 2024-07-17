@@ -41,13 +41,12 @@ export function Controls() {
 
   return (
     <div className="mt-8 flex flex-col lg:mt-12 lg:flex-row">
-      <Link target="_blank" href={url.discord}>
-        <Button
-          variant="default"
-          className="mb-4 w-full rounded-xl bg-green px-16 py-10 text-[20px] font-bold hover:bg-green/70 lg:mr-10 lg:w-[300px] lg:active:bg-green/50"
-        >
-          Начать играть
-        </Button>
+      <Link
+        className="mb-4 w-full rounded-xl bg-green py-6 text-center text-[20px] font-bold transition hover:bg-green/70 lg:mb-0 lg:mr-10 lg:w-[300px] lg:active:bg-green/50"
+        target="_blank"
+        href={url.discord}
+      >
+        <span>Начать играть</span>
       </Link>
 
       <div className="version lg:block">
