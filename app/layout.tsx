@@ -1,9 +1,10 @@
 import { Montserrat } from 'next/font/google'
 
 import { Toaster } from '@/components/ui/sonner'
-import { url } from '@/constants/translation'
+import { routes } from '@/constants/routes'
 
 import type { Metadata } from 'next'
+
 import './globals.css'
 
 const font = Montserrat({ subsets: ['cyrillic', 'latin'] })
@@ -15,15 +16,24 @@ export const metadata: Metadata = {
   },
   description:
     'LEAF CITY - ванильный сервер, нацеленный на выживание и ламповое общение. Игровой процесс на проекте очень многогранный, ты можешь создать свое локальное сообщество, организовать поселение, продавать свой товар, строить огромные проекты, так и просто приятно общаться и проводить время.',
-  metadataBase: new URL(url.baseUrl),
+  metadataBase: new URL(routes.baseUrl),
   keywords: [
     'minecraft',
     'vanilla',
     'leafcity',
     'leafcity minecraft',
+    'leaf city minecraft',
+    'leafcity minecraft server',
     'leaf city',
     'leaf city minecraft',
     'лиф сити',
+    'лиф сити маин',
+    'лиф сити майн',
+    'лиф сити маинкрафт',
+    'лиф сити майнкрафт',
+    'лиф сити сервер',
+    'лиф сити карта',
+    'лиф сити правила',
     'сервер',
     'ванильное',
     'приватное',
@@ -31,6 +41,11 @@ export const metadata: Metadata = {
     'карта',
     'приватный',
     'майнкрафт',
+    'карта',
+    'веб-карта',
+    'онлайн-карта',
+    'онлайн карта',
+    'миникарта',
     'RP',
     'РП',
     'без доната',
@@ -62,7 +77,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: `${url.baseUrl}/opengraph-image.png`
+        url: `${routes.baseUrl}/opengraph-image.png`
       }
     ],
     description:
@@ -81,8 +96,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={font.className}>{children}</body>
-      <Toaster />
+      <body className={font.className}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   )
 }

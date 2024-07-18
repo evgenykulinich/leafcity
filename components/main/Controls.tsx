@@ -4,14 +4,8 @@ import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 import { Button } from '@/components/ui/button'
-import { url } from '@/constants/translation'
-
-const copyIpMessage = {
-  textToCopy: 'play.leafcity.ru',
-  default: 'Скопировать IP',
-  success: 'Скопировано!',
-  error: 'Ошибка :('
-}
+import { routes } from '@/constants/routes'
+import { copyIpMessage } from '@/constants/copyIpMessage'
 
 export function Controls() {
   const [copyMessage, setCopyMessage] = useState(copyIpMessage.default)
@@ -44,7 +38,7 @@ export function Controls() {
       <Link
         className="mb-4 w-full rounded-xl bg-green py-6 text-center text-[20px] font-bold transition hover:bg-green/70 lg:mb-0 lg:mr-10 lg:w-[300px] lg:active:bg-green/50"
         target="_blank"
-        href={url.discord}
+        href={routes.discord}
       >
         <span>Начать играть</span>
       </Link>

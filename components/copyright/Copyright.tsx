@@ -5,16 +5,10 @@ import Link from 'next/link'
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { Button } from '@/components/ui/button'
-import { url } from '@/constants/translation'
+import { routes } from '@/constants/routes'
+import { useScrollToTop } from '@/helpers/scroll'
 
 export function Copyright() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
-
   return (
     <div className="mt-12 flex flex-col border-t-2 border-white/10 pt-4 lg:mt-20 lg:flex-row lg:justify-between lg:pt-8">
       <div className="lg:flex lg:flex-col lg:items-start lg:justify-between">
@@ -22,8 +16,8 @@ export function Copyright() {
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <Button
-                className="mb-4 w-full text-center transition-all duration-300 hover:scale-90 lg:mb-8 lg:w-auto lg:px-0 lg:hover:scale-110"
-                onClick={scrollToTop}
+                className="mb-4 w-full text-center transition-all duration-300 active:scale-95 lg:mb-8 lg:w-auto lg:px-0 lg:hover:scale-105 lg:active:scale-100"
+                onClick={useScrollToTop}
               >
                 <Image
                   className="mr-4 w-[40px] cursor-pointer"
@@ -55,7 +49,7 @@ export function Copyright() {
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
-                <Link href={url.shop} target="_blank">
+                <Link href={routes.shop} target="_blank">
                   <Image
                     src="/icon/cart.svg"
                     alt="Cart"
@@ -74,7 +68,7 @@ export function Copyright() {
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
-                <Link href={url.discord} target="_blank">
+                <Link href={routes.discord} target="_blank">
                   <Image
                     className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110"
                     src="/icon/discord-icon.svg"

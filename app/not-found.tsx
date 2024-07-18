@@ -5,7 +5,7 @@ import { Header } from '@/components/Header'
 
 export default function Custom404() {
   return (
-    <section className="flex h-dvh flex-col items-center justify-center py-2">
+    <div className="flex h-dvh flex-col items-center justify-center py-2">
       <div className="flex items-center gap-4 text-3xl font-bold md:text-5xl lg:text-6xl">
         <Link
           className="flex items-center justify-center transition duration-300 lg:active:scale-95"
@@ -24,6 +24,6 @@ export default function Custom404() {
         <p>404</p>
       </div>
       <p className="text-md mt-3 text-white/50 lg:mt-4 lg:text-lg">Тест на IQ не пройден</p>
-    </section>
+    </div>
   )
 }

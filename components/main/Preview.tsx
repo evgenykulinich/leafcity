@@ -9,6 +9,7 @@ export function Preview() {
         alt="animal"
         height={1024}
         width={1024}
+        priority={true}
       />
       <h1 className="mt-4 text-[2.75rem] font-bold leading-tight sm:text-5xl lg:mt-24 lg:text-6xl">
         Уникальный{' '}

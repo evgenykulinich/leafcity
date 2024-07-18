@@ -59,11 +59,11 @@
       }
 
       &:hover::before {
-        top: -45px;
+        top: -40px;
       }
 
       &:hover::after {
-        bottom: -30px;
+        bottom: -40px;
       }
     }
   }
@@ -84,7 +84,7 @@ html {
 
 body {
   background-color: #131313;
-  color: aliceblue;
+  color: #ffffff;
 }
 
 @keyframes fadeIn {
