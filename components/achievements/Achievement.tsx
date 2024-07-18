@@ -16,10 +16,24 @@ export function Achievement({ title, content, color, icon }: Props) {
       className={clsx(
         'w-full flex-1 cursor-default rounded-2xl border-2 transition-all lg:hover:scale-[1.025]',
         {
-          [`border-${color}`]: color,
-          [`bg-${color}/10`]: color,
-          [`text-${color}`]: color,
-          [`hover:bg-${color}/20`]: color
+          'bg-purple/10': color === 'purple',
+          'bg-green/10': color === 'green',
+          'bg-blue/10': color === 'blue'
+        },
+        {
+          'hover:bg-purple/20': color === 'purple',
+          'hover:bg-green/20': color === 'green',
+          'hover:bg-blue/20': color === 'blue'
+        },
+        {
+          'border-purple': color === 'purple',
+          'border-green': color === 'green',
+          'border-blue': color === 'blue'
+        },
+        {
+          'text-purple': color === 'purple',
+          'text-green': color === 'green',
+          'text-blue': color === 'blue'
         }
       )}
     >
