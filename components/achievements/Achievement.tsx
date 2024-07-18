@@ -19,8 +19,7 @@ export function Achievement({ title, content, color, icon }: Props) {
           [`border-${color}`]: color,
           [`bg-${color}/10`]: color,
           [`text-${color}`]: color,
-          [`hover:bg-${color}/20`]: color,
-          [`bg-${color}/10`]: color
+          [`hover:bg-${color}/20`]: color
         }
       )}
     >
