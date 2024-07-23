@@ -386,48 +386,6 @@ body {
   }
 }
 
-.member-crucesaureae {
-  @media (width > 1024px) {
-    position: relative;
-
-    &::before,
-    &::after {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      transition: all 0.3s ease;
-      font-size: 20px;
-      opacity: 0;
-    }
-
-    &::before {
-      content: 'crucesaureae';
-      top: 0;
-      color: #fdb3fc;
-    }
-
-    &::after {
-      content: 'Хелпер';
-      font-size: 1.1rem;
-      bottom: 0;
-      color: #fdb3fc;
-    }
-
-    &:hover::before,
-    &:hover::after {
-      opacity: 0.8;
-    }
-
-    &:hover::before {
-      top: -30px;
-    }
-
-    &:hover::after {
-      bottom: -42px;
-    }
-  }
-}
-
 .member-istork {
   @media (width > 1024px) {
     position: relative;
@@ -453,6 +411,48 @@ body {
       font-size: 1.1rem;
       bottom: 0;
       color: #ff4c3b
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.8;
+    }
+
+    &:hover::before {
+      top: -30px;
+    }
+
+    &:hover::after {
+      bottom: -42px;
+    }
+  }
+}
+
+.member-crucesaureae {
+  @media (width > 1024px) {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      opacity: 0;
+    }
+
+    &::before {
+      content: 'crucesaureae';
+      top: 0;
+      color: #fdb3fc;
+    }
+
+    &::after {
+      content: 'Хелпер';
+      font-size: 1.1rem;
+      bottom: 0;
+      color: #fdb3fc;
     }
 
     &:hover::before,
@@ -701,7 +701,7 @@ body {
     }
 
     &::after {
-      content: 'Символ проекта';
+      content: 'Лучший игрок';
       font-size: 1.1rem;
       bottom: 0;
       color: #0cb4c4;
