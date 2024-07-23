@@ -19,7 +19,7 @@ export const RulesList = () => {
   const copyToClipboard = useCopyToClipboard()
 
   return (
-    <Accordion className="mt-10 w-full" collapsible type="single">
+    <Accordion className="mt-10 w-full" defaultValue={rulesList[0].value} collapsible type="single">
       {rulesList.map(rule => (
         <AccordionItem
           className={clsx(

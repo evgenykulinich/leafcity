@@ -25,23 +25,25 @@ export const Server = () => {
   }, [])
 
   return (
-    <Card className="w-full rounded-2xl border-2 transition-all">
+    <Card className="w-full rounded-2xl border-2 border-green bg-green/10 transition hover:bg-green/20">
       <CardHeader className="pb-0">
         <CardTitle className="flex items-center justify-between">
-          <div className="flex">
+          <div className="flex items-center">
             <Image
-              className="mr-4 w-[40px] cursor-pointer"
+              className="mr-4 size-[40px] cursor-pointer"
               src="/logo/lc.png"
               alt="LC"
               height={1000}
               width={1000}
             />
-            <span className="cursor-default text-2xl font-bold">LEAF CITY</span>
+            <span className="mr-2 cursor-default text-2xl font-bold">LEAF CITY</span>
           </div>
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
-                <p className="cursor-default rounded-2xl text-lg font-normal">1.13 − 1.21</p>
+                <p className="visible cursor-default text-nowrap rounded-2xl bg-green/10 px-3 text-center text-lg font-normal lg:hidden xl:block">
+                  1.13 − 1.21
+                </p>
               </TooltipTrigger>
               <TooltipContent className="bg-black/80 text-white">
                 <p>Допустимые версии</p>
@@ -50,15 +52,15 @@ export const Server = () => {
           </TooltipProvider>
         </CardTitle>
       </CardHeader>
-      <CardContent className="mt-6 flex flex-col items-start justify-center">
+      <CardContent className="mt-5 flex flex-col items-start justify-center">
         <p>Сейчас играют:</p>
         <p className="mt-2 flex items-center text-lg font-bold text-green">
           <Image
-            className="mr-2 h-8 w-8"
+            className="mr-2 size-8"
             src="/icon/users.svg"
             alt="Игроки"
-            width={50}
-            height={50}
+            width={100}
+            height={100}
           />
           {users ? `${users} из 200` : 'Сервер оффлайн'}
         </p>
