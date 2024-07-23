@@ -10,7 +10,7 @@ import { useScrollToTop } from '@/helpers/scroll'
 
 export function Copyright() {
   return (
-    <div className="mt-12 flex flex-col border-t-2 border-white/10 pt-4 lg:mt-20 lg:flex-row lg:justify-between lg:pt-8">
+    <div className="mt-8 flex flex-col border-t-2 border-white/10 pt-4 lg:mt-14 lg:flex-row lg:justify-between lg:pt-8">
       <div className="lg:flex lg:flex-col lg:items-start lg:justify-between">
         <TooltipProvider>
           <Tooltip delayDuration={200}>

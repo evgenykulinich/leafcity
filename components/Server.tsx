@@ -30,7 +30,7 @@ export const Server = () => {
         <CardTitle className="flex items-center justify-between">
           <div className="flex items-center">
             <Image
-              className="mr-4 size-[40px] cursor-pointer"
+              className="mr-4 w-[40px] cursor-pointer"
               src="/logo/lc.png"
               alt="LC"
               height={1000}
