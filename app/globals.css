@@ -191,7 +191,7 @@ body {
 
   @media (width > 1024px) {
     &::before {
-      content: 'ratkea';
+      content: 'женечка';
     }
 
     &::after {
