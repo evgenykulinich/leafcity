@@ -80,7 +80,7 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'loop-scroll': 'loop-scroll 60s linear infinite'
+        'loop-scroll': 'loop-scroll 120s linear infinite'
       }
     }
   },
