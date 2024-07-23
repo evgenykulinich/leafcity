@@ -54,8 +54,8 @@ const config = {
         },
         green: '#67c960',
         mango: '#fedf00',
-        purple: '#7289DA',
         blue: '#2e9fd2',
+        purple: '#7289DA',
         clear: '#ffffff'
       },
       borderRadius: {
@@ -71,11 +71,16 @@ const config = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' }
+        },
+        'loop-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'loop-scroll': 'loop-scroll 60s linear infinite'
       }
     }
   },

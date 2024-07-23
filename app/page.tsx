@@ -3,6 +3,7 @@ import { Preview } from '@/components/main/Preview'
 import { Controls } from '@/components/main/Controls'
 import { Achievements } from '@/components/achievements/Achievements'
 import { Questions } from '@/components/question/Questions'
+import { Members } from '@/components/members/Members'
 import { Copyright } from '@/components/copyright/Copyright'
 
 export default function Main() {
@@ -13,6 +14,7 @@ export default function Main() {
       <Controls />
       <Achievements />
       <Questions />
+      <Members />
       <Copyright />
     </main>
   )

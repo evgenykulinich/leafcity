@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Header } from '@/components/Header'
-
 export default function Custom404() {
   return (
     <div className="flex h-dvh flex-col items-center justify-center py-2">
