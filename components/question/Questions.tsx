@@ -55,7 +55,7 @@ export function Questions() {
                           </p>
                         </TooltipTrigger>
                         <TooltipContent className="bg-black/50 text-white">
-                          <p>Игроков онлайн</p>
+                          <p>Участников онлайн</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
