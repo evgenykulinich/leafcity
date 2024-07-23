@@ -193,14 +193,14 @@ body {
     &::before {
       content: 'Dashka17';
       top: 0;
-      color: #fedf00;
+      color: #ffcf2e;
     }
 
     &::after {
-      content: 'Администратор';
+      content: 'Ненормальная';
       font-size: 1.1rem;
       bottom: 0;
-      color: #fedf00;
+      color: #ffcf2e;
     }
 
     &:hover::before,
@@ -235,14 +235,14 @@ body {
     &::before {
       content: 'OuiKing';
       top: 0;
-      color: #26bdff
+      color: #9932CC
     }
 
     &::after {
       content: 'Администратор';
       font-size: 1.1rem;
       bottom: 0;
-      color: #26bdff
+      color: #9932CC
     }
 
     &:hover::before,
@@ -277,14 +277,14 @@ body {
     &::before {
       content: 'ratkea';
       top: 0;
-      color: #b7a6ff;
+      color: #bb91fd;
     }
 
     &::after {
       content: 'Разработчик сайта';
       font-size: 1.1rem;
       bottom: 0;
-      color: #b7a6ff
+      color: #bb91fd
     }
 
     &:hover::before,
@@ -317,16 +317,58 @@ body {
     }
 
     &::before {
-      content: 'Nokarena';
+      content: 'лол12';
       top: 0;
-      color: #67c960;
+      color: #54d071;
     }
 
     &::after {
       content: 'Модератор';
       font-size: 1.1rem;
       bottom: 0;
-      color: #67c960;
+      color: #54d071;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.8;
+    }
+
+    &:hover::before {
+      top: -30px;
+    }
+
+    &:hover::after {
+      bottom: -42px;
+    }
+  }
+}
+
+.member-sora {
+  @media (width > 1024px) {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      opacity: 0;
+    }
+
+    &::before {
+      content: 'SoraIspania';
+      top: 0;
+      color: #f8a382;
+    }
+
+    &::after {
+      content: 'Модератор';
+      font-size: 1.1rem;
+      bottom: 0;
+      color: #f8a382;
     }
 
     &:hover::before,
@@ -361,14 +403,56 @@ body {
     &::before {
       content: 'crucesaureae';
       top: 0;
-      color: #fedf00
+      color: #fdb3fc;
     }
 
     &::after {
       content: 'Хелпер';
       font-size: 1.1rem;
       bottom: 0;
-      color: #fedf00
+      color: #fdb3fc;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.8;
+    }
+
+    &:hover::before {
+      top: -30px;
+    }
+
+    &:hover::after {
+      bottom: -42px;
+    }
+  }
+}
+
+.member-istork {
+  @media (width > 1024px) {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      opacity: 0;
+    }
+
+    &::before {
+      content: 'iStork';
+      top: 0;
+      color: #ff4c3b
+    }
+
+    &::after {
+      content: 'Модератор';
+      font-size: 1.1rem;
+      bottom: 0;
+      color: #ff4c3b
     }
 
     &:hover::before,
@@ -403,14 +487,14 @@ body {
     &::before {
       content: 'demi_0';
       top: 0;
-      color: #26bdff;
+      color: #ffdbca;
     }
 
     &::after {
       content: 'Хелпер';
       font-size: 1.1rem;
       bottom: 0;
-      color: #26bdff;
+      color: #ffdbca;
     }
 
     &:hover::before,
@@ -445,14 +529,14 @@ body {
     &::before {
       content: 'Mireraqq';
       top: 0;
-      color: #b7a6ff;
+      color: #779e23;
     }
 
     &::after {
       content: 'Менеджер ивентов';
       font-size: 1.1rem;
       bottom: 0;
-      color: #b7a6ff;
+      color: #779e23;
     }
 
     &:hover::before,
@@ -487,14 +571,14 @@ body {
     &::before {
       content: '_Kristopher_';
       top: 0;
-      color: #67c960;
+      color: #c42389;
     }
 
     &::after {
       content: 'Креативный менеджер';
       font-size: 1.1rem;
       bottom: 0;
-      color: #67c960;
+      color: #c42389;
     }
 
     &:hover::before,
@@ -529,14 +613,14 @@ body {
     &::before {
       content: 'muz0ku';
       top: 0;
-      color: #fedf00;
+      color: #00fec3;
     }
 
     &::after {
       content: 'Менеджер Ада';
       font-size: 1.1rem;
       bottom: 0;
-      color: #fedf00;
+      color: #00fec3;
     }
 
     &:hover::before,
@@ -571,14 +655,56 @@ body {
     &::before {
       content: 'drainedgod';
       top: 0;
-      color: #26bdff;
+      color: #9459ff;
     }
 
     &::after {
       content: 'Менеджер Энда';
       font-size: 1.1rem;
       bottom: 0;
-      color: #26bdff;
+      color: #9459ff;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 0.8;
+    }
+
+    &:hover::before {
+      top: -30px;
+    }
+
+    &:hover::after {
+      bottom: -42px;
+    }
+  }
+}
+
+.member-masha {
+  @media (width > 1024px) {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      opacity: 0;
+    }
+
+    &::before {
+      content: 'Masha';
+      top: 0;
+      color: #0cb4c4;
+    }
+
+    &::after {
+      content: 'Символ проекта';
+      font-size: 1.1rem;
+      bottom: 0;
+      color: #0cb4c4;
     }
 
     &:hover::before,

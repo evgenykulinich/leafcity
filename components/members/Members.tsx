@@ -17,6 +17,17 @@ export const Members = () => {
               loading="eager"
             />
           </div>
+          <div className="member-ratkea mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
+            <p className="text-purple lg:hidden">ratkea</p>
+            <Image
+              className="mt-2 w-full rounded-[8px]"
+              src="/members/ratkea.png"
+              alt="ratkea"
+              height={1000}
+              width={1000}
+              loading="eager"
+            />
+          </div>
           <div className="member-dashka17 mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
             <p className="text-mango lg:hidden">Dashka17</p>
             <Image
@@ -39,23 +50,34 @@ export const Members = () => {
               loading="eager"
             />
           </div>
-          <div className="member-ratkea mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
-            <p className="text-purple lg:hidden">ratkea</p>
-            <Image
-              className="mt-2 w-full rounded-[8px]"
-              src="/members/ratkea.png"
-              alt="ratkea"
-              height={1000}
-              width={1000}
-              loading="eager"
-            />
-          </div>
           <div className="member-nokarena mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
             <p className="text-green lg:hidden">Nokarena</p>
             <Image
               className="mt-2 w-full rounded-[8px]"
               src="/members/nokarena.png"
               alt="nokarena"
+              height={1000}
+              width={1000}
+              loading="eager"
+            />
+          </div>
+          <div className="member-sora mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
+            <p className="text-green lg:hidden">SoraIspania</p>
+            <Image
+              className="mt-2 w-full rounded-[8px]"
+              src="/members/sora.png"
+              alt="SoraIspania"
+              height={1000}
+              width={1000}
+              loading="eager"
+            />
+          </div>
+          <div className="member-istork mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
+            <p className="text-green lg:hidden">iStork</p>
+            <Image
+              className="mt-2 w-full rounded-[8px]"
+              src="/members/istork.png"
+              alt="iStork"
               height={1000}
               width={1000}
               loading="eager"
@@ -122,6 +144,17 @@ export const Members = () => {
               className="mt-2 w-full rounded-[8px]"
               src="/members/drained.png"
               alt="drainedgod"
+              height={1000}
+              width={1000}
+              loading="eager"
+            />
+          </div>
+          <div className="member-masha mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
+            <p className="text-blue lg:hidden">Masha</p>
+            <Image
+              className="mt-2 w-full rounded-[8px]"
+              src="/members/masha.png"
+              alt="masha"
               height={1000}
               width={1000}
               loading="eager"
@@ -141,6 +174,17 @@ export const Members = () => {
               loading="eager"
             />
           </div>
+          <div className="member-ratkea mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
+            <p className="text-purple lg:hidden">ratkea</p>
+            <Image
+              className="mt-2 w-full rounded-[8px]"
+              src="/members/ratkea.png"
+              alt="ratkea"
+              height={1000}
+              width={1000}
+              loading="eager"
+            />
+          </div>
           <div className="member-dashka17 mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
             <p className="text-mango lg:hidden">Dashka17</p>
             <Image
@@ -163,23 +207,34 @@ export const Members = () => {
               loading="eager"
             />
           </div>
-          <div className="member-ratkea mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
-            <p className="text-purple lg:hidden">ratkea</p>
-            <Image
-              className="mt-2 w-full rounded-[8px]"
-              src="/members/ratkea.png"
-              alt="ratkea"
-              height={1000}
-              width={1000}
-              loading="eager"
-            />
-          </div>
           <div className="member-nokarena mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
             <p className="text-green lg:hidden">Nokarena</p>
             <Image
               className="mt-2 w-full rounded-[8px]"
               src="/members/nokarena.png"
               alt="nokarena"
+              height={1000}
+              width={1000}
+              loading="eager"
+            />
+          </div>
+          <div className="member-sora mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
+            <p className="text-green lg:hidden">SoraIspania</p>
+            <Image
+              className="mt-2 w-full rounded-[8px]"
+              src="/members/sora.png"
+              alt="SoraIspania"
+              height={1000}
+              width={1000}
+              loading="eager"
+            />
+          </div>
+          <div className="member-istork mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
+            <p className="text-green lg:hidden">iStork</p>
+            <Image
+              className="mt-2 w-full rounded-[8px]"
+              src="/members/istork.png"
+              alt="iStork"
               height={1000}
               width={1000}
               loading="eager"
@@ -246,6 +301,17 @@ export const Members = () => {
               className="mt-2 w-full rounded-[8px]"
               src="/members/drained.png"
               alt="drainedgod"
+              height={1000}
+              width={1000}
+              loading="eager"
+            />
+          </div>
+          <div className="member-masha mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px]">
+            <p className="text-blue lg:hidden">Masha</p>
+            <Image
+              className="mt-2 w-full rounded-[8px]"
+              src="/members/masha.png"
+              alt="masha"
               height={1000}
               width={1000}
               loading="eager"
