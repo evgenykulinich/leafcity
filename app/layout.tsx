@@ -3,8 +3,10 @@ import { Montserrat } from 'next/font/google'
 import { Toaster } from '@/components/ui/sonner'
 import { routes } from '@/constants/routes'
 import YandexMetrika from '@/app/YandexMetrika'
+import Providers from '@/components/ProgressBarProvider'
 
 import type { Metadata } from 'next'
+
 import './globals.css'
 
 const font = Montserrat({ subsets: ['cyrillic', 'latin'] })
@@ -108,7 +110,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={font.className}>
-        {children}
+        <Providers>{children}</Providers>
         <Toaster />
         <YandexMetrika />
       </body>

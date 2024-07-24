@@ -9,15 +9,12 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { getOnlineDiscordUsers } from '@/helpers/users'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
 import { questionList } from '@/data/questionList'
 import { Server } from '@/components/Server'
 
 export function Questions() {
-  const onlineDiscordUsers = getOnlineDiscordUsers()
-
   return (
     <section className="mt-16 lg:mt-24">
       <h2 className="mt-10 text-[26px] lg:mt-24">Ответы на вопросы</h2>
@@ -47,18 +44,6 @@ export function Questions() {
                       width={100}
                       className="size-10"
                     />
-                    <TooltipProvider>
-                      <Tooltip delayDuration={200}>
-                        <TooltipTrigger asChild>
-                          <p className="ml-2 rounded-2xl border-purple bg-purple/10 px-3">
-                            {onlineDiscordUsers}
-                          </p>
-                        </TooltipTrigger>
-                        <TooltipContent className="bg-black/[0.69] text-white">
-                          <p>Участников онлайн</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
                   </div>
                   <ExternalLink />
                 </div>

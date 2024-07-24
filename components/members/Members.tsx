@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { clsx } from 'clsx'
 
+import MembersList from '@/components/members/MembersList'
 import { members } from '@/data/members'
 
 export const Members = () => {
@@ -8,45 +9,31 @@ export const Members = () => {
     <section className="mt-16 overflow-hidden lg:mt-24">
       <h2 className="text-[26px]">Команда проекта</h2>
       <div className="members-borders flex">
-        <div className="hover:pause mt-4 flex animate-loop-scroll whitespace-nowrap pb-10 lg:mt-10">
-          {members.map(member => (
-            <div
-              className={clsx(
-                `member mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px] ${member.styles}`
-              )}
-              key={member.nickname}
-            >
-              <p className="lg:hidden">{member.nickname}</p>
-              <Image
-                className="mt-2 w-full rounded-[8px]"
-                src={member.image}
-                alt={member.nickname}
-                height={500}
-                width={500}
-                loading="eager"
-              />
-            </div>
-          ))}
-
-          {members.map(member => (
-            <div
-              className={clsx(
-                `member mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px] ${member.styles}`
-              )}
-              key={`%${member.nickname}`}
-            >
-              <p className="lg:hidden">{member.nickname}</p>
-              <Image
-                className="mt-2 w-full rounded-[8px]"
-                src={member.image}
-                alt={member.nickname}
-                height={500}
-                width={500}
-                loading="eager"
-              />
-            </div>
-          ))}
-        </div>
+        <MembersList>
+          <div
+            className="hover:pause mt-4 flex animate-loop-scroll whitespace-nowrap pb-10 lg:mt-10"
+            id="members"
+          >
+            {members.map(member => (
+              <div
+                className={clsx(
+                  `member mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px] ${member.styles}`
+                )}
+                key={member.nickname}
+              >
+                <p className="lg:hidden">{member.nickname}</p>
+                <Image
+                  className="mt-2 w-full rounded-[8px]"
+                  src={member.image}
+                  alt={member.nickname}
+                  height={500}
+                  width={500}
+                  loading="eager"
+                />
+              </div>
+            ))}
+          </div>
+        </MembersList>
       </div>
     </section>
   )

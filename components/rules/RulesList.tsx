@@ -12,11 +12,11 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion'
 import { RulesItem } from '@/components/rules/RulesItem'
-import { useCopyToClipboard } from '@/helpers/copy'
+import { useCopyRule } from '@/hooks/useCopy'
 
 export const RulesList = () => {
   const isDesktop = useMedia('(min-width: 1024px)', false)
-  const copyToClipboard = useCopyToClipboard()
+  const copyRule = useCopyRule()
 
   return (
     <Accordion className="mt-10 w-full" defaultValue={rulesList[0].value} collapsible type="single">
@@ -54,9 +54,7 @@ export const RulesList = () => {
             )}
             {rule.points?.map(point => (
               <div
-                onClick={
-                  isDesktop ? () => copyToClipboard(`${point.point}. ${point.text}`) : undefined
-                }
+                onClick={isDesktop ? () => copyRule(`${point.point}. ${point.text}`) : undefined}
                 title="Нажми чтобы скопировать"
                 key={point.text}
               >
