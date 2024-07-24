@@ -54,7 +54,7 @@ export function Questions() {
                             {onlineDiscordUsers}
                           </p>
                         </TooltipTrigger>
-                        <TooltipContent className="bg-black/50 text-white">
+                        <TooltipContent className="bg-black/[0.69] text-white">
                           <p>Участников онлайн</p>
                         </TooltipContent>
                       </Tooltip>

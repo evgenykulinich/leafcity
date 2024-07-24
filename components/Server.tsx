@@ -72,7 +72,7 @@ export const Server = () => {
                   1.13 − 1.21
                 </p>
               </TooltipTrigger>
-              <TooltipContent className="bg-black/80 text-white">
+              <TooltipContent className="bg-black/[0.69] text-white">
                 <p>Допустимые версии</p>
               </TooltipContent>
             </Tooltip>
@@ -98,7 +98,7 @@ export const Server = () => {
                 />
               </div>
             </TooltipTrigger>
-            <TooltipContent className="bg-black/10 px-2 py-1">Скопировать IP</TooltipContent>
+            <TooltipContent className="bg-black/[0.69] px-2 py-1">Скопировать IP</TooltipContent>
           </Tooltip>
         </TooltipProvider>
         <p>Сейчас играют:</p>
