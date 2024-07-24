@@ -80,27 +80,19 @@ export const Server = () => {
         </CardTitle>
       </CardHeader>
       <CardContent className="mt-5 flex flex-col items-start justify-center">
-        <TooltipProvider>
-          <Tooltip delayDuration={200}>
-            <TooltipTrigger
-              asChild
-              className="mb-3 flex w-full cursor-pointer justify-between self-stretch rounded-xl border-none bg-green/10 hover:bg-green/10"
-              onClick={toggleCopyIp}
-            >
-              <div className="p-2">
-                <span className={animate ? 'copy-fade-in' : ''}>{copyMessage}</span>
-                <Image
-                  className="mr-2 size-6"
-                  src="/icon/copy.svg"
-                  alt="Игроки"
-                  width={100}
-                  height={100}
-                />
-              </div>
-            </TooltipTrigger>
-            <TooltipContent className="bg-black/[0.69] px-2 py-1">Скопировать IP</TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+        <div
+          className="mb-3 flex w-full cursor-pointer justify-between self-stretch rounded-xl border-none bg-green/10 p-2 pr-1 hover:bg-green/10"
+          onClick={toggleCopyIp}
+        >
+          <span className={animate ? 'copy-fade-in' : ''}>{copyMessage}</span>
+          <Image
+            className="mr-2 size-6"
+            src="/icon/copy.svg"
+            alt="Игроки"
+            width={100}
+            height={100}
+          />
+        </div>
         <p>Сейчас играют:</p>
         <p className="mt-2 flex items-center text-lg font-bold text-green">
           <Image
