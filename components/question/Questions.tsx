@@ -34,7 +34,7 @@ export function Questions() {
             </AccordionItem>
           ))}
         </Accordion>
-        <div className="mx-auto flex max-w-[450px] flex-col justify-between lg:w-[35%]">
+        <div className="mx-auto flex max-w-[450px] flex-col justify-between lg:w-[50%]">
           <Link className="mb-8" href={routes.discord} target="_blank">
             <Card className="w-full rounded-2xl border-2 border-purple bg-purple/10 text-purple transition-all hover:bg-purple/20">
               <CardHeader className="pb-0">
