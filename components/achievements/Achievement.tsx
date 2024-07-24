@@ -14,7 +14,7 @@ export function Achievement({ title, content, color, icon }: Props) {
   return (
     <Card
       className={clsx(
-        'w-full flex-1 cursor-default rounded-2xl border-2 transition-all lg:hover:scale-[1.025]',
+        'w-full flex-1 cursor-default rounded-2xl border-2 transition-all',
         {
           'bg-purple/10': color === 'purple',
           'bg-green/10': color === 'green',
