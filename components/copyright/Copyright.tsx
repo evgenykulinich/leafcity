@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { Button } from '@/components/ui/button'
 import { routes } from '@/constants/routes'
-import { useScrollToTop } from '@/helpers/scroll'
+import { useScrollToTop } from '@/hooks/useScroll'
 
 export function Copyright() {
   return (

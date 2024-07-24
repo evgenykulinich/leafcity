@@ -1,55 +1,17 @@
 'use client'
 
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 
 import { ProgressRoot, ProgressIndicator } from '@/components/ui/progress'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { getOnlineMinecraftUsers } from '@/helpers/users'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { copyIpMessage } from '@/constants/copyIpMessage'
-import { Button } from '@/components/ui/button'
-import { useScrollToTop } from '@/helpers/scroll'
+import { useCopyIp } from '@/hooks/useCopy'
+import useMinecraftUsers from '@/hooks/useMinecraftUsers'
 
 export const Server = () => {
-  const [users, setUsers] = useState<number | undefined>(undefined)
-  const [copyMessage, setCopyMessage] = useState<string>(copyIpMessage.ip)
-  const [animate, setAnimate] = useState<boolean>(false)
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const users = await getOnlineMinecraftUsers()
-        setUsers(users)
-      } catch (e) {
-        return null
-      }
-    }
-
-    fetchUsers()
-  }, [])
-
-  const toggleCopyIp = async () => {
-    try {
-      if (copyMessage === copyIpMessage.ip) {
-        await navigator.clipboard.writeText(copyIpMessage.textToCopy)
-        setCopyMessage(copyIpMessage.success)
-      } else if (copyMessage === copyIpMessage.success || copyMessage === copyIpMessage.error) {
-        setCopyMessage(copyIpMessage.ip)
-      }
-      setAnimate(true)
-    } catch {
-      setCopyMessage(copyIpMessage.error)
-      setAnimate(true)
-    }
-  }
-
-  useEffect(() => {
-    if (animate) {
-      const timer = setTimeout(() => setAnimate(false), 200)
-      return () => clearTimeout(timer)
-    }
-  }, [animate])
+  const { copyMessage, animate, toggleCopyIp } = useCopyIp(copyIpMessage.ip)
+  const { minecraftUsers } = useMinecraftUsers()
 
   return (
     <Card className="w-full rounded-2xl border-2 border-green bg-green/10 transition hover:bg-green/20">
@@ -102,9 +64,9 @@ export const Server = () => {
             width={100}
             height={100}
           />
-          {users ? `${users} из 200` : 'Сервер оффлайн'}
+          {minecraftUsers ? `${minecraftUsers} из 200` : 'Сервер оффлайн'}
         </p>
-        <ProgressRoot className="mt-4 w-full bg-white" value={users} max={200}>
+        <ProgressRoot className="mt-4 w-full bg-white" value={minecraftUsers} max={200}>
           <ProgressIndicator className="bg-green" />
         </ProgressRoot>
       </CardContent>

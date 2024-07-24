@@ -1,37 +1,14 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { routes } from '@/constants/routes'
 import { copyIpMessage } from '@/constants/copyIpMessage'
+import { useCopyIp } from '@/hooks/useCopy'
 
 export function Controls() {
-  const [copyMessage, setCopyMessage] = useState(copyIpMessage.default)
-  const [animate, setAnimate] = useState(false)
-
-  const toggleCopyIp = async () => {
-    try {
-      if (copyMessage === copyIpMessage.default) {
-        await navigator.clipboard.writeText(copyIpMessage.textToCopy)
-        setCopyMessage(copyIpMessage.success)
-      } else if (copyMessage === copyIpMessage.success || copyMessage === copyIpMessage.error) {
-        setCopyMessage(copyIpMessage.default)
-      }
-      setAnimate(true)
-    } catch {
-      setCopyMessage(copyIpMessage.error)
-      setAnimate(true)
-    }
-  }
-
-  useEffect(() => {
-    if (animate) {
-      const timer = setTimeout(() => setAnimate(false), 200)
-      return () => clearTimeout(timer)
-    }
-  }, [animate])
+  const { copyMessage, animate, toggleCopyIp } = useCopyIp(copyIpMessage.default)
 
   return (
     <div className="mt-8 flex flex-col lg:mt-12 lg:flex-row">
