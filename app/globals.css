@@ -2,84 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .link-animation {
-    position: relative;
-    color: aliceblue;
-
-    :hover {
-      color: #67c960;
-    }
-
-    &::after {
-      content: '';
-      background-color: #67c960;
-      border-radius: 8px;
-      position: absolute;
-      bottom: -6px;
-      left: 50%;
-      height: 3px;
-      width: 0;
-      transform: translateX(-50%);
-      transition: all 0.3s ease;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
-  }
-
-  .version {
-    @media (width > 1024px) {
-      position: relative;
-
-      &::before,
-      &::after {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        transition: all 0.3s ease;
-        font-size: 20px;
-        opacity: 0;
-      }
-
-      &::before {
-        content: '1.13 – 1.21';
-        top: 0;
-      }
-
-      &::after {
-        content: 'Java/Bedrock';
-        bottom: 0;
-      }
-
-      &:hover::before,
-      &:hover::after {
-        opacity: 0.8;
-      }
-
-      &:hover::before {
-        top: -40px;
-      }
-
-      &:hover::after {
-        bottom: -40px;
-      }
-    }
-  }
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #67c960;
-  border-radius: 8px;
+:root {
+  --color-green: theme('colors.green');
+  --color-mango: theme('colors.mango');
+  --color-blue: theme('colors.blue');
+  --color-purple: theme('colors.purple');
+  --color-black: theme('colors.black');
+  --color-white: theme('colors.white');
 }
 
 html {
   font-size: 16px;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 * {
@@ -88,11 +26,87 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #131313;
-  color: #ffffff;
+::-webkit-scrollbar {
+  width: 4px;
 }
 
+::-webkit-scrollbar-thumb {
+  background: var(--color-green);
+  border-radius: 8px;
+}
+
+.hover-underline {
+  position: relative;
+
+  &:hover {
+    color: var(--hover-color);
+  }
+
+  &::after {
+    content: '';
+    background-color: var(--background-color);
+    border-radius: 8px;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    height: 3px;
+    width: 0;
+    transform: translateX(-50%);
+    transition: all 0.2s linear;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.underline-green {
+  --hover-color: var(--color-green);
+  --background-color: var(--color-green);
+}
+
+.underline-blue {
+  --hover-color: var(--color-blue);
+  --background-color: var(--color-blue);
+}
+
+@media (width > 1024px) {
+  .minecraft-version {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      opacity: 0;
+    }
+
+    &::before {
+      content: '1.13 – 1.21';
+      top: 0;
+    }
+
+    &::after {
+      content: 'Java/Bedrock';
+      bottom: 0;
+    }
+
+    &:hover::before {
+      top: -40px;
+      opacity: 1;
+    }
+
+    &:hover::after {
+      bottom: -40px;
+      opacity: 1;
+    }
+  }
+}
+
+/* Анимация текста на кнопках копирования IP */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -102,44 +116,47 @@ body {
   }
 }
 
-.copy-fade-in {
+.animation-fade-in {
   animation: fadeIn 0.2s ease-in-out;
 }
 
-.members-borders {
-  @media (width > 1024px) {
+/* Секция команды проекта */
+@media (width > 1024px) {
+  .members-borders,
+  .member {
     position: relative;
 
     &:before,
     &:after {
-      content: "";
       position: absolute;
+    }
+  }
+
+  .members-borders {
+    &:before,
+    &:after {
+      content: "";
       top: 0;
       height: 100%;
       width: 30px;
       z-index: 10;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0), #131313)
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--color-black))
     }
 
     &:before {
       left: 0;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0), #131313)
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--color-black))
     }
 
     &:after {
       right: 0;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), #131313)
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--color-black))
     }
   }
-}
 
-.member {
-  @media (width > 1024px) {
-    position: relative;
-
+  .member {
     &::before,
     &::after {
-      position: absolute;
       left: 50%;
       transform: translateX(-50%);
       transition: all 0.3s ease;
@@ -156,227 +173,130 @@ body {
       bottom: 0;
     }
 
-    &:hover::before,
-    &:hover::after {
-      opacity: 0.8;
-    }
-
     &:hover::before {
       top: -30px;
+      opacity: 1;
     }
 
     &:hover::after {
       bottom: -42px;
+      opacity: 1;
+    }
+  }
+}
+
+@media (width > 1024px) {
+  .member-list_tw,
+  .member-ratkea,
+  .member-dashka17,
+  .member-ouiking,
+  .member-badtrip,
+  .member-nokarena,
+  .member-soraispania,
+  .member-istork,
+  .member-crucesaureae,
+  .member-demi_0,
+  .member-mireraqq,
+  .member-kristopher,
+  .member-muz0ku,
+  .member-drainedgod,
+  .member-masha {
+    &::before {
+      content: var(--member-nickname)
+    }
+
+    &::after {
+      content: var(--member-role);
     }
   }
 }
 
 .member-list_tw {
   color: #67c960;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'list_tw';
-    }
-
-    &::after {
-      content: 'Владелец сервера';
-    }
-  }
+  --member-nickname: 'list_tw';
+  --member-role: 'Главный в цирке';
 }
 
 .member-ratkea {
   color: #bfb1df;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'женечка';
-    }
-
-    &::after {
-      content: 'Разработчик сайта';
-    }
-  }
+  --member-nickname: 'женечка';
+  --member-role: 'Сделал сайт за банан';
 }
 
 .member-dashka17 {
   color: #ff61e5;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'Dashka17';
-    }
-
-    &::after {
-      content: 'Ненормальная';
-    }
-  }
+  --member-nickname: 'Dashka17';
+  --member-role: 'Ненормальная';
 }
 
 .member-ouiking {
   color: #9932CC;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'Даниэлиус';
-    }
-
-    &::after {
-      content: 'Администратор';
-    }
-  }
+  --member-nickname: 'Даниэлиус';
+  --member-role: 'Администратор';
 }
 
-.member-trip {
+.member-badtrip {
   color: #01fff1;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'badtrip_';
-    }
-
-    &::after {
-      content: 'Блудный сын';
-    }
-  }
+  --member-nickname: 'badtrip_';
+  --member-role: 'Блудный сын';
 }
 
 .member-nokarena {
   color: #54d071;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'лол12';
-    }
-
-    &::after {
-      content: 'Модератор';
-    }
-  }
+  --member-nickname: 'лол12';
+  --member-role: 'Модератор';
 }
 
-.member-sora {
+.member-soraispania {
   color: #f8a382;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'SoraIspania';
-    }
-
-    &::after {
-      content: 'Модератор';
-    }
-  }
+  --member-nickname: 'SoraIspania';
+  --member-role: 'Чел где скин';
 }
 
 .member-istork {
   color: #ff4c3b;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'iStork';
-    }
-
-    &::after {
-      content: 'Модератор';
-    }
-  }
+  --member-nickname: 'iStork';
+  --member-role: 'Модератор';
 }
 
 .member-crucesaureae {
   color: #fdb3fc;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'crucesaureae';
-    }
-
-    &::after {
-      content: 'Хелпер';
-    }
-  }
+  --member-nickname: 'crucesaureae';
+  --member-role: 'Хелпер';
 }
 
 .member-demi_0 {
-  color: #d72a55;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'demi_0';
-    }
-
-    &::after {
-      content: 'Хелпер';
-    }
-  }
+  color: #e25b29;
+  --member-nickname: 'demi_0';
+  --member-role: 'Хелпер';
 }
 
 .member-mireraqq {
   color: #779e23;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'Лео бравл старс';
-    }
-
-    &::after {
-      content: 'Менеджер ивентов';
-    }
-  }
+  --member-nickname: 'Лео бравл старс';
+  --member-role: 'Менеджер ивентов';
 }
 
 .member-kristopher {
   color: #c42389;
-
-  @media (width > 1024px) {
-    &::before {
-      content: '_Kristopher_';
-    }
-
-    &::after {
-      content: 'Креативный менеджер';
-    }
-  }
+  --member-nickname: '_Kristopher_';
+  --member-role: 'На все руки мастер';
 }
 
 .member-muz0ku {
   color: #00fec3;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'muz0ku';
-    }
-
-    &::after {
-      content: 'Менеджер Ада';
-    }
-  }
+  --member-nickname: 'muz0ku';
+  --member-role: 'Любит хайперлупы';
 }
 
 .member-drainedgod {
   color: #9459ff;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'drainedпёс';
-    }
-
-    &::after {
-      content: 'Менеджер Энда';
-    }
-  }
+  --member-nickname: 'drainedпёс';
+  --member-role: 'Продаст родину за обсу';
 }
 
 .member-masha {
   color: #0cb4c4;
-
-  @media (width > 1024px) {
-    &::before {
-      content: 'Masha';
-    }
-
-    &::after {
-      content: 'Талисман проекта';
-    }
-  }
+  --member-nickname: 'Masha';
+  --member-role: 'Талисман проекта';
 }

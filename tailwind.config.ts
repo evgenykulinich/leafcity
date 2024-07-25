@@ -52,11 +52,14 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
+        'link-hover-color': 'var(--link-hover-color)',
+        'link-background-color': 'var(--link-background-color)',
         green: '#67c960',
         mango: '#fedf00',
         blue: '#2e9fd2',
         purple: '#7289DA',
-        clear: '#ffffff'
+        black: '#111111',
+        white: '#ffffff'
       },
       borderRadius: {
         lg: 'var(--radius)',

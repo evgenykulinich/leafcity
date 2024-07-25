@@ -81,7 +81,7 @@ export const Navigation = () => {
             <Link
               target={link.label === 'Веб-карта' || 'Правила' ? '_self' : '_blank'}
               href={link.href}
-              className={`text-md link-animation ${pathname === link.href ? 'text-green' : ''}`}
+              className={`text-md hover-underline underline-green ${pathname === link.href ? 'text-green' : ''}`}
             >
               {link.label}
             </Link>
