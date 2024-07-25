@@ -55,19 +55,18 @@ export const RulesList = () => {
             {rule.points?.map(point => (
               <div
                 onClick={isDesktop ? () => copyRule(`${point.point}. ${point.text}`) : undefined}
-                title="Нажми чтобы скопировать"
                 key={point.text}
               >
                 <RulesItem
                   className={clsx(
-                    'bordered cursor-copy rounded-[8px] border-2 border-transparent px-2 py-1 text-sm transition lg:text-lg',
+                    'bordered cursor-copy rounded-[8px] border-transparent px-2 py-1 text-sm transition lg:text-lg',
                     `lg:hover:border-${rule.color}`,
                     {
-                      'lg:hover:border-purple': rule.color === 'purple',
-                      'lg:hover:border-green': rule.color === 'green',
-                      'lg:hover:border-blue': rule.color === 'blue',
-                      'lg:hover:border-mango': rule.color === 'mango',
-                      'lg:hover:border-white': rule.color === 'white'
+                      'lg:hover:bg-purple/50': rule.color === 'purple',
+                      'lg:hover:bg-green/30': rule.color === 'green',
+                      'lg:hover:bg-blue/30': rule.color === 'blue',
+                      'lg:hover:bg-mango/20': rule.color === 'mango',
+                      'lg:hover:bg-white/20': rule.color === 'white'
                     }
                   )}
                   point={point.point}
