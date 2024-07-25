@@ -11,7 +11,7 @@ export const Members = () => {
       <div className="members-borders flex">
         <MembersList>
           <div
-            className="hover:pause mt-4 flex animate-loop-scroll whitespace-nowrap pb-10 lg:mt-10"
+            className="mt-4 flex animate-loop-scroll whitespace-nowrap pb-10 lg:mt-10"
             id="members"
           >
             {members.map(member => (
@@ -22,14 +22,16 @@ export const Members = () => {
                 key={member.nickname}
               >
                 <p className="lg:hidden">{member.nickname}</p>
-                <Image
-                  className="mt-2 w-full rounded-[8px]"
-                  src={member.image}
-                  alt={member.nickname}
-                  height={500}
-                  width={500}
-                  loading="eager"
-                />
+                <div className="shy">
+                  <Image
+                    className="mt-2 w-full cursor-pointer rounded-[8px] transition active:scale-[.95]"
+                    src={member.image}
+                    alt={member.nickname}
+                    height={500}
+                    width={500}
+                    loading="eager"
+                  />
+                </div>
               </div>
             ))}
           </div>
