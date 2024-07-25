@@ -22,7 +22,7 @@ export const members = [
   {
     nickname: 'badtrip_',
     image: '/members/trip.png',
-    styles: 'member-trip'
+    styles: 'member-badtrip'
   },
   {
     nickname: 'Nokarena',
@@ -32,7 +32,7 @@ export const members = [
   {
     nickname: 'SoraIspania',
     image: '/members/sora.png',
-    styles: 'member-sora'
+    styles: 'member-soraispania'
   },
   {
     nickname: 'iStork',

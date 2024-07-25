@@ -46,7 +46,7 @@ export const Server = () => {
           className="mb-3 flex w-full cursor-pointer justify-between self-stretch rounded-xl border-none bg-green/10 p-2 pr-1 hover:bg-green/10"
           onClick={toggleCopyIp}
         >
-          <span className={animate ? 'copy-fade-in' : ''}>{copyMessage}</span>
+          <span className={animate ? 'animation-fade-in' : ''}>{copyMessage}</span>
           <Image
             className="mr-2 size-6"
             src="/icon/copy.svg"

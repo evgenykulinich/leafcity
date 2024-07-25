@@ -20,13 +20,13 @@ export function Controls() {
         <span>Начать играть</span>
       </Link>
 
-      <div className="version lg:block">
+      <div className="minecraft-version lg:block">
         <Button
           variant="outline"
           onClick={toggleCopyIp}
           className="block h-[80px] w-full rounded-xl border-green text-[20px] hover:bg-green/10 lg:w-[300px]"
         >
-          <span className={animate ? 'copy-fade-in' : ''}>{copyMessage}</span>
+          <span className={animate ? 'animation-fade-in' : ''}>{copyMessage}</span>
         </Button>
       </div>
     </div>
