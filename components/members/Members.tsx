@@ -24,7 +24,7 @@ export const Members = () => {
                 <p className="lg:hidden">{member.nickname}</p>
                 <div className="shy">
                   <Image
-                    className="mt-2 w-full cursor-pointer rounded-[8px] transition active:scale-[.95]"
+                    className="mt-2 w-full cursor-pointer rounded-[8px] transition lg:active:scale-[.95]"
                     src={member.image}
                     alt={member.nickname}
                     height={500}
