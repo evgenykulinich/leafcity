@@ -1,4 +1,5 @@
 import { Header } from '@/components/Header'
+import { routes } from '@/constants/routes'
 
 import type { Metadata } from 'next'
 
@@ -7,8 +8,18 @@ export const metadata: Metadata = {
   description:
     'Интерактивная карта игрового сервера. Узнайте расположение построек и территорий. Полезно для новичков и опытных игроков',
   openGraph: {
+    title: 'LEAF CITY - Карта',
+    images: [
+      {
+        url: `${routes.baseUrl}/og/map.png`,
+        width: 1200,
+        height: 630,
+        alt: 'LEAF CITY - Карта'
+      }
+    ],
     description:
-      'Интерактивная карта игрового сервера. Узнайте расположение построек и территорий. Полезно для новичков и опытных игроков'
+      'Интерактивная карта игрового сервера. Узнайте расположение построек и территорий. Полезно для новичков и опытных игроков',
+    type: 'website'
   }
 }
 
