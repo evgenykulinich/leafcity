@@ -1,5 +1,6 @@
 export const routes = {
   baseUrl: 'https://leafcity.ru',
+  head: 'https://leafcity.ru/head',
   home: '/',
   rules: '/rules',
   map: '/map',

@@ -1,77 +1,79 @@
+import { routes } from '@/constants/routes'
+
 export const members = [
   {
     nickname: 'list_tw',
-    image: '/members/list_tw.png',
+    image: `${routes.head}/list_tw`,
     styles: 'member-list_tw'
   },
   {
     nickname: 'ratkea',
-    image: '/members/ratkea.png',
+    image: `${routes.head}/ratkea`,
     styles: 'member-ratkea'
   },
   {
     nickname: 'Dashka17',
-    image: '/members/dashka17.png',
+    image: `${routes.head}/Dashka17`,
     styles: 'member-dashka17'
   },
   {
     nickname: 'OuiKing',
-    image: '/members/ouiking.png',
+    image: `${routes.head}/OuiKing`,
     styles: 'member-ouiking'
   },
-  {
-    nickname: 'badtrip_',
-    image: '/members/trip.png',
-    styles: 'member-badtrip'
-  },
+  // {
+  //   nickname: 'badtrip_',
+  //   image: `${routes.head}/badtrip_`,
+  //   styles: 'member-badtrip'
+  // },
   {
     nickname: 'Nokarena',
-    image: '/members/nokarena.png',
+    image: `${routes.head}/Nokarena`,
     styles: 'member-nokarena'
   },
   {
     nickname: 'SoraIspania',
-    image: '/members/sora.png',
+    image: `${routes.head}/SoraIspania`,
     styles: 'member-soraispania'
   },
   {
     nickname: 'iStork',
-    image: '/members/istork.png',
+    image: `${routes.head}/iStork`,
     styles: 'member-istork'
   },
   {
     nickname: 'crucesaureae',
-    image: '/members/crucesaureae.png',
+    image: `${routes.head}/crucesaureae`,
     styles: 'member-crucesaureae'
   },
   {
     nickname: 'demi_0',
-    image: '/members/demi.png',
+    image: `${routes.head}/demi_0`,
     styles: 'member-demi_0'
   },
   {
     nickname: 'Mireraqq',
-    image: '/members/mireraqq.png',
+    image: `${routes.head}/Mireraqq`,
     styles: 'member-mireraqq'
   },
   {
     nickname: '_Kristopher_',
-    image: '/members/kristopher.png',
+    image: `${routes.head}/_Kristopher_`,
     styles: 'member-kristopher'
   },
   {
     nickname: 'muz0ku',
-    image: '/members/muzoku.png',
+    image: `${routes.head}/muz0ku`,
     styles: 'member-muz0ku'
   },
   {
     nickname: 'drainedgod',
-    image: '/members/drained.png',
+    image: `${routes.head}/drainedgod`,
     styles: 'member-drainedgod'
-  },
-  {
-    nickname: 'Masha',
-    image: '/members/masha.png',
-    styles: 'member-masha'
   }
+  // {
+  //   nickname: 'Masha',
+  //   image: `${routes.head}/Masha`,
+  //   styles: 'member-masha'
+  // }
 ]
