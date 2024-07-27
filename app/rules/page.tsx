@@ -1,14 +1,27 @@
 import { Header } from '@/components/Header'
 import { Copyright } from '@/components/copyright/Copyright'
 import { RulesList } from '@/components/rules/RulesList'
+import { routes } from '@/constants/routes'
 
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Правила',
-  description: 'LEAF CITY стремится создать ламповую и безопасную среду для всех наших игроков ☘️',
+  description:
+    'Все правила проекта на одной странице. Обязательно к ознакомлению перед началом игры',
   openGraph: {
-    description: 'LEAF CITY стремится создать ламповую и безопасную среду для всех наших игроков ☘️'
+    title: 'LEAF CITY - Правила',
+    images: [
+      {
+        url: `${routes.baseUrl}/og/rules.png`,
+        width: 1200,
+        height: 630,
+        alt: 'LEAF CITY - Правила'
+      }
+    ],
+    description:
+      'Все правила проекта на одной странице. Обязательно к ознакомлению перед началом игры',
+    type: 'website'
   }
 }
 
