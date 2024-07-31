@@ -70,10 +70,10 @@ export const members = [
     nickname: 'drainedgod',
     image: `${routes.head}/drainedgod`,
     styles: 'member-drainedgod'
+  },
+  {
+    nickname: 'Masha',
+    image: `${routes.head}/Masha`,
+    styles: 'member-masha'
   }
-  // {
-  //   nickname: 'Masha',
-  //   image: `${routes.head}/Masha`,
-  //   styles: 'member-masha'
-  // }
 ]

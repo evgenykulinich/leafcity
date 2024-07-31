@@ -28,15 +28,11 @@ export default function MapPage() {
 
   return (
     <div className="flex h-screen w-screen flex-col overflow-x-hidden">
-      <div className="mx-auto w-full max-w-screen-2xl px-4 pt-4 lg:px-8">
+      <div className="fixed mx-auto w-full max-w-screen-2xl touch-none px-4 pt-4 lg:static lg:px-8">
         <Header />
       </div>
-      <div className="flex-1 overflow-hidden">
-        <iframe
-          src={noCacheUrl}
-          className="h-[calc(100dvh-65px)] w-full border-0 sm:h-full"
-          title="Map"
-        />
+      <div className="fixed bottom-0 w-full flex-1 overflow-hidden">
+        <iframe src={noCacheUrl} className="h-[calc(100dvh-65px)] w-full border-0" title="Map" />
       </div>
     </div>
   )
