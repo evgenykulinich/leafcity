@@ -45,10 +45,10 @@ export default function MapWorlds() {
     <>
       {buttonsVisible && (
         <div className="flex flex-col pb-4 lg:h-dvh">
-          <div className="mx-auto w-full touch-none px-4 pt-4 lg:static lg:px-8">
+          <div className="mx-auto w-full max-w-screen-2xl touch-none px-4 pt-4 lg:static lg:px-8">
             <Header />
           </div>
-          <div className="mt-8 flex h-full flex-col items-center justify-between gap-10 overflow-x-auto px-4 lg:mt-0 lg:flex-row lg:gap-4 lg:px-8">
+          <div className="mx-auto mt-8 flex h-full w-full max-w-screen-2xl flex-col items-center justify-between gap-10 overflow-x-auto px-4 lg:mt-0 lg:flex-row lg:gap-4 lg:px-8">
             {worlds.map(world => (
               <Card
                 className={clsx(
@@ -103,7 +103,7 @@ export default function MapWorlds() {
       )}
       {!buttonsVisible && activeWorld && (
         <div>
-          <div className="fixed mx-auto w-full touch-none px-4 pt-4 lg:static lg:px-8">
+          <div className="fixed mx-auto w-full max-w-screen-2xl touch-none px-4 pt-4 lg:static lg:px-8">
             <Header />
           </div>
           <div className="fixed bottom-0 w-full flex-1 overflow-hidden">
