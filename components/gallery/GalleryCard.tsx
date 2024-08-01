@@ -24,7 +24,7 @@ interface Props {
 
 const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props) => {
   return (
-    <Card className={`flex-1 rounded-2xl border px-4 pb-2 pt-4 transition ${className}`}>
+    <Card className={`flex-1 rounded-2xl border p-4 transition lg:p-6 lg:py-4 ${className}`}>
       <p className="flex items-center justify-center gap-2">
         <Image alt="Эмоджи" src={icon} width={24} height={24} />
         <span className={`text-${color}`}>{title}</span>
