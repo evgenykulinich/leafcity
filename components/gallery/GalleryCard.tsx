@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -27,55 +29,67 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
         <Image alt="Эмоджи" src={icon} width={24} height={24} />
         <span className={`text-${color}`}>{title}</span>
       </p>
-      <Carousel className="mt-4 lg:mt-6" opts={{ loop: true }}>
-        <CarouselContent>
-          {screenshots.map(screenshot => (
-            <CarouselItem className="relative" key={screenshot.url}>
-              <div>
-                <Dialog>
-                  <DialogTrigger className="min-h-[200px] w-full overflow-hidden rounded-xl outline-none lg:h-[400px]">
-                    <Image
-                      className="h-full w-full rounded-xl"
-                      alt="Скриншот"
-                      src={screenshot.url}
-                      width={1920}
-                      height={1080}
-                    />
-                  </DialogTrigger>
-                  <DialogContent className="w-full lg:max-w-fit">
-                    <Image
-                      className="rounded-xl"
-                      alt="Скриншот"
-                      src={screenshot.url}
-                      width={1920}
-                      height={1080}
-                    />
-                    <TooltipProvider>
-                      <Tooltip delayDuration={200}>
-                        <TooltipTrigger asChild>
-                          <div className="absolute bottom-3 left-3 flex cursor-default items-center gap-1 rounded-[6px] bg-black/60 px-1 py-1 lg:bottom-4 lg:left-4 lg:gap-2 lg:rounded-[8px] lg:px-2 lg:py-2">
-                            <Image
-                              className="w-[20px] rounded"
-                              alt="Аватар"
-                              src={`${routes.head}/${screenshot.author}`}
-                              width={180}
-                              height={180}
-                            />
-                            <span className="text-sm">{screenshot.author}</span>
-                          </div>
-                        </TooltipTrigger>
-                        <TooltipContent className="p-0">Автор</TooltipContent>
-                      </Tooltip>
-                    </TooltipProvider>
-                  </DialogContent>
-                </Dialog>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="left-3 hidden border-none bg-black/60 text-white/80 hover:bg-black/90 lg:inline-flex" />
-        <CarouselNext className="right-3 hidden border-none bg-black/60 text-white/80 hover:bg-black/90 lg:inline-flex" />
-      </Carousel>
+      <Dialog>
+        <DialogTrigger className="relative mt-4 h-[200px] min-h-[200px] w-full overflow-hidden rounded-xl outline-none lg:h-[400px]">
+          <Image
+            className="h-full w-full rounded-xl"
+            alt="Скриншот"
+            src={screenshots[0].url}
+            width={1920}
+            height={1080}
+          />
+          <TooltipProvider>
+            <Tooltip delayDuration={200}>
+              <TooltipTrigger asChild>
+                <Image
+                  className="absolute right-1 top-1 w-[25px] rounded-[6px] bg-black/60 p-1 lg:w-[30px]"
+                  alt="Аватар"
+                  src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1vdXNlLXBvaW50ZXItY2xpY2siPjxwYXRoIGQ9Im05IDkgNSAxMiAxLjgtNS4yTDIxIDE0WiIvPjxwYXRoIGQ9Ik03LjIgMi4yIDggNS4xIi8+PHBhdGggZD0ibTUuMSA4LTIuOS0uOCIvPjxwYXRoIGQ9Ik0xNCA0LjEgMTIgNiIvPjxwYXRoIGQ9Im02IDEyLTEuOSAyIi8+PC9zdmc+"
+                  width={180}
+                  height={180}
+                />
+              </TooltipTrigger>
+              <TooltipContent className="p-0">Смотреть</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </DialogTrigger>
+        <DialogContent className="w-full p-0 lg:max-w-fit">
+          <Carousel className="relative w-full px-2 lg:max-w-fit" opts={{ loop: true }}>
+            <CarouselContent>
+              {screenshots.map(item => (
+                <CarouselItem className="relative" key={item.url}>
+                  <Image
+                    className="h-full rounded-xl"
+                    alt="Скриншот"
+                    src={item.url}
+                    width={1920}
+                    height={1080}
+                  />
+                  <TooltipProvider>
+                    <Tooltip delayDuration={200}>
+                      <TooltipTrigger asChild>
+                        <div className="absolute bottom-1 left-5 flex cursor-default items-center gap-1 rounded-[6px] bg-black/60 p-1 lg:bottom-1 lg:gap-2 lg:rounded-[8px] lg:px-2 lg:py-2">
+                          <Image
+                            className="w-[20px] rounded"
+                            alt="Аватар"
+                            src={`${routes.head}/${item.author}`}
+                            width={180}
+                            height={180}
+                          />
+                          <span className="text-sm">{item.author}</span>
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent className="p-0">Автор</TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 hidden border-none bg-black/60 text-white/80 outline-none hover:bg-black/90 lg:inline-flex" />
+            <CarouselNext className="absolute right-4 hidden border-none bg-black/60 text-white/80 outline-none hover:bg-black/90 lg:inline-flex" />
+          </Carousel>
+        </DialogContent>
+      </Dialog>
     </Card>
   )
 }
