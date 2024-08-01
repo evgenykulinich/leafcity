@@ -9,7 +9,7 @@ import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 import { usePathname } from 'next/navigation'
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { navigationList } from '@/data/navigationList'
+import { navigation } from '@/data/navigation'
 import { routes } from '@/constants/routes'
 import { DialogTitle } from '@/components/ui/dialog'
 
@@ -34,7 +34,7 @@ export const Navigation = () => {
           </DialogTitle>
           <nav className="pt-4">
             <ul>
-              {navigationList.map(link => (
+              {navigation.map(link => (
                 <li className="mb-5 cursor-pointer text-center text-2xl" key={link.label}>
                   <Link
                     className="text-md flex items-center justify-center hover:text-green"
@@ -76,7 +76,7 @@ export const Navigation = () => {
   return (
     <nav>
       <ul className="hidden gap-20 text-lg lg:flex">
-        {navigationList.map(link => (
+        {navigation.map(link => (
           <li className="cursor-pointer" key={link.label}>
             <Link
               target={link.label === 'Веб-карта' || 'Правила' ? '_self' : '_blank'}

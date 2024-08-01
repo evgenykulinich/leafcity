@@ -21,11 +21,11 @@ export const members = [
     image: `${routes.head}/OuiKing`,
     styles: 'member-ouiking'
   },
-  // {
-  //   nickname: 'badtrip_',
-  //   image: `${routes.head}/badtrip_`,
-  //   styles: 'member-badtrip'
-  // },
+  {
+    nickname: 'badtrip_',
+    image: `${routes.head}/_BaD_TriP_`,
+    styles: 'member-badtrip'
+  },
   {
     nickname: 'Nokarena',
     image: `${routes.head}/Nokarena`,

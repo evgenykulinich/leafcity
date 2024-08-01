@@ -32,9 +32,9 @@ export default function RulesPage() {
       <div className="mt-8 cursor-default text-center text-xl lg:mt-10 lg:text-2xl">
         <span>Проект </span>
         <span className="font-bold">LEAF CITY</span> стремится создать{' '}
-        <span className="hover-underline underline-green text-green">ламповую</span> и{' '}
-        <span className="hover-underline underline-blue text-blue">безопасную</span> среду для всех
-        наших игроков ☘️
+        <span className="lg:hover-underline lg:underline-green text-green">ламповую</span> и{' '}
+        <span className="lg:hover-underline lg:underline-blue text-blue">безопасную</span> среду для
+        всех наших игроков ☘️
       </div>
       <RulesList />
       <Copyright />

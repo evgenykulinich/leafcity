@@ -11,10 +11,12 @@ export function Preview() {
         width={1024}
         priority={true}
       />
-      <h1 className="mt-4 cursor-default text-[2.75rem] font-bold sm:text-5xl lg:mt-24 lg:text-[60px] lg:leading-[1.25]">
-        Уникальный <span className="hover-underline underline-green text-green">ванильный</span>
+      <h1 className="mt-6 cursor-default text-[2.75rem] font-bold sm:text-5xl lg:mt-24 lg:text-[60px] lg:leading-[1.25]">
+        Уникальный{' '}
+        <span className="hover-underline underline-green text-green after:bottom-0">ванильный</span>
         <br />
-        сервер с <span className="hover-underline underline-blue text-blue">ламповым</span>
+        сервер с{' '}
+        <span className="hover-underline underline-blue text-blue after:bottom-0">ламповым</span>
         <br />
         сообществом
       </h1>

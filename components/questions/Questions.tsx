@@ -11,7 +11,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
-import { questionList } from '@/data/questionList'
+import { questions } from '@/data/questions'
 import { Server } from '@/components/Server'
 
 export function Questions() {
@@ -20,7 +20,7 @@ export function Questions() {
       <h2 className="mt-10 text-[26px] lg:mt-24">Ответы на вопросы</h2>
       <div className="mt-10 flex flex-col items-start gap-12 lg:flex-row">
         <Accordion type="single" collapsible className="flex w-full flex-col gap-4">
-          {questionList.map(question => (
+          {questions.map(question => (
             <AccordionItem
               value={question.value}
               key={question.value}
