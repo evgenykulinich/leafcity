@@ -33,7 +33,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
             <CarouselItem className="relative" key={screenshot.url}>
               <div>
                 <Dialog>
-                  <DialogTrigger className="h-[185px] overflow-hidden rounded-xl outline-none lg:h-[400px]">
+                  <DialogTrigger className="min-h-[200px] w-full overflow-hidden rounded-xl outline-none lg:h-[400px]">
                     <Image
                       className="h-full w-full rounded-xl"
                       alt="Скриншот"
@@ -42,7 +42,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
                       height={1080}
                     />
                   </DialogTrigger>
-                  <DialogContent className="w-full max-w-fit">
+                  <DialogContent className="w-full lg:max-w-fit">
                     <Image
                       className="rounded-xl"
                       alt="Скриншот"
