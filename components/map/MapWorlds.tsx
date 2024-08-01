@@ -48,11 +48,17 @@ export default function MapWorlds() {
           <div className="mx-auto w-full max-w-screen-2xl touch-none px-4 pt-4 lg:static lg:px-8">
             <Header />
           </div>
-          <div className="mx-auto mt-8 flex h-full w-full max-w-screen-2xl flex-col items-center justify-between gap-10 overflow-x-auto px-4 lg:mt-0 lg:flex-row lg:gap-4 lg:px-8">
+          <div className="mt-8 cursor-default text-center text-xl lg:mt-10 lg:text-2xl">
+            <span>
+              Онлайн-карта для <span className="text-blue">каждого</span> мира в{' '}
+              <span className="text-green">реальном</span> времени 🧭
+            </span>
+          </div>
+          <div className="mx-auto mt-8 grid h-full w-full max-w-screen-2xl gap-4 px-4 lg:mt-10 lg:grid-cols-3 lg:flex-row lg:items-center lg:gap-8 lg:px-8">
             {worlds.map(world => (
               <Card
                 className={clsx(
-                  `cursor-pointer rounded-2xl border-2 p-4 transition lg:p-6 lg:hover:scale-105 lg:active:scale-100`,
+                  `block w-full cursor-pointer rounded-2xl border-2 p-4 transition lg:p-6`,
                   {
                     'bg-purple/10': world.color === 'purple',
                     'bg-green/10': world.color === 'green',
@@ -82,7 +88,9 @@ export default function MapWorlds() {
                 key={world.title}
                 onClick={() => handleButtonClick(world.title)}
               >
-                <div className={`${world.title} size-[275px] rounded-2xl lg:size-[400px]`}></div>
+                <div
+                  className={`${world.title} mx-auto min-h-[275px] w-full rounded-2xl lg:min-h-[400px]`}
+                ></div>
                 <div className="mt-4 flex items-center justify-center gap-1.5 text-xl lg:mt-6">
                   <Image
                     className="w-[25px] lg:w-[25px]"
