@@ -45,10 +45,10 @@ export default function MapWorlds() {
     <>
       {buttonsVisible && (
         <div className="flex flex-col pb-4 lg:h-dvh">
-          <div className="mx-auto w-full max-w-screen-2xl touch-none px-4 pt-4 lg:static lg:px-8">
+          <div className="mx-auto w-full touch-none px-4 pt-4 lg:static lg:px-8">
             <Header />
           </div>
-          <div className="mt-8 flex h-full flex-col items-center justify-center gap-10 px-12 lg:mt-0 lg:flex-row lg:gap-20">
+          <div className="mt-8 flex h-full flex-col items-center justify-between gap-10 overflow-x-auto px-4 lg:mt-0 lg:flex-row lg:gap-4 lg:px-8">
             {worlds.map(world => (
               <Card
                 className={clsx(
@@ -82,7 +82,7 @@ export default function MapWorlds() {
                 key={world.title}
                 onClick={() => handleButtonClick(world.title)}
               >
-                <div className={`${world.title} size-[300px] rounded-2xl`}></div>
+                <div className={`${world.title} size-[275px] rounded-2xl lg:size-[400px]`}></div>
                 <div className="mt-4 flex items-center justify-center gap-1.5 text-xl lg:mt-6">
                   <Image
                     className="w-[25px] lg:w-[25px]"
@@ -103,7 +103,7 @@ export default function MapWorlds() {
       )}
       {!buttonsVisible && activeWorld && (
         <div>
-          <div className="fixed mx-auto w-full max-w-screen-2xl touch-none px-4 pt-4 lg:static lg:px-8">
+          <div className="fixed mx-auto w-full touch-none px-4 pt-4 lg:static lg:px-8">
             <Header />
           </div>
           <div className="fixed bottom-0 w-full flex-1 overflow-hidden">
