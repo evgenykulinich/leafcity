@@ -7,11 +7,6 @@ export const members = [
     styles: 'member-list_tw'
   },
   {
-    nickname: 'ratkea',
-    image: `${routes.head}/ratkea`,
-    styles: 'member-ratkea'
-  },
-  {
     nickname: 'Dashka17',
     image: `${routes.head}/Dashka17`,
     styles: 'member-dashka17'
@@ -75,5 +70,15 @@ export const members = [
     nickname: 'Masha',
     image: `${routes.head}/Masha`,
     styles: 'member-masha'
+  },
+  {
+    nickname: 'ratkea',
+    image: `${routes.head}/ratkea`,
+    styles: 'member-ratkea'
+  },
+  {
+    nickname: 'Tpyxan_',
+    image: `${routes.head}/xareht`,
+    styles: 'member-tryxan'
   }
 ]
