@@ -128,6 +128,25 @@ img {
   animation: fadeIn 0.2s ease-in-out;
 }
 
+/* Картинки для карточек миров */
+.survival,
+.farms,
+.resources {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.survival {
+  background-image: url('/map/survival.png');
+}
+.farms {
+  background-image: url('/map/farms.png');
+}
+.resources {
+  background-image: url('/map/resources.png');
+}
+
 /* Секция команды проекта */
 @media (width > 1024px) {
   .shy {
