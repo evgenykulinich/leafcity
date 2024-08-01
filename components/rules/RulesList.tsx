@@ -4,7 +4,7 @@ import { clsx } from 'clsx'
 import Image from 'next/image'
 import { useMedia } from 'react-use'
 
-import { rulesList } from '@/data/rulesList'
+import { rules } from '@/data/rules'
 import {
   Accordion,
   AccordionContent,
@@ -19,8 +19,8 @@ export const RulesList = () => {
   const copyRule = useCopyRule()
 
   return (
-    <Accordion className="mt-10 w-full" defaultValue={rulesList[0].value} collapsible type="single">
-      {rulesList.map(rule => (
+    <Accordion className="mt-10 w-full" defaultValue={rules[0].value} collapsible type="single">
+      {rules.map(rule => (
         <AccordionItem
           className={clsx(
             'mb-4 overflow-hidden rounded-2xl px-2 transition',
