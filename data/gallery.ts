@@ -77,6 +77,10 @@ export const projects = [
     author: authors.list_tw
   },
   {
+    url: '/gallery/projects/Crazy_lady51_1.png',
+    author: authors.crazy_lady
+  },
+  {
     url: '/gallery/projects/Ini_ga_5.png',
     author: authors.ini_ga
   },
@@ -85,8 +89,12 @@ export const projects = [
     author: authors.list_tw
   },
   {
-    url: '/gallery/projects/Crazy_lady51_1.png',
+    url: '/gallery/projects/Crazy_lady51_2.png',
     author: authors.crazy_lady
+  },
+  {
+    url: '/gallery/projects/Ini_ga_6.png',
+    author: authors.ini_ga
   }
 ]
 

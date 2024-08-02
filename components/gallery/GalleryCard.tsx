@@ -24,13 +24,13 @@ interface Props {
 
 const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props) => {
   return (
-    <Card className={`flex-1 rounded-2xl border p-4 transition lg:p-6 lg:py-4 ${className}`}>
+    <Card className={`flex-1 rounded-2xl border-2 p-4 transition lg:p-6 lg:py-4 ${className}`}>
       <p className="flex items-center justify-center gap-2">
         <Image alt="Эмоджи" src={icon} width={24} height={24} />
         <span className={`text-${color}`}>{title}</span>
       </p>
       <Dialog>
-        <DialogTrigger className="relative mt-4 h-[200px] min-h-[200px] w-full overflow-hidden rounded-xl outline-none lg:h-[400px]">
+        <DialogTrigger className="relative mt-4 w-full overflow-hidden rounded-xl outline-none">
           <Image
             className="h-full w-full rounded-xl"
             alt="Скриншот"
@@ -53,8 +53,8 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent className="w-full p-0 lg:max-w-fit">
-          <Carousel className="relative w-full px-2 lg:max-w-fit" opts={{ loop: true }}>
+        <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+          <Carousel className="relative w-full lg:max-w-fit" opts={{ loop: true }}>
             <CarouselContent>
               {screenshots.map(item => (
                 <CarouselItem className="relative" key={item.url}>
@@ -68,7 +68,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
                   <TooltipProvider>
                     <Tooltip delayDuration={200}>
                       <TooltipTrigger asChild>
-                        <div className="absolute bottom-1 left-5 flex cursor-default items-center gap-1 rounded-[6px] bg-black/60 p-1 lg:bottom-1 lg:gap-2 lg:rounded-[8px] lg:px-2 lg:py-2">
+                        <div className="absolute bottom-1 left-5 flex cursor-default items-center gap-1 rounded-[6px] bg-black/60 p-1 transition hover:bg-black/90 lg:bottom-1 lg:gap-2 lg:rounded-[8px] lg:px-2 lg:py-2">
                           <Image
                             className="w-[20px] rounded"
                             alt="Аватар"
@@ -85,8 +85,8 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-4 hidden border-none bg-black/60 text-white/80 outline-none hover:bg-black/90 lg:inline-flex" />
-            <CarouselNext className="absolute right-4 hidden border-none bg-black/60 text-white/80 outline-none hover:bg-black/90 lg:inline-flex" />
+            <CarouselPrevious className="absolute left-1 hidden border-none bg-black/60 text-white/80 outline-none hover:bg-black/90 lg:inline-flex" />
+            <CarouselNext className="absolute right-1 hidden border-none bg-black/60 text-white/80 outline-none hover:bg-black/90 lg:inline-flex" />
           </Carousel>
         </DialogContent>
       </Dialog>

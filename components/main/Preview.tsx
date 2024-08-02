@@ -11,7 +11,7 @@ export function Preview() {
         width={1024}
         priority={true}
       />
-      <h1 className="mt-6 cursor-default text-[2.75rem] font-bold sm:text-5xl lg:mt-24 lg:text-[60px] lg:leading-[1.25]">
+      <h1 className="mt-8 cursor-default text-[2.75rem] font-bold sm:text-5xl lg:mt-24 lg:text-[60px] lg:leading-[1.25]">
         Уникальный{' '}
         <span className="hover-underline underline-green text-green after:bottom-0">ванильный</span>
         <br />
