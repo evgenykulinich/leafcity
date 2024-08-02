@@ -8,7 +8,7 @@ import { Copyright } from '@/components/copyright/Copyright'
 
 export default function Main() {
   return (
-    <main className="mx-auto w-full max-w-screen-2xl px-4 pb-8 pt-4 lg:px-8">
+    <main className="mx-auto min-h-dvh max-w-screen-2xl px-4 lg:px-8">
       <Header />
       <Preview />
       <Controls />

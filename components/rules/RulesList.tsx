@@ -19,7 +19,12 @@ export const RulesList = () => {
   const copyRule = useCopyRule()
 
   return (
-    <Accordion className="mt-10 w-full" defaultValue={rules[0].value} collapsible type="single">
+    <Accordion
+      className="mt-8 w-full lg:mt-12"
+      defaultValue={rules[0].value}
+      collapsible
+      type="single"
+    >
       {rules.map(rule => (
         <AccordionItem
           className={clsx(

@@ -11,7 +11,7 @@ export const Members = () => {
       <div className="members-borders flex">
         <MembersList>
           <div
-            className="mt-4 flex animate-loop-scroll whitespace-nowrap pb-10 lg:mt-10"
+            className="mt-8 flex animate-loop-scroll whitespace-nowrap pb-10 lg:mt-12"
             id="members"
           >
             {members.map(member => (
