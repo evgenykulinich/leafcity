@@ -7,9 +7,11 @@ import { WIKI_ROUTES } from '@/lib/wiki_routes'
 export function Leftbar() {
   return (
     <aside className="top-16 hidden flex-[0.9] flex-col self-start pr-8 lg:flex">
-      <ScrollArea className="m-0">
-        <Menu />
-      </ScrollArea>
+      <div className="fixed">
+        <ScrollArea className="m-0">
+          <Menu />
+        </ScrollArea>
+      </div>
     </aside>
   )
 }

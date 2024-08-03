@@ -6,6 +6,7 @@ import Pagination from '@/components/wiki/pagination'
 import Toc from '@/components/wiki/toc'
 import { page_routes } from '@/lib/wiki_routes'
 import { routes } from '@/constants/routes'
+import { Leftbar, SheetLeftbar } from '@/components/wiki/leftbar'
 
 import type { Metadata } from 'next'
 
@@ -39,7 +40,9 @@ export default async function WikiPage({ params: { slug = [] } }: PageProps) {
 
   if (!Component) notFound()
   return (
-    <div className="grid h-fit grid-cols-[1fr_auto] self-start lg:gap-6">
+    <div className="flex h-fit grid-cols-[auto_1fr_auto_auto_auto] flex-col self-start lg:grid lg:gap-6">
+      <SheetLeftbar />
+      <Leftbar />
       <Markdown>
         <Component />
         <Pagination pathname={pathName} />
@@ -50,7 +53,7 @@ export default async function WikiPage({ params: { slug = [] } }: PageProps) {
 }
 
 function Markdown({ children }: PropsWithChildren) {
-  return <div>{children}</div>
+  return <div className="lg:pl-[100px]">{children}</div>
 }
 
 // export async function generateMetadata({ params: { slug = [] } }: PageProps) {
