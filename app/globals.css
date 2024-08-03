@@ -13,6 +13,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
   color: var(--color-white);
 }
 
-* {
+*, .reset {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -77,6 +78,16 @@ img {
 .underline-blue {
   --hover-color: var(--color-blue);
   --background-color: var(--color-blue);
+}
+
+.underline-purple {
+  --hover-color: var(--color-purple);
+  --background-color: var(--color-purple);
+}
+
+.underline-mango {
+  --hover-color: var(--color-mango);
+  --background-color: var(--color-mango);
 }
 
 @media (width > 1024px) {
@@ -359,4 +370,17 @@ img {
   color: #bfb1df;
   --member-nickname: 'женечка';
   --member-role: 'Ищу работу';
+}
+
+/* wiki */
+.toc {
+  display: flex;
+}
+
+@media (width < 1140px) {
+  .search,
+  .leftbar,
+  .toc {
+    display: none;
+  }
 }

@@ -33,7 +33,7 @@ export const projects = [
     author: authors.chimi4angi
   },
   {
-    url: '/gallery/projects/OuiKing_3.png',
+    url: '/gallery/projects/OuiKing_1.png',
     author: authors.ouiking
   },
   {
@@ -49,7 +49,7 @@ export const projects = [
     author: authors.blinks10
   },
   {
-    url: '/gallery/projects/OuiKing_1.png',
+    url: '/gallery/projects/OuiKing_2.png',
     author: authors.ouiking
   },
   {
@@ -69,7 +69,7 @@ export const projects = [
     author: authors.crucesaureae
   },
   {
-    url: '/gallery/projects/OuiKing_2.png',
+    url: '/gallery/projects/OuiKing_3.png',
     author: authors.ouiking
   },
   {
@@ -89,11 +89,23 @@ export const projects = [
     author: authors.list_tw
   },
   {
+    url: '/gallery/projects/Ini_ga_6.png',
+    author: authors.ini_ga
+  },
+  {
     url: '/gallery/projects/Crazy_lady51_2.png',
     author: authors.crazy_lady
   },
   {
-    url: '/gallery/projects/Ini_ga_6.png',
+    url: '/gallery/projects/Ini_ga_7.png',
+    author: authors.ini_ga
+  },
+  {
+    url: '/gallery/projects/OuiKing_4.png',
+    author: authors.ouiking
+  },
+  {
+    url: '/gallery/projects/Ini_ga_8.png',
     author: authors.ini_ga
   }
 ]
