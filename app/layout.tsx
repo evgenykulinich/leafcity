@@ -112,7 +112,7 @@ export default function RootLayout({
       <body className={font.className}>
         <Providers>{children}</Providers>
         <Toaster />
-        {/*<YandexMetrika />*/}
+        <YandexMetrika />
       </body>
     </html>
   )

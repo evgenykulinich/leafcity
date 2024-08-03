@@ -40,7 +40,7 @@ export default async function WikiPage({ params: { slug = [] } }: PageProps) {
 
   if (!Component) notFound()
   return (
-    <div className="flex h-fit grid-cols-[auto_1fr_auto_auto_auto] flex-col self-start lg:grid lg:gap-6">
+    <div className="flex h-fit grid-cols-[auto_auto_1fr_auto_auto] flex-col self-start lg:grid lg:gap-6">
       <SheetLeftbar />
       <Leftbar />
       <Markdown>

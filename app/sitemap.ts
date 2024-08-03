@@ -35,10 +35,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7
     },
     {
-      url: routes.wiki,
+      url: `${routes.baseUrl}/${routes.wiki}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.6
+      priority: 0.9
     }
   ]
 }

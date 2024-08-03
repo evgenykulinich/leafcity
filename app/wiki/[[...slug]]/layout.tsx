@@ -9,7 +9,7 @@ export default function DocsLayout({
   return (
     <div className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_1fr_auto] px-4 lg:px-8">
       <WikiHeader />
-      <div className="mt-4 grid lg:mt-8 lg:grid-cols-[auto_auto_1fr]">{children}</div>
+      <div className="mt-4 grid grid-cols-[1fr_auto] lg:mt-8">{children}</div>
       <Copyright />
     </div>
   )
