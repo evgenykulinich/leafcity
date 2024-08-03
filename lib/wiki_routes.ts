@@ -10,7 +10,7 @@ export const WIKI_ROUTES = [
   },
   {
     title: 'Фишки',
-    href: 'uniqueness',
+    href: 'features',
     items: [
       { title: 'Миры', href: '/worlds' },
       { title: 'Напитки', href: '/drinks' },
