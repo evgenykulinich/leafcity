@@ -10,6 +10,13 @@ const config = {
   ],
   prefix: '',
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px'
+    },
     container: {
       center: true,
       padding: '2rem',
@@ -24,12 +31,8 @@ const config = {
         blue: '#2e9fd2',
         purple: '#7289DA',
         black: '#111111',
-        white: '#ffffff'
-      },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        white: '#ffffff',
+        danger: '#ed2e38'
       },
       keyframes: {
         'accordion-down': {

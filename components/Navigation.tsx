@@ -12,6 +12,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { navigation } from '@/data/navigation'
 import { routes } from '@/constants/routes'
 import { DialogTitle } from '@/components/ui/dialog'
+import Search from '@/components/wiki/search'
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -75,11 +76,11 @@ export const Navigation = () => {
 
   return (
     <nav>
-      <ul className="hidden gap-20 text-lg lg:flex">
+      <ul className="hidden items-center gap-10 text-lg lg:flex">
+        {pathname.startsWith('/wiki') ? <Search /> : null}
         {navigation.map(link => (
           <li className="cursor-pointer" key={link.label}>
             <Link
-              target={link.label === 'Веб-карта' || 'Правила' ? '_self' : '_blank'}
               href={link.href}
               className={`text-md hover-underline underline-green ${pathname === link.href ? 'text-green' : ''}`}
             >
