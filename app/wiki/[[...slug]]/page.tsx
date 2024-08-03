@@ -56,20 +56,6 @@ function Markdown({ children }: PropsWithChildren) {
   return <div className="lg:pl-[100px]">{children}</div>
 }
 
-// export async function generateMetadata({ params: { slug = [] } }: PageProps) {
-//   const pathName = slug.join('/')
-//   const res = await cachedGetMarkdownForSlug(pathName)
-//   if (!res) {
-//     // @ts-ignore
-//     return null
-//   }
-//   const { frontmatter } = res
-//   return {
-//     title: frontmatter.title,
-//     description: frontmatter.description
-//   }
-// }
-
 export function generateStaticParams() {
   return page_routes.map(item => ({
     slug: item.href.split('/')
