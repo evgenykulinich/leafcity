@@ -171,7 +171,7 @@ export const allowedMods = [
 
 export const bannedMods = [
   { name: 'Авто-тотем модификации (любого вида)' },
-  { name: 'Модификации, выполняющие действия за игрокаИИ, принтер и так далее' },
+  { name: 'Модификации, выполняющие действия за игрока, ИИ, принтер и так далее' },
   { name: 'Чит-модификации (любого вида)' },
   { name: 'AFKPeace' },
   { name: 'Aristois' },
@@ -194,8 +194,8 @@ export const bannedMods = [
   { name: 'LavaClearView' },
   { name: 'Librarian Trade Finder' },
   { name: 'MultiConnect' },
-  { name: 'NoFogИспользуйте Sodium Extra или OptiFine' },
-  { name: 'SeedCrackerА также другие моды и программы, выполняющие функции этого мода' },
+  { name: 'NoFog - используйте Sodium Extra или OptiFine' },
+  { name: 'SeedCracker и другие программы, выполняющие функции этого мода' },
   { name: 'Sigma' },
   { name: 'Trajectory Preview' },
   { name: 'Tweakeroo' },

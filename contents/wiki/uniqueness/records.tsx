@@ -14,17 +14,19 @@ export default function Records() {
       </p>
 
       <p className="mt-4">
-        <span className="rounded bg-blue/20 px-2 py-1 leading-[20px]">
+        <span className="leading-height text-nowrap rounded bg-blue/20 px-2 py-1 leading-[20px]">
           {'disc burn <url> [name]'}
         </span>{' '}
         – Создай диск с пользовательским звуком по URL. Тебе нужно держать музыкальный диск в руке.
       </p>
       <p className="mt-5">
-        <span className="rounded bg-blue/20 px-2 py-1 leading-[20px]">/disc erase</span> – Замени
-        пользовательский диск на обычный.
+        <span className="leading-height text-nowrap rounded bg-blue/20 px-2 py-1 leading-[20px]">
+          /disc erase
+        </span>{' '}
+        – Замени пользовательский диск на обычный.
       </p>
       <p className="mt-5">
-        <span className="rounded bg-blue/20 px-2 py-1 leading-[20px]">
+        <span className="leading-height text-nowrap rounded bg-blue/20 px-2 py-1 leading-[20px]">
           {'/disc search <query>'}
         </span>{' '}
         – Поиск треков на YouTube.

@@ -384,3 +384,7 @@ img {
     display: none;
   }
 }
+
+.leading-height {
+  line-height: 34px
+}

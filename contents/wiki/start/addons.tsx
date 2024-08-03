@@ -38,7 +38,7 @@ export default function Info() {
 
       <ul className="mt-4 flex flex-col gap-3">
         {sortedAllowedModsList.map(mod => (
-          <li key={mod.name}>
+          <li className="text-white/50" key={mod.name}>
             •{' '}
             <Link className="hover-underline underline-blue text-blue" href={mod.url}>
               {mod.name}
@@ -67,9 +67,11 @@ export default function Info() {
       <h3 className="mt-8 text-lg font-bold" id="моды">
         Моды
       </h3>
-      <ul className="mt-4 flex flex-col gap-3">
+      <ul className="mt-4 flex flex-col gap-3 text-white/50">
         {sortedBannedModsList.map(mod => (
-          <li key={mod.name}>• {mod.name}</li>
+          <li className="inline w-fit rounded bg-danger/10 px-2 py-1 text-white" key={mod.name}>
+            {mod.name}
+          </li>
         ))}
       </ul>
 
@@ -78,7 +80,9 @@ export default function Info() {
       </h3>
       <ul className="mb-8 mt-4 flex flex-col gap-3">
         {sortedBannedPacksList.map(mod => (
-          <li key={mod.name}>• {mod.name}</li>
+          <li className="leading-height rounded bg-danger/10 px-2 py-1 text-white" key={mod.name}>
+            {mod.name}
+          </li>
         ))}
       </ul>
 

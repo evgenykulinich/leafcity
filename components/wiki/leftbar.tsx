@@ -27,7 +27,10 @@ export function SheetLeftbar() {
           </Button>
         </SheetTrigger>
       </div>
-      <SheetContent className="flex flex-col gap-4 border-none px-0" side="left">
+      <SheetContent
+        className="flex flex-col gap-4 border-r-2 border-green/20 bg-black/[85%] px-0 pt-0"
+        side="left"
+      >
         <SheetHeader>
           <SheetClose className="px-5" asChild></SheetClose>
         </SheetHeader>
