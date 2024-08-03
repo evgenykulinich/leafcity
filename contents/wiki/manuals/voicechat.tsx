@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 const updateDate = '3 Aug 2024'
@@ -14,8 +15,9 @@ export default function VoiceChat() {
     <>
       <h1 className="mb-8 text-xl font-bold">Голосовой чат</h1>
       <p className="mt-4">
-        Plasmo Voice позволяет использовать голосовой чат в Minecraft, предоставляя множество
-        функций и настроек для удобного общения в игре.
+        <span className="leading-height rounded bg-purple/20 px-2 py-1">Plasmo Voice</span>{' '}
+        позволяет использовать голосовой чат в Minecraft, предоставляя множество функций и настроек
+        для удобного общения в игре.
       </p>
 
       <h2 className="mt-8 text-lg font-bold" id="мод-на-голосовой-чат">
@@ -50,7 +52,7 @@ export default function VoiceChat() {
             Plasmo Voice
           </Link>{' '}
           и перекинуть в папку{' '}
-          <span className="rounded bg-purple/20 px-2 py-1">/.minecraft/mods/</span>
+          <span className="leading-height rounded bg-purple/20 px-2 py-1">/.minecraft/mods/</span>
         </li>
       </ul>
 
@@ -87,7 +89,7 @@ export default function VoiceChat() {
           OptiFabric
         </Link>{' '}
         и OptiFine с официального сайта. Нужно перекинуть оба мода в папку{' '}
-        <span className="rounded bg-purple/20 px-2 py-1">/.minecraft/mods/</span>
+        <span className="leading-height rounded bg-purple/20 px-2 py-1">/.minecraft/mods/</span>
       </p>
 
       <h3 className="mt-8 text-lg font-bold" id="зависимости-для-данного-мода">
@@ -115,8 +117,10 @@ export default function VoiceChat() {
       </h2>
       <p className="mt-4">
         Теперь ты можешь отличить значки{' '}
-        <span className="rounded bg-purple/20 px-2 py-1">Client Mute</span> и{' '}
-        <span className="rounded bg-purple/20 px-2 py-1">Server Mute</span>
+        <span className="leading-height text-nowrap rounded bg-purple/20 px-2 py-1">
+          Client Mute
+        </span>{' '}
+        и <span className="text-nowrap rounded bg-purple/20 px-2 py-1">Server Mute</span>
       </p>
       <p className="mt-4">
         Также есть новая <span className="rounded bg-purple/20 px-2 py-1">Player Muted Audio</span>{' '}
@@ -148,7 +152,13 @@ export default function VoiceChat() {
               </Tooltip>
             </TooltipProvider>
           </DialogTrigger>
-          <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+          <DialogContent
+            className="w-full px-4 lg:max-w-[1080px] lg:px-8"
+            aria-describedby={undefined}
+          >
+            <DialogTitle>
+              <VisuallyHidden.Root />
+            </DialogTitle>
             <Image
               className="w-full overflow-hidden rounded-lg"
               src="/wiki/voice/icons-1.png"
@@ -177,7 +187,13 @@ export default function VoiceChat() {
               </Tooltip>
             </TooltipProvider>
           </DialogTrigger>
-          <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+          <DialogContent
+            className="w-full px-4 lg:max-w-[1080px] lg:px-8"
+            aria-describedby={undefined}
+          >
+            <DialogTitle>
+              <VisuallyHidden.Root />
+            </DialogTitle>
             <Image
               className="w-full overflow-hidden rounded-lg"
               src="/wiki/voice/icons-2.png"
@@ -193,17 +209,17 @@ export default function VoiceChat() {
         Новое меню
       </h2>
       <p className="mt-4">Благодаря множеству новых функций нам пришлось заново продумать меню.</p>
-      <p className="mt-4">
-        Мы заменили <span className="rounded bg-purple/20 px-2 py-1">General</span>
-        категорию четырьмя новыми: <span className="rounded bg-purple/20 px-2 py-1">
-          Devices
-        </span>, <span className="rounded bg-purple/20 px-2 py-1">Volume</span>,{' '}
+      <p className="leading-height mt-4 text-base">
+        Мы заменили <span className="rounded bg-purple/20 px-2 py-1">General</span> категорию
+        четырьмя новыми: <span className="rounded bg-purple/20 px-2 py-1">Devices</span>,{' '}
+        <span className="rounded bg-purple/20 px-2 py-1">Volume</span>,{' '}
         <span className="rounded bg-purple/20 px-2 py-1">Activation</span> и{' '}
         <span className="rounded bg-purple/20 px-2 py-1">Overlay</span>
       </p>
       <p className="mb-8 mt-4">
-        Также появилась новая <span className="rounded bg-purple/20 px-2 py-1">Add-ons</span>
-        категория и множество улучшений визуального оформления и удобства использования.
+        Также появилась новая{' '}
+        <span className="text-nowrap rounded bg-purple/20 px-2 py-1">Add-ons</span> категория и
+        множество улучшений визуального оформления и удобства использования.
       </p>
 
       <small className="text-sm text-white/50">{lastUpdateDate}</small>

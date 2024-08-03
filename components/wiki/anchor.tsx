@@ -14,7 +14,7 @@ type AnchorProps = ComponentProps<typeof Link> & {
 
 export default function Anchor({
   absolute,
-  className = 'hover:text-blue transition text-[16px] hover-underline underline-blue inline w-fit',
+  className = 'hover:text-blue transition text-[16px] inline w-fit',
   activeClassName = '',
   disabled,
   children,

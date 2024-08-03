@@ -21,7 +21,7 @@ export function Header({ className }: Props) {
         href="/"
       >
         <Image
-          className="mr-4 w-[40px] cursor-pointer"
+          className="mr-4 h-[36px] w-auto cursor-pointer"
           src="/logo/lc.png"
           alt="LC"
           height={1000}
@@ -47,7 +47,7 @@ export function WikiHeader({ className }: Props) {
         href="/"
       >
         <Image
-          className="mr-4 w-[40px] cursor-pointer"
+          className="mr-4 h-[36px] w-auto cursor-pointer"
           src="/logo/lc.png"
           alt="LC"
           height={1000}

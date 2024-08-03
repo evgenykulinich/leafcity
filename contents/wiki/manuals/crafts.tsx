@@ -1,6 +1,7 @@
 import Image from 'next/image'
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
@@ -47,7 +48,13 @@ export default function Crafts() {
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+        <DialogContent
+          className="w-full px-4 lg:max-w-[1080px] lg:px-8"
+          aria-describedby={undefined}
+        >
+          <DialogTitle>
+            <VisuallyHidden.Root>Debug Stick</VisuallyHidden.Root>
+          </DialogTitle>
           <Image
             className="w-full overflow-hidden rounded-lg"
             src="/wiki/crafts/debug-stick.avif"
@@ -68,12 +75,7 @@ export default function Crafts() {
       </p>
       <Dialog>
         <DialogTrigger className="relative mx-auto mb-8 mt-4 block max-w-[400px] overflow-hidden rounded-lg outline-none">
-          <Image
-            src="/wiki/crafts/debug-stick.avif"
-            alt="Палочка отладки"
-            width={500}
-            height={500}
-          />
+          <Image src="/wiki/crafts/light.avif" alt="Палочка отладки" width={500} height={500} />
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
@@ -89,11 +91,17 @@ export default function Crafts() {
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+        <DialogContent
+          className="w-full px-4 lg:max-w-[1080px] lg:px-8"
+          aria-describedby={undefined}
+        >
+          <DialogTitle>
+            <VisuallyHidden.Root>Light</VisuallyHidden.Root>
+          </DialogTitle>
           <Image
             className="w-full overflow-hidden rounded-lg"
             src="/wiki/crafts/light.avif"
-            alt="Палочка отладки"
+            alt="Light"
             width={1000}
             height={1000}
           />

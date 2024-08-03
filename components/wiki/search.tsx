@@ -1,14 +1,16 @@
 'use client'
 
-import { FileTextIcon, SearchIcon } from 'lucide-react'
+import { Book, CommandIcon, SearchIcon } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTrigger,
-  DialogClose
+  DialogClose,
+  DialogTitle
 } from '@/components/ui/dialog'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Input } from '@/components/ui/input'
@@ -49,16 +51,26 @@ export default function Search() {
         }}
       >
         <DialogTrigger asChild>
-          <div className="relative mx-auto w-fit flex-1 cursor-pointer">
+          <div className="relative mx-auto w-fit flex-1 cursor-pointer rounded-[6px] bg-white/10 py-2">
             <SearchIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
             <Input
               className="h-fit w-fit bg-transparent py-0 pl-10 text-sm"
-              placeholder="Поиск по вики..."
+              placeholder="Поиск..."
               type="search"
             />
+            <div className="absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-0.5 rounded-[6px] bg-green/40 p-[5px] font-mono text-xs font-medium transition hover:bg-green/60">
+              <CommandIcon className="h-[12px] w-[12px]" />
+              <span className="text-[15px]">K</span>
+            </div>
           </div>
         </DialogTrigger>
-        <DialogContent className="top-[45%] flex w-full max-w-[650px] flex-col gap-0 overflow-hidden rounded-[8px] border-2 border-green bg-black/80 p-0 sm:top-[38%]">
+        <DialogContent
+          className="top-[45%] flex w-full max-w-[650px] flex-col gap-0 overflow-hidden rounded-[8px] border-2 border-green bg-black/[85%] p-0 sm:top-[38%]"
+          aria-describedby={undefined}
+        >
+          <DialogTitle>
+            <VisuallyHidden.Root />
+          </DialogTitle>
           <DialogHeader>
             <input
               value={searchedInput}
@@ -78,11 +90,12 @@ export default function Search() {
               {filteredResults.map(item => (
                 <DialogClose onChange={val => console.log(val)} key={item.href} asChild>
                   <Anchor
-                    className="flex w-full items-center gap-2.5 rounded-lg p-2.5 px-3 text-[15px] hover:bg-green/20"
+                    className="flex w-full items-center gap-2.5 rounded-lg p-2.5 px-3 text-[15px] hover:bg-green/40"
                     href={`/wiki/${item.href}`}
-                    activeClassName="bg-green/20"
+                    activeClassName="bg-green/40"
                   >
-                    <FileTextIcon className="h-[1.1rem] w-[1.1rem]" /> {item.title}
+                    <Book className="h-[1.1rem] w-[1.1rem]" color="#ffffff" strokeWidth={1.5} />
+                    {item.title}
                   </Anchor>
                 </DialogClose>
               ))}

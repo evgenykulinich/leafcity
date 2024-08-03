@@ -24,13 +24,13 @@ export default function Info() {
         Впервые на сервере?
       </h2>
       <ul className="mt-4 flex flex-col gap-3">
-        <li>
+        <li className="text-white/50">
           •{' '}
           <Link className="hover-underline underline-blue text-blue" href={routes.rules}>
             Правила сервера
           </Link>
         </li>
-        <li>
+        <li className="text-white/50">
           •{' '}
           <Link
             className="hover-underline underline-blue text-blue"
@@ -39,7 +39,7 @@ export default function Info() {
             Разрешённые модификации
           </Link>
         </li>
-        <li>
+        <li className="text-white/50">
           •{' '}
           <Link
             className="hover-underline underline-blue text-blue"

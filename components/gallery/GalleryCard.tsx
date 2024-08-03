@@ -1,10 +1,11 @@
 'use client'
 
 import Image from 'next/image'
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import {
   Carousel,
   CarouselContent,
@@ -53,7 +54,13 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+        <DialogContent
+          className="w-full px-4 lg:max-w-[1080px] lg:px-8"
+          aria-describedby={undefined}
+        >
+          <DialogTitle>
+            <VisuallyHidden.Root />
+          </DialogTitle>
           <Carousel className="relative w-full lg:max-w-fit" opts={{ loop: true }}>
             <CarouselContent>
               {screenshots.map(item => (

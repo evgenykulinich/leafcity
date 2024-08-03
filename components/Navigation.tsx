@@ -29,7 +29,11 @@ export const Navigation = () => {
         <SheetTrigger className="acive:text-green border-none outline-none transition hover:text-green focus-visible:ring-transparent focus-visible:ring-offset-0 lg:hover:scale-125 lg:focus-visible:scale-125 lg:focus-visible:text-green">
           <Menu className="size-8" />
         </SheetTrigger>
-        <SheetContent className="border-none outline-none" side="top" aria-describedby={undefined}>
+        <SheetContent
+          className="border-b-2 border-purple/20 bg-black/[85%] pt-0 outline-none"
+          side="top"
+          aria-describedby={undefined}
+        >
           <DialogTitle>
             <VisuallyHidden.Root>Menu</VisuallyHidden.Root>
           </DialogTitle>

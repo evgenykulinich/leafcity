@@ -14,8 +14,10 @@ export default function ModPack() {
       <h1 className="text-xl font-bold">Сборка</h1>
       <p className="mt-4">
         Модпак для Minecraft на базе Fabric предназначен для улучшения производительности и
-        графического качества игры. В его состав входят оптимизационные моды, такие как Sodium,
-        Lithium и Starlight.
+        графического качества игры. В его состав входят оптимизационные моды, такие как{' '}
+        <span className="leading-height rounded bg-purple/20 px-2 py-1">Sodium</span>,{' '}
+        <span className="leading-height rounded bg-purple/20 px-2 py-1">Lithium</span> и{' '}
+        <span className="leading-height rounded bg-purple/20 px-2 py-1">Starlight</span>
       </p>
 
       <h2 className="mt-8 text-lg font-bold" id="список-модов">
@@ -24,7 +26,11 @@ export default function ModPack() {
       <ul className="mt-4 flex flex-col gap-3">
         {sortedModpack.map(mod => (
           <li key={mod.name}>
-            • <span className="font-bold">{mod.name} </span> – {mod.description}
+            <span className="text-white/50">• </span>
+            <span className="leading-height rounded bg-blue/20 px-2 py-1 font-bold">
+              {mod.name}
+            </span>{' '}
+            – {mod.description}
           </li>
         ))}
       </ul>

@@ -44,13 +44,16 @@ export default function Map() {
 
       <p className="mt-4 leading-loose">
         Ты можешь скрыть/показать себя на общей карте используя команду{' '}
-        <span className="text-nowrap rounded bg-blue/20 px-2 py-1">/map hide / show</span>
+        <span className="leading-height text-nowrap rounded bg-blue/20 px-2 py-1">
+          /map hide / show
+        </span>
       </p>
 
       <p className="mb-8 mt-4">
         Так же на общей карте доступны флаги, с помощью которых можно указать свой
-        проект/базу/магазин, ты можешь их показать нажав shift + ПКМ по флагу (только с подпиской)
-        или же через поддержку в Discord.
+        проект/базу/магазин, ты можешь их показать нажав{' '}
+        <span className="leading-height rounded bg-purple/20 px-2 py-1">shift + ПКМ</span> по флагу
+        (только с подпиской) или же через поддержку в Discord.
       </p>
 
       <small className="text-sm text-white/50">{lastUpdateDate}</small>
