@@ -3,12 +3,26 @@ import { projects, generation } from '@/data/gallery'
 import { routes } from '@/constants/routes'
 import { Copyright } from '@/components/copyright/Copyright'
 import GalleryCard from '@/components/gallery/GalleryCard'
+import { PageTitle } from '@/components/PageTitle'
 
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Галерея',
   description: 'Галерея уникальных построек игроков и красочной генерации мира',
+  metadataBase: new URL(routes.baseUrl),
+  keywords: [
+    'галерея построек лиф сити',
+    'уникальные постройки Minecraft',
+    'красочные генерации мира',
+    'строительства игроков лиф сити',
+    'лучшие постройки лиф сити',
+    'генерация мира Minecraft',
+    'достижения в строительстве лиф сити',
+    'творческие постройки Minecraft',
+    'галерея миров лиф сити',
+    'выдающиеся постройки на сервере'
+  ],
   openGraph: {
     title: 'LEAF CITY - Галерея',
     images: [
@@ -21,6 +35,11 @@ export const metadata: Metadata = {
     ],
     description: 'Галерея уникальных построек игроков и красочной генерации мира',
     type: 'website'
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black',
+    title: 'LEAF CITY - Галерея'
   }
 }
 
@@ -29,12 +48,12 @@ export default function Gallery() {
     <div className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_1fr_auto] flex-col px-4 lg:px-8">
       <Header />
       <section>
-        <h2 className="mt-8 cursor-default text-center text-xl lg:mt-12 lg:text-2xl">
+        <PageTitle>
           <span>
             Галерея уникальных <span className="text-blue">построек</span> игроков и красочной{' '}
             <span className="text-green">генерации</span> мира 🎨
           </span>
-        </h2>
+        </PageTitle>
         <div className="mt-8 flex cursor-default flex-col gap-4 text-center text-xl lg:mt-12 lg:flex-row lg:text-2xl">
           <GalleryCard
             className="border-green bg-green/10 hover:bg-green/20"

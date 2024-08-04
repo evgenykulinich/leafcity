@@ -22,7 +22,7 @@ export default function MapWorlds() {
   return (
     <>
       {buttonsVisible && (
-        <div className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_auto_1fr_auto] px-4 lg:px-8">
+        <section className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_auto_1fr_auto] px-4 lg:px-8">
           <Header />
           <PageTitle>
             Онлайн-карта для <span className="text-blue">каждого</span> мира в{' '}
@@ -74,7 +74,7 @@ export default function MapWorlds() {
             ))}
           </div>
           <Copyright />
-        </div>
+        </section>
       )}
       {!buttonsVisible && activeWorld && (
         <>

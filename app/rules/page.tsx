@@ -10,6 +10,19 @@ export const metadata: Metadata = {
   title: 'Правила',
   description:
     'Все правила проекта на одной странице. Обязательно к ознакомлению перед началом игры',
+  metadataBase: new URL(routes.baseUrl),
+  keywords: [
+    'правила лиф сити',
+    'гриферство лиф сити',
+    'правила сервера Minecraft',
+    'правила выживания лиф сити',
+    'честная игра лиф сити',
+    'строительство и торговля лиф сити',
+    'чат Discord и Minecraft лиф сити',
+    'администрация лиф сити',
+    'пользовательское соглашение лиф сити',
+    'нарушения правил лиф сити'
+  ],
   openGraph: {
     title: 'LEAF CITY - Правила',
     images: [
@@ -23,12 +36,17 @@ export const metadata: Metadata = {
     description:
       'Все правила проекта на одной странице. Обязательно к ознакомлению перед началом игры',
     type: 'website'
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black',
+    title: 'LEAF CITY - Правила'
   }
 }
 
 export default function RulesPage() {
   return (
-    <div className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_auto_1fr_auto] px-4 lg:px-8">
+    <section className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_auto_1fr_auto] px-4 lg:px-8">
       <Header />
       <PageTitle>
         Проект <span className="font-bold">LEAF CITY</span> стремится создать{' '}
@@ -37,6 +55,6 @@ export default function RulesPage() {
       </PageTitle>
       <RulesList />
       <Copyright />
-    </div>
+    </section>
   )
 }

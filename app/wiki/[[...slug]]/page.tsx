@@ -13,6 +13,19 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Википедия',
   description: 'Документация проекта, самая важная информация о проекте на одной странице',
+  metadataBase: new URL(routes.baseUrl),
+  keywords: [
+    'вики лиф сити',
+    'моды лиф сити',
+    'вики сервер лиф сити',
+    'сборка лиф сити',
+    'руководство по лиф сити',
+    'вики Minecraft сервер',
+    'цвет ника лиф сити',
+    'пластинки лиф сити',
+    'голосовой чат лиф сити',
+    'иконки лиф сити'
+  ],
   openGraph: {
     title: 'LEAF CITY - Википедия',
     images: [
@@ -25,6 +38,11 @@ export const metadata: Metadata = {
     ],
     description: 'Документация проекта, самая важная информация о проекте на одной странице',
     type: 'website'
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black',
+    title: 'LEAF CITY - Википедия'
   }
 }
 
@@ -53,7 +71,7 @@ export default async function WikiPage({ params: { slug = [] } }: PageProps) {
 }
 
 function Markdown({ children }: PropsWithChildren) {
-  return <div className="lg:pl-[100px]">{children}</div>
+  return <section className="lg:pl-[100px]">{children}</section>
 }
 
 export function generateStaticParams() {
