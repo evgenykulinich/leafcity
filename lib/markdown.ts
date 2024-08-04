@@ -54,7 +54,16 @@ export async function getTocs(slug: string) {
 
     return extractedHeadings
   } catch (error) {
-    notFound()
+    if (error instanceof Error && 'code' in error) {
+      const err = error as NodeJS.ErrnoException
+      if (err.code === 'ENOENT') {
+        notFound()
+      } else {
+        throw err
+      }
+    } else {
+      throw error
+    }
   }
 }
 
