@@ -31,7 +31,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
         <span className={`text-${color}`}>{title}</span>
       </p>
       <Dialog>
-        <DialogTrigger className="relative mt-4 w-full overflow-hidden rounded-xl outline-none">
+        <DialogTrigger className="relative mt-4 w-full max-w-[500px] overflow-hidden rounded-xl outline-none">
           <Image
             className="h-full w-full rounded-xl"
             alt="Скриншот"

@@ -35,7 +35,7 @@ export const Navigation = () => {
           aria-describedby={undefined}
         >
           <DialogTitle>
-            <VisuallyHidden.Root>Menu</VisuallyHidden.Root>
+            <VisuallyHidden.Root />
           </DialogTitle>
           <nav className="pt-4">
             <ul>

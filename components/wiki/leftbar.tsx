@@ -1,8 +1,12 @@
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import { Description } from '@radix-ui/react-dialog'
+
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import Anchor from '@/components/wiki/anchor'
 import { WIKI_ROUTES } from '@/lib/wiki_routes'
+import { DialogTitle } from '@/components/ui/dialog'
 
 export function Leftbar() {
   return (
@@ -33,6 +37,12 @@ export function SheetLeftbar() {
         className="flex flex-col gap-4 border-r-2 border-green/20 bg-black/[85%] px-0 pt-0"
         side="left"
       >
+        <VisuallyHidden.Root>
+          <Description />
+        </VisuallyHidden.Root>
+        <DialogTitle>
+          <VisuallyHidden.Root />
+        </DialogTitle>
         <SheetHeader>
           <SheetClose className="px-5" asChild></SheetClose>
         </SheetHeader>

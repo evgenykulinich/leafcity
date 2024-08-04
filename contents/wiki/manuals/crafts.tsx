@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import { Description } from '@radix-ui/react-dialog'
 
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
@@ -26,12 +27,12 @@ export default function Crafts() {
         блоки невозможно редактировать во избежание дюпа.
       </p>
       <Dialog>
-        <DialogTrigger className="relative mx-auto mt-4 block max-w-[400px] overflow-hidden rounded-lg outline-none">
+        <DialogTrigger className="relative mx-auto mt-4 block overflow-hidden rounded-lg outline-none">
           <Image
             src="/wiki/crafts/debug-stick.avif"
             alt="Палочка отладки"
-            width={500}
-            height={500}
+            width={400}
+            height={400}
           />
           <TooltipProvider>
             <Tooltip delayDuration={200}>
@@ -48,19 +49,19 @@ export default function Crafts() {
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent
-          className="w-full px-4 lg:max-w-[1080px] lg:px-8"
-          aria-describedby={undefined}
-        >
+        <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+          <VisuallyHidden.Root>
+            <Description />
+          </VisuallyHidden.Root>
           <DialogTitle>
-            <VisuallyHidden.Root>Debug Stick</VisuallyHidden.Root>
+            <VisuallyHidden.Root />
           </DialogTitle>
           <Image
-            className="w-full overflow-hidden rounded-lg"
+            className="w-auto overflow-hidden rounded-lg"
             src="/wiki/crafts/debug-stick.avif"
             alt="Палочка отладки"
-            width={1000}
-            height={1000}
+            width={1920}
+            height={1080}
           />
         </DialogContent>
       </Dialog>
@@ -74,8 +75,8 @@ export default function Crafts() {
         блока света можно на камнерезе.
       </p>
       <Dialog>
-        <DialogTrigger className="relative mx-auto mb-8 mt-4 block max-w-[400px] overflow-hidden rounded-lg outline-none">
-          <Image src="/wiki/crafts/light.avif" alt="Палочка отладки" width={500} height={500} />
+        <DialogTrigger className="relative mx-auto mb-8 mt-4 block overflow-hidden rounded-lg outline-none">
+          <Image src="/wiki/crafts/light.avif" alt="Палочка отладки" width={400} height={400} />
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
@@ -91,19 +92,19 @@ export default function Crafts() {
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent
-          className="w-full px-4 lg:max-w-[1080px] lg:px-8"
-          aria-describedby={undefined}
-        >
+        <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+          <VisuallyHidden.Root>
+            <Description />
+          </VisuallyHidden.Root>
           <DialogTitle>
-            <VisuallyHidden.Root>Light</VisuallyHidden.Root>
+            <VisuallyHidden.Root />
           </DialogTitle>
           <Image
             className="w-full overflow-hidden rounded-lg"
             src="/wiki/crafts/light.avif"
             alt="Light"
-            width={1000}
-            height={1000}
+            width={1920}
+            height={1080}
           />
         </DialogContent>
       </Dialog>

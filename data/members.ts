@@ -22,11 +22,6 @@ export const members = [
     styles: 'member-badtrip'
   },
   {
-    nickname: 'Nokarena',
-    image: `${routes.head}/Nokarena`,
-    styles: 'member-nokarena'
-  },
-  {
     nickname: 'SoraIspania',
     image: `${routes.head}/SoraIspania`,
     styles: 'member-soraispania'

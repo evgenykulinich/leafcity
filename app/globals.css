@@ -254,7 +254,6 @@ img {
   .member-dashka17,
   .member-ouiking,
   .member-badtrip,
-  .member-nokarena,
   .member-soraispania,
   .member-istork,
   .member-crucesaureae,
@@ -298,12 +297,6 @@ img {
   color: #01fff1;
   --member-nickname: 'badtrip_';
   --member-role: 'Блудный сын';
-}
-
-.member-nokarena {
-  color: #54d071;
-  --member-nickname: 'лол12';
-  --member-role: 'Модератор';
 }
 
 .member-soraispania {
