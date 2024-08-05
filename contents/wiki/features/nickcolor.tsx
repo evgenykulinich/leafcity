@@ -7,8 +7,8 @@ export default function NickColor() {
 
   return (
     <>
-      <h1 className="mb-8 text-xl font-bold">Цвет ника</h1>
-      <p className="mt4">
+      <h1 className="text-xl font-bold">Цвет ника</h1>
+      <p className="mt-4">
         С помощью этих команд ты сможешь изменить цвет своего ника в чате и Tab-е, выбрав один
         оттенок или градиент. Доступно только для подписчиков.
       </p>

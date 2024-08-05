@@ -13,7 +13,7 @@ export default function Crafts() {
 
   return (
     <>
-      <h1 className="mb-8 text-xl font-bold">Крафты</h1>
+      <h1 className="text-xl font-bold">Крафты</h1>
       <p className="mt-4">
         Все кастомные крафты доступные на сервере, разнообразь свое приключение и создай то, что не
         смог в одиночной игре. Особенно полезно для строителей.

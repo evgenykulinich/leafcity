@@ -90,7 +90,7 @@ img {
   --background-color: var(--color-mango);
 }
 
-@media (width > 1024px) {
+@media (width >= 1024px) {
   .minecraft-version {
     position: relative;
 
@@ -138,6 +138,79 @@ img {
 
 .animation-fade-in {
   animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Секция достижений */
+@media (width >= 1024px) {
+  .achievement-tps,
+  .achievement-community,
+  .achievement-worlds {
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      font-size: 1.15rem;
+      text-wrap: nowrap;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &:hover::before {
+      top: -40px;
+
+    }
+
+    &:hover::after {
+      bottom: -40px;
+
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  .achievement-tps {
+    &::before {
+      content: 'В среднем 8 ТПС'
+    }
+
+    &::after {
+      content: 'По праздникам бывает и 10'
+    }
+  }
+
+  .achievement-community {
+    &::before {
+      content: 'Дети на админах'
+    }
+
+    &::after {
+      content: 'И токсичное комьюнити'
+    }
+  }
+
+  .achievement-worlds {
+    &::before {
+      content: 'Но ты не волнуйся'
+    }
+
+    &::after {
+      content: 'Получишь бан в каждом из них'
+    }
+  }
 }
 
 /* Картинки для карточек миров */
@@ -211,7 +284,7 @@ img {
 }
 
 /* Секция команды проекта */
-@media (width > 1024px) {
+@media (width >= 1024px) {
   .shy {
     position: relative;
 
@@ -298,7 +371,7 @@ img {
   }
 }
 
-@media (width > 1024px) {
+@media (width >= 1024px) {
   .member-list_tw,
   .member-dashka17,
   .member-ouiking,

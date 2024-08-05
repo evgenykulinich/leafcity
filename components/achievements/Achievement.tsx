@@ -8,9 +8,10 @@ interface Props {
   content: string
   color: string
   icon: string
+  className: string
 }
 
-export function Achievement({ title, content, color, icon }: Props) {
+export function Achievement({ title, content, color, icon, className }: Props) {
   return (
     <Card
       className={clsx(
@@ -34,7 +35,8 @@ export function Achievement({ title, content, color, icon }: Props) {
           'text-purple': color === 'purple',
           'text-green': color === 'green',
           'text-blue': color === 'blue'
-        }
+        },
+        className
       )}
     >
       <CardHeader className="mb-2">

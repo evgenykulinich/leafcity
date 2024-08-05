@@ -13,7 +13,7 @@ export default function VoiceChat() {
 
   return (
     <>
-      <h1 className="mb-8 text-xl font-bold">Голосовой чат</h1>
+      <h1 className="text-xl font-bold">Голосовой чат</h1>
       <p className="mt-4">
         <span className="style-info">Plasmo Voice</span> позволяет использовать голосовой чат в
         Minecraft, предоставляя множество функций и настроек для удобного общения в игре.
