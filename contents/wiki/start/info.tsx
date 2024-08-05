@@ -91,8 +91,8 @@ export default function Info() {
         нет, то ты можешь обратиться за помощью в{' '}
         <Link className="hover-underline underline-purple text-purple" href={routes.discord}>
           Службу заботы
-        </Link>
-        .
+        </Link>{' '}
+        Discrod-a.
       </p>
       <small className="text-sm text-white/50">{lastUpdateDate}</small>
     </>

@@ -14,22 +14,16 @@ export default function Records() {
       </p>
 
       <p className="mt-4">
-        <span className="leading-height text-nowrap rounded bg-blue/20 px-2 py-1 leading-[20px]">
-          {'disc burn <url> [name]'}
-        </span>{' '}
-        – Создай диск с пользовательским звуком по URL. Тебе нужно держать музыкальный диск в руке.
+        <span className="style-point text-nowrap">{'disc burn <url> [name]'}</span> – Создай диск с
+        пользовательским звуком по URL. Тебе нужно держать музыкальный диск в руке.
       </p>
       <p className="mt-5">
-        <span className="leading-height text-nowrap rounded bg-blue/20 px-2 py-1 leading-[20px]">
-          /disc erase
-        </span>{' '}
-        – Замени пользовательский диск на обычный.
+        <span className="style-point text-nowrap">/disc erase</span> – Замени пользовательский диск
+        на обычный.
       </p>
       <p className="mt-5">
-        <span className="leading-height text-nowrap rounded bg-blue/20 px-2 py-1 leading-[20px]">
-          {'/disc search <query>'}
-        </span>{' '}
-        – Поиск треков на YouTube.
+        <span className="style-point text-nowrap">{'/disc search <query>'}</span> – Поиск треков на
+        YouTube.
       </p>
 
       <h2 className="mt-8 text-lg font-bold" id="поддерживаемые-источники">
@@ -39,22 +33,28 @@ export default function Records() {
 
       <ul className="mt-4 flex flex-col gap-3">
         <li>
-          <span className="text-white/50">• </span>Видео с YouTube и прямые трансляции
+          <span className="text-white/50">• </span>Видео с{' '}
+          <span className="style-info">YouTube</span> и прямые трансляции
         </li>
         <li>
-          <span className="text-white/50">• </span>SoundCloud
+          <span className="text-white/50">• </span>
+          <span className="style-info">SoundCloud</span>
         </li>
         <li>
-          <span className="text-white/50">• </span>Bandcamp
+          <span className="text-white/50">• </span>
+          <span className="style-info">Bandcamp</span>
         </li>
         <li>
-          <span className="text-white/50">• </span>Vimeo
+          <span className="text-white/50">• </span>
+          <span className="style-info">Vimeo</span>
         </li>
         <li>
-          <span className="text-white/50">• </span>Twitch прямые трансляции
+          <span className="text-white/50">• </span>
+          <span className="style-info">Twitch</span> прямые трансляции
         </li>
         <li>
-          <span className="text-white/50">• </span>Прямые HTTP-адреса
+          <span className="text-white/50">• </span>Прямые{' '}
+          <span className="style-info">HTTP-адреса</span>
         </li>
       </ul>
 
@@ -65,28 +65,35 @@ export default function Records() {
 
       <ul className="mb-8 mt-4 flex flex-col gap-3">
         <li>
-          <span className="text-white/50">• </span>MP3
+          <span className="text-white/50">• </span>
+          <span className="style-info">MP3</span>
         </li>
         <li>
-          <span className="text-white/50">• </span>FLAC
+          <span className="text-white/50">• </span>
+          <span className="style-info">FLAC</span>
         </li>
         <li>
-          <span className="text-white/50">• </span>WAV
+          <span className="text-white/50">• </span>
+          <span className="style-info">WAV</span>
         </li>
         <li>
-          <span className="text-white/50">• </span>Matroska / WebM (кодеки AAC, Opus или Vorbis)
+          <span className="text-white/50">• </span>
+          <span className="style-info">Matroska / WebM</span> (кодеки AAC, Opus или Vorbis)
         </li>
         <li>
-          <span className="text-white/50">• </span>MP4 / M4A (кодек AAC)
+          <span className="text-white/50">• </span>
+          <span className="style-info">MP4 / M4A</span> (кодек AAC)
         </li>
         <li>
-          <span className="text-white/50">• </span>OGG-потоки (кодеки Opus, Vorbis и FLAC)
+          <span className="text-white/50">• </span>
+          <span className="style-info">OGG-потоки</span> (кодеки Opus, Vorbis и FLAC)
         </li>
         <li>
-          <span className="text-white/50">• </span>Потоки AAC
+          <span className="text-white/50">• </span>Потоки <span className="style-info">AAC</span>
         </li>
         <li>
-          <span className="text-white/50">• </span>Плейлисты для стримов (M3U и PLS)
+          <span className="text-white/50">• </span>Плейлисты для стримов{' '}
+          <span className="style-info">(M3U и PLS)</span>
         </li>
       </ul>
 

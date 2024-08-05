@@ -19,19 +19,15 @@ export default function Cute() {
       <ul className="mt-4 flex flex-col gap-3">
         <li>
           <span className="text-white/50">1. </span>Именно на нашем сервере ты можешь узнать ник
-          другого игрока только нажав по нему{' '}
-          <span className="leading-height rounded bg-purple/20 px-2 py-1">ПКМ</span>, чтобы обнять.
+          другого игрока только нажав по нему <span className="style-info">ПКМ</span>, чтобы обнять.
         </li>
         <li>
           <span className="text-white/50">2. </span>Ты можешь гладить котиков нажав по ним{' '}
-          <span className="leading-height rounded bg-purple/20 px-2 py-1">ПКМ</span>
+          <span className="style-info">ПКМ</span>
         </li>
         <li>
           <span className="text-white/50">3. </span>Ты можешь поделиться своей любовью с игроков
-          прописав{' '}
-          <span className="leading-height text-nowrap rounded bg-purple/20 px-2 py-1">
-            {'/love <игрок>'}
-          </span>
+          прописав <span className="style-info text-nowrap">{'/love <игрок>'}</span>
         </li>
       </ul>
 
@@ -41,11 +37,11 @@ export default function Cute() {
       <ul className="mt-4 flex flex-col gap-3">
         <li>
           <span className="text-white/50">1. </span>Ты можешь харкнуть в игрока написав{' '}
-          <span className="leading-height rounded bg-purple/20 px-2 py-1">/spit</span>
+          <span className="style-info">/spit</span>
         </li>
         <li>
           <span className="text-white/50">2. </span>Ты можешь переключить фантомов командой{' '}
-          <span className="leading-height rounded bg-purple/20 px-2 py-1">/phantoms off / on</span>
+          <span className="style-info text-nowrap">/phantoms off / on</span>
         </li>
       </ul>
 
