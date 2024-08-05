@@ -58,9 +58,9 @@ export default function MapWorlds() {
                 onClick={() => handleButtonClick(world.title)}
               >
                 <div className={`${world.title} mx-auto aspect-square w-full`} />
-                <p className="align-center absolute left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] gap-2 transition duration-500">
+                <p className="absolute left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] items-center gap-2 transition duration-500">
                   <Image
-                    className="w-[30px] lg:w-[30px]"
+                    className="w-[30px] lg:w-[35px]"
                     alt="Аватар"
                     src={world.icon}
                     width={180}
