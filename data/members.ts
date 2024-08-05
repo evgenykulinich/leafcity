@@ -72,7 +72,7 @@ export const members = [
     styles: 'member-ratkea'
   },
   {
-    nickname: 'Tpyxan_',
+    nickname: 'Tpyxan',
     image: `${routes.head}/xareht`,
     styles: 'member-tryxan'
   }
