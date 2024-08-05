@@ -49,15 +49,7 @@ export default function Icons() {
       <div className="mb-8 mt-4">
         {sortedIconsList.map(icon => (
           <div className="flex items-center gap-2 py-2" key={icon.command}>
-            <div className="w-[30px]">
-              <Image
-                className="h-[auto] w-fit"
-                src={icon.img}
-                alt={icon.command}
-                width={100}
-                height={100}
-              />
-            </div>
+            <Image className="icon" src={icon.img} alt={icon.command} width={100} height={100} />
             <span className="font-bold text-white/50">•</span>
             <span className="rounded bg-purple/20 px-2 py-1 font-bold">{icon.command}</span>
           </div>

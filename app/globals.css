@@ -430,3 +430,8 @@ img {
 .style-danger {
   background-color: rgba(237, 46, 56, 0.1);
 }
+
+.icon {
+  width: 30px !important;
+  height: auto !important;
+}
