@@ -41,9 +41,6 @@ export default function Search() {
     [searchedInput]
   )
 
-  const searchInput = document.querySelector('#wiki-search')
-  const searchLine = document.querySelector('.search__line')
-
   return (
     <div className="search">
       <Dialog
@@ -77,7 +74,6 @@ export default function Search() {
           <DialogHeader>
             <input
               className="h-14 bg-transparent px-4 text-[15px] caret-green outline-none"
-              id="wiki-search"
               value={searchedInput}
               onChange={e => setSearchedInput(e.target.value)}
               placeholder="Поиск..."

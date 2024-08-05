@@ -19,8 +19,8 @@ export default function Crafts() {
         смог в одиночной игре. Особенно полезно для строителей.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold" id="палочка-откладки">
-        Палочка откладки
+      <h2 className="mt-8 text-lg font-bold" id="палочка-отладки">
+        Палочка отладки
       </h2>
       <p className="mt-4">
         С помощью палочки откладки ты сможешь создавать совершенно разнообразные проекты, некоторые
@@ -66,7 +66,7 @@ export default function Crafts() {
         </DialogContent>
       </Dialog>
 
-      <h2 className="mt-8 text-lg font-bold" id="палочка-откладки">
+      <h2 className="mt-8 text-lg font-bold" id="блок-света">
         Блок света
       </h2>
       <p className="mt-4">
