@@ -11,7 +11,7 @@ import { Discord } from '@/components/questions/Discord'
 export function Questions() {
   return (
     <section className="mt-16 lg:mt-24">
-      <h2 className="mt-16 text-[26px] lg:mt-24">Ответы на вопросы</h2>
+      <h2 className="mt-16 text-center text-[26px] lg:mt-24">Ответы на вопросы</h2>
       <div className="mt-8 flex flex-col items-start gap-8 lg:mt-12 lg:flex-row">
         <Accordion type="single" collapsible className="flex w-full flex-col gap-4">
           {questions.map(question => (
@@ -25,7 +25,7 @@ export function Questions() {
             </AccordionItem>
           ))}
         </Accordion>
-        <div className="mx-auto flex max-w-[450px] flex-col justify-between lg:w-[50%]">
+        <div className="mx-auto flex flex-col justify-between lg:w-[50%] lg:max-w-[450px]">
           <Discord />
           <Server />
         </div>

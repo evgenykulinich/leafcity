@@ -168,10 +168,7 @@ export default function Commands() {
       <ul className="mb-8 mt-4 flex flex-col gap-3">
         {sortedCommandList.map(command => (
           <li key={command.name}>
-            <span className="leading-height text-nowrap rounded bg-blue/20 px-2 py-1">
-              {command.name}
-            </span>{' '}
-            – {command.description}
+            <span className="style-point">{command.name}</span> – {command.description}
           </li>
         ))}
       </ul>

@@ -15,9 +15,8 @@ export default function VoiceChat() {
     <>
       <h1 className="mb-8 text-xl font-bold">Голосовой чат</h1>
       <p className="mt-4">
-        <span className="leading-height rounded bg-purple/20 px-2 py-1">Plasmo Voice</span>{' '}
-        позволяет использовать голосовой чат в Minecraft, предоставляя множество функций и настроек
-        для удобного общения в игре.
+        <span className="style-info">Plasmo Voice</span> позволяет использовать голосовой чат в
+        Minecraft, предоставляя множество функций и настроек для удобного общения в игре.
       </p>
 
       <h2 className="mt-8 text-lg font-bold" id="мод-на-голосовой-чат">
@@ -51,8 +50,7 @@ export default function VoiceChat() {
           >
             Plasmo Voice
           </Link>{' '}
-          и перекинуть в папку{' '}
-          <span className="leading-height rounded bg-purple/20 px-2 py-1">/.minecraft/mods/</span>
+          и перекинуть в папку <span className="style-info">/.minecraft/mods/</span>
         </li>
       </ul>
 
@@ -89,7 +87,7 @@ export default function VoiceChat() {
           OptiFabric
         </Link>{' '}
         и OptiFine с официального сайта. Нужно перекинуть оба мода в папку{' '}
-        <span className="leading-height rounded bg-purple/20 px-2 py-1">/.minecraft/mods/</span>
+        <span className="style-info">/.minecraft/mods/</span>
       </p>
 
       <h3 className="mt-8 text-lg font-bold" id="зависимости-для-данного-мода">
@@ -116,15 +114,12 @@ export default function VoiceChat() {
         Новые значки
       </h2>
       <p className="mt-4">
-        Теперь ты можешь отличить значки{' '}
-        <span className="leading-height text-nowrap rounded bg-purple/20 px-2 py-1">
-          Client Mute
-        </span>{' '}
-        и <span className="text-nowrap rounded bg-purple/20 px-2 py-1">Server Mute</span>
+        Теперь ты можешь отличить значки <span className="style-info text-nowrap">Client Mute</span>{' '}
+        и <span className="style-info text-nowrap">Server Mute</span>
       </p>
       <p className="mt-4">
-        Также есть новая <span className="rounded bg-purple/20 px-2 py-1">Player Muted Audio</span>{' '}
-        иконка. Этот значок означает, что игрок отключил голосовой чат на клиенте.
+        Также есть новая <span className="style-info text-nowrap">Player Muted Audio</span> иконка.
+        Этот значок означает, что игрок отключил голосовой чат на клиенте.
       </p>
 
       <div className="flex flex-wrap gap-4">
@@ -210,15 +205,12 @@ export default function VoiceChat() {
       </h2>
       <p className="mt-4">Благодаря множеству новых функций нам пришлось заново продумать меню.</p>
       <p className="leading-height mt-4 text-base">
-        Мы заменили <span className="rounded bg-purple/20 px-2 py-1">General</span> категорию
-        четырьмя новыми: <span className="rounded bg-purple/20 px-2 py-1">Devices</span>,{' '}
-        <span className="rounded bg-purple/20 px-2 py-1">Volume</span>,{' '}
-        <span className="rounded bg-purple/20 px-2 py-1">Activation</span> и{' '}
-        <span className="rounded bg-purple/20 px-2 py-1">Overlay</span>
+        Мы заменили <span className="style-info">General</span> категорию четырьмя новыми:{' '}
+        <span className="style-info">Devices</span>, <span className="style-info">Volume</span>,{' '}
+        <span className="style-info">Activation</span> и <span className="style-info">Overlay</span>
       </p>
       <p className="mb-8 mt-4">
-        Также появилась новая{' '}
-        <span className="text-nowrap rounded bg-purple/20 px-2 py-1">Add-ons</span> категория и
+        Также появилась новая <span className="style-info text-nowrap">Add-ons</span> категория и
         множество улучшений визуального оформления и удобства использования.
       </p>
 

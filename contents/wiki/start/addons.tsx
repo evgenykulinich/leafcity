@@ -25,8 +25,11 @@ export default function Info() {
       </h2>
       <p className="mt-4">
         Всё модификации, которые добавляют визуальный контент, а так же оптимизацию, кроме тех, что
-        дают явные преимущества над другими игроками - разрешены. Автокликеры, Easy Place Mode, а
-        так же модификации, по типу: Gamma, Fullbright UB, InventoryProfileNext - так же разрешены.
+        дают явные преимущества над другими игроками - разрешены. Автокликеры,{' '}
+        <span className="style-info text-nowrap">Easy Place Mode</span>, а так же модификации, по
+        типу: <span className="style-info">Gamma</span>,{' '}
+        <span className="style-info text-nowrap">Fullbright UB</span>,{' '}
+        <span className="style-info">InventoryProfileNext</span> - так же разрешены.
       </p>
       <InfoText className="mt-8">
         Если вы сомневаетесь в какой-либо модификации - обратитесь в поддержку.
@@ -69,8 +72,8 @@ export default function Info() {
       </h3>
       <ul className="mt-4 flex flex-col gap-3 text-white/50">
         {sortedBannedModsList.map(mod => (
-          <li className="w-fit rounded bg-danger/10 px-2 py-1 text-white" key={mod.name}>
-            {mod.name}
+          <li className="w-fit" key={mod.name}>
+            <span className="style-danger">{mod.name}</span>
           </li>
         ))}
       </ul>
@@ -80,16 +83,13 @@ export default function Info() {
       </h3>
       <ul className="mb-8 mt-4 flex flex-col gap-3">
         {sortedBannedPacksList.map(mod => (
-          <li
-            className="leading-height w-fit rounded bg-danger/10 px-2 py-1 text-white"
-            key={mod.name}
-          >
-            {mod.name}
+          <li className="w-fit" key={mod.name}>
+            <span className="style-danger">{mod.name}</span>
           </li>
         ))}
       </ul>
 
-      <small className="text-sm text-white/50">{lastUpdateDate}</small>
+      <small className="text-nowrap text-sm text-white/50">{lastUpdateDate}</small>
     </>
   )
 }

@@ -47,10 +47,8 @@ export default function Worlds() {
         </li>
         <li>
           <span className="text-white/50">2.</span> Напиши{' '}
-          <span className="leading-height text-nowrap rounded bg-purple/20 px-2 py-1">
-            /server сервер
-          </span>{' '}
-          чтобы переключить необходимый мир.
+          <span className="style-info text-nowrap">/server сервер</span> чтобы переключить
+          необходимый мир.
         </li>
       </ul>
 
@@ -78,8 +76,8 @@ export default function Worlds() {
       </h3>
       <p className="mb-8 mt-4">
         Используют спавн-рейт сервера. Используют механику спавна от игрока (например: ферма
-        тотемов). Используют более 10 единиц редстоун механизмов (например: воронки, наблюдатели,
-        поршни и т.д.)
+        тотемов). Используют <span className="style-danger">более 10</span> единиц редстоун
+        механизмов (например: воронки, наблюдатели, поршни и т.д.)
       </p>
 
       <small className="text-sm text-white/50">{lastUpdateDate}</small>

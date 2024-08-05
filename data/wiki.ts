@@ -236,7 +236,7 @@ export const modpack = [
       'мод добавляющий интерфейс, который дает возможность удобно настраивать большинство дополнений.'
   },
   {
-    name: 'Lightium',
+    name: 'Lithium',
     description:
       'это мод, который улучшает ряд систем, такие как: физика игры, искусственный интеллект мобов и block ticking не затрагивая стандартную механику Minecraft. Lithium помогает повысить производительность за счет оптимизации  внутреннего игрового сервера, что и говорит нам о том, насколько незаменим для тебя этот мод.'
   },
@@ -254,5 +254,60 @@ export const modpack = [
     name: 'Emotecraft',
     description:
       'мод, который позволяет игрокам использовать различные анимации и эмоции в игре. Это добавляет больше способов самовыражения и взаимодействия с другими игроками в мире Minecraft.'
+  }
+]
+
+export const icons = [
+  {
+    command: '/banana',
+    img: '/wiki/icons/banana.png'
+  },
+  {
+    command: '/death',
+    img: '/wiki/icons/death.png'
+  },
+  {
+    command: '/fire',
+    img: '/wiki/icons/fire.png'
+  },
+  {
+    command: '/light',
+    img: '/wiki/icons/light.png'
+  },
+  {
+    command: '/heart',
+    img: '/wiki/icons/heart.png'
+  },
+  {
+    command: '/meteorite',
+    img: '/wiki/icons/meteorite.png'
+  },
+  {
+    command: '/radiation',
+    img: '/wiki/icons/radiation.png'
+  },
+  {
+    command: '/pickaxe',
+    img: '/wiki/icons/pickaxe.png'
+  },
+  {
+    command: '/plane',
+    img: '/wiki/icons/plane.png'
+  },
+  {
+    command: '/snowflake',
+    img: '/wiki/icons/snowflake.png'
+  },
+  {
+    command: '/star',
+    img: '/wiki/icons/star.png'
+  },
+  {
+    command: '/sword',
+    img: '/wiki/icons/sword.png'
+  },
+  {
+    command: '/ussr',
+    img: '/wiki/icons/ussr.png'
   }
 ]
