@@ -17,11 +17,11 @@ export default function NickColor() {
         Команда для смены цвета ника
       </h2>
       <p className="mt-4">
-        <span className="style-success">{'/nickcolor <#цвет>'}</span> - для цвета ника с одним
+        <span className="style-success">{'/nickcolor <#цвет>'}</span> – для цвета ника с одним
         оттенком
       </p>
       <p className="mt-5">
-        <span className="style-success">{'/nickcolor <gradient:#цвет1:#цвет2>'}</span> - для
+        <span className="style-success">{'/nickcolor <gradient:#цвет1:#цвет2>'}</span> – для
         градиент ника
       </p>
 
@@ -29,10 +29,10 @@ export default function NickColor() {
         Примеры
       </h2>
       <p className="mt-4">
-        <span className="style-point">{'/nickcolor <#90EE90>'}</span> - один оттенок
+        <span className="style-point">{'/nickcolor <#90EE90>'}</span> – один оттенок
       </p>
       <p className="mb-8 mt-5">
-        <span className="style-point">{'/nickcolor <gradient:#90EE90:#3CB371>'}</span> - градиент
+        <span className="style-point">{'/nickcolor <gradient:#90EE90:#3CB371>'}</span> – градиент
       </p>
 
       <small className="text-sm text-white/50">{lastUpdateDate}</small>

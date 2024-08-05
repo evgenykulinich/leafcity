@@ -25,13 +25,13 @@ export default function Info() {
       </h2>
       <ul className="mt-4 flex flex-col gap-3">
         <li className="text-white/50">
-          •{' '}
+          <span className="font-bold text-white/50">• </span>
           <Link className="hover-underline underline-blue text-blue" href={routes.rules}>
             Правила сервера
           </Link>
         </li>
         <li className="text-white/50">
-          •{' '}
+          <span className="font-bold text-white/50">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/start/addons`}
@@ -40,7 +40,7 @@ export default function Info() {
           </Link>
         </li>
         <li className="text-white/50">
-          •{' '}
+          <span className="font-bold text-white/50">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/start/modpack`}
@@ -55,7 +55,7 @@ export default function Info() {
       </h2>
       <ul className="mt-4 flex flex-col gap-3">
         <li>
-          •{' '}
+          <span className="font-bold text-white/50">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/manuals/commands`}
@@ -64,7 +64,7 @@ export default function Info() {
           </Link>
         </li>
         <li>
-          •{' '}
+          <span className="font-bold text-white/50">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/manuals/crafts`}
@@ -73,7 +73,7 @@ export default function Info() {
           </Link>
         </li>
         <li>
-          •{' '}
+          <span className="font-bold text-white/50">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/manuals/registration`}

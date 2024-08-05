@@ -15,7 +15,7 @@ export default function Icons() {
     <>
       <h1 className="mb-8 text-xl font-bold">Иконки</h1>
       <p className="mt-4">
-        Иконки на нашем проекте - способ выделиться среди других игроков, а так же финансовая
+        Иконки на нашем проекте – способ выделиться среди других игроков, а так же финансовая
         поддержка для сервера. В данном руководстве ты сможешь узнать какие есть команды для смены
         иконки.
       </p>
@@ -49,13 +49,16 @@ export default function Icons() {
       <div className="mb-8 mt-4">
         {sortedIconsList.map(icon => (
           <div className="flex items-center gap-2 py-2" key={icon.command}>
-            <Image
-              className="h-[auto] w-[30px]"
-              src={icon.img}
-              alt={icon.command}
-              width={100}
-              height={100}
-            />
+            <div className="w-[30px]">
+              <Image
+                className="h-[auto] w-fit"
+                src={icon.img}
+                alt={icon.command}
+                width={100}
+                height={100}
+              />
+            </div>
+            <span className="font-bold text-white/50">•</span>
             <span className="rounded bg-purple/20 px-2 py-1 font-bold">{icon.command}</span>
           </div>
         ))}
