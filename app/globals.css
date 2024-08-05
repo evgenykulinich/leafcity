@@ -141,6 +141,34 @@ img {
 }
 
 /* Картинки для карточек миров */
+.transition-all {
+  transition: all 0.5s ease;
+}
+
+.radius-animation {
+  border-radius: 50%;
+  transition: all 0.5s ease;
+
+  & > div {
+    border-radius: inherit;
+    transition: filter 0.5s ease;
+    filter: blur(8px) brightness(70%);
+  }
+
+  &:hover {
+    border-radius: 15%;
+
+    & > div {
+      border-radius: inherit;
+      filter: none;
+    }
+
+    & > p {
+      opacity: 0;
+    }
+  }
+}
+
 .survival,
 .farms,
 .resources {

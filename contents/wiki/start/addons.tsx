@@ -24,7 +24,7 @@ export default function Info() {
         Разрешенные модификации
       </h2>
       <p className="mt-4">
-        Всё модификации, которые добавляют визуальный контент, а так же оптимизацию, кроме тех, что
+        Все модификации, которые добавляют визуальный контент, а так же оптимизацию, кроме тех, что
         дают явные преимущества над другими игроками – разрешены. Автокликеры,{' '}
         <span className="style-info text-nowrap">Easy Place Mode</span>, а так же модификации, по
         типу: <span className="style-info">Gamma</span>,{' '}
@@ -43,7 +43,7 @@ export default function Info() {
         {sortedAllowedModsList.map(mod => (
           <li className="text-white/50" key={mod.name}>
             <span className="font-bold text-white/50">• </span>
-            <Link className="hover-underline underline-blue text-blue" href={mod.url}>
+            <Link className="hover-underline underline-green text-green" href={mod.url}>
               {mod.name}
             </Link>
           </li>

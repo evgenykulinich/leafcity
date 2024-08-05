@@ -7,7 +7,7 @@ export default function Records() {
 
   return (
     <>
-      <h1 className="mb-8 text-xl font-bold">Пластинки</h1>
+      <h1 className="text-xl font-bold">Пластинки</h1>
       <p className="mt-4">
         С помощью этих команд ты сможешь создавать музыкальные диски с пользовательскими звуками,
         искать треки на YouTube и заменять пользовательские диски на обычные.
