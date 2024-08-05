@@ -39,23 +39,46 @@ export function Copyright() {
         </p>
         <p className="mt-2 text-sm text-white/40">
           Сайт разработан под брендом{' '}
-          <Link className="transition hover:text-mango" href="https://t.me/ratmoodfrontend">
-            RatMood 🤍
-          </Link>
+          <Link
+            className="hover-underline underline-mango transition hover:text-mango"
+            href="https://t.me/ratmoodfrontend"
+          >
+            RatMood
+          </Link>{' '}
+          🤍
         </p>
       </div>
-      <div className="mt-6 flex justify-center gap-8 lg:mt-0 lg:block">
-        <div className="flex-grow">
+      <div className="mt-6 flex w-full justify-center gap-4 lg:mt-0 lg:block lg:w-auto lg:gap-8">
+        <div className="w-full lg:hidden">
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
-                <Link href={routes.shop} target="_blank">
+                <Link href={routes.map}>
                   <Image
-                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNob3BwaW5nLWJhc2tldCI+PHBhdGggZD0ibTE1IDExLTEgOSIvPjxwYXRoIGQ9Im0xOSAxMS00LTciLz48cGF0aCBkPSJNMiAxMWgyMCIvPjxwYXRoIGQ9Im0zLjUgMTEgMS42IDcuNGEyIDIgMCAwIDAgMiAxLjZoOS44YTIgMiAwIDAgMCAyLTEuNmwxLjctNy40Ii8+PHBhdGggZD0iTTQuNSAxNS41aDE1Ii8+PHBhdGggZD0ibTUgMTEgNC03Ii8+PHBhdGggZD0ibTkgMTEgMSA5Ii8+PC9zdmc+"
+                    className="size-12 w-full cursor-pointer rounded-xl bg-purple p-2 transition hover:scale-105 hover:bg-purple/80"
+                    src="/icon/map.svg"
                     alt="Cart"
                     height={1000}
                     width={1000}
-                    className="size-12 w-full cursor-pointer rounded-xl bg-green/80 p-2 transition hover:scale-110 lg:mb-6"
+                  />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent className="p-0">Карта</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
+
+        <div className="w-full">
+          <TooltipProvider>
+            <Tooltip delayDuration={200}>
+              <TooltipTrigger asChild>
+                <Link href={routes.shop}>
+                  <Image
+                    className="size-12 w-full cursor-pointer rounded-xl border-2 border-green bg-green/10 p-2 transition hover:scale-105 hover:bg-green/20 lg:mb-6 lg:hover:scale-110"
+                    src="/icon/shopping-basket.svg"
+                    alt="Cart"
+                    height={1000}
+                    width={1000}
                   />
                 </Link>
               </TooltipTrigger>
@@ -64,13 +87,13 @@ export function Copyright() {
           </TooltipProvider>
         </div>
 
-        <div className="flex-grow">
+        <div className="w-full">
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
                 <Link href={routes.discord} target="_blank">
                   <Image
-                    className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-110"
+                    className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-105 lg:hover:scale-110"
                     src="/icon/discord-icon.svg"
                     alt="Discord"
                     height={100}
