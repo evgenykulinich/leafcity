@@ -25,14 +25,14 @@ export default function Info() {
       </h2>
       <p className="mt-4">
         Всё модификации, которые добавляют визуальный контент, а так же оптимизацию, кроме тех, что
-        дают явные преимущества над другими игроками - разрешены. Автокликеры,{' '}
+        дают явные преимущества над другими игроками – разрешены. Автокликеры,{' '}
         <span className="style-info text-nowrap">Easy Place Mode</span>, а так же модификации, по
         типу: <span className="style-info">Gamma</span>,{' '}
         <span className="style-info text-nowrap">Fullbright UB</span>,{' '}
-        <span className="style-info">InventoryProfileNext</span> - так же разрешены.
+        <span className="style-info">InventoryProfileNext</span> – так же разрешены.
       </p>
       <InfoText className="mt-8">
-        Если вы сомневаетесь в какой-либо модификации - обратитесь в поддержку.
+        Если вы сомневаетесь в какой-либо модификации – обратитесь в поддержку.
       </InfoText>
 
       <h3 className="mt-8 text-lg font-bold" id="дополнительный-список">
@@ -42,7 +42,7 @@ export default function Info() {
       <ul className="mt-4 flex flex-col gap-3">
         {sortedAllowedModsList.map(mod => (
           <li className="text-white/50" key={mod.name}>
-            •{' '}
+            <span className="font-bold text-white/50">• </span>
             <Link className="hover-underline underline-blue text-blue" href={mod.url}>
               {mod.name}
             </Link>

@@ -25,7 +25,7 @@ export default function ModPack() {
       <ul className="mt-4 flex flex-col gap-3">
         {sortedModpack.map(mod => (
           <li key={mod.name}>
-            <span className="text-white/50">• </span>
+            <span className="font-bold text-white/50">• </span>
             <span className="style-point">{mod.name}</span> – {mod.description}
           </li>
         ))}
