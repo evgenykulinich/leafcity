@@ -53,8 +53,8 @@ export default function Icons() {
               className="h-[auto] w-[30px]"
               src={icon.img}
               alt={icon.command}
-              width={500}
-              height={500}
+              width={100}
+              height={100}
             />
             <span className="rounded bg-purple/20 px-2 py-1 font-bold">{icon.command}</span>
           </div>
