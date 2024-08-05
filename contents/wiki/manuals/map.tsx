@@ -11,7 +11,7 @@ export default function Map() {
 
   return (
     <>
-      <h1 className="mb-8 text-xl font-bold">Карта</h1>
+      <h1 className="text-xl font-bold">Карта</h1>
       <p className="mt-4">
         Узнай о расположении всех построек и территорий нашего сервера на удобной и интуитивно
         понятной карте. Этот инструмент особенно полезен для новичков.
@@ -28,7 +28,7 @@ export default function Map() {
           height={1000}
           width={1000}
         />
-        <span className="text-[20px] font-bold">LEAF CITY</span>
+        <span className="text-[20px] font-bold">LEAF CITY • Карта</span>
         <Image
           className="absolute right-1"
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWNoZXZyb24tcmlnaHQiPjxwYXRoIGQ9Im05IDE4IDYtNi02LTYiLz48L3N2Zz4="

@@ -12,6 +12,7 @@ export function Achievements() {
             content={achievement.content}
             color={achievement.color}
             icon={achievement.icon}
+            className={achievement.className}
             key={achievement.title}
           />
         ))}

@@ -13,7 +13,7 @@ export default function Icons() {
 
   return (
     <>
-      <h1 className="mb-8 text-xl font-bold">Иконки</h1>
+      <h1 className="text-xl font-bold">Иконки</h1>
       <p className="mt-4">
         Иконки на нашем проекте – способ выделиться среди других игроков, а так же финансовая
         поддержка для сервера. В данном руководстве ты сможешь узнать какие есть команды для смены

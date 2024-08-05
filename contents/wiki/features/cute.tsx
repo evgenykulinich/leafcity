@@ -7,7 +7,7 @@ export default function Cute() {
 
   return (
     <>
-      <h1 className="mb-8 text-xl font-bold">Фишки</h1>
+      <h1 className="text-xl font-bold">Фишки</h1>
       <p className="mt-4">
         На нашем сервере есть несколько особых функций, которые добавляют веселья и уюта в вашу
         игру.
@@ -31,8 +31,8 @@ export default function Cute() {
         </li>
       </ul>
 
-      <h2 className="mt-8 text-lg font-bold" id="список-не-очень-милых-фишек-сервера">
-        Список не очень милых фишек сервера
+      <h2 className="mt-8 text-lg font-bold" id="список-не-милых-фишек-сервера">
+        Список не милых фишек сервера
       </h2>
       <ul className="mt-4 flex flex-col gap-3">
         <li>

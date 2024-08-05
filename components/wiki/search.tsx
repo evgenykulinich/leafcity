@@ -41,6 +41,9 @@ export default function Search() {
     [searchedInput]
   )
 
+  const searchInput = document.querySelector('#wiki-search')
+  const searchLine = document.querySelector('.search__line')
+
   return (
     <div className="search">
       <Dialog
@@ -54,7 +57,7 @@ export default function Search() {
           <div className="relative mx-auto w-fit flex-1 cursor-pointer rounded-[6px] bg-white/10 py-2">
             <SearchIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
             <Input
-              className="h-fit w-fit bg-transparent py-0 pl-10 text-sm"
+              className="h-fit w-fit bg-transparent py-0 pl-10 text-sm caret-green"
               placeholder="Поиск..."
               type="search"
             />
@@ -73,15 +76,16 @@ export default function Search() {
           </DialogTitle>
           <DialogHeader>
             <input
+              className="h-14 bg-transparent px-4 text-[15px] caret-green outline-none"
+              id="wiki-search"
               value={searchedInput}
               onChange={e => setSearchedInput(e.target.value)}
               placeholder="Поиск..."
               autoFocus
-              className="h-14 bg-transparent px-4 text-[15px] outline-none"
             />
           </DialogHeader>
           {filteredResults.length == 0 && searchedInput && (
-            <p className="mx-auto mt-2 text-sm">
+            <p className="mx-auto mt-2 px-4 text-sm">
               Нет результатов для <span className="text-primary">{`"${searchedInput}"`}</span>
             </p>
           )}
