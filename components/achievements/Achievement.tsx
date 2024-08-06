@@ -41,8 +41,8 @@ export function Achievement({ title, content, color, icon, className }: Props) {
         className
       )}
     >
-      <CardHeader className="mb-2">
-        <Image className="mb-10 size-10" src={icon} alt={title} width={50} height={50} />
+      <CardHeader>
+        <Image className="mb-4 size-[40px] lg:mb-8" src={icon} alt={title} width={50} height={50} />
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent>{content}</CardContent>

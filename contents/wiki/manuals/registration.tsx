@@ -7,7 +7,11 @@ export default function Registration() {
 
   return (
     <>
-      <h1 className="mb-8 text-xl font-bold">В разработке</h1>
+      <h1 className="text-xl font-bold">Регистрация</h1>
+
+      <h2 className="mb-8 mt-8 text-lg font-bold" id="в-разработке">
+        В разработке
+      </h2>
 
       <small className="text-sm text-white/50">{lastUpdateDate}</small>
     </>
