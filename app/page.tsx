@@ -4,6 +4,7 @@ import { Controls } from '@/components/main/Controls'
 import { Achievements } from '@/components/achievements/Achievements'
 import { Questions } from '@/components/questions/Questions'
 import { LCPlus } from '@/components/lcplus/LCPlus'
+import { Useful } from '@/components/useful/Useful'
 import { Members } from '@/components/members/Members'
 import { Copyright } from '@/components/copyright/Copyright'
 
@@ -16,6 +17,7 @@ export default function Main() {
       <Achievements />
       <Questions />
       <LCPlus />
+      <Useful />
       <Members />
       <Copyright />
     </main>

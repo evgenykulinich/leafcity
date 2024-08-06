@@ -51,7 +51,7 @@ export default function RulesPage() {
       <PageTitle>
         Проект <span className="font-bold">LEAF CITY</span> стремится создать{' '}
         <span className="text-green">ламповую</span> и <span className="text-blue">безопасную</span>{' '}
-        среду для всех наших игроков ☘️
+        среду для всех наших игроков
       </PageTitle>
       <RulesList />
       <Copyright />

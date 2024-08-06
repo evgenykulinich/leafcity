@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import { useState } from 'react'
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
@@ -24,6 +25,12 @@ interface Props {
 }
 
 const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props) => {
+  const [imgError, setImgError] = useState(false)
+
+  const handleError = () => {
+    setImgError(true)
+  }
+
   return (
     <Card className={`flex-1 rounded-2xl border-2 p-4 transition lg:p-6 lg:py-4 ${className}`}>
       <p className="flex items-center justify-center gap-2">
@@ -44,7 +51,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
               <TooltipTrigger asChild>
                 <Image
                   className="absolute right-1 top-1 w-[25px] rounded-[6px] bg-black/60 p-1 lg:w-[30px]"
-                  alt="Аватар"
+                  alt="Смотреть"
                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1vdXNlLXBvaW50ZXItY2xpY2siPjxwYXRoIGQ9Im05IDkgNSAxMiAxLjgtNS4yTDIxIDE0WiIvPjxwYXRoIGQ9Ik03LjIgMi4yIDggNS4xIi8+PHBhdGggZD0ibTUuMSA4LTIuOS0uOCIvPjxwYXRoIGQ9Ik0xNCA0LjEgMTIgNiIvPjxwYXRoIGQ9Im02IDEyLTEuOSAyIi8+PC9zdmc+"
                   width={180}
                   height={180}
@@ -76,13 +83,24 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
                     <Tooltip delayDuration={200}>
                       <TooltipTrigger asChild>
                         <div className="absolute bottom-1 left-5 flex cursor-default items-center gap-1 rounded-[6px] bg-black/60 p-1 transition hover:bg-black/90 lg:bottom-1 lg:gap-2 lg:rounded-[8px] lg:px-2 lg:py-2">
-                          <Image
-                            className="w-[20px] rounded"
-                            alt="Аватар"
-                            src={`${routes.head}/${item.author}`}
-                            width={180}
-                            height={180}
-                          />
+                          {imgError ? (
+                            <Image
+                              className="w-[20px] rounded"
+                              alt="Автор"
+                              src="/icon/head_default.png"
+                              width={180}
+                              height={180}
+                            />
+                          ) : (
+                            <Image
+                              className="w-[20px] rounded"
+                              alt="Автор"
+                              src={`${routes.head}/${item.author}`}
+                              width={180}
+                              height={180}
+                              onError={handleError}
+                            />
+                          )}
                           <span className="text-sm">{item.author}</span>
                         </div>
                       </TooltipTrigger>

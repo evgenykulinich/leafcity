@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { Header } from '@/components/Header'
 import { projects, generation } from '@/data/gallery'
 import { routes } from '@/constants/routes'
@@ -51,7 +53,7 @@ export default function Gallery() {
         <PageTitle>
           <span>
             Галерея уникальных <span className="text-blue">построек</span> игроков и красочной{' '}
-            <span className="text-green">генерации</span> мира 🎨
+            <span className="text-green">генерации</span> мира
           </span>
         </PageTitle>
         <div className="mt-8 flex cursor-default flex-col gap-4 text-center text-xl lg:mt-12 lg:flex-row lg:text-2xl">
@@ -70,6 +72,19 @@ export default function Gallery() {
             color="blue"
           />
         </div>
+        <p className="mt-8 text-center text-lg lg:mt-12 lg:text-xl">
+          Поделиться своими скриншотами можно в{' '}
+          <Link className="hover-underline underline-purple text-purple" href={routes.discord}>
+            Discord
+          </Link>{' '}
+          канале{' '}
+          <Link
+            className="style-info transition hover:bg-purple/40"
+            href="https://discord.com/channels/1170345596247355506/1182192521372237876"
+          >
+            #предложения
+          </Link>
+        </p>
       </section>
       <Copyright />
     </div>

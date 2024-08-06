@@ -26,7 +26,7 @@ export default function MapWorlds() {
           <Header />
           <PageTitle>
             Онлайн-карта для <span className="text-blue">каждого</span> мира в{' '}
-            <span className="text-green">реальном</span> времени 🧭
+            <span className="text-green">реальном</span> времени
           </PageTitle>
           <div className="mx-auto mt-8 grid w-full max-w-screen-2xl gap-8 lg:mt-12 lg:grid-cols-3 lg:items-start">
             {worlds.map(world => (

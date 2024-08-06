@@ -1,10 +1,18 @@
+'use client'
+
 import Image from 'next/image'
 import { clsx } from 'clsx'
+import { useState } from 'react'
 
 import MembersList from '@/components/members/MembersList'
 import { members } from '@/data/members'
 
 export const Members = () => {
+  const [imgError, setImgError] = useState(false)
+
+  const handleError = () => {
+    setImgError(true)
+  }
   return (
     <section className="mt-16 overflow-hidden lg:mt-24">
       <h2 className="text-center text-[26px] lg:text-left">Команда проекта</h2>
@@ -23,14 +31,26 @@ export const Members = () => {
               >
                 <p className="lg:hidden">{member.nickname}</p>
                 <div className="shy">
-                  <Image
-                    className="mt-2 w-full cursor-pointer rounded-[8px] transition lg:active:scale-[.95]"
-                    src={member.image}
-                    alt={member.nickname}
-                    height={500}
-                    width={500}
-                    loading="eager"
-                  />
+                  {imgError ? (
+                    <Image
+                      className="mt-2 w-full cursor-pointer rounded-[8px] transition lg:active:scale-[.95]"
+                      src="/icon/head_default.png"
+                      alt={member.nickname}
+                      height={500}
+                      width={500}
+                      loading="eager"
+                    />
+                  ) : (
+                    <Image
+                      className="mt-2 w-full cursor-pointer rounded-[8px] transition lg:active:scale-[.95]"
+                      src={member.image}
+                      alt={member.nickname}
+                      height={500}
+                      width={500}
+                      loading="eager"
+                      onError={handleError}
+                    />
+                  )}
                 </div>
               </div>
             ))}
