@@ -9,7 +9,8 @@ const authors = {
   crucesaureae: 'crucesaureae',
   blinks10: 'BLINKS10',
   chimi4angi: 'ch1m14ang1',
-  theshowergel1: 'THESHOWERGEL1'
+  theshowergel1: 'THESHOWERGEL1',
+  vityalik2321231: 'vityalik2321231'
 }
 
 export const projects = [
@@ -113,20 +114,21 @@ export const projects = [
     url: '/gallery/projects/list_tw_3.png',
     author: authors.list_tw
   },
-
   {
     url: '/gallery/projects/Crazy_lady51_2.png',
     author: authors.crazy_lady
   },
-
   {
     url: '/gallery/projects/OuiKing_3.png',
     author: authors.ouiking
   },
-
   {
     url: '/gallery/projects/THESHOWERGEL1_1.png',
     author: authors.theshowergel1
+  },
+  {
+    url: '/gallery/projects/vityalik2321231_1.png',
+    author: authors.vityalik2321231
   }
 ]
 
