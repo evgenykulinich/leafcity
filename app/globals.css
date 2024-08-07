@@ -218,32 +218,32 @@ img {
   transition: all 0.5s ease;
 }
 
-.width-animation {
-  transition: all 0.5s ease;
+@media (width > 1024px) {
+  .width-animation {
+    transition: all 0.5s ease;
 
-  & > div {
-    transition: filter 0.5s ease;
-    filter: blur(1px) brightness(70%);
-  }
+    & > div {
+      transition: filter 0.5s ease;
+      filter: blur(1px) brightness(70%);
+    }
 
-  @media (width > 1024px) {
-    flex: 1px;
+    flex: 1;
 
     & > div {
       filter: blur(8px) brightness(70%);
     }
-  }
 
-  @media (width > 1024px) {
-    &:hover {
-      flex: 3;
+    @media (width > 1024px) {
+      &:hover {
+        flex: 3;
 
-      & > div {
-        filter: none;
-      }
+        & > div {
+          filter: none;
+        }
 
-      & > p {
-        opacity: 0;
+        & > p {
+          opacity: 0;
+        }
       }
     }
   }
