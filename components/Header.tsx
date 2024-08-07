@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { Navigation } from '@/components/Navigation'
 import { cn } from '@/lib/utils'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 interface Props {
   className?: string
@@ -16,19 +17,25 @@ export function Header({ className }: Props) {
         className
       )}
     >
-      <Link
-        className="flex items-center transition duration-300 active:scale-95 lg:hover:scale-105 lg:active:scale-100"
-        href="/"
-      >
-        <Image
-          className="mr-4 h-[36px] w-auto cursor-pointer"
-          src="/logo/lc.png"
-          alt="LC"
-          height={1000}
-          width={1000}
-        />
-        <span className="text-2xl font-bold">LEAF CITY</span>
-      </Link>
+      <TooltipProvider>
+        <Tooltip delayDuration={200}>
+          <TooltipTrigger asChild>
+            <Link className="flex items-center transition duration-300 active:scale-95" href="/">
+              <Image
+                className="mr-4 h-[36px] w-auto cursor-pointer"
+                src="/logo/lc.png"
+                alt="LC"
+                height={1000}
+                width={1000}
+              />
+              <span className="text-2xl font-bold">LEAF CITY</span>
+            </Link>
+          </TooltipTrigger>
+          <TooltipContent side="bottom" className="p-0">
+            На главную
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
       <Navigation />
     </header>
   )

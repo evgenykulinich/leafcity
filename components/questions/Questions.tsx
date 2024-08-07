@@ -21,7 +21,7 @@ export function Questions() {
               className="overflow-hidden rounded-2xl border-2 border-white/20 px-4 transition hover:border-purple hover:bg-purple/20"
             >
               <AccordionTrigger>{question.question}</AccordionTrigger>
-              <AccordionContent>{question.answer}</AccordionContent>
+              <AccordionContent className="text-base">{question.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

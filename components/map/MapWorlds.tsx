@@ -12,27 +12,27 @@ import { noCacheUrl, worlds } from '@/data/worlds'
 
 export default function MapWorlds() {
   const [activeWorld, setActiveWorld] = useState<string | null>(null)
-  const [buttonsVisible, setButtonsVisible] = useState(true)
+  const [isButtonsVisible, setIsButtonsVisible] = useState(true)
 
   const handleButtonClick = (world: string) => {
     setActiveWorld(world)
-    setButtonsVisible(false)
+    setIsButtonsVisible(false)
   }
 
   return (
     <>
-      {buttonsVisible && (
+      {isButtonsVisible && (
         <section className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_auto_1fr_auto] px-4 lg:px-8">
           <Header />
           <PageTitle>
             Онлайн-карта для <span className="text-blue">каждого</span> мира в{' '}
             <span className="text-green">реальном</span> времени
           </PageTitle>
-          <div className="mx-auto mt-8 grid w-full max-w-screen-2xl gap-8 lg:mt-12 lg:grid-cols-3 lg:items-start">
+          <div className="mx-auto mt-8 flex w-full max-w-screen-2xl flex-col gap-4 lg:mt-12 lg:flex-row lg:items-start lg:gap-8">
             {worlds.map(world => (
               <Card
                 className={clsx(
-                  `radius-animation relative mx-auto block aspect-square w-full max-w-[450px] cursor-pointer overflow-hidden border-2 p-4 transition-all lg:p-6`,
+                  `width-animation relative mx-auto block h-[150px] w-full cursor-pointer overflow-hidden rounded-2xl border-2 p-4 transition-all lg:h-[500px] lg:p-6`,
                   {
                     'bg-green/10': world.color === 'green',
                     'bg-mango/10': world.color === 'mango',
@@ -57,18 +57,16 @@ export default function MapWorlds() {
                 key={world.title}
                 onClick={() => handleButtonClick(world.title)}
               >
-                <div className={`${world.title} mx-auto aspect-square w-full`} />
+                <div className={`${world.title} h-full w-full`} />
                 <p className="absolute left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] items-center gap-2 transition duration-500">
                   <Image
-                    className="w-[30px] lg:w-[35px]"
+                    className="w-[22px]"
                     alt="Аватар"
                     src={world.icon}
                     width={180}
                     height={180}
                   />
-                  <span className="text-nowrap text-2xl font-bold lg:text-[1.6vw]">
-                    {world.description}
-                  </span>
+                  <span className="text-[22px] font-bold">{world.description}</span>
                 </p>
               </Card>
             ))}
@@ -76,7 +74,7 @@ export default function MapWorlds() {
           <Copyright />
         </section>
       )}
-      {!buttonsVisible && activeWorld && (
+      {!isButtonsVisible && activeWorld && (
         <>
           <Header className="fixed touch-none px-4 lg:px-8" />
           <iframe
