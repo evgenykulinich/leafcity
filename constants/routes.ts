@@ -1,7 +1,7 @@
 export const routes = {
   baseUrl: 'https://leafcity.ru',
   head: 'https://leafcity.ru/head',
-  home: '/',
+  main: '/',
   rules: '/rules',
   map: '/map',
   gallery: '/gallery',

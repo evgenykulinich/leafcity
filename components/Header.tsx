@@ -1,15 +1,22 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import { Navigation } from '@/components/Navigation'
 import { cn } from '@/lib/utils'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { routes } from '@/constants/routes'
 
 interface Props {
   className?: string
 }
 
 export function Header({ className }: Props) {
+  const pathname = usePathname()
+  console.log(pathname)
+
   return (
     <header
       className={cn(
@@ -17,25 +24,39 @@ export function Header({ className }: Props) {
         className
       )}
     >
-      <TooltipProvider>
-        <Tooltip delayDuration={200}>
-          <TooltipTrigger asChild>
-            <Link className="flex items-center transition duration-300 active:scale-95" href="/">
-              <Image
-                className="mr-4 h-[36px] w-auto cursor-pointer"
-                src="/logo/lc.png"
-                alt="LC"
-                height={1000}
-                width={1000}
-              />
-              <span className="text-2xl font-bold">LEAF CITY</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="bottom" className="p-0">
-            На главную
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      {pathname === routes.main ? (
+        <Link className="flex items-center transition duration-300 active:scale-95" href="/">
+          <Image
+            className="mr-4 h-[36px] w-auto cursor-pointer"
+            src="/logo/lc.png"
+            alt="LC"
+            height={1000}
+            width={1000}
+          />
+          <span className="text-2xl font-bold">LEAF CITY</span>
+        </Link>
+      ) : (
+        <TooltipProvider>
+          <Tooltip delayDuration={200}>
+            <TooltipTrigger asChild>
+              <Link className="flex items-center transition duration-300 active:scale-95" href="/">
+                <Image
+                  className="mr-4 h-[36px] w-auto cursor-pointer"
+                  src="/logo/lc.png"
+                  alt="LC"
+                  height={1000}
+                  width={1000}
+                />
+                <span className="text-2xl font-bold">LEAF CITY</span>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent side="bottom" className="p-0">
+              На главную
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      )}
+
       <Navigation />
     </header>
   )
