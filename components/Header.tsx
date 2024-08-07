@@ -70,10 +70,7 @@ export function WikiHeader({ className }: Props) {
         className
       )}
     >
-      <Link
-        className="flex items-center transition duration-300 active:scale-95 lg:hover:scale-105 lg:active:scale-100"
-        href="/"
-      >
+      <Link className="flex items-center transition duration-300 active:scale-95" href="/">
         <Image
           className="mr-4 h-[36px] w-auto cursor-pointer"
           src="/logo/lc.png"
