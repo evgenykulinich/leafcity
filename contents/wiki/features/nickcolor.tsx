@@ -32,7 +32,7 @@ export default function NickColor() {
       <p className="mt-4">
         <span className="style-point">{'/nickcolor <#90EE90>'}</span> – один оттенок
       </p>
-      <p className="mb-4 mt-5 lg:mb-8">
+      <p className="mb-4 mt-5">
         <span className="style-point">{'/nickcolor <gradient:#90EE90:#3CB371>'}</span> – градиент
       </p>
 
