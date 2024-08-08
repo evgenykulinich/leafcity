@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { clsx } from 'clsx'
 
 import { Card } from '@/components/ui/card'
-import { Header } from '@/components/Header'
-import { Copyright } from '@/components/copyright/Copyright'
-import { PageTitle } from '@/components/PageTitle'
+import { Header } from '@/components/common/Header'
+import { Copyright } from '@/components/common/Copyright'
+import { PageTitle } from '@/components/common/PageTitle'
 import { noCacheUrl, worlds } from '@/data/worlds'
 
 export default function MapWorlds() {

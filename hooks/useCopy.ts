@@ -3,8 +3,8 @@ import { toast } from 'sonner'
 
 import { copyIpMessage } from '@/constants/copyIpMessage'
 
-export const useCopyRule = () => {
-  const copyRule = useCallback(async (textToCopy: string) => {
+export const useCopyText = () => {
+  const copyText = useCallback(async (textToCopy: string) => {
     try {
       await navigator.clipboard.writeText(textToCopy)
       toast.success('Скопировано')
@@ -13,7 +13,7 @@ export const useCopyRule = () => {
     }
   }, [])
 
-  return copyRule
+  return copyText
 }
 
 export const useCopyIp = (message: string) => {

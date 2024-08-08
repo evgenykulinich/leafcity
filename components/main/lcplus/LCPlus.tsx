@@ -21,7 +21,7 @@ export const LCPlus = () => {
                 <p className="cursor-default text-center text-[38px] font-bold">Подписка</p>
                 <Image
                   className="mx-auto w-[70px]"
-                  src="/LCPlus/lcplus.png"
+                  src="/logo/lcplus.png"
                   alt={'LC+'}
                   width={500}
                   height={500}
@@ -64,7 +64,7 @@ export const LCPlus = () => {
                 <p className="text-[28px] font-bold">Подписка</p>
                 <Image
                   className="mx-auto w-[54px]"
-                  src="/LCPlus/lcplus.png"
+                  src="/logo/lcplus.png"
                   alt={'LC+'}
                   width={500}
                   height={500}

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { clsx } from 'clsx'
 import { useState } from 'react'
 
-import MembersList from '@/components/members/MembersList'
+import MembersList from '@/components/main/members/MembersList'
 import { members } from '@/data/members'
 
 export const Members = () => {

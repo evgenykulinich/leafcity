@@ -5,8 +5,8 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion'
 import { questions } from '@/data/questions'
-import { Server } from '@/components/questions/Server'
-import { Discord } from '@/components/questions/Discord'
+import { Server } from '@/components/main/questions/Server'
+import { Discord } from '@/components/main/questions/Discord'
 
 export function Questions() {
   return (

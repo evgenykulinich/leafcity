@@ -2,11 +2,11 @@ import { notFound } from 'next/navigation'
 import { PropsWithChildren, cache } from 'react'
 
 import { getComponentForSlug } from '@/lib/markdown'
-import Pagination from '@/components/wiki/pagination'
-import Toc from '@/components/wiki/toc'
+import Pagination from '@/components/wiki/Pagination'
 import { page_routes } from '@/lib/wiki_routes'
 import { routes } from '@/constants/routes'
-import { Leftbar, SheetLeftbar } from '@/components/wiki/leftbar'
+import { Leftbar, SheetLeftbar } from '@/components/wiki/Leftbar'
+import Toc from '@/components/wiki/Toc'
 
 import type { Metadata } from 'next'
 

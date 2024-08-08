@@ -3,7 +3,7 @@ import { Montserrat } from 'next/font/google'
 import { Toaster } from '@/components/ui/sonner'
 import { routes } from '@/constants/routes'
 import YandexMetrika from '@/app/YandexMetrika'
-import Providers from '@/components/ProgressBarProvider'
+import Providers from '@/components/common/ProgressBarProvider'
 
 import type { Metadata } from 'next'
 

@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import { Header } from '@/components/Header'
+import { Header } from '@/components/common/Header'
 import { projects, generation } from '@/data/gallery'
 import { routes } from '@/constants/routes'
-import { Copyright } from '@/components/copyright/Copyright'
+import { Copyright } from '@/components/common/Copyright'
 import GalleryCard from '@/components/gallery/GalleryCard'
-import { PageTitle } from '@/components/PageTitle'
+import { PageTitle } from '@/components/common/PageTitle'
 
 import type { Metadata } from 'next'
 

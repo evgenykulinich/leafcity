@@ -81,7 +81,7 @@ export function Copyright() {
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <Button
-                className="transition-all duration-300 active:scale-95 lg:w-auto"
+                className="order-1 transition-all duration-300 active:scale-95 lg:order-none lg:w-auto"
                 onClick={useScrollToTop}
               >
                 <Image

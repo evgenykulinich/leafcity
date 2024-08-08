@@ -35,6 +35,10 @@ img {
   -webkit-user-select: none;
 }
 
+ul, li {
+  list-style: none;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -383,6 +387,7 @@ img {
   .member-dashka17,
   .member-ouiking,
   .member-badtrip,
+  .member-nokarena,
   .member-soraispania,
   .member-istork,
   .member-crucesaureae,
@@ -426,6 +431,12 @@ img {
   color: #01fff1;
   --member-nickname: 'badtrip_';
   --member-role: 'Блудный сын';
+}
+
+.member-nokarena {
+  color: #1c872f;
+  --member-nickname: 'lol12';
+  --member-role: 'Модератор';
 }
 
 .member-soraispania {
@@ -515,7 +526,7 @@ img {
 .style-point,
 .style-danger,
 .style-success {
-  font-weight: bold;
+  font-weight: 600;
   color: var(--color-white);
   line-height: 34px;
   border-radius: 4px;
