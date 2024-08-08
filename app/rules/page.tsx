@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     'нарушения правил лиф сити'
   ],
   openGraph: {
-    title: 'LEAF CITY - Правила',
+    title: 'LEAF CITY • Правила',
     images: [
       {
         url: `${routes.baseUrl}/og/rules.png`,
         width: 1200,
         height: 630,
-        alt: 'LEAF CITY - Правила'
+        alt: 'LEAF CITY • Правила'
       }
     ],
     description:
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black',
-    title: 'LEAF CITY - Правила'
+    title: 'LEAF CITY • Правила'
   }
 }
 

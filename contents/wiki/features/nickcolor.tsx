@@ -1,7 +1,7 @@
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
-import ColorPicker from '@/components/wiki/ColorPicker'
+import GradientPicker from '@/components/wiki/GradientPicker'
 
-const updateDate = '8 Aug 2024'
+const updateDate = '9 Aug 2024'
 
 export default function NickColor() {
   const lastUpdateDate = getLastUpdateDate(updateDate)
@@ -32,11 +32,11 @@ export default function NickColor() {
       <p className="mt-4">
         <span className="style-point">{'/nickcolor <#90EE90>'}</span> – один оттенок
       </p>
-      <p className="mb-8 mt-5">
+      <p className="mb-4 mt-5 lg:mb-8">
         <span className="style-point">{'/nickcolor <gradient:#90EE90:#3CB371>'}</span> – градиент
       </p>
 
-      <ColorPicker />
+      <GradientPicker />
 
       <small className="text-sm text-white/50">{lastUpdateDate}</small>
     </>

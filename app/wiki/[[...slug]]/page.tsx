@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     'иконки лиф сити'
   ],
   openGraph: {
-    title: 'LEAF CITY - Википедия',
+    title: 'LEAF CITY • Википедия',
     images: [
       {
         url: `${routes.baseUrl}/og/wiki.png`,
         width: 1200,
         height: 630,
-        alt: 'LEAF CITY - Википедия'
+        alt: 'LEAF CITY • Википедия'
       }
     ],
     description: 'Документация проекта, самая важная информация о проекте на одной странице',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black',
-    title: 'LEAF CITY - Википедия'
+    title: 'LEAF CITY • Википедия'
   }
 }
 

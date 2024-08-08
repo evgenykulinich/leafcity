@@ -219,16 +219,19 @@ ul, li {
 
 /* Картинки для карточек миров */
 .transition-all {
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-blur {
+  filter: blur(1px) brightness(70%);
 }
 
 @media (width > 1024px) {
   .width-animation {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out;
 
     & > div {
-      transition: filter 0.5s ease;
-      filter: blur(1px) brightness(70%);
+      transition: filter 0.3s ease-in-out;
     }
 
     flex: 1;
