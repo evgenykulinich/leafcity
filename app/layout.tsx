@@ -13,8 +13,8 @@ const font = Montserrat({ subsets: ['cyrillic', 'latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'LEAF CITY - Ванильное выживание',
-    template: `LEAF CITY - %s`
+    default: 'LEAF CITY • Ванильное выживание',
+    template: `LEAF CITY • %s`
   },
   description:
     'Уникальный ванильный сервер, нацеленный на выживание и ламповое общение, без привата и платных преимуществ',
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     'онлайн-карта minecraft'
   ],
   openGraph: {
-    title: 'LEAF CITY - Ванильное выживание',
+    title: 'LEAF CITY • Ванильное выживание',
     images: [
       {
         url: `${routes.baseUrl}/og/main.png`,
         width: 1200,
         height: 630,
-        alt: 'LEAF CITY - Ванильное выживание'
+        alt: 'LEAF CITY • Ванильное выживание'
       }
     ],
     description:
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black',
-    title: 'LEAF CITY - Ванильное выживание'
+    title: 'LEAF CITY • Ванильное выживание'
   }
 }
 

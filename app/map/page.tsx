@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     'навигация на сервере лиф сити'
   ],
   openGraph: {
-    title: 'LEAF CITY - Карта',
+    title: 'LEAF CITY • Карта',
     images: [
       {
         url: `${routes.baseUrl}/og/map.png`,
         width: 1200,
         height: 630,
-        alt: 'LEAF CITY - Карта'
+        alt: 'LEAF CITY • Карта'
       }
     ],
     description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black',
-    title: 'LEAF CITY - Карта'
+    title: 'LEAF CITY • Карта'
   }
 }
 

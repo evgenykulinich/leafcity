@@ -138,8 +138,16 @@ export const generation = [
     author: authors.ini_ga
   },
   {
+    url: '/gallery/generation/vityalik2321231_1.png',
+    author: authors.vityalik2321231
+  },
+  {
     url: '/gallery/generation/ch1m14ang1_1.png',
     author: authors.chimi4angi
+  },
+  {
+    url: '/gallery/generation/vityalik2321231_2.png',
+    author: authors.vityalik2321231
   },
   {
     url: '/gallery/generation/Ini_ga_2.png',

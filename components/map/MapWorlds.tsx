@@ -32,7 +32,7 @@ export default function MapWorlds() {
             {worlds.map(world => (
               <Card
                 className={clsx(
-                  `width-animation relative mx-auto block h-[150px] w-full cursor-pointer overflow-hidden rounded-2xl border-2 p-4 transition-all lg:h-[500px] lg:p-6`,
+                  `width-animation relative mx-auto block h-[150px] w-full cursor-pointer overflow-hidden rounded-2xl border-2 p-4 lg:h-[500px] lg:p-6`,
                   {
                     'bg-green/10': world.color === 'green',
                     'bg-mango/10': world.color === 'mango',
@@ -57,7 +57,7 @@ export default function MapWorlds() {
                 key={world.title}
                 onClick={() => handleButtonClick(world.title)}
               >
-                <div className={`${world.title} h-full w-full`} />
+                <div className={`${world.title} card-blur h-full w-full`} />
                 <p className="absolute left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] items-center gap-2 transition duration-500">
                   <Image
                     className="w-[22px]"
