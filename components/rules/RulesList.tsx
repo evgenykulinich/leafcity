@@ -12,11 +12,11 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion'
 import { RulesItem } from '@/components/rules/RulesItem'
-import { useCopyRule } from '@/hooks/useCopy'
+import { useCopyText } from '@/hooks/useCopy'
 
 export const RulesList = () => {
   const isDesktop = useMedia('(min-width: 1024px)', false)
-  const copyRule = useCopyRule()
+  const copyRule = useCopyText()
 
   return (
     <Accordion

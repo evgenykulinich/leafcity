@@ -1,4 +1,4 @@
-import { Achievement } from '@/components/achievements/Achievement'
+import { Achievement } from '@/components/main/achievements/Achievement'
 import { achievements } from '@/data/achievements'
 
 export function Achievements() {

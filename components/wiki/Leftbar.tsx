@@ -4,9 +4,9 @@ import { Description } from '@radix-ui/react-dialog'
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import Anchor from '@/components/wiki/anchor'
 import { WIKI_ROUTES } from '@/lib/wiki_routes'
 import { DialogTitle } from '@/components/ui/dialog'
+import Anchor from '@/components/wiki/Anchor'
 
 export function Leftbar() {
   return (

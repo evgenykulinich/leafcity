@@ -15,7 +15,7 @@ import {
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Input } from '@/components/ui/input'
 import { page_routes } from '@/lib/wiki_routes'
-import Anchor from '@/components/wiki/anchor'
+import Anchor from '@/components/wiki/Anchor'
 
 export default function Search() {
   const [searchedInput, setSearchedInput] = useState('')

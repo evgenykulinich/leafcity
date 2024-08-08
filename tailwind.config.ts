@@ -57,4 +57,6 @@ const config = {
   plugins: [require('tailwindcss-animate')]
 } satisfies Config
 
+export const colors = config.theme.extend.colors
+
 export default config

@@ -1,6 +1,7 @@
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
+import ColorPicker from '@/components/wiki/ColorPicker'
 
-const updateDate = '3 Aug 2024'
+const updateDate = '8 Aug 2024'
 
 export default function NickColor() {
   const lastUpdateDate = getLastUpdateDate(updateDate)
@@ -34,6 +35,8 @@ export default function NickColor() {
       <p className="mb-8 mt-5">
         <span className="style-point">{'/nickcolor <gradient:#90EE90:#3CB371>'}</span> – градиент
       </p>
+
+      <ColorPicker />
 
       <small className="text-sm text-white/50">{lastUpdateDate}</small>
     </>
