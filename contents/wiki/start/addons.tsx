@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 import { allowedMods, bannedMods, bannedPacks } from '@/data/wiki'
-import { InfoText } from '@/components/wiki/textVariations'
+import { InfoText } from '@/components/wiki/TextVariations'
 
 const updateDate = '3 Aug 2024'
 const sortedAllowedModsList = allowedMods.sort((prev, next) => (prev.name > next.name ? 1 : -1))
