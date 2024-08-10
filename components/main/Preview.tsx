@@ -1,15 +1,14 @@
-import Image from 'next/image'
+import { FadeInImage } from '@/components/common/FadeInImage'
 
 export function Preview() {
   return (
     <section className="relative">
-      <Image
+      <FadeInImage
         className="absolute right-0 top-[-60px] hidden cursor-pointer transition hover:scale-105 active:scale-95 xl:block xl:size-[576px]"
         src="/animal.png"
         alt="animal"
         height={1024}
         width={1024}
-        priority={true}
       />
       <h1 className="mt-8 cursor-default text-[2.75rem] font-bold sm:text-5xl lg:mt-24 lg:text-[60px] lg:leading-[1.25]">
         Уникальный{' '}

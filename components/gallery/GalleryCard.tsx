@@ -15,6 +15,7 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel'
 import { Card } from '@/components/ui/card'
+import { FadeInImage } from '@/components/common/FadeInImage'
 
 interface Props {
   className?: string
@@ -39,12 +40,12 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
       </p>
       <Dialog>
         <DialogTrigger className="relative mt-4 w-full overflow-hidden rounded-xl outline-none">
-          <Image
-            className="h-full w-full rounded-xl"
-            alt="Скриншот"
-            src={screenshots[0].url}
-            width={1920}
+          <FadeInImage
+            className={'h-full w-full rounded-xl'}
+            src={`${screenshots[0].url}.png`}
+            alt={'Скриншот'}
             height={1080}
+            width={1920}
           />
           <TooltipProvider>
             <Tooltip delayDuration={200}>
@@ -68,16 +69,16 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
           <DialogTitle>
             <VisuallyHidden.Root />
           </DialogTitle>
-          <Carousel className="relative w-full lg:max-w-fit" opts={{ loop: true }}>
+          <Carousel className="relative overflow-hidden rounded-2xl" opts={{ loop: true }}>
             <CarouselContent>
               {screenshots.map(item => (
-                <CarouselItem className="relative" key={item.url}>
-                  <Image
-                    className="h-full rounded-xl"
+                <CarouselItem className="relative gap-2" key={item.url}>
+                  <FadeInImage
+                    className={'aspect-video h-full w-full rounded-2xl'}
+                    src={`${item.url}.png`}
                     alt="Скриншот"
-                    src={item.url}
-                    width={1920}
                     height={1080}
+                    width={1920}
                   />
                   <TooltipProvider>
                     <Tooltip delayDuration={200}>
