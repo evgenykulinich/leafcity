@@ -5,6 +5,7 @@ import { Description } from '@radix-ui/react-dialog'
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { FadeInImage } from '@/components/common/FadeInImage'
 
 const updateDate = '3 Aug 2024'
 
@@ -28,7 +29,7 @@ export default function Crafts() {
       </p>
       <Dialog>
         <DialogTrigger className="relative mx-auto mt-4 block overflow-hidden rounded-lg outline-none">
-          <Image
+          <FadeInImage
             src="/wiki/crafts/debug-stick.avif"
             alt="Палочка отладки"
             width={400}
@@ -40,7 +41,7 @@ export default function Crafts() {
                 <Image
                   className="absolute right-1 top-1 w-[25px] rounded-[6px] bg-black/60 p-1 lg:w-[30px]"
                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXpvb20taW4iPjxjaXJjbGUgY3g9IjExIiBjeT0iMTEiIHI9IjgiLz48bGluZSB4MT0iMjEiIHgyPSIxNi42NSIgeTE9IjIxIiB5Mj0iMTYuNjUiLz48bGluZSB4MT0iMTEiIHgyPSIxMSIgeTE9IjgiIHkyPSIxNCIvPjxsaW5lIHgxPSI4IiB4Mj0iMTQiIHkxPSIxMSIgeTI9IjExIi8+PC9zdmc+"
-                  alt="Палочка отладки"
+                  alt="Приблизить"
                   width={24}
                   height={24}
                 />
@@ -56,7 +57,7 @@ export default function Crafts() {
           <DialogTitle>
             <VisuallyHidden.Root />
           </DialogTitle>
-          <Image
+          <FadeInImage
             className="w-auto overflow-hidden rounded-lg"
             src="/wiki/crafts/debug-stick.avif"
             alt="Палочка отладки"
@@ -76,14 +77,19 @@ export default function Crafts() {
       </p>
       <Dialog>
         <DialogTrigger className="relative mx-auto mb-8 mt-4 block overflow-hidden rounded-lg outline-none">
-          <Image src="/wiki/crafts/light.avif" alt="Палочка отладки" width={400} height={400} />
+          <FadeInImage
+            src="/wiki/crafts/light.avif"
+            alt="Палочка отладки"
+            width={400}
+            height={400}
+          />
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
                 <Image
                   className="absolute right-1 top-1 w-[25px] rounded-[6px] bg-black/60 p-1 lg:w-[30px]"
                   src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXpvb20taW4iPjxjaXJjbGUgY3g9IjExIiBjeT0iMTEiIHI9IjgiLz48bGluZSB4MT0iMjEiIHgyPSIxNi42NSIgeTE9IjIxIiB5Mj0iMTYuNjUiLz48bGluZSB4MT0iMTEiIHgyPSIxMSIgeTE9IjgiIHkyPSIxNCIvPjxsaW5lIHgxPSI4IiB4Mj0iMTQiIHkxPSIxMSIgeTI9IjExIi8+PC9zdmc+"
-                  alt="Палочка отладки"
+                  alt="Приблизить"
                   width={24}
                   height={24}
                 />
@@ -99,7 +105,7 @@ export default function Crafts() {
           <DialogTitle>
             <VisuallyHidden.Root />
           </DialogTitle>
-          <Image
+          <FadeInImage
             className="w-full overflow-hidden rounded-lg"
             src="/wiki/crafts/light.avif"
             alt="Light"

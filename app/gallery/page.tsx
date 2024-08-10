@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     'выдающиеся постройки на сервере'
   ],
   openGraph: {
-    title: 'LEAF CITY • Галерея',
+    title: 'LEAF CITY - Галерея',
     images: [
       {
         url: `${routes.baseUrl}/og/gallery.png`,
         width: 1200,
         height: 630,
-        alt: 'LEAF CITY • Галерея'
+        alt: 'LEAF CITY - Галерея'
       }
     ],
     description: 'Галерея уникальных построек игроков и красочной генерации мира',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black',
-    title: 'LEAF CITY • Галерея'
+    title: 'LEAF CITY - Галерея'
   }
 }
 
