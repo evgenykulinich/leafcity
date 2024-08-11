@@ -70,7 +70,7 @@ const GradientPicker = () => {
                 <span className="text-lg font-bold">Скопировать</span>
               </Button>
             </TooltipTrigger>
-            <TooltipContent className="p-0 text-white/50" side="bottom">
+            <TooltipContent className="p-0 text-sm text-white" side="bottom">
               Скопировать команду одним кликом
             </TooltipContent>
           </Tooltip>

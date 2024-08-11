@@ -8,7 +8,7 @@ interface Props {
 export const InfoText = ({ children, className }: Props) => {
   return (
     <div
-      className={`${className} flex items-center gap-2 rounded-xl border-2 border-blue/20 bg-blue/10 p-3`}
+      className={`${className} flex items-center gap-2 rounded-xl border-2 border-blue/20 bg-blue/10 px-3 py-4`}
     >
       <Image
         className="h-[20px] w-[20px]"
@@ -25,7 +25,7 @@ export const InfoText = ({ children, className }: Props) => {
 export const WarningText = ({ children, className }: Props) => {
   return (
     <div
-      className={`${className} flex items-center gap-2 rounded-xl border-2 border-mango/20 bg-mango/10 p-3`}
+      className={`${className} flex items-center gap-2 rounded-xl border-2 border-mango/20 bg-mango/10 px-3 py-4`}
     >
       <Image
         className="h-[20px] w-[20px]"
@@ -42,7 +42,7 @@ export const WarningText = ({ children, className }: Props) => {
 export const DangerText = ({ children, className }: Props) => {
   return (
     <div
-      className={`${className} flex items-center gap-2 rounded-xl border-2 border-danger/20 bg-danger/10 p-3`}
+      className={`${className} flex items-center gap-2 rounded-xl border-2 border-danger/20 bg-danger/10 px-3 py-4`}
     >
       <Image
         className="h-[20px] w-[20px]"
