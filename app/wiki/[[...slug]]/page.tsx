@@ -7,6 +7,7 @@ import { page_routes } from '@/lib/wiki_routes'
 import { routes } from '@/constants/routes'
 import { Leftbar, SheetLeftbar } from '@/components/wiki/Leftbar'
 import Toc from '@/components/wiki/Toc'
+import Transition from '@/app/template'
 
 import type { Metadata } from 'next'
 
@@ -61,10 +62,12 @@ export default async function WikiPage({ params: { slug = [] } }: PageProps) {
     <div className="flex h-fit grid-cols-[auto_auto_1fr_auto_auto] flex-col self-start lg:grid lg:gap-6">
       <SheetLeftbar />
       <Leftbar />
-      <Markdown>
-        <Component />
-        <Pagination pathname={pathName} />
-      </Markdown>
+      <Transition>
+        <Markdown>
+          <Component />
+          <Pagination pathname={pathName} />
+        </Markdown>
+      </Transition>
       <Toc path={pathName} />
     </div>
   )

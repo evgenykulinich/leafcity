@@ -70,13 +70,14 @@ export function Copyright() {
             </TooltipProvider>
           </div>
         </div>
-        <div className="flex flex-col gap-2 self-center text-center text-sm text-white/40 lg:text-start">
-          <p>© Все права защищены. LEAF CITY, 2023-2024</p>
-          <p>Проект LEAF CITY не относится к Mojang Studios</p>
-        </div>
+        <p className="self-center text-center text-sm text-white/40 lg:flex lg:items-center lg:justify-center lg:text-start">
+          © Все права защищены. LEAF CITY, 2023-2024.
+          <br className="hidden lg:block" /> Проект LEAF CITY не относится к Mojang Studios
+          {/*<p>Проект LEAF CITY не относится к Mojang Studios</p>*/}
+        </p>
       </div>
 
-      <div className="flex flex-col items-center gap-2 lg:items-end">
+      <div className="flex flex-col items-center gap-1 lg:items-end lg:gap-0">
         <TooltipProvider>
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
@@ -85,20 +86,20 @@ export function Copyright() {
                 onClick={useScrollToTop}
               >
                 <Image
-                  className="mr-4 w-[40px] cursor-pointer"
+                  className="mr-2 w-[28px] cursor-pointer"
                   src="/logo/lc.png"
                   alt="LC"
                   height={1000}
                   width={1000}
                 />
-                <span className="text-2xl font-bold">LEAF CITY</span>
+                <span className="text-[1.5rem] font-bold">LEAF CITY</span>
               </Button>
             </TooltipTrigger>
             <TooltipContent className="p-0">Наверх</TooltipContent>
           </Tooltip>
         </TooltipProvider>
         <p className="text-sm text-white/40">
-          Сайт разработан под брендом{' '}
+          Разработано под брендом{' '}
           <Link
             className="hover-underline underline-mango transition hover:text-mango"
             href="https://t.me/ratmoodfrontend"

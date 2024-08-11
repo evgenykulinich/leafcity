@@ -13,17 +13,23 @@ interface Props {
   width: number
 }
 
+const restyleLoadedImage = (e: any) => {
+  ;(e.target as HTMLImageElement).style.opacity = '1'
+  ;(e.target as HTMLImageElement).style.filter = 'none'
+}
+
 export const FadeInImage = ({ className, style, src, alt, height, width }: Props) => {
   return (
     <Image
-      className={clsx('opacity-0 transition-all duration-500', className)}
+      className={clsx('image-fade-in', className)}
       style={style}
       src={src}
       alt={alt}
       width={width}
       height={height}
-      onLoad={e => ((e.target as HTMLImageElement).style.opacity = '1')}
+      onLoad={e => restyleLoadedImage(e)}
       priority
+      decoding={'async'}
     />
   )
 }

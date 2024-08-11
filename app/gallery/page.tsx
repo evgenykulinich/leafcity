@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { Header } from '@/components/common/Header'
 import { projects, generation } from '@/data/gallery'
@@ -6,6 +7,7 @@ import { routes } from '@/constants/routes'
 import { Copyright } from '@/components/common/Copyright'
 import GalleryCard from '@/components/gallery/GalleryCard'
 import { PageTitle } from '@/components/common/PageTitle'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 
 import type { Metadata } from 'next'
 
@@ -78,12 +80,19 @@ export default function Gallery() {
             Discord
           </Link>{' '}
           канале{' '}
-          <Link
-            className="style-info transition hover:bg-purple/40"
-            href="https://discord.com/channels/1170345596247355506/1182192521372237876"
-          >
-            #предложения
-          </Link>
+          <TooltipProvider>
+            <Tooltip delayDuration={200}>
+              <TooltipTrigger asChild>
+                <Link
+                  className="style-info transition hover:bg-purple/40"
+                  href={routes.discordSupport}
+                >
+                  #предложения
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent className="p-0">Перейти</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </p>
       </section>
       <Copyright />

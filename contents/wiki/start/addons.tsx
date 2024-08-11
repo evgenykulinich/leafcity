@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 import { allowedMods, bannedMods, bannedPacks } from '@/data/wiki'
 import { InfoText } from '@/components/wiki/TextVariations'
+import { routes } from '@/constants/routes'
 
 const updateDate = '3 Aug 2024'
 const sortedAllowedModsList = allowedMods.sort((prev, next) => (prev.name > next.name ? 1 : -1))
@@ -32,7 +33,10 @@ export default function Info() {
         <span className="style-info">InventoryProfileNext</span> – так же разрешены.
       </p>
       <InfoText className="mt-8">
-        Если вы сомневаетесь в какой-либо модификации – обратитесь в поддержку.
+        Если вы сомневаетесь в какой-либо модификации – обратитесь в{' '}
+        <Link className="hover-underline underline-blue text-blue" href={routes.discordSupport}>
+          поддержку
+        </Link>
       </InfoText>
 
       <h3 className="mt-8 text-lg font-bold" id="дополнительный-список">
