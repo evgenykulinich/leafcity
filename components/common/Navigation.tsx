@@ -49,12 +49,13 @@ export const Navigation = () => {
 
   return isMobile ? (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger className="acive:text-green border-none outline-none transition hover:text-green focus-visible:ring-transparent focus-visible:ring-offset-0 lg:hover:scale-125 lg:focus-visible:scale-125 lg:focus-visible:text-green">
+      <SheetTrigger className="acive:text-green border-none outline-none transition hover:text-green focus-visible:ring-transparent focus-visible:ring-offset-0">
         <Menu className="size-8" />
       </SheetTrigger>
       <SheetContent
-        className="border-b-2 border-purple/20 bg-black/[85%] pt-0 outline-none"
+        className="border-b-2 border-purple bg-black/90 pt-0 outline-none"
         side="top"
+        aria-describedby={undefined}
       >
         <DialogTitle>
           <VisuallyHidden.Root />

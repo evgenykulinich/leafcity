@@ -62,19 +62,19 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent
-          className="w-full px-4 lg:max-w-[1080px] lg:px-8"
-          aria-describedby={undefined}
-        >
+        <DialogContent className="w-full max-w-screen-xl px-4 lg:px-8" aria-describedby={undefined}>
           <DialogTitle>
             <VisuallyHidden.Root />
           </DialogTitle>
-          <Carousel className="relative overflow-hidden rounded-2xl" opts={{ loop: true }}>
+          <Carousel
+            className="relative overflow-hidden rounded-lg lg:rounded-xl"
+            opts={{ loop: true }}
+          >
             <CarouselContent>
               {screenshots.map(item => (
                 <CarouselItem className="relative gap-2" key={item.url}>
                   <FadeInImage
-                    className={'aspect-video h-full w-full rounded-2xl'}
+                    className={'aspect-video h-full w-full rounded-lg lg:rounded-xl'}
                     src={`${item.url}.png`}
                     alt="Скриншот"
                     height={1080}
