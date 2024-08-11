@@ -4,7 +4,8 @@ export function Preview() {
   return (
     <section className="relative">
       <FadeInImage
-        className="absolute right-0 top-[-60px] hidden cursor-pointer transition hover:scale-105 active:scale-95 xl:block xl:size-[576px]"
+        className="absolute right-0 top-[-60px] hidden cursor-pointer hover:scale-105 active:scale-95 xl:block xl:size-[576px]"
+        style={{ transitionDuration: '175ms' }}
         src="/animal.png"
         alt="animal"
         height={1024}

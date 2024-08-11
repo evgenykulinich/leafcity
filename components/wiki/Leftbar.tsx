@@ -34,7 +34,7 @@ export function SheetLeftbar() {
         </SheetTrigger>
       </div>
       <SheetContent
-        className="flex flex-col gap-4 border-r-2 border-green/20 bg-black/[85%] px-0 pt-0"
+        className="flex flex-col gap-4 border-r-2 border-green bg-black/90 px-0 pt-0"
         side="left"
       >
         <VisuallyHidden.Root>

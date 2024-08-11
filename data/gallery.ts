@@ -142,7 +142,19 @@ export const generation = [
     author: authors.vityalik2321231
   },
   {
+    url: '/gallery/generation/Ini_ga_2',
+    author: authors.ini_ga
+  },
+  {
     url: '/gallery/generation/ch1m14ang1_1',
+    author: authors.chimi4angi
+  },
+  {
+    url: '/gallery/generation/Ini_ga_3',
+    author: authors.ini_ga
+  },
+  {
+    url: '/gallery/generation/ch1m14ang1_2',
     author: authors.chimi4angi
   },
   {
@@ -150,23 +162,23 @@ export const generation = [
     author: authors.vityalik2321231
   },
   {
-    url: '/gallery/generation/Ini_ga_2',
+    url: '/gallery/generation/Ini_ga_4',
     author: authors.ini_ga
+  },
+  {
+    url: '/gallery/generation/vityalik2321231_3',
+    author: authors.vityalik2321231
   },
   {
     url: '/gallery/generation/CMETAHA99_1',
     author: authors.cmetaha
   },
   {
-    url: '/gallery/generation/Ini_ga_3',
+    url: '/gallery/generation/Ini_ga_5',
     author: authors.ini_ga
   },
   {
     url: '/gallery/generation/OuiKing_1',
     author: authors.ouiking
-  },
-  {
-    url: '/gallery/generation/Ini_ga_4',
-    author: authors.ini_ga
   }
 ]
