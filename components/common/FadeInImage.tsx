@@ -9,8 +9,12 @@ interface Props {
   style?: CSSProperties
   src: string
   alt: string
-  height: number
-  width: number
+  height?: number
+  width?: number
+  layout?: string
+  objectFit?: string
+  quality?: number
+  onError?: () => void
 }
 
 const restyleLoadedImage = (e: any) => {
@@ -18,7 +22,18 @@ const restyleLoadedImage = (e: any) => {
   ;(e.target as HTMLImageElement).style.filter = 'none'
 }
 
-export const FadeInImage = ({ className, style, src, alt, height, width }: Props) => {
+export const FadeInImage = ({
+  className,
+  style,
+  src,
+  alt,
+  height,
+  width,
+  layout,
+  objectFit,
+  quality,
+  onError
+}: Props) => {
   return (
     <Image
       className={clsx('image-fade-in', className)}
@@ -30,6 +45,10 @@ export const FadeInImage = ({ className, style, src, alt, height, width }: Props
       onLoad={e => restyleLoadedImage(e)}
       priority
       decoding={'async'}
+      layout={layout}
+      objectFit={objectFit}
+      quality={quality}
+      onError={onError}
     />
   )
 }

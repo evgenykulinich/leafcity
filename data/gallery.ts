@@ -15,6 +15,10 @@ const authors = {
 
 export const projects = [
   {
+    url: '/gallery/projects/list_tw_1',
+    author: authors.list_tw
+  },
+  {
     url: '/gallery/projects/Kirosin_1',
     author: authors.kirosin
   },
@@ -69,10 +73,6 @@ export const projects = [
   {
     url: '/gallery/projects/Ini_ga_7',
     author: authors.ini_ga
-  },
-  {
-    url: '/gallery/projects/list_tw_1',
-    author: authors.list_tw
   },
   {
     url: '/gallery/projects/Ini_ga_8',
@@ -176,6 +176,10 @@ export const generation = [
   {
     url: '/gallery/generation/Ini_ga_5',
     author: authors.ini_ga
+  },
+  {
+    url: '/gallery/generation/CMETAHA99_2',
+    author: authors.cmetaha
   },
   {
     url: '/gallery/generation/OuiKing_1',
