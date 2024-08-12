@@ -1,3 +1,7 @@
+'use client'
+
+import { useEffect } from 'react'
+
 import { Header } from '@/components/common/Header'
 import { Preview } from '@/components/main/Preview'
 import { Controls } from '@/components/main/Controls'
@@ -9,6 +13,13 @@ import { Members } from '@/components/main/members/Members'
 import { Copyright } from '@/components/common/Copyright'
 
 export default function Main() {
+  useEffect(() => {
+    ;(async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default
+      const locomotiveScroll = new LocomotiveScroll()
+    })()
+  }, [])
+
   return (
     <div className="mx-auto min-h-dvh max-w-screen-2xl px-4 lg:px-8">
       <Header />

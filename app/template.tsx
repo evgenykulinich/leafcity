@@ -9,7 +9,7 @@ export default function Transition({ children }: { children: React.ReactNode }) 
       animate={{ opacity: 1 }}
       transition={{
         ease: 'easeInOut',
-        duration: 0.5
+        duration: 0.7
       }}
     >
       {children}

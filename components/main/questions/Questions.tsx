@@ -25,7 +25,11 @@ export function Questions() {
             </AccordionItem>
           ))}
         </Accordion>
-        <div className="mx-auto flex flex-col justify-between lg:w-[50%] lg:max-w-[450px]">
+        <div
+          className="mx-auto flex flex-col justify-between lg:w-[50%] lg:max-w-[450px]"
+          data-scroll
+          data-scroll-speed={'0.15'}
+        >
           <Discord />
           <Server />
         </div>
