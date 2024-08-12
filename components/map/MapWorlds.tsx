@@ -9,6 +9,7 @@ import { Header } from '@/components/common/Header'
 import { Copyright } from '@/components/common/Copyright'
 import { PageTitle } from '@/components/common/PageTitle'
 import { noCacheUrl, worlds } from '@/data/worlds'
+import { BackgroundImage } from '@/components/map/BackgroundImage'
 
 export default function MapWorlds() {
   const [activeWorld, setActiveWorld] = useState<string | null>(null)
@@ -32,21 +33,26 @@ export default function MapWorlds() {
             {worlds.map(world => (
               <Card
                 className={clsx(
-                  `width-animation relative mx-auto block h-[150px] w-full cursor-pointer overflow-hidden rounded-2xl border-2 p-4 lg:h-[500px] lg:p-6`,
+                  `width-animation relative mx-auto block h-[175px] w-full cursor-pointer overflow-hidden rounded-2xl border-2 p-0 lg:h-[500px]`,
+                  {
+                    'hover:border-green': world.color === 'green',
+                    'hover:border-mango': world.color === 'mango',
+                    'hover:border-blue': world.color === 'blue'
+                  },
+                  {
+                    'border-green/50': world.color === 'green',
+                    'border-mango/50': world.color === 'mango',
+                    'border-blue/50': world.color === 'blue'
+                  },
                   {
                     'bg-green/10': world.color === 'green',
                     'bg-mango/10': world.color === 'mango',
                     'bg-blue/10': world.color === 'blue'
                   },
                   {
-                    'hover:bg-green/20': world.color === 'green',
-                    'hover:bg-mango/20': world.color === 'mango',
-                    'hover:bg-blue/20': world.color === 'blue'
-                  },
-                  {
-                    'border-green': world.color === 'green',
-                    'border-mango': world.color === 'mango',
-                    'border-blue': world.color === 'blue'
+                    'hover:bg-green/0': world.color === 'green',
+                    'hover:bg-mango/0': world.color === 'mango',
+                    'hover:bg-blue/0': world.color === 'blue'
                   },
                   {
                     'text-green': world.color === 'green',
@@ -57,11 +63,11 @@ export default function MapWorlds() {
                 key={world.title}
                 onClick={() => handleButtonClick(world.title)}
               >
-                <div className={`${world.title} card-blur h-full w-full`} />
+                <BackgroundImage src={world.background} alt={world.description} />
                 <p className="absolute left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] items-center gap-2 transition duration-500">
                   <Image
                     className="w-[22px]"
-                    alt="Аватар"
+                    alt="Иконка"
                     src={world.icon}
                     width={180}
                     height={180}

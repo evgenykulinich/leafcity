@@ -85,7 +85,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
                       <TooltipTrigger asChild>
                         <div className="absolute bottom-1 left-5 flex cursor-default items-center gap-1 rounded-[6px] bg-black/60 p-1 transition hover:bg-black/90 lg:bottom-1 lg:gap-2 lg:rounded-[8px] lg:px-2 lg:py-2">
                           {imgError ? (
-                            <Image
+                            <FadeInImage
                               className="w-[20px] rounded"
                               alt="Автор"
                               src="/icon/head_default.png"
@@ -93,7 +93,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props)
                               height={180}
                             />
                           ) : (
-                            <Image
+                            <FadeInImage
                               className="w-[20px] rounded"
                               alt="Автор"
                               src={`${routes.head}/${item.author}`}

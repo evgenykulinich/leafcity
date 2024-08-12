@@ -228,10 +228,10 @@ ul, li {
 
 @media (width > 1024px) {
   .width-animation {
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     & > div {
-      transition: filter 0.3s ease-in-out;
+      transition: filter 0.5s ease-in-out;
     }
 
     flex: 1;
@@ -254,26 +254,6 @@ ul, li {
       }
     }
   }
-}
-
-.survival,
-.farms,
-.resources {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.survival {
-  background-image: url('/map/survival.png');
-}
-
-.farms {
-  background-image: url('/map/farms.png');
-}
-
-.resources {
-  background-image: url('/map/resources.png');
 }
 
 /* LC Plus */

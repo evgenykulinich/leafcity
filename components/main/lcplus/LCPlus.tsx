@@ -60,9 +60,9 @@ export const LCPlus = () => {
       )}
 
       {isMobile && (
-        <section className="mt-24">
+        <section className="mt-16">
           <h2 className="text-center text-[26px]">Будь ярким на сервере</h2>
-          <div className="mt-8 flex w-full flex-col items-center gap-8 rounded-2xl">
+          <div className="mt-4 flex w-full flex-col items-center gap-8 rounded-2xl lg:mt-8">
             <div className="mx-auto flex flex-col px-8">
               <div className="flex items-center gap-2">
                 <p className="text-[28px] font-bold">Подписка</p>
