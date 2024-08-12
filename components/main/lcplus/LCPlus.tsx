@@ -16,7 +16,11 @@ export const LCPlus = () => {
         <section className="mt-24">
           <h2 className="text-[26px] lg:text-end">Будь ярким на сервере</h2>
           <div className="mt-12 flex w-full items-center justify-between gap-12 rounded-2xl">
-            <div className="mx-auto flex flex-col items-center justify-center gap-8 px-8">
+            <div
+              className="mx-auto flex flex-col items-center justify-center gap-8 px-8"
+              data-scroll
+              data-scroll-speed={'0.15'}
+            >
               <div className="flex items-center gap-2">
                 <p className="cursor-default text-center text-[38px] font-bold">Подписка</p>
                 <Image
