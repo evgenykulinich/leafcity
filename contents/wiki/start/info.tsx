@@ -10,7 +10,7 @@ export default function Info() {
 
   return (
     <>
-      <h1 className="text-xl font-bold">Введение</h1>
+      <h1 className="text-heading">Введение</h1>
       <p className="mt-4">
         Документация проекта, самая важная информация о проекте на одной странице. Мы надеемся, что
         наша документация поможет тебе более полно погрузиться в наш мир и насладиться игрой вместе
@@ -19,20 +19,20 @@ export default function Info() {
       <p className="mt-4">
         Наша основная цель – создание уютного сообщества игроков с разнообразными интересами,
         которым мы предоставим расширенный игровой опыт по мотивам{' '}
-        <span className="style-info">ванильного</span> Minecraft!
+        <span className="text-note note-purple">ванильного</span> Minecraft!
       </p>
-      <h2 className="mt-8 text-lg font-bold" id="впервые-на-сервере">
+      <h2 className="text-subheading" id="впервые-на-сервере">
         Впервые на сервере?
       </h2>
       <ul className="mt-4 flex flex-col gap-3">
-        <li className="text-white/50">
-          <span className="font-bold text-white/50">• </span>
+        <li>
+          <span className="font-bold">• </span>
           <Link className="hover-underline underline-blue text-blue" href={routes.rules}>
             Правила сервера
           </Link>
         </li>
-        <li className="text-white/50">
-          <span className="font-bold text-white/50">• </span>
+        <li>
+          <span className="font-bold">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/start/addons`}
@@ -40,8 +40,8 @@ export default function Info() {
             Разрешённые модификации
           </Link>
         </li>
-        <li className="text-white/50">
-          <span className="font-bold text-white/50">• </span>
+        <li>
+          <span className="font-bold">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/start/modpack`}
@@ -51,12 +51,12 @@ export default function Info() {
         </li>
       </ul>
 
-      <h2 className="mt-8 text-lg font-bold" id="ищешь-гайды">
+      <h2 className="text-subheading" id="ищешь-гайды">
         Ищешь гайды?
       </h2>
       <ul className="mt-4 flex flex-col gap-3">
         <li>
-          <span className="font-bold text-white/50">• </span>
+          <span className="font-bold">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/manuals/commands`}
@@ -65,7 +65,7 @@ export default function Info() {
           </Link>
         </li>
         <li>
-          <span className="font-bold text-white/50">• </span>
+          <span className="font-bold">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/manuals/crafts`}
@@ -74,7 +74,7 @@ export default function Info() {
           </Link>
         </li>
         <li>
-          <span className="font-bold text-white/50">• </span>
+          <span className="font-bold">• </span>
           <Link
             className="hover-underline underline-blue text-blue"
             href={`${routes.baseUrl}/wiki/manuals/registration`}
@@ -84,10 +84,10 @@ export default function Info() {
         </li>
       </ul>
 
-      <h2 className="mt-8 text-lg font-bold" id="остались-вопросы">
+      <h2 className="text-subheading" id="остались-вопросы">
         Остались вопросы?
       </h2>
-      <p className="mb-8 mt-4">
+      <p className="mt-4">
         Возможно ответ на твой вопрос уже есть на странице с часто задаваемыми вопросами. Если его
         нет, то ты можешь обратиться за помощью в{' '}
         <Link className="hover-underline underline-purple text-purple" href={routes.discord}>
@@ -95,7 +95,7 @@ export default function Info() {
         </Link>{' '}
         Discrod-a.
       </p>
-      <small className="text-sm text-white/50">{lastUpdateDate}</small>
+      <p className="text-subtext">{lastUpdateDate}</p>
     </>
   )
 }

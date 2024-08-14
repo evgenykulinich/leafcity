@@ -15,22 +15,22 @@ export default function Info() {
 
   return (
     <>
-      <h1 className="text-xl font-bold">Модификации</h1>
+      <h1 className="text-heading">Модификации</h1>
       <p className="mt-4">
         На нашем сервере разрешены модификации, которые добавляют визуальный контент или
         оптимизируют игру, при условии, что они не дают явного преимущества над другими игроками.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold" id="разрешённые-модификации">
+      <h2 className="text-subheading" id="разрешённые-модификации">
         Разрешённые модификации
       </h2>
       <p className="mt-4">
         Все модификации, которые добавляют визуальный контент, а так же оптимизацию, кроме тех, что
         дают явные преимущества над другими игроками – разрешены. Автокликеры,{' '}
-        <span className="style-info text-nowrap">Easy Place Mode</span>, а так же модификации, по
-        типу: <span className="style-info">Gamma</span>,{' '}
-        <span className="style-info text-nowrap">Fullbright UB</span>,{' '}
-        <span className="style-info">InventoryProfileNext</span> – так же разрешены.
+        <span className="text-note note-purple text-nowrap">Easy Place Mode</span>, а так же
+        модификации, по типу: <span className="text-note note-purple">Gamma</span>,{' '}
+        <span className="text-note note-purple text-nowrap">Fullbright UB</span>,{' '}
+        <span className="text-note note-purple">InventoryProfileNext</span> – так же разрешены.
       </p>
       <InfoText className="mt-8">
         Если вы сомневаетесь в какой-либо модификации – обратитесь в{' '}
@@ -39,14 +39,14 @@ export default function Info() {
         </Link>
       </InfoText>
 
-      <h3 className="mt-8 text-lg font-bold" id="дополнительный-список">
+      <h3 className="text-subheading" id="дополнительный-список">
         Дополнительный список
       </h3>
 
       <ul className="mt-4 flex flex-col gap-3">
         {sortedAllowedModsList.map(mod => (
-          <li className="text-white/50" key={mod.name}>
-            <span className="font-bold text-white/50">• </span>
+          <li key={mod.name}>
+            <span className="font-bold">• </span>
             <Link className="hover-underline underline-green text-green" href={mod.url}>
               {mod.name}
             </Link>
@@ -54,7 +54,7 @@ export default function Info() {
         ))}
       </ul>
 
-      <h2 className="mt-8 text-lg font-bold" id="ресурспаки">
+      <h2 className="text-subheading" id="ресурспаки">
         Ресурспаки
       </h2>
       <p className="mt-4">
@@ -62,7 +62,7 @@ export default function Info() {
         что указаны в списке запрещённых.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold" id="запрещённые-модификации">
+      <h2 className="text-subheading" id="запрещённые-модификации">
         Запрещённые модификации
       </h2>
       <p className="mt-4">
@@ -71,29 +71,29 @@ export default function Info() {
         изменений в коде.
       </p>
 
-      <h3 className="mt-8 text-lg font-bold" id="моды">
+      <h3 className="text-subheading" id="моды">
         Моды
       </h3>
-      <ul className="mt-4 flex flex-col gap-3 text-white/50">
+      <ul className="mt-4 flex flex-col gap-3">
         {sortedBannedModsList.map(mod => (
-          <li className="w-fit" key={mod.name}>
-            <span className="style-danger">{mod.name}</span>
+          <li key={mod.name}>
+            <span className="text-note note-red">{mod.name}</span>
           </li>
         ))}
       </ul>
 
-      <h3 className="mt-8 text-lg font-bold" id="список-ресурспаков">
+      <h3 className="text-subheading" id="список-ресурспаков">
         Список ресурспаков
       </h3>
-      <ul className="mb-8 mt-4 flex flex-col gap-3">
+      <ul className="mt-4 flex flex-col gap-3">
         {sortedBannedPacksList.map(mod => (
-          <li className="w-fit" key={mod.name}>
-            <span className="style-danger">{mod.name}</span>
+          <li key={mod.name}>
+            <span className="text-note note-red">{mod.name}</span>
           </li>
         ))}
       </ul>
 
-      <small className="text-nowrap text-sm text-white/50">{lastUpdateDate}</small>
+      <p className="text-subtext">{lastUpdateDate}</p>
     </>
   )
 }

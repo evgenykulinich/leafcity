@@ -11,27 +11,28 @@ export default function ModPack() {
   const lastUpdateDate = getLastUpdateDate(updateDate)
   return (
     <>
-      <h1 className="text-xl font-bold">Сборка</h1>
+      <h1 className="text-heading">Сборка</h1>
       <p className="mt-4">
         Модпак для Minecraft на базе Fabric предназначен для улучшения производительности и
         графического качества игры. В его состав входят оптимизационные моды, такие как{' '}
-        <span className="style-info">Sodium</span>, <span className="style-info">Lithium</span> и{' '}
-        <span className="style-info">Starlight</span>
+        <span className="text-note note-purple">Sodium</span>,{' '}
+        <span className="text-note note-purple">Lithium</span> и{' '}
+        <span className="text-note note-purple">Starlight</span>
       </p>
 
-      <h2 className="mt-8 text-lg font-bold" id="список-модов">
+      <h2 className="text-subheading" id="список-модов">
         Список модов
       </h2>
       <ul className="mt-4 flex flex-col gap-3">
         {sortedModpack.map(mod => (
           <li key={mod.name}>
-            <span className="font-bold text-white/50">• </span>
-            <span className="style-point">{mod.name}</span> – {mod.description}
+            <span className="font-bold">• </span>
+            <span className="text-note note-blue">{mod.name}</span> – {mod.description}
           </li>
         ))}
       </ul>
 
-      <h2 className="mt-8 text-lg font-bold" id="скачать-сборку">
+      <h2 className="text-subheading" id="скачать-сборку">
         Скачать сборку
       </h2>
       <Link
@@ -42,7 +43,7 @@ export default function ModPack() {
         Fabric – 1.21
       </Link>
 
-      <small className="text-sm text-white/50">{lastUpdateDate}</small>
+      <p className="text-subtext">{lastUpdateDate}</p>
     </>
   )
 }

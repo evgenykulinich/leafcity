@@ -14,7 +14,7 @@ export const LCPlus = () => {
     <>
       {!isMobile && (
         <section className="mt-24">
-          <h2 className="text-[26px] lg:text-end">Будь ярким на сервере</h2>
+          <h2 className="text-heading lg:text-end">Будь ярким на сервере</h2>
           <div className="mt-12 flex w-full items-center justify-between gap-12 rounded-2xl">
             <div
               className="mx-auto flex flex-col items-center justify-center gap-8 px-8"
@@ -32,7 +32,7 @@ export const LCPlus = () => {
                 />
               </div>
               <Link
-                className="lcplus-button text-nowrap rounded-2xl bg-green px-24 py-6 font-bold transition hover:bg-green/70"
+                className="hover-subscription text-nowrap rounded-2xl bg-green px-24 py-6 font-bold transition hover:bg-green/70"
                 href={routes.shop}
               >
                 Хочу такую!
@@ -61,7 +61,7 @@ export const LCPlus = () => {
 
       {isMobile && (
         <section className="mt-16">
-          <h2 className="text-center text-[26px]">Будь ярким на сервере</h2>
+          <h2 className="text-heading text-center">Будь ярким на сервере</h2>
           <div className="mt-4 flex w-full flex-col items-center gap-8 rounded-2xl lg:mt-8">
             <div className="mx-auto flex flex-col px-8">
               <div className="flex items-center gap-2">

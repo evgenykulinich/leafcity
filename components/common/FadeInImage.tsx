@@ -36,7 +36,7 @@ export const FadeInImage = ({
 }: Props) => {
   return (
     <Image
-      className={clsx('image-fade-in', className)}
+      className={clsx('image-loading', className)}
       style={style}
       src={src}
       alt={alt}

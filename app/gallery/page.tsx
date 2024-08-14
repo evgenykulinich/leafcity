@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 import { Header } from '@/components/common/Header'
 import { projects, generation } from '@/data/gallery'
@@ -74,7 +73,7 @@ export default function Gallery() {
             color="blue"
           />
         </div>
-        <p className="mt-8 text-center text-lg lg:mt-12 lg:text-xl">
+        <div className="mt-8 text-center text-lg lg:mt-12 lg:text-xl">
           Поделиться своими скриншотами можно в{' '}
           <Link className="hover-underline underline-purple text-purple" href={routes.discord}>
             Discord
@@ -84,7 +83,7 @@ export default function Gallery() {
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
                 <Link
-                  className="style-info transition hover:bg-purple/40"
+                  className="text-note note-purple transition hover:bg-purple/40"
                   href={routes.discordSupport}
                 >
                   #предложения
@@ -93,7 +92,7 @@ export default function Gallery() {
               <TooltipContent className="p-0">Перейти</TooltipContent>
             </Tooltip>
           </TooltipProvider>
-        </p>
+        </div>
       </section>
       <Copyright />
     </div>

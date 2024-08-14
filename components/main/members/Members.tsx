@@ -15,7 +15,7 @@ export const Members = () => {
   }
   return (
     <section className="mt-16 overflow-hidden lg:mt-24">
-      <h2 className="text-center text-[26px] lg:text-left">Команда проекта</h2>
+      <h2 className="text-heading text-center lg:text-left">Команда проекта</h2>
       <div className="members-borders flex">
         <MembersList>
           <div
@@ -25,12 +25,12 @@ export const Members = () => {
             {members.map(member => (
               <div
                 className={clsx(
-                  `member mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px] ${member.styles}`
+                  `member-card mx-5 flex size-[100px] flex-1 flex-col items-center lg:mx-10 lg:size-[120px] ${member.styles}`
                 )}
                 key={member.nickname}
               >
                 <p className="lg:hidden">{member.nickname}</p>
-                <div className="shy">
+                <div className="hover-shy">
                   {imgError ? (
                     <Image
                       className="mt-2 w-full cursor-pointer rounded-[8px] transition lg:active:scale-[.95]"

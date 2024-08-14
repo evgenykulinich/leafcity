@@ -159,24 +159,24 @@ export default function Commands() {
 
   return (
     <>
-      <h1 className="text-xl font-bold">Команды</h1>
+      <h1 className="text-heading">Команды</h1>
       <p className="mt-4">
         Эти команды помогут тебе настроить свой игровой опыт, взаимодействовать с другими игроками и
         воспользоваться дополнительными возможностями, предоставляемыми сервером
       </p>
 
-      <h2 className="mt-8 text-lg font-bold" id="список-команд">
+      <h2 className="text-subheading" id="список-команд">
         Список команд
       </h2>
-      <ul className="mb-8 mt-4 flex flex-col gap-3">
+      <ul className="mt-4 flex flex-col gap-3">
         {sortedCommandList.map(command => (
           <li key={command.name}>
-            <span className="style-point">{command.name}</span> – {command.description}
+            <span className="text-note note-blue">{command.name}</span> – {command.description}
           </li>
         ))}
       </ul>
 
-      <small className="text-sm text-white/50">{lastUpdateDate}</small>
+      <p className="text-subtext">{lastUpdateDate}</p>
     </>
   )
 }
