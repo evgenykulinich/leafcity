@@ -11,7 +11,7 @@ export default function Map() {
 
   return (
     <>
-      <h1 className="text-xl font-bold">Карта</h1>
+      <h1 className="text-heading">Карта</h1>
       <p className="mt-4">
         Узнай о расположении всех построек и территорий нашего сервера на удобной и интуитивно
         понятной карте. Этот инструмент особенно полезен для новичков.
@@ -38,23 +38,23 @@ export default function Map() {
         />
       </Link>
 
-      <h2 className="mt-8 text-lg font-bold" id="дополнение">
+      <h2 className="text-subheading" id="дополнение">
         Дополнение
       </h2>
 
       <p className="mt-4 leading-loose">
         Ты можешь скрыть/показать себя на общей карте используя команду{' '}
-        <span className="style-point text-nowrap">/map hide / show</span>
+        <span className="text-note note-blue text-nowrap">/map hide / show</span>
       </p>
 
-      <p className="mb-8 mt-4">
+      <p className="mt-4">
         Так же на общей карте доступны флаги, с помощью которых можно указать свой проект / базу /
         магазин, ты можешь их показать нажав{' '}
-        <span className="style-info text-nowrap">Shift + ПКМ</span> по флагу (только с подпиской)
-        или же через поддержку в Discord.
+        <span className="text-note note-purple text-nowrap">Shift + ПКМ</span> по флагу (только с
+        подпиской) или же через поддержку в Discord.
       </p>
 
-      <small className="text-sm text-white/50">{lastUpdateDate}</small>
+      <p className="text-subtext">{lastUpdateDate}</p>
     </>
   )
 }

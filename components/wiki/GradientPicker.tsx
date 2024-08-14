@@ -27,7 +27,7 @@ const GradientPicker = () => {
   }, [leftColor, rightColor])
 
   return (
-    <div>
+    <>
       <div className="flex w-full flex-col gap-8 lg:w-full">
         <div>
           <div className="flex items-center justify-center gap-2">
@@ -64,7 +64,7 @@ const GradientPicker = () => {
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <Button
-                className="mx-auto mb-8 w-full rounded-xl border-none bg-purple px-24 py-8 text-[20px] transition hover:bg-purple/80 active:scale-95 lg:w-fit"
+                className="mx-auto w-full rounded-xl border-none bg-purple px-24 py-8 text-[20px] transition hover:bg-purple/80 active:scale-95 lg:w-fit"
                 onClick={() => copyHex(nicknameColor)}
               >
                 <span className="text-lg font-bold">Скопировать</span>
@@ -76,7 +76,7 @@ const GradientPicker = () => {
           </Tooltip>
         </TooltipProvider>
       </div>
-    </div>
+    </>
   )
 }
 

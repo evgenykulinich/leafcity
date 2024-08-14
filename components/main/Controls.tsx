@@ -20,7 +20,7 @@ export function Controls() {
         <span>Начать играть</span>
       </Link>
 
-      <div className="minecraft-version lg:block">
+      <div className="hover-versions lg:block">
         <Button
           variant="outline"
           onClick={toggleCopyIp}

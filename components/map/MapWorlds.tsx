@@ -35,24 +35,9 @@ export default function MapWorlds() {
                 className={clsx(
                   `width-animation relative mx-auto block h-[175px] w-full cursor-pointer overflow-hidden rounded-2xl border-2 p-0 lg:h-[500px]`,
                   {
-                    'hover:border-green': world.color === 'green',
-                    'hover:border-mango': world.color === 'mango',
-                    'hover:border-blue': world.color === 'blue'
-                  },
-                  {
-                    'border-green/50': world.color === 'green',
-                    'border-mango/50': world.color === 'mango',
-                    'border-blue/50': world.color === 'blue'
-                  },
-                  {
-                    'bg-green/10': world.color === 'green',
-                    'bg-mango/10': world.color === 'mango',
-                    'bg-blue/10': world.color === 'blue'
-                  },
-                  {
-                    'hover:bg-green/0': world.color === 'green',
-                    'hover:bg-mango/0': world.color === 'mango',
-                    'hover:bg-blue/0': world.color === 'blue'
+                    'border-green': world.color === 'green',
+                    'border-mango': world.color === 'mango',
+                    'border-blue': world.color === 'blue'
                   },
                   {
                     'text-green': world.color === 'green',

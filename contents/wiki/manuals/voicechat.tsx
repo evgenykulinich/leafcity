@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import { Description } from '@radix-ui/react-dialog'
 
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
@@ -13,16 +14,16 @@ export default function VoiceChat() {
 
   return (
     <>
-      <h1 className="text-xl font-bold">Голосовой чат</h1>
+      <h1 className="text-heading">Голосовой чат</h1>
       <p className="mt-4">
-        <span className="style-info">Plasmo Voice</span> позволяет использовать голосовой чат в
-        Minecraft, предоставляя множество функций и настроек для удобного общения в игре.
+        <span className="text-note note-purple">Plasmo Voice</span> позволяет использовать голосовой
+        чат в Minecraft, предоставляя множество функций и настроек для удобного общения в игре.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold" id="мод-на-голосовой-чат">
+      <h2 className="text-subheading" id="мод-на-голосовой-чат">
         Мод на голосовой чат
       </h2>
-      <h3 className="mt-8 text-lg font-bold" id="установка">
+      <h3 className="text-subheading" id="установка">
         Установка
       </h3>
       <ul className="mt-4 flex flex-col gap-3">
@@ -50,7 +51,7 @@ export default function VoiceChat() {
           >
             Plasmo Voice
           </Link>{' '}
-          и перекинуть в папку <span className="style-info">/.minecraft/mods/</span>
+          и перекинуть в папку <span className="text-note note-purple">/.minecraft/mods/</span>
         </li>
       </ul>
 
@@ -59,7 +60,7 @@ export default function VoiceChat() {
         Files и выбрать его там. По умолчанию скачивается версия на Fabric.
       </p>
 
-      <h3 className="mt-8 text-lg font-bold" id="дополнительно">
+      <h3 className="text-subheading" id="дополнительно">
         Дополнительно
       </h3>
       <p className="mt-4">
@@ -87,10 +88,10 @@ export default function VoiceChat() {
           OptiFabric
         </Link>{' '}
         и OptiFine с официального сайта. Нужно перекинуть оба мода в папку{' '}
-        <span className="style-info">/.minecraft/mods/</span>
+        <span className="text-note note-purple">/.minecraft/mods/</span>
       </p>
 
-      <h3 className="mt-8 text-lg font-bold" id="зависимости-для-данного-мода">
+      <h3 className="text-subheading" id="зависимости-для-данного-мода">
         Зависимости для данного мода
       </h3>
       <p className="mt-4">
@@ -110,16 +111,18 @@ export default function VoiceChat() {
         </Link>
       </p>
 
-      <h2 className="mt-8 text-lg font-bold" id="новые-значки">
+      <h2 className="text-subheading" id="новые-значки">
         Новые значки
       </h2>
       <p className="mt-4">
-        Теперь ты можешь отличить значки <span className="style-info text-nowrap">Client Mute</span>{' '}
-        и <span className="style-info text-nowrap">Server Mute</span>
+        Теперь ты можешь отличить значки{' '}
+        <span className="text-note note-purple text-nowrap">Client Mute</span> и{' '}
+        <span className="text-note note-purple text-nowrap">Server Mute</span>
       </p>
       <p className="mt-4">
-        Также есть новая <span className="style-info text-nowrap">Player Muted Audio</span> иконка.
-        Этот значок означает, что игрок отключил голосовой чат на клиенте.
+        Также есть новая{' '}
+        <span className="text-note note-purple text-nowrap">Player Muted Audio</span> иконка. Этот
+        значок означает, что игрок отключил голосовой чат на клиенте.
       </p>
 
       <div className="flex flex-wrap gap-4">
@@ -128,7 +131,7 @@ export default function VoiceChat() {
             <Image
               className="h-full"
               src="/wiki/voice/icons-1.png"
-              alt="Палочка отладки"
+              alt="Иконки"
               width={500}
               height={500}
             />
@@ -148,16 +151,18 @@ export default function VoiceChat() {
             </TooltipProvider>
           </DialogTrigger>
           <DialogContent
-            className="w-full px-4 lg:max-w-[1080px] lg:px-8"
+            className="w-full max-w-screen-xl px-4 lg:px-8"
             aria-describedby={undefined}
           >
             <DialogTitle>
-              <VisuallyHidden.Root />
+              <VisuallyHidden.Root>
+                <Description />
+              </VisuallyHidden.Root>
             </DialogTitle>
             <Image
-              className="w-full overflow-hidden rounded-lg"
+              className="w-full overflow-hidden rounded-lg lg:rounded-xl"
               src="/wiki/voice/icons-1.png"
-              alt="Палочка отладки"
+              alt="Иконки"
               width={1000}
               height={1000}
             />
@@ -183,16 +188,18 @@ export default function VoiceChat() {
             </TooltipProvider>
           </DialogTrigger>
           <DialogContent
-            className="w-full px-4 lg:max-w-[1080px] lg:px-8"
+            className="w-full max-w-screen-xl px-4 lg:px-8"
             aria-describedby={undefined}
           >
             <DialogTitle>
-              <VisuallyHidden.Root />
+              <VisuallyHidden.Root>
+                <Description />
+              </VisuallyHidden.Root>
             </DialogTitle>
             <Image
-              className="w-full overflow-hidden rounded-lg"
+              className="w-full overflow-hidden rounded-lg lg:rounded-xl"
               src="/wiki/voice/icons-2.png"
-              alt="Палочка отладки"
+              alt="Иконки"
               width={1000}
               height={1000}
             />
@@ -200,21 +207,23 @@ export default function VoiceChat() {
         </Dialog>
       </div>
 
-      <h2 className="mt-8 text-lg font-bold" id="новое-меню">
+      <h2 className="text-subheading" id="новое-меню">
         Новое меню
       </h2>
       <p className="mt-4">Благодаря множеству новых функций нам пришлось заново продумать меню.</p>
       <p className="leading-height mt-4 text-base">
-        Мы заменили <span className="style-info">General</span> категорию четырьмя новыми:{' '}
-        <span className="style-info">Devices</span>, <span className="style-info">Volume</span>,{' '}
-        <span className="style-info">Activation</span> и <span className="style-info">Overlay</span>
+        Мы заменили <span className="text-note note-purple">General</span> категорию четырьмя
+        новыми: <span className="text-note note-purple">Devices</span>,{' '}
+        <span className="text-note note-purple">Volume</span>,{' '}
+        <span className="text-note note-purple">Activation</span> и{' '}
+        <span className="text-note note-purple">Overlay</span>
       </p>
-      <p className="mb-8 mt-4">
-        Также появилась новая <span className="style-info text-nowrap">Add-ons</span> категория и
-        множество улучшений визуального оформления и удобства использования.
+      <p className="mt-4">
+        Также появилась новая <span className="text-note note-purple text-nowrap">Add-ons</span>{' '}
+        категория и множество улучшений визуального оформления и удобства использования.
       </p>
 
-      <small className="text-sm text-white/50">{lastUpdateDate}</small>
+      <p className="text-subtext">{lastUpdateDate}</p>
     </>
   )
 }

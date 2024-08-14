@@ -14,13 +14,13 @@ export default function Crafts() {
 
   return (
     <>
-      <h1 className="text-xl font-bold">Крафты</h1>
+      <h1 className="text-heading">Крафты</h1>
       <p className="mt-4">
         Все кастомные крафты доступные на сервере, разнообразь свое приключение и создай то, что не
         смог в одиночной игре. Особенно полезно для строителей.
       </p>
 
-      <h2 className="mt-8 text-lg font-bold" id="палочка-отладки">
+      <h2 className="text-subheading" id="палочка-отладки">
         Палочка отладки
       </h2>
       <p className="mt-4">
@@ -28,7 +28,7 @@ export default function Crafts() {
         блоки невозможно редактировать во избежание дюпа.
       </p>
       <Dialog>
-        <DialogTrigger className="relative mx-auto mt-4 block overflow-hidden rounded-lg outline-none">
+        <DialogTrigger className="relative mx-auto mt-4 block overflow-hidden rounded-lg outline-none lg:rounded-xl">
           <FadeInImage
             src="/wiki/crafts/debug-stick.avif"
             alt="Палочка отладки"
@@ -50,7 +50,7 @@ export default function Crafts() {
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+        <DialogContent className="w-full max-w-screen-xl px-4 lg:px-8">
           <VisuallyHidden.Root>
             <Description />
           </VisuallyHidden.Root>
@@ -58,7 +58,7 @@ export default function Crafts() {
             <VisuallyHidden.Root />
           </DialogTitle>
           <FadeInImage
-            className="w-auto overflow-hidden rounded-lg"
+            className="w-full overflow-hidden rounded-lg lg:rounded-xl"
             src="/wiki/crafts/debug-stick.avif"
             alt="Палочка отладки"
             width={1920}
@@ -67,7 +67,7 @@ export default function Crafts() {
         </DialogContent>
       </Dialog>
 
-      <h2 className="mt-8 text-lg font-bold" id="блок-света">
+      <h2 className="text-subheading" id="блок-света">
         Блок света
       </h2>
       <p className="mt-4">
@@ -76,13 +76,8 @@ export default function Crafts() {
         блока света можно на камнерезе.
       </p>
       <Dialog>
-        <DialogTrigger className="relative mx-auto mb-8 mt-4 block overflow-hidden rounded-lg outline-none">
-          <FadeInImage
-            src="/wiki/crafts/light.avif"
-            alt="Палочка отладки"
-            width={400}
-            height={400}
-          />
+        <DialogTrigger className="relative mx-auto mt-4 block overflow-hidden rounded-lg outline-none lg:rounded-xl">
+          <FadeInImage src="/wiki/crafts/light.avif" alt="Блок света" width={400} height={400} />
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
@@ -98,7 +93,7 @@ export default function Crafts() {
             </Tooltip>
           </TooltipProvider>
         </DialogTrigger>
-        <DialogContent className="w-full px-4 lg:max-w-[1080px] lg:px-8">
+        <DialogContent className="w-full max-w-screen-xl px-4 lg:px-8">
           <VisuallyHidden.Root>
             <Description />
           </VisuallyHidden.Root>
@@ -106,16 +101,16 @@ export default function Crafts() {
             <VisuallyHidden.Root />
           </DialogTitle>
           <FadeInImage
-            className="w-full overflow-hidden rounded-lg"
+            className="overflow-hidden rounded-lg lg:rounded-xl"
             src="/wiki/crafts/light.avif"
-            alt="Light"
+            alt="Блок света"
             width={1920}
             height={1080}
           />
         </DialogContent>
       </Dialog>
 
-      <small className="block text-sm text-white/50">{lastUpdateDate}</small>
+      <p className="text-subtext">{lastUpdateDate}</p>
     </>
   )
 }
