@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 import { Copyright } from '@/components/common/Copyright'
 import { Header } from '@/components/common/Header'
-import { Achievements } from '@/components/main/achievements/Achievements'
+import { AchievementsList } from '@/components/main/achievements/AchievementsList'
 import { Controls } from '@/components/main/Controls'
 import { LCPlus } from '@/components/main/lcplus/LCPlus'
 import { Members } from '@/components/main/members/Members'
@@ -25,7 +25,7 @@ export default function Main() {
       <Header />
       <Preview />
       <Controls />
-      <Achievements />
+      <AchievementsList />
       <Questions />
       <LCPlus />
       <Useful />

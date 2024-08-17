@@ -3,10 +3,7 @@
 import { useEffect } from 'react'
 
 import { members } from '@/data/members'
-
-interface MembersListProps {
-  children: React.ReactNode
-}
+import { MembersListProps } from '@/interfaces/main'
 
 const MembersList = ({ children }: MembersListProps) => {
   useEffect(() => {

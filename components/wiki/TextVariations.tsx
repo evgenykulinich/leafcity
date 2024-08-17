@@ -1,10 +1,6 @@
 import Image from 'next/image'
-import React from 'react'
 
-interface TextVariantProps {
-  children: React.ReactNode
-  className?: string
-}
+import { TextVariantProps } from '@/interfaces/wiki'
 
 export const InfoText = ({ children, className }: TextVariantProps) => {
   return (

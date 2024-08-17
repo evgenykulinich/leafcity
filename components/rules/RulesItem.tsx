@@ -1,8 +1,4 @@
-interface RulesItemProps {
-  point?: string
-  text: string
-  className: string
-}
+import { RulesItemProps } from '@/interfaces/rules'
 
 export const RulesItem = ({ className, point, text }: RulesItemProps) => {
   return (

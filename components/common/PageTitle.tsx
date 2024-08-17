@@ -1,6 +1,4 @@
-interface PageTitleProps {
-  children: React.ReactNode
-}
+import { PageTitleProps } from '@/interfaces/common'
 
 export const PageTitle = ({ children }: PageTitleProps) => {
   return (

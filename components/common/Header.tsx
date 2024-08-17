@@ -7,11 +7,8 @@ import { usePathname } from 'next/navigation'
 import { Navigation } from '@/components/common/Navigation'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
+import { HeaderProps } from '@/interfaces/common'
 import { cn } from '@/lib/utils'
-
-interface HeaderProps {
-  className?: string
-}
 
 function HeaderLogo() {
   return (

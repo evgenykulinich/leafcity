@@ -6,6 +6,7 @@ import { Leftbar, SheetLeftbar } from '@/components/wiki/Leftbar'
 import Pagination from '@/components/wiki/Pagination'
 import Toc from '@/components/wiki/Toc'
 import { routes } from '@/constants/routes'
+import { WikiPageProps } from '@/interfaces/wiki'
 import { getComponentForSlug } from '@/lib/markdown'
 import { page_routes } from '@/lib/wiki_routes'
 
@@ -47,13 +48,9 @@ export const metadata: Metadata = {
   }
 }
 
-type PageProps = {
-  params: { slug: string[] }
-}
-
 const cachedGetComponentForSlug = cache(getComponentForSlug)
 
-export default async function WikiPage({ params: { slug = [] } }: PageProps) {
+export default async function WikiPage({ params: { slug = [] } }: WikiPageProps) {
   const pathName = slug.join('/')
   const Component = await cachedGetComponentForSlug(pathName)
 
