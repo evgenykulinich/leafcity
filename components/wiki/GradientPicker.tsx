@@ -3,7 +3,7 @@
 import { clsx } from 'clsx'
 import { VT323 } from 'next/font/google'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { HexColorPicker } from 'react-colorful'
 
 import { Button } from '@/components/ui/button'

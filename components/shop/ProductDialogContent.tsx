@@ -6,20 +6,11 @@ import { FadeInImage } from '@/components/common/FadeInImage'
 import { ProductForm } from '@/components/shop/ProductForm'
 import { Card, CardContent } from '@/components/ui/card'
 import { DialogClose, DialogContent, DialogTitle } from '@/components/ui/dialog'
+import { ProductDialogContentProps } from '@/interfaces/shop'
 
-interface ProductDialogContentProps {
-  id: number
-  name: string
-  description: string
-  price: number
-}
+export const ProductDialogContent = ({ product }: ProductDialogContentProps) => {
+  const { id, name, description, price } = product
 
-export const ProductDialogContent = ({
-  id,
-  name,
-  description,
-  price
-}: ProductDialogContentProps) => {
   return (
     <DialogContent className="product-dialog flex w-full flex-col items-stretch justify-stretch bg-black p-0 lg:max-w-[1280px] lg:rounded-2xl lg:border-2 lg:border-purple lg:p-2">
       <DialogTitle>

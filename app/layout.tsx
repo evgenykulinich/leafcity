@@ -2,7 +2,7 @@ import { Montserrat } from 'next/font/google'
 import Head from 'next/head'
 
 import YandexMetrika from '@/app/YandexMetrika'
-import Providers from '@/components/common/ProgressBarProvider'
+import ProgressBarProvider from '@/components/common/ProgressBarProvider'
 import { Toaster } from '@/components/ui/sonner'
 import { routes } from '@/constants/routes'
 
@@ -74,7 +74,7 @@ export default function RootLayout({
         />
       </Head>
       <body className={font.className}>
-        <Providers>{children}</Providers>
+        <ProgressBarProvider>{children}</ProgressBarProvider>
         <Toaster />
         <YandexMetrika />
       </body>

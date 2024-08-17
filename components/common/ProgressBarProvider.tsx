@@ -3,11 +3,12 @@
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar'
 import { useEffect, useState } from 'react'
 
+import { ProgressBarProviderProps } from '@/interfaces/common'
 import { colors } from '@/tailwind.config'
 
 const colorsList = [colors.mango, colors.green, colors.blue, colors.purple]
 
-const Providers = ({ children }: { children: React.ReactNode }) => {
+const ProgressBarProvider = ({ children }: ProgressBarProviderProps) => {
   const [currentColor, setCurrentColor] = useState<string>('')
 
   useEffect(() => {
@@ -34,4 +35,4 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
-export default Providers
+export default ProgressBarProvider

@@ -21,12 +21,8 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { getRedirectPayment } from '@/helpers/getPaymentUrl'
+import { PaymentFormProps } from '@/interfaces/shop'
 import { PaymentSchema } from '@/schemas'
-
-interface PaymentFormProps {
-  productId: number
-  price: number
-}
 
 export function ProductForm({ productId, price }: PaymentFormProps) {
   const router = useRouter()

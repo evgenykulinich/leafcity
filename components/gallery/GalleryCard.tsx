@@ -16,14 +16,7 @@ import {
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
-
-interface GalleryCardProps {
-  className?: string
-  screenshots: { url: string; author: string }[]
-  title: string
-  icon: string
-  color: string
-}
+import { GalleryCardProps } from '@/interfaces/gallery'
 
 const GalleryCard = ({ className = '', screenshots, title, icon, color }: GalleryCardProps) => {
   const [imgError, setImgError] = useState(false)
