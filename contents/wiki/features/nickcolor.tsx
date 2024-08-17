@@ -1,5 +1,5 @@
-import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 import GradientPicker from '@/components/wiki/GradientPicker'
+import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 
 const updateDate = '9 Aug 2024'
 

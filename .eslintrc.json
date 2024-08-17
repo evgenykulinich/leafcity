@@ -37,7 +37,11 @@
           "index",
           "object",
           "type"
-        ]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
       }
     ]
   }

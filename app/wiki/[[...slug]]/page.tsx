@@ -1,13 +1,13 @@
 import { notFound } from 'next/navigation'
 import { PropsWithChildren, cache } from 'react'
 
-import { getComponentForSlug } from '@/lib/markdown'
-import Pagination from '@/components/wiki/Pagination'
-import { page_routes } from '@/lib/wiki_routes'
-import { routes } from '@/constants/routes'
-import { Leftbar, SheetLeftbar } from '@/components/wiki/Leftbar'
-import Toc from '@/components/wiki/Toc'
 import Transition from '@/app/template'
+import { Leftbar, SheetLeftbar } from '@/components/wiki/Leftbar'
+import Pagination from '@/components/wiki/Pagination'
+import Toc from '@/components/wiki/Toc'
+import { routes } from '@/constants/routes'
+import { getComponentForSlug } from '@/lib/markdown'
+import { page_routes } from '@/lib/wiki_routes'
 
 import type { Metadata } from 'next'
 

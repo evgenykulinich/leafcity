@@ -4,14 +4,14 @@ import { clsx } from 'clsx'
 import Image from 'next/image'
 import { useMedia } from 'react-use'
 
-import { rules } from '@/data/rules'
+import { RulesItem } from '@/components/rules/RulesItem'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion'
-import { RulesItem } from '@/components/rules/RulesItem'
+import { rules } from '@/data/rules'
 import { useCopyText } from '@/hooks/useCopy'
 
 export const RulesList = () => {

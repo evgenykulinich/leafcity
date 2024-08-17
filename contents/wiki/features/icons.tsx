@@ -1,9 +1,9 @@
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 
-import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 import { routes } from '@/constants/routes'
 import { icons } from '@/data/wiki'
+import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 
 const updateDate = '3 Aug 2024'
 const sortedIconsList = icons.sort((prev, next) => (prev.command > next.command ? 1 : -1))

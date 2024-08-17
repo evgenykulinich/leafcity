@@ -3,8 +3,8 @@
 import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
-import { routes } from '@/constants/routes'
 import { copyIpMessage } from '@/constants/copyIpMessage'
+import { routes } from '@/constants/routes'
 import { useCopyIp } from '@/hooks/useCopy'
 
 export function Controls() {

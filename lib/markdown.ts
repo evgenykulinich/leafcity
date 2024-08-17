@@ -1,5 +1,5 @@
-import path from 'path'
 import { promises as fs } from 'fs'
+import path from 'path'
 
 import dynamic from 'next/dynamic'
 import { notFound } from 'next/navigation'

@@ -1,11 +1,11 @@
 'use client'
 
-import Image from 'next/image'
 import { clsx } from 'clsx'
+import Image from 'next/image'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
-interface Props {
+interface AchievementProps {
   title: string
   content: string
   color: string
@@ -13,7 +13,7 @@ interface Props {
   className: string
 }
 
-export function Achievement({ title, content, color, icon, className }: Props) {
+export function Achievement({ title, content, color, icon, className }: AchievementProps) {
   return (
     <Card
       className={clsx(

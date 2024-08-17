@@ -11,31 +11,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1
     },
     {
-      url: routes.baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.9
-    },
-    {
-      url: `${routes.baseUrl}/${routes.rules}`,
+      url: `${routes.baseUrl}/${routes.shop}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8
+      priority: 0.9
     },
     {
       url: `${routes.baseUrl}/${routes.map}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.8
     },
     {
-      url: routes.shop,
+      url: `${routes.baseUrl}/${routes.rules}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7
     },
     {
       url: `${routes.baseUrl}/${routes.wiki}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6
+    },
+    {
+      url: `${routes.baseUrl}/${routes.gallery}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9

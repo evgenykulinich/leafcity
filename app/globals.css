@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Color palette initialization */
 :root {
   --color-green: theme('colors.green');
   --color-mango: theme('colors.mango');
@@ -55,7 +54,7 @@ ul, li {
 }
 
 .image-loading {
-  transition: all 0.25s ease-in;
+  transition: all 0.2s ease-in;
   opacity: 0;
   filter: blur(20px);
 }
@@ -319,10 +318,10 @@ ul, li {
   .member-card {
     &::before,
     &::after {
+      font-size: 18px;
       left: 50%;
       transform: translateX(-50%);
       transition: all 0.2s ease-in;
-      font-size: 20px;
       opacity: 0;
     }
 
@@ -554,4 +553,31 @@ ul, li {
   text-wrap: nowrap;
   margin-top: 2rem;
   opacity: .5;
+}
+
+/* Shop page */
+.product-card:hover {
+  & #product-card-image {
+    @media (width > 1024px) {
+      transform: scale(110%);
+    }
+  }
+}
+
+.product-dialog {
+  width: 100%;
+  max-height: 100%;
+
+  @media (width > 1024px) {
+    width: calc(100% - 2rem);
+    max-height: calc(100% - 3rem);
+    height: fit-content;
+  }
+}
+
+.scroll-transparent {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 }

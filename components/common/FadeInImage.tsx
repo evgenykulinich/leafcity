@@ -1,10 +1,10 @@
 'use client'
 
-import Image from 'next/image'
 import { clsx } from 'clsx'
+import Image from 'next/image'
 import { CSSProperties } from 'react'
 
-interface Props {
+interface FadeInImageProps {
   className?: string
   style?: CSSProperties
   src: string
@@ -15,6 +15,7 @@ interface Props {
   objectFit?: string
   quality?: number
   onError?: () => void
+  id?: string
 }
 
 const restyleLoadedImage = (e: any) => {
@@ -32,8 +33,9 @@ export const FadeInImage = ({
   layout,
   objectFit,
   quality,
-  onError
-}: Props) => {
+  onError,
+  id
+}: FadeInImageProps) => {
   return (
     <Image
       className={clsx('image-loading', className)}
@@ -49,6 +51,7 @@ export const FadeInImage = ({
       objectFit={objectFit}
       quality={quality}
       onError={onError}
+      id={id}
     />
   )
 }

@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
   images: {
-    domains: ['leafcity.ru']
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'leafcity.ru',
+      }
+    ]
   },
   async redirects() {
     return [

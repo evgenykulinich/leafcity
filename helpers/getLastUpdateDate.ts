@@ -3,14 +3,10 @@ import { differenceInDays, differenceInWeeks, differenceInMonths, parse } from '
 const updateDateInfo = 'Обновлялось'
 
 export const getLastUpdateDate = (dateString: string) => {
-  // Определяем формат строки даты
   const dateFormat = 'd MMM yyyy'
-
-  // Преобразуем строку даты в объект Date
   const givenDate = parse(dateString, dateFormat, new Date())
 
   const now = new Date()
-
   if (now < givenDate) {
     return `Не обновлялось`
   }

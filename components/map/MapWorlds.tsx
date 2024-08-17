@@ -1,15 +1,15 @@
 'use client'
 
-import { useState } from 'react'
-import Image from 'next/image'
 import { clsx } from 'clsx'
+import Image from 'next/image'
+import { useState } from 'react'
 
-import { Card } from '@/components/ui/card'
-import { Header } from '@/components/common/Header'
 import { Copyright } from '@/components/common/Copyright'
+import { Header } from '@/components/common/Header'
 import { PageTitle } from '@/components/common/PageTitle'
-import { noCacheUrl, worlds } from '@/data/worlds'
 import { BackgroundImage } from '@/components/map/BackgroundImage'
+import { Card } from '@/components/ui/card'
+import { noCacheUrl, worlds } from '@/data/worlds'
 
 export default function MapWorlds() {
   const [activeWorld, setActiveWorld] = useState<string | null>(null)

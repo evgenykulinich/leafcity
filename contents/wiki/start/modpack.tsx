@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
+import { routes } from '@/constants/routes'
 import { modpack } from '@/data/wiki'
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
-import { routes } from '@/constants/routes'
 
 const updateDate = '3 Aug 2024'
 const sortedModpack = modpack.sort((prev, next) => (prev.name > next.name ? 1 : -1))
