@@ -3,12 +3,9 @@
 import { useEffect } from 'react'
 
 import { members } from '@/data/members'
+import { MembersListProps } from '@/interfaces/main'
 
-interface Props {
-  children: React.ReactNode
-}
-
-const MembersList = ({ children }: Props) => {
+const MembersList = ({ children }: MembersListProps) => {
   useEffect(() => {
     const membersLoop = document.querySelector('#members')
     if (membersLoop?.children) {

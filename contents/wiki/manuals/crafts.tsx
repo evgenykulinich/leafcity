@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 import { Description } from '@radix-ui/react-dialog'
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import Image from 'next/image'
 
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
-import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { FadeInImage } from '@/components/common/FadeInImage'
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 
 const updateDate = '3 Aug 2024'
 

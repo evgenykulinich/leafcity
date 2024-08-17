@@ -1,10 +1,6 @@
-interface Props {
-  point?: string
-  text: string
-  className: string
-}
+import { RulesItemProps } from '@/interfaces/rules'
 
-export const RulesItem = ({ className, point, text }: Props) => {
+export const RulesItem = ({ className, point, text }: RulesItemProps) => {
   return (
     <p className={className}>
       <span>{point ? `${point}. ` : '• '}</span>

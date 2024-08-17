@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 
-import { ProgressRoot, ProgressIndicator } from '@/components/ui/progress'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { ProgressRoot, ProgressIndicator } from '@/components/ui/progress'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { copyIpMessage } from '@/constants/copyIpMessage'
 import { useCopyIp } from '@/hooks/useCopy'

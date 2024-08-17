@@ -1,12 +1,12 @@
 import Link from 'next/link'
 
-import { Header } from '@/components/common/Header'
-import { projects, generation } from '@/data/gallery'
-import { routes } from '@/constants/routes'
 import { Copyright } from '@/components/common/Copyright'
-import GalleryCard from '@/components/gallery/GalleryCard'
+import { Header } from '@/components/common/Header'
 import { PageTitle } from '@/components/common/PageTitle'
+import GalleryCard from '@/components/gallery/GalleryCard'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { routes } from '@/constants/routes'
+import { projects, generation } from '@/data/gallery'
 
 import type { Metadata } from 'next'
 

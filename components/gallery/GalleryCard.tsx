@@ -1,12 +1,11 @@
 'use client'
 
-import Image from 'next/image'
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import Image from 'next/image'
 import { useState } from 'react'
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { routes } from '@/constants/routes'
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { FadeInImage } from '@/components/common/FadeInImage'
+import { Card } from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -14,18 +13,12 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '@/components/ui/carousel'
-import { Card } from '@/components/ui/card'
-import { FadeInImage } from '@/components/common/FadeInImage'
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { routes } from '@/constants/routes'
+import { GalleryCardProps } from '@/interfaces/gallery'
 
-interface Props {
-  className?: string
-  screenshots: { url: string; author: string }[]
-  title: string
-  icon: string
-  color: string
-}
-
-const GalleryCard = ({ className = '', screenshots, title, icon, color }: Props) => {
+const GalleryCard = ({ className = '', screenshots, title, icon, color }: GalleryCardProps) => {
   const [imgError, setImgError] = useState(false)
 
   const handleError = () => {

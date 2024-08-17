@@ -5,13 +5,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { Navigation } from '@/components/common/Navigation'
-import { cn } from '@/lib/utils'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
-
-interface HeaderProps {
-  className?: string
-}
+import { HeaderProps } from '@/interfaces/common'
+import { cn } from '@/lib/utils'
 
 function HeaderLogo() {
   return (

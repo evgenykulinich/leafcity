@@ -1,13 +1,14 @@
 import { notFound } from 'next/navigation'
 import { PropsWithChildren, cache } from 'react'
 
-import { getComponentForSlug } from '@/lib/markdown'
-import Pagination from '@/components/wiki/Pagination'
-import { page_routes } from '@/lib/wiki_routes'
-import { routes } from '@/constants/routes'
-import { Leftbar, SheetLeftbar } from '@/components/wiki/Leftbar'
-import Toc from '@/components/wiki/Toc'
 import Transition from '@/app/template'
+import { Leftbar, SheetLeftbar } from '@/components/wiki/Leftbar'
+import Pagination from '@/components/wiki/Pagination'
+import Toc from '@/components/wiki/Toc'
+import { routes } from '@/constants/routes'
+import { WikiPageProps } from '@/interfaces/wiki'
+import { getComponentForSlug } from '@/lib/markdown'
+import { page_routes } from '@/lib/wiki_routes'
 
 import type { Metadata } from 'next'
 
@@ -47,13 +48,9 @@ export const metadata: Metadata = {
   }
 }
 
-type PageProps = {
-  params: { slug: string[] }
-}
-
 const cachedGetComponentForSlug = cache(getComponentForSlug)
 
-export default async function WikiPage({ params: { slug = [] } }: PageProps) {
+export default async function WikiPage({ params: { slug = [] } }: WikiPageProps) {
   const pathName = slug.join('/')
   const Component = await cachedGetComponentForSlug(pathName)
 

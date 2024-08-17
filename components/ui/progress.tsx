@@ -1,7 +1,7 @@
 'use client'
 
-import * as React from 'react'
 import * as ProgressPrimitive from '@radix-ui/react-progress'
+import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 
@@ -12,7 +12,7 @@ const ProgressRoot = React.forwardRef<
 >(({ className, value, max = 100, children, ...props }, ref) => (
   <ProgressPrimitive.Root
     ref={ref}
-    className={cn('relative h-4 w-full overflow-hidden rounded-full bg-secondary', className)}
+    className={cn('bg-secondary relative h-4 w-full overflow-hidden rounded-full', className)}
     {...props}
   >
     {React.Children.map(children, child =>
@@ -33,7 +33,7 @@ const ProgressIndicator = React.forwardRef<
 >(({ className, value = 0, max = 100, style, ...props }, ref) => (
   <ProgressPrimitive.Indicator
     ref={ref}
-    className={cn('h-full flex-1 rounded-[6px] bg-primary transition-all', className)}
+    className={cn('bg-primary h-full flex-1 rounded-[6px] transition-all', className)}
     style={{ width: `${(value / max) * 100}%`, ...style }}
     {...props}
   />
