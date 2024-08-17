@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { Button } from '@/components/ui/button'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
 import { useScrollToTop } from '@/hooks/useScroll'
 
@@ -19,7 +19,7 @@ export function Copyright() {
                 <TooltipTrigger asChild>
                   <Link href={routes.map}>
                     <Image
-                      className="size-12 w-full cursor-pointer rounded-xl bg-purple p-2 transition hover:scale-105 hover:bg-purple/80"
+                      className="size-12 w-full cursor-pointer rounded-xl bg-purple p-2 transition hover:bg-purple/80"
                       src="/icon/map.svg"
                       alt="Cart"
                       height={1000}
@@ -38,7 +38,7 @@ export function Copyright() {
                 <TooltipTrigger asChild>
                   <Link href={routes.shop}>
                     <Image
-                      className="size-12 w-full cursor-pointer rounded-xl border-2 border-green bg-green/10 p-2 transition hover:scale-105 hover:bg-green/20 lg:hover:scale-110"
+                      className="size-12 w-full cursor-pointer rounded-xl bg-green p-2 transition hover:bg-green/80"
                       src="/icon/shopping-basket.svg"
                       alt="Cart"
                       height={1000}
@@ -57,7 +57,7 @@ export function Copyright() {
                 <TooltipTrigger asChild>
                   <Link href={routes.discord} target="_blank">
                     <Image
-                      className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition hover:scale-105 lg:hover:scale-110"
+                      className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition lg:hover:scale-110"
                       src="/icon/discord-icon.svg"
                       alt="Discord"
                       height={100}

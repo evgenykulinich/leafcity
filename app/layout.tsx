@@ -1,15 +1,23 @@
 import { Montserrat } from 'next/font/google'
+import Head from 'next/head'
 
-import { Toaster } from '@/components/ui/sonner'
-import { routes } from '@/constants/routes'
 import YandexMetrika from '@/app/YandexMetrika'
 import Providers from '@/components/common/ProgressBarProvider'
+import { Toaster } from '@/components/ui/sonner'
+import { routes } from '@/constants/routes'
 
-import type { Metadata } from 'next'
-
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 const font = Montserrat({ subsets: ['cyrillic', 'latin'] })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: false,
+  themeColor: 'black'
+}
 
 export const metadata: Metadata = {
   title: {
@@ -59,6 +67,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+      </Head>
       <body className={font.className}>
         <Providers>{children}</Providers>
         <Toaster />

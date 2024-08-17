@@ -2,15 +2,15 @@
 
 import { useEffect } from 'react'
 
-import { Header } from '@/components/common/Header'
-import { Preview } from '@/components/main/Preview'
-import { Controls } from '@/components/main/Controls'
-import { Achievements } from '@/components/main/achievements/Achievements'
-import { Questions } from '@/components/main/questions/Questions'
-import { LCPlus } from '@/components/main/lcplus/LCPlus'
-import { Useful } from '@/components/main/usefulLinks/Useful'
-import { Members } from '@/components/main/members/Members'
 import { Copyright } from '@/components/common/Copyright'
+import { Header } from '@/components/common/Header'
+import { Achievements } from '@/components/main/achievements/Achievements'
+import { Controls } from '@/components/main/Controls'
+import { LCPlus } from '@/components/main/lcplus/LCPlus'
+import { Members } from '@/components/main/members/Members'
+import { Preview } from '@/components/main/Preview'
+import { Questions } from '@/components/main/questions/Questions'
+import { Useful } from '@/components/main/usefulLinks/Useful'
 
 export default function Main() {
   useEffect(() => {

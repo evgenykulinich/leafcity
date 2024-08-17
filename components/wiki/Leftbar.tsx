@@ -1,12 +1,12 @@
-import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 import { Description } from '@radix-ui/react-dialog'
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { WIKI_ROUTES } from '@/lib/wiki_routes'
 import { DialogTitle } from '@/components/ui/dialog'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/sheet'
 import Anchor from '@/components/wiki/Anchor'
+import { WIKI_ROUTES } from '@/lib/wiki_routes'
 
 export function Leftbar() {
   return (

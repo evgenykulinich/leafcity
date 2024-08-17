@@ -1,3 +1,5 @@
+import { Discord } from '@/components/main/questions/Discord'
+import { Server } from '@/components/main/questions/Server'
 import {
   Accordion,
   AccordionContent,
@@ -5,8 +7,6 @@ import {
   AccordionTrigger
 } from '@/components/ui/accordion'
 import { questions } from '@/data/questions'
-import { Server } from '@/components/main/questions/Server'
-import { Discord } from '@/components/main/questions/Discord'
 
 export function Questions() {
   return (

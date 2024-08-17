@@ -1,14 +1,14 @@
 'use client'
 
+import { clsx } from 'clsx'
 import { VT323 } from 'next/font/google'
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import { HexColorPicker } from 'react-colorful'
-import { clsx } from 'clsx'
-import Image from 'next/image'
 
 import { Button } from '@/components/ui/button'
-import { useCopyText } from '@/hooks/useCopy'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { useCopyText } from '@/hooks/useCopy'
 import { colors } from '@/tailwind.config'
 
 const font = VT323({ weight: ['400'], subsets: ['latin'] })

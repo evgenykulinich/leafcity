@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { Navigation } from '@/components/common/Navigation'
-import { cn } from '@/lib/utils'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
+import { cn } from '@/lib/utils'
 
 interface HeaderProps {
   className?: string

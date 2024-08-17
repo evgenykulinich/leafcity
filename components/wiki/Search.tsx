@@ -1,8 +1,8 @@
 'use client'
 
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 import { Book, CommandIcon, SearchIcon } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
-import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
 import {
   Dialog,
@@ -12,10 +12,10 @@ import {
   DialogClose,
   DialogTitle
 } from '@/components/ui/dialog'
-import { ScrollArea } from '@/components/ui/scroll-area'
 import { Input } from '@/components/ui/input'
-import { page_routes } from '@/lib/wiki_routes'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import Anchor from '@/components/wiki/Anchor'
+import { page_routes } from '@/lib/wiki_routes'
 
 export default function Search() {
   const [searchedInput, setSearchedInput] = useState('')
@@ -54,7 +54,7 @@ export default function Search() {
           <div className="relative mx-auto w-fit flex-1 cursor-pointer rounded-[6px] bg-white/10 py-2">
             <SearchIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
             <Input
-              className="h-fit w-fit bg-transparent py-0 pl-10 text-sm caret-green"
+              className="h-fit w-fit border-none bg-transparent py-0 pl-10 text-sm caret-green"
               placeholder="Поиск..."
               type="search"
             />
@@ -72,8 +72,8 @@ export default function Search() {
             <VisuallyHidden.Root />
           </DialogTitle>
           <DialogHeader>
-            <input
-              className="h-14 bg-transparent px-4 text-[15px] caret-green outline-none"
+            <Input
+              className="h-14 border-none bg-transparent px-4 text-[15px] caret-green outline-none"
               value={searchedInput}
               onChange={e => setSearchedInput(e.target.value)}
               placeholder="Поиск..."

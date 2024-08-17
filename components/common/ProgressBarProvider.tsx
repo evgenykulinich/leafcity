@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar'
+import { useEffect, useState } from 'react'
 
 import { colors } from '@/tailwind.config'
 

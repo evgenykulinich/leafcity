@@ -1,8 +1,8 @@
-import { Header } from '@/components/common/Header'
 import { Copyright } from '@/components/common/Copyright'
+import { Header } from '@/components/common/Header'
+import { PageTitle } from '@/components/common/PageTitle'
 import { RulesList } from '@/components/rules/RulesList'
 import { routes } from '@/constants/routes'
-import { PageTitle } from '@/components/common/PageTitle'
 
 import type { Metadata } from 'next'
 
