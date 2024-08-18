@@ -16,7 +16,20 @@ LEAF CITY - ванильный сервер, нацеленный на выжи�
 ты можешь создать свое локальное сообщество, организовать поселение, продавать свой товар, строить огромные проекты, так
 и просто приятно общаться и проводить время
 
-Разработан с 💚 на TypeScript, Next.js, shadcn/ui, Radix UI и Tailwind CSS c использованием Prettier, ESLint и Husky
+Веб сайт для сервера разработан с 💚 на TypeScript, Next.js, shadcn/ui, Radix UI и Tailwind CSS c использованием
+Prettier, ESLint и Husky
+
+## Результат
+
+Ознакомиться с результатом разработки можно по ссылке:
+
+🔗 Открыть [leafcity.ru](https://leafcity.ru/) в новой вкладке
+
+## Статус
+
+![Repo Size](https://img.shields.io/github/repo-size/evgenykulinich/leafcity?labelColor=000&color=2564c4&logo=github&logoColor=fff&style=for-the-badge)
+![PR](https://img.shields.io/github/issues-pr-closed/evgenykulinich/leafcity?labelColor=000&color=2564c4&logo=github&logoColor=fff&style=for-the-badge)
+![Deployment](https://img.shields.io/github/deployments/evgenykulinich/leafcity/production?labelColor=000&color=2564c4&logo=github&logoColor=fff&style=for-the-badge)
 
 ## Технический стек
 
@@ -32,5 +45,9 @@ LEAF CITY - ванильный сервер, нацеленный на выжи�
 ## Баги и ошибки
 
 Нашли баг на сайте? Давайте [решим](https://github.com/evgenykulinich/leafcity/issues) его вместе
+
+## Предложения и обсуждения
+
+Есть предложение по улучшению? Давайте [обсудим](https://github.com/evgenykulinich/leafcity/discussions) вашу идею
 
 [//]: #shields_list (https://simpleicons.org/) 
