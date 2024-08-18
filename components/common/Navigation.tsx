@@ -1,7 +1,7 @@
 'use client'
 
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
-import { Menu } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -10,7 +10,7 @@ import { FaDiscord } from 'react-icons/fa'
 import { useMedia } from 'react-use'
 
 import { DialogTitle } from '@/components/ui/dialog'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import Search from '@/components/wiki/Search'
 import { routes } from '@/constants/routes'
 import { navigation } from '@/data/navigation'
@@ -24,26 +24,20 @@ export const Navigation = () => {
 
   function MobileNavigationLinks() {
     return (
-      <>
+      <ul className="flex flex-col gap-5">
         {navigation.map(link => (
-          <li className="mb-5 cursor-pointer text-center text-2xl" key={link.label}>
+          <li className="cursor-pointer text-2xl" key={link.label}>
             <Link
-              className="text-md flex items-center justify-center hover:text-green"
+              className={`text-md flex items-center gap-2 hover:text-green ${pathname === link.href || (pathname.startsWith(routes.wiki) && link.href.startsWith(routes.wiki)) ? 'text-green' : ''}`}
               href={link.href}
               onClick={handleClose}
             >
-              <Image
-                className="mr-4 w-7"
-                src={link.icon}
-                alt={link.label}
-                width={100}
-                height={100}
-              />
+              {link.icon()}
               {link.label}
             </Link>
           </li>
         ))}
-      </>
+      </ul>
     )
   }
 
@@ -53,22 +47,37 @@ export const Navigation = () => {
         <Menu className="size-8" />
       </SheetTrigger>
       <SheetContent
-        className="border-b-2 border-purple bg-black/90 pt-0 outline-none"
-        side="top"
+        className="border-l-2 border-purple/20 bg-black pt-0 outline-none"
+        side="right"
         aria-describedby={undefined}
       >
         <DialogTitle>
           <VisuallyHidden.Root />
         </DialogTitle>
-        <nav className="pt-4">
-          <MobileNavigationLinks />
+        <nav className="flex flex-col gap-5 pt-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Image
+                className="h-[28px] w-auto"
+                src="/logo/lc.png"
+                alt="Leaf City Logo"
+                height={100}
+                width={100}
+              />
+              <span className="text-xl font-bold">LEAF CITY</span>
+            </div>
+            <SheetClose className="outline-none">
+              <X className="size-[1.75rem] transition hover:text-green lg:size-[1.5rem]" />
+            </SheetClose>
+          </div>
           <Link
-            className="flex items-center justify-center rounded-xl border-none bg-purple/80 py-4 font-semibold no-underline outline-none transition active:bg-purple/60"
+            className="flex items-center justify-center rounded-lg border-none bg-purple/80 px-4 py-3 font-semibold no-underline outline-none transition active:bg-purple/60"
             href={routes.discord}
           >
             <FaDiscord className="mr-2 h-auto w-[30px]" />
-            Присоединиться
+            Начать играть
           </Link>
+          <MobileNavigationLinks />
         </nav>
       </SheetContent>
     </Sheet>

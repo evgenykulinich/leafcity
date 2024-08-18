@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { FaDiscord } from 'react-icons/fa'
 
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
@@ -17,25 +18,6 @@ export function Copyright() {
             <TooltipProvider>
               <Tooltip delayDuration={200}>
                 <TooltipTrigger asChild>
-                  <Link href={routes.map}>
-                    <Image
-                      className="size-12 w-full cursor-pointer rounded-xl bg-purple p-2 transition hover:bg-purple/80"
-                      src="/icon/map.svg"
-                      alt="Cart"
-                      height={1000}
-                      width={1000}
-                    />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent className="p-0">Карта</TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          </div>
-
-          <div className="w-full">
-            <TooltipProvider>
-              <Tooltip delayDuration={200}>
-                <TooltipTrigger asChild>
                   <Link href={routes.shop}>
                     <Image
                       className="size-12 w-full cursor-pointer rounded-xl bg-green p-2 transition hover:bg-green/80"
@@ -46,7 +28,26 @@ export function Copyright() {
                     />
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent className="p-0">Магазин</TooltipContent>
+                <TooltipContent className="p-1">Магазин</TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
+
+          <div className="w-full">
+            <TooltipProvider>
+              <Tooltip delayDuration={200}>
+                <TooltipTrigger asChild>
+                  <Link href={routes.map}>
+                    <Image
+                      className="size-12 w-full cursor-pointer rounded-xl bg-blue p-2 transition hover:bg-blue/80"
+                      src="/icon/map.svg"
+                      alt="Cart"
+                      height={1000}
+                      width={1000}
+                    />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent className="p-1">Карта</TooltipContent>
               </Tooltip>
             </TooltipProvider>
           </div>
@@ -56,28 +57,22 @@ export function Copyright() {
               <Tooltip delayDuration={200}>
                 <TooltipTrigger asChild>
                   <Link href={routes.discord} target="_blank">
-                    <Image
-                      className="size-12 w-full cursor-pointer rounded-xl bg-slate-50 p-2 transition lg:hover:scale-110"
-                      src="/icon/discord-icon.svg"
-                      alt="Discord"
-                      height={100}
-                      width={100}
-                    />
+                    <FaDiscord className="size-12 w-full cursor-pointer rounded-xl bg-purple p-2 transition hover:bg-purple/80" />
                   </Link>
                 </TooltipTrigger>
-                <TooltipContent className="p-0">Discord</TooltipContent>
+                <TooltipContent className="p-1">Discord</TooltipContent>
               </Tooltip>
             </TooltipProvider>
           </div>
         </div>
-        <p className="self-center text-center text-sm text-white/40 lg:flex lg:items-center lg:justify-center lg:text-start">
-          © Все права защищены. LEAF CITY, 2023-2024.
-          <br className="hidden lg:block" /> Проект LEAF CITY не относится к Mojang Studios
-          {/*<p>Проект LEAF CITY не относится к Mojang Studios</p>*/}
+        <p className="gap-2 self-center text-center text-sm text-white/40 lg:flex lg:flex-col lg:items-start lg:text-start">
+          <span>© Все права защищены. LEAF CITY, 2023-2024.</span>
+          <br className="lg:hidden" />
+          <span>Проект LEAF CITY не относится к Mojang Studios</span>
         </p>
       </div>
 
-      <div className="flex flex-col items-center gap-1 lg:items-end lg:gap-0">
+      <div className="flex flex-col items-center gap-1 lg:items-end">
         <TooltipProvider>
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>

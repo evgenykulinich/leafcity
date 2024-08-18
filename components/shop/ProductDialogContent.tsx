@@ -9,7 +9,7 @@ import { DialogClose, DialogContent, DialogTitle } from '@/components/ui/dialog'
 import { ProductDialogContentProps } from '@/interfaces/shop'
 
 export const ProductDialogContent = ({ product }: ProductDialogContentProps) => {
-  const { id, name, description, price } = product
+  const { id, name, description, price, imageUrl, sale } = product
 
   return (
     <DialogContent className="product-dialog flex w-full flex-col items-stretch justify-stretch bg-black p-0 lg:max-w-[1280px] lg:rounded-2xl lg:border-2 lg:border-purple lg:p-2">
@@ -21,7 +21,12 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
       </VisuallyHidden.Root>
       <Card className="flex w-full flex-col py-4">
         <div className="flex w-full flex-row items-center justify-between px-4 text-white">
-          <p className="text-2xl font-bold text-white lg:mx-0">{name}</p>
+          <p className="flex items-center gap-2 text-2xl font-bold text-white lg:mx-0">
+            <span>{name}</span>
+            <span className="ml-2 rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
+              - {product.sale}%
+            </span>
+          </p>
           <DialogClose
             className="cursor-pointer p-0 text-white/50 transition hover:opacity-[0.8] lg:font-semibold"
             asChild
@@ -34,7 +39,7 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
             <FadeInImage
               className="h-full w-full"
               alt={name}
-              src={`/shop/${id}.png`}
+              src={imageUrl}
               width={150}
               height={150}
             />

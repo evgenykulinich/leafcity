@@ -45,7 +45,7 @@ export function Header({ className }: HeaderProps) {
                 <HeaderLogo />
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="bottom" className="p-0">
+            <TooltipContent className="mt-2 bg-black px-2 py-1" side="bottom">
               На главную
             </TooltipContent>
           </Tooltip>

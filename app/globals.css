@@ -559,7 +559,7 @@ ul, li {
 .product-card:hover {
   & #product-card-image {
     @media (width > 1024px) {
-      transform: scale(110%);
+      /*transform: scale(110%);*/
     }
   }
 }
