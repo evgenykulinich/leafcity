@@ -55,7 +55,7 @@ export default function Search() {
             <SearchIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2" />
             <Input
               className="h-fit w-fit border-none bg-transparent py-0 pl-10 text-sm caret-green"
-              placeholder="Поиск..."
+              placeholder="Поиск. . ."
               type="search"
             />
             <div className="absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-0.5 rounded-[6px] bg-green/40 p-[5px] font-mono text-xs font-medium transition hover:bg-green/60">
@@ -76,7 +76,7 @@ export default function Search() {
               className="h-14 border-none bg-transparent px-4 text-[15px] caret-green outline-none"
               value={searchedInput}
               onChange={e => setSearchedInput(e.target.value)}
-              placeholder="Поиск..."
+              placeholder="Поиск. . ."
               autoFocus
             />
           </DialogHeader>
