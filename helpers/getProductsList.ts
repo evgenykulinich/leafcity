@@ -4,7 +4,8 @@ export async function getProductsList() {
   try {
     const getProductsUrl = `${process.env.NEXT_PUBLIC_API_URL}/shop/getProducts`
     const productsResponse = await fetch(getProductsUrl, {
-      method: 'GET'
+      method: 'GET',
+      cache: 'no-store'
     })
 
     if (!productsResponse.ok) {
