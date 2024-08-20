@@ -7,7 +7,7 @@ import { routes } from '@/constants/routes'
 export const Useful = () => {
   return (
     <section className="mt-16 lg:mt-24">
-      <h2 className="text-heading text-center">Полезные ссылки</h2>
+      <h2 className="text-center text-2xl">Полезные ссылки</h2>
       <div className="mt-8 flex flex-col gap-8 lg:mt-12 lg:flex-row lg:justify-between">
         <Link className="flex w-full" href={`${routes.wiki}/start/info`}>
           <Card className="w-full rounded-2xl border-2 border-blue bg-blue/10 text-blue transition hover:bg-blue/20">

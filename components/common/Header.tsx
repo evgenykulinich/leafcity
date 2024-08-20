@@ -1,9 +1,9 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+import { FadeInImage } from '@/components/common/FadeInImage'
 import { Navigation } from '@/components/common/Navigation'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils'
 function HeaderLogo() {
   return (
     <div className="flex cursor-pointer select-none items-center transition duration-300 active:scale-95">
-      <Image
+      <FadeInImage
         className="mr-4 h-[36px] w-auto"
         src="/logo/lc.png"
         alt="Leaf City Logo"

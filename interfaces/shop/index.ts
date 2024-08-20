@@ -20,3 +20,19 @@ export interface PaymentFormProps {
   productId: number
   price: number
 }
+
+export interface Payment {
+  daysAgo: string
+  imageUrl: string
+  key: string
+  username: string
+}
+
+export interface PaymentsListProps {
+  lastPayments: Payment[]
+  children: React.ReactNode
+}
+
+export interface PaymentsItemProps {
+  payment: Payment
+}
