@@ -39,6 +39,10 @@ ul, li {
   list-style: none;
 }
 
+h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -579,5 +583,66 @@ ul, li {
   &::-webkit-scrollbar {
     width: 0;
     height: 0;
+  }
+}
+
+.hover-connect {
+  @media (width > 1024px) {
+    position: relative;
+
+    &::before,
+    &::after {
+      font-weight: normal;
+      text-wrap: nowrap;
+      position: absolute;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: all 0.2s ease-in;
+    }
+
+    &::before {
+      content: 'Ждём тебя';
+      top: 0;
+      left: 50%;
+    }
+
+    &::after {
+      content: 'В нашем комьюнити';
+      bottom: 0;
+      left: 50%;
+    }
+
+    &:hover::before {
+      opacity: 1;
+      top: -40px;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      bottom: -40px;
+    }
+  }
+}
+
+.hover-thanks {
+  @media (width > 1024px) {
+    position: relative;
+
+    &::after {
+      content: 'Спасибо, милашка 🤍';
+      font-weight: normal;
+      text-wrap: nowrap;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      top: -40px;
+    }
   }
 }

@@ -1,6 +1,8 @@
 import { Copyright } from '@/components/common/Copyright'
 import { Header } from '@/components/common/Header'
 import { PageTitle } from '@/components/common/PageTitle'
+import { Connections } from '@/components/shop/Connections'
+import { LastPayments } from '@/components/shop/LastPayments'
 import { ProductsList } from '@/components/shop/ProductsList'
 import { routes } from '@/constants/routes'
 
@@ -53,6 +55,8 @@ export default function Shop() {
       </PageTitle>
       <div className="flex-grow">
         <ProductsList />
+        <Connections />
+        <LastPayments />
       </div>
       <Copyright />
     </section>

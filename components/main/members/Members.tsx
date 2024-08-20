@@ -8,7 +8,7 @@ import { Member } from '@/interfaces/main'
 export const Members = () => {
   return (
     <section className="mt-16 overflow-hidden lg:mt-24">
-      <h2 className="text-heading text-center lg:text-left">Команда проекта</h2>
+      <h2 className="text-center text-2xl lg:text-left">Команда проекта</h2>
       <div className="members-borders flex">
         <MembersList>
           <div
