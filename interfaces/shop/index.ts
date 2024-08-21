@@ -41,11 +41,6 @@ export interface Payment {
   productName: string
 }
 
-export interface PaymentsListProps {
-  lastPayments: Payment[]
-  children: React.ReactNode
-}
-
 export interface PaymentsItemProps {
   payment: Payment
 }
