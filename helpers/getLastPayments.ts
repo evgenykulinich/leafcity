@@ -9,14 +9,12 @@ export async function getLastPaymentsList() {
     })
 
     if (!lastPaymentsResponse.ok) {
-      console.log('')
-      // return notFound()
+      return notFound()
     }
 
     const lasPaymentsList = await lastPaymentsResponse.json()
     return lasPaymentsList
   } catch (error) {
-    console.log('')
-    // return notFound()
+    return notFound()
   }
 }
