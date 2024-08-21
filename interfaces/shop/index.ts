@@ -1,11 +1,23 @@
+type ProductDuration = {
+  id: number
+  duration: number
+  description: string
+}
+
+type ProductCategory = {
+  id: number
+  name: string
+}
+
 export interface Product {
   id: number
   name: string
-  description: string
   price: number
+  description: string
   sale: number
   imageUrl: string
-  duration: string
+  duration: ProductDuration
+  category?: ProductCategory
 }
 
 export interface ProductsItemProps {
@@ -26,6 +38,7 @@ export interface Payment {
   imageUrl: string
   key: string
   username: string
+  productName: string
 }
 
 export interface PaymentsListProps {
