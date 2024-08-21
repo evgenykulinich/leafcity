@@ -8,7 +8,7 @@ import { routes } from '@/constants/routes'
 import { PaymentsItemProps } from '@/interfaces/shop'
 
 export const PaymentsItem = ({ payment }: PaymentsItemProps) => {
-  const { daysAgo, imageUrl, username } = payment
+  const { daysAgo, imageUrl, username, productName } = payment
   const [imgError, setImgError] = useState(false)
 
   const handleError = () => {
@@ -29,7 +29,7 @@ export const PaymentsItem = ({ payment }: PaymentsItemProps) => {
             width={256}
           />
         </div>
-        <span className="text-nowrap text-center font-semibold">Кастомные пластинки</span>
+        <span className="text-nowrap text-center font-semibold">{productName}</span>
       </CardContent>
       <CardFooter className="mt-0 flex items-center gap-2 pt-0 lg:mt-0 lg:pt-0">
         {imgError ? (

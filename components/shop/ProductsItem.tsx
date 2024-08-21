@@ -45,7 +45,7 @@ export const ProductsItem = ({ product }: ProductsItemProps) => {
         <CardFooter className="flex justify-between lg:mt-4">
           <p className="flex w-fit cursor-default items-center justify-center gap-2 rounded-xl bg-purple/10 px-2 py-1 text-lg">
             <Clock8 className="text-green" size={18} strokeWidth={1.5} />
-            <span>{product.duration}</span>
+            <span>{product.duration.description}</span>
           </p>
           <p className="flex items-center gap-2 text-nowrap rounded-xl bg-purple/10 px-2 py-1 text-lg font-semibold">
             <Tag className="text-green" strokeWidth={2} size={18} />
