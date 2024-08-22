@@ -13,7 +13,7 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
   const { id, name, description, price, imageUrl, sale } = product
 
   return (
-    <DialogContent className="product-dialog flex w-full flex-col items-stretch justify-stretch bg-black p-0 lg:max-w-[1280px] lg:rounded-2xl lg:border-2 lg:border-purple lg:p-2">
+    <DialogContent className="product-dialog flex h-full w-full flex-col items-stretch justify-stretch bg-black p-0 lg:max-w-[1280px] lg:rounded-2xl lg:border-2 lg:border-purple lg:p-2">
       <DialogTitle>
         <VisuallyHidden.Root />
       </DialogTitle>
@@ -22,11 +22,13 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
       </VisuallyHidden.Root>
       <Card className="flex w-full flex-col py-4">
         <div className="flex w-full flex-row items-center justify-between px-4 text-white">
-          <p className="flex items-center gap-2 text-2xl font-bold text-white lg:mx-0">
+          <p className="flex items-center gap-2 text-xl font-bold leading-[1.5rem] text-white lg:mx-0">
             <span>{name}</span>
-            <span className="ml-2 rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
-              - {sale}%
-            </span>
+            {sale && (
+              <span className="ml-2 text-nowrap rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
+                - {sale}%
+              </span>
+            )}
           </p>
           <DialogClose
             className="cursor-pointer p-0 text-white/50 transition hover:opacity-[0.8] lg:font-semibold"
@@ -36,7 +38,7 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
               <Tooltip delayDuration={200}>
                 <TooltipTrigger className="outline-none" asChild>
                   <DialogTrigger>
-                    <X className="size-[1.75rem] transition hover:text-green lg:size-[1.5rem]" />
+                    <X className="ml-2 size-[1.75rem] transition hover:text-green lg:size-[1.5rem]" />
                   </DialogTrigger>
                 </TooltipTrigger>
                 <TooltipContent className="mt-1 hidden bg-purple/10 px-2 py-1 lg:block" side="left">
@@ -47,9 +49,9 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
           </DialogClose>
         </div>
         <CardContent className="flex w-full flex-col gap-4 py-0 lg:flex-row">
-          <div className="mx-auto aspect-square h-[150px] rounded-xl bg-purple/10 px-2 py-3">
+          <div className="mx-auto flex aspect-square h-[150px] items-center justify-center rounded-xl bg-purple/10 px-2 py-3">
             <Image
-              className="h-full w-full"
+              className="h-auto w-full"
               alt={name}
               src={'/LCPlus/other.png'}
               width={150}
