@@ -16,12 +16,16 @@ export async function getRedirectPayment(values: z.infer<typeof PaymentSchema>) 
     })
 
     if (!redirectResponse.ok) {
-      return notFound()
+      if (redirectResponse.status === 404) {
+        return notFound()
+      } else {
+        throw new Error(`Ошибка: сервер вернул статус ${redirectResponse.status}`)
+      }
     }
 
     const { confirmation_url } = await redirectResponse.json()
     return confirmation_url
   } catch (error) {
-    return notFound()
+    throw new Error('Ошибка при попытке получения ссылки на оплату')
   }
 }

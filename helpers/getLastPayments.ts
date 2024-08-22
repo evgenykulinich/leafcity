@@ -9,12 +9,16 @@ export async function getLastPaymentsList() {
     })
 
     if (!lastPaymentsResponse.ok) {
-      return notFound()
+      if (lastPaymentsResponse.status === 404) {
+        return notFound()
+      } else {
+        throw new Error(`Ошибка: сервер вернул статус ${lastPaymentsResponse.status}`)
+      }
     }
 
-    const lasPaymentsList = await lastPaymentsResponse.json()
-    return lasPaymentsList
+    const lastPaymentsList = await lastPaymentsResponse.json()
+    return lastPaymentsList
   } catch (error) {
-    return notFound()
+    throw new Error('Ошибка при попытке получения последних покупок')
   }
 }

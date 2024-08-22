@@ -9,7 +9,7 @@ import { ProductsItemProps } from '@/interfaces/shop'
 
 export const ProductsItem = ({ product }: ProductsItemProps) => {
   return (
-    <Card className="product-card flex flex-col justify-between gap-4 rounded-3xl border-2 border-purple bg-purple/10 p-2 pt-4 transition lg:gap-0 lg:border-purple/60 lg:hover:border-purple lg:hover:bg-purple/20">
+    <Card className="product-card flex flex-col justify-between gap-4 rounded-3xl border-2 border-purple bg-purple/10 p-2 pt-4 transition lg:gap-0 lg:hover:bg-purple/20">
       <Dialog>
         <div className="flex flex-col">
           <CardTitle className="cursor-default text-center text-2xl">

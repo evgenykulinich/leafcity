@@ -1,11 +1,12 @@
 import { Description } from '@radix-ui/react-dialog'
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 import { X } from 'lucide-react'
+import Image from 'next/image'
 
-import { FadeInImage } from '@/components/common/FadeInImage'
 import { ProductForm } from '@/components/shop/ProductForm'
 import { Card, CardContent } from '@/components/ui/card'
-import { DialogClose, DialogContent, DialogTitle } from '@/components/ui/dialog'
+import { DialogClose, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { ProductDialogContentProps } from '@/interfaces/shop'
 
 export const ProductDialogContent = ({ product }: ProductDialogContentProps) => {
@@ -24,25 +25,30 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
           <p className="flex items-center gap-2 text-2xl font-bold text-white lg:mx-0">
             <span>{name}</span>
             <span className="ml-2 rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
-              - {product.sale}%
+              - {sale}%
             </span>
           </p>
           <DialogClose
             className="cursor-pointer p-0 text-white/50 transition hover:opacity-[0.8] lg:font-semibold"
             asChild
           >
-            <X className="size-[1.75rem] transition hover:text-green lg:size-[1.5rem]" />
+            <TooltipProvider>
+              <Tooltip delayDuration={200}>
+                <TooltipTrigger className="outline-none" asChild>
+                  <DialogTrigger>
+                    <X className="size-[1.75rem] transition hover:text-green lg:size-[1.5rem]" />
+                  </DialogTrigger>
+                </TooltipTrigger>
+                <TooltipContent className="mt-1 hidden bg-purple/10 px-2 py-1 lg:block" side="left">
+                  Закрыть
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </DialogClose>
         </div>
         <CardContent className="flex w-full flex-col gap-4 py-0 lg:flex-row">
           <div className="mx-auto aspect-square h-[150px] rounded-xl bg-purple/10 px-2 py-3">
-            <FadeInImage
-              className="h-full w-full"
-              alt={name}
-              src={imageUrl}
-              width={150}
-              height={150}
-            />
+            <Image className="h-full w-full" alt={name} src={imageUrl} width={150} height={150} />
           </div>
           <div className="flex w-full flex-col gap-4 text-white lg:flex-row">
             <p className="h-fit w-full flex-1 rounded-xl bg-purple/10 px-2 py-3 text-white">

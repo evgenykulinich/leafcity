@@ -1,4 +1,4 @@
-interface Screenshot {
+type Screenshot = {
   url: string
   author: string
 }

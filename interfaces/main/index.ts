@@ -1,4 +1,4 @@
-export interface Achievement {
+export type Achievement = {
   title: string
   content: string
   color: string
@@ -10,7 +10,7 @@ export interface AchievementItemProps {
   achievement: Achievement
 }
 
-export interface Member {
+export type Member = {
   nickname: string
   image: string
   styles: string

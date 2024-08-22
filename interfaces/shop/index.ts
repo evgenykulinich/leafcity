@@ -39,8 +39,10 @@ export interface Payment {
   key: string
   username: string
   productName: string
+  thanksMessage?: string
 }
 
 export interface PaymentsItemProps {
   payment: Payment
+  thanksMessage: string
 }

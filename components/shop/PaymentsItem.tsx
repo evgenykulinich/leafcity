@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter, CardTitle } from '@/components/ui/card'
 import { routes } from '@/constants/routes'
 import { PaymentsItemProps } from '@/interfaces/shop'
 
-export const PaymentsItem = ({ payment }: PaymentsItemProps) => {
+export const PaymentsItem = ({ payment, thanksMessage }: PaymentsItemProps) => {
   const { daysAgo, imageUrl, username, productName } = payment
   const [imgError, setImgError] = useState(false)
 
@@ -15,14 +15,17 @@ export const PaymentsItem = ({ payment }: PaymentsItemProps) => {
     setImgError(true)
   }
   return (
-    <Card className="hover-thanks flex w-full flex-1 flex-col flex-nowrap items-center gap-4 rounded-2xl border-2 border-blue bg-blue/10 pt-4 transition lg:hover:bg-blue/20">
+    <Card
+      className="hover-thanks flex w-full flex-1 flex-col flex-nowrap items-center gap-4 rounded-2xl border-2 border-blue bg-blue/10 py-4 pt-4 transition lg:hover:bg-blue/20"
+      data-thanks-message={thanksMessage}
+    >
       <CardTitle className="ml-auto mt-0 px-2">
-        <span className="rounded-2xl bg-green/10 px-2 py-1 text-lg font-normal">{daysAgo}</span>
+        <span className="rounded-2xl bg-blue/10 px-2 py-1 text-lg font-normal">{daysAgo}</span>
       </CardTitle>
       <CardContent className="mt-0 flex flex-col gap-4 py-0 lg:mt-0">
-        <div className="mx-auto aspect-square max-h-[200px] rounded-xl bg-purple/10 p-4">
+        <div className="mx-auto aspect-square max-h-[200px] rounded-xl bg-blue/10 p-4">
           <FadeInImage
-            className="mx-auto mt-2 w-full cursor-pointer transition lg:active:scale-[.95]"
+            className="mx-auto mt-2 w-full"
             src={imageUrl}
             alt={username}
             height={256}
@@ -31,7 +34,7 @@ export const PaymentsItem = ({ payment }: PaymentsItemProps) => {
         </div>
         <span className="text-nowrap text-center font-semibold">{productName}</span>
       </CardContent>
-      <CardFooter className="mt-0 flex items-center gap-2 pt-0 lg:mt-0 lg:pt-0">
+      <CardFooter className="mt-0 flex items-center gap-2 rounded-xl bg-blue/10 px-2 py-1 lg:mt-0">
         {imgError ? (
           <FadeInImage
             className="w-[20px] rounded"

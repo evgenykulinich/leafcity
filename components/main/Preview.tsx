@@ -11,7 +11,7 @@ export function Preview() {
         height={1024}
         width={1024}
       />
-      <h1 className="mt-8 cursor-default text-[2.75rem] font-bold leading-[1.2] sm:text-5xl lg:mt-24 lg:text-[60px] lg:leading-[1.25]">
+      <h1 className="mt-8 cursor-default text-center text-[2.75rem] font-bold leading-[1.2] sm:text-5xl lg:mt-24 lg:text-left lg:text-[60px] lg:leading-[1.25]">
         Уникальный{' '}
         <span className="hover-underline underline-green text-green after:bottom-0">ванильный</span>
         <br />
@@ -20,7 +20,7 @@ export function Preview() {
         <br />
         сообществом
       </h1>
-      <p className="mt-8 text-[18px] text-white/80 lg:mt-12">
+      <p className="mt-8 text-center text-[18px] text-white/80 lg:mt-12 lg:text-left">
         Идеальное место для твоих идей.
         <br />
         Без привилегий, привата и лишних плагинов.

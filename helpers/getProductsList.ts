@@ -9,12 +9,16 @@ export async function getProductsList() {
     })
 
     if (!productsResponse.ok) {
-      return notFound()
+      if (productsResponse.status === 404) {
+        return notFound()
+      } else {
+        throw new Error(`Ошибка: сервер вернул статус ${productsResponse.status}`)
+      }
     }
 
     const productList = await productsResponse.json()
     return productList
   } catch (error) {
-    return notFound()
+    throw new Error(`Ошибка при попытке получения списка товаров: ${error.message}`)
   }
 }

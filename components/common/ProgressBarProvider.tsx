@@ -3,6 +3,7 @@
 import { AppProgressBar as ProgressBar } from 'next-nprogress-bar'
 import { useEffect, useState } from 'react'
 
+import { getRandomItemInArray } from '@/helpers/getRandomItemInArray'
 import { ProgressBarProviderProps } from '@/interfaces/common'
 import { colors } from '@/tailwind.config'
 
@@ -13,8 +14,7 @@ const ProgressBarProvider = ({ children }: ProgressBarProviderProps) => {
 
   useEffect(() => {
     const getRandomColor = () => {
-      const randomIndex = Math.floor(Math.random() * colorsList.length)
-      return colorsList[randomIndex]
+      return getRandomItemInArray(colorsList)
     }
 
     setCurrentColor(getRandomColor())

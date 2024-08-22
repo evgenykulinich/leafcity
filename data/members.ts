@@ -42,11 +42,6 @@ export const members = [
     styles: 'member-crucesaureae'
   },
   {
-    nickname: 'demi_0',
-    image: `${routes.head}/demi_0`,
-    styles: 'member-demi_0'
-  },
-  {
     nickname: 'Mireraqq',
     image: `${routes.head}/Mireraqq`,
     styles: 'member-mireraqq'
@@ -75,6 +70,11 @@ export const members = [
     nickname: 'ratkea',
     image: `${routes.head}/ratkea`,
     styles: 'member-ratkea'
+  },
+  {
+    nickname: 'NebulousVortex',
+    image: `${routes.head}/NebulousVortex`,
+    styles: 'member-vortex'
   },
   {
     nickname: 'Tpyxan',

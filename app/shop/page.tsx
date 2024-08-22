@@ -1,10 +1,11 @@
 import { Copyright } from '@/components/common/Copyright'
 import { Header } from '@/components/common/Header'
 import { PageTitle } from '@/components/common/PageTitle'
-import { Connections } from '@/components/shop/Connections'
+import { UsefulLinks } from '@/components/common/usefulLinks/Useful'
 import { LastPayments } from '@/components/shop/LastPayments'
 import { ProductsList } from '@/components/shop/ProductsList'
 import { routes } from '@/constants/routes'
+import { usefulShopLink } from '@/data/usefulLinks'
 
 import type { Metadata } from 'next'
 
@@ -55,7 +56,7 @@ export default function Shop() {
       </PageTitle>
       <div className="flex-grow">
         <ProductsList />
-        <Connections />
+        <UsefulLinks linksList={usefulShopLink} />
         <LastPayments />
       </div>
       <Copyright />

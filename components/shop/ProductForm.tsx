@@ -30,6 +30,7 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
 
   const form = useForm<z.infer<typeof PaymentSchema>>({
     resolver: zodResolver(PaymentSchema),
+    mode: 'onChange',
     defaultValues: {
       productId,
       username: ''
@@ -53,16 +54,19 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
                 <FormField
                   control={form.control}
                   name="username"
-                  render={({ field }) => (
+                  render={({ field, fieldState }) => (
                     <FormItem>
-                      <FormLabel className="inline text-lg text-white">Ваш никнейм:</FormLabel>
-                      <FormMessage className="inline text-danger" />
+                      <FormLabel className="inline text-lg text-white">Никнейм:</FormLabel>
+                      {fieldState.error && (
+                        <FormMessage className="inline text-mango">
+                          {fieldState.error.message}
+                        </FormMessage>
+                      )}
                       <FormControl>
                         <Input
                           className="w-full rounded-xl border-[3px] border-transparent px-4 py-6 text-[1rem] font-semibold caret-purple outline-none transition focus:border-purple"
                           {...field}
                           placeholder="Dashka17. . ."
-                          disabled={false}
                         />
                       </FormControl>
                     </FormItem>
@@ -117,7 +121,7 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
           <div className="mt-4 flex items-center gap-2 rounded-xl bg-purple/10 px-2 py-3 lg:px-3 lg:py-4">
             <FileText className="text-purple" size={22} strokeWidth={1.5} />
             <Link
-              className="hover-underline underline-green w-fit cursor-pointer select-none text-sm font-medium text-white transition hover:text-green"
+              className="w-fit cursor-pointer select-none text-sm font-medium text-white transition hover:text-green"
               href={'/shop/policy.pdf'}
               target="_blank"
               rel="noopener noreferrer"
@@ -129,7 +133,7 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
           <div className="mt-4 flex items-center gap-2 rounded-xl bg-purple/10 px-2 py-3 lg:px-3 lg:py-4">
             <FileText className="text-purple" size={22} strokeWidth={1.5} />
             <Link
-              className="hover-underline underline-green w-fit cursor-pointer select-none text-sm font-medium text-white transition hover:text-green"
+              className="w-fit cursor-pointer select-none text-sm font-medium text-white transition hover:text-green"
               href={'/shop/agreement.pdf'}
               target="_blank"
               rel="noopener noreferrer"

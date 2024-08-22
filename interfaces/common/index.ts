@@ -25,3 +25,23 @@ export interface FadeInImageProps {
   onError?: () => void
   id?: string
 }
+
+interface UsefulLink {
+  title: string
+  description: string
+  color: string
+  href: string
+  children: React.ReactNode
+}
+
+export interface UsefulLinksProps {
+  linksList: UsefulLink[]
+}
+
+export interface UsefulItemProps {
+  title: string
+  description: string
+  color: string
+  href: string
+  children: React.ReactNode
+}
