@@ -50,4 +50,8 @@ Prettier, ESLint и Husky
 
 Есть предложение по улучшению? Давайте [обсудим](https://github.com/evgenykulinich/leafcity/discussions) вашу идею
 
+## Лицензия
+
+Этот проект лицензирован под Apache License 2.0. Подробности см. в файле [LICENSE](./LICENSE)
+
 [//]: #shields_list (https://simpleicons.org/) 

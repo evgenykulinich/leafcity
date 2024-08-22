@@ -44,5 +44,5 @@ export interface Payment {
 
 export interface PaymentsItemProps {
   payment: Payment
-  thanksMessage: string
+  thanksMessage?: string
 }

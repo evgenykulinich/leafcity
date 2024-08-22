@@ -12,9 +12,9 @@ export const ProductsItem = ({ product }: ProductsItemProps) => {
     <Card className="product-card flex flex-col justify-between gap-4 rounded-3xl border-2 border-purple bg-purple/10 p-2 pt-4 transition lg:gap-0 lg:hover:bg-purple/20">
       <Dialog>
         <div className="flex flex-col">
-          <CardTitle className="cursor-default text-center text-2xl">
+          <CardTitle className="leading-height cursor-default text-center text-xl">
             {product.name}{' '}
-            <span className="ml-2 rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
+            <span className="ml-2 text-nowrap rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
               - {product.sale}%
             </span>
           </CardTitle>

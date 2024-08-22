@@ -14,6 +14,7 @@ export const PaymentsItem = ({ payment, thanksMessage }: PaymentsItemProps) => {
   const handleError = () => {
     setImgError(true)
   }
+
   return (
     <Card
       className="hover-thanks flex w-full flex-1 flex-col flex-nowrap items-center gap-4 rounded-2xl border-2 border-blue bg-blue/10 py-4 pt-4 transition lg:hover:bg-blue/20"
@@ -23,9 +24,9 @@ export const PaymentsItem = ({ payment, thanksMessage }: PaymentsItemProps) => {
         <span className="rounded-2xl bg-blue/10 px-2 py-1 text-lg font-normal">{daysAgo}</span>
       </CardTitle>
       <CardContent className="mt-0 flex flex-col gap-4 py-0 lg:mt-0">
-        <div className="mx-auto aspect-square max-h-[200px] rounded-xl bg-blue/10 p-4">
+        <div className="mx-auto aspect-square max-w-[100px] rounded-xl bg-blue/10 p-4">
           <FadeInImage
-            className="mx-auto mt-2 w-full"
+            className="mx-auto mt-2 h-auto w-full"
             src={'/LCPlus/other.png'}
             alt={username}
             height={256}
