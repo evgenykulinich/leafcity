@@ -48,7 +48,13 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
         </div>
         <CardContent className="flex w-full flex-col gap-4 py-0 lg:flex-row">
           <div className="mx-auto aspect-square h-[150px] rounded-xl bg-purple/10 px-2 py-3">
-            <Image className="h-full w-full" alt={name} src={imageUrl} width={150} height={150} />
+            <Image
+              className="h-full w-full"
+              alt={name}
+              src={'/LCPlus/other.png'}
+              width={150}
+              height={150}
+            />
           </div>
           <div className="flex w-full flex-col gap-4 text-white lg:flex-row">
             <p className="h-fit w-full flex-1 rounded-xl bg-purple/10 px-2 py-3 text-white">

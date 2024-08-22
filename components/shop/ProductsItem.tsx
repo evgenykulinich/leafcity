@@ -29,7 +29,7 @@ export const ProductsItem = ({ product }: ProductsItemProps) => {
                     className="rounded-xl transition hover:scale-105"
                     id="product-card-image"
                     alt={product.name}
-                    src={product.imageUrl}
+                    src={'/LCPlus/other.png'}
                     width={250}
                     height={250}
                   />

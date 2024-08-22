@@ -19,6 +19,6 @@ export async function getLastPaymentsList() {
     const lastPaymentsList = await lastPaymentsResponse.json()
     return lastPaymentsList
   } catch (error) {
-    throw new Error('Ошибка при попытке получения последних покупок')
+    return notFound()
   }
 }

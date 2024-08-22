@@ -26,6 +26,6 @@ export async function getRedirectPayment(values: z.infer<typeof PaymentSchema>) 
     const { confirmation_url } = await redirectResponse.json()
     return confirmation_url
   } catch (error) {
-    throw new Error('Ошибка при попытке получения ссылки на оплату')
+    return notFound()
   }
 }
