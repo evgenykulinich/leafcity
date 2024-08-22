@@ -26,7 +26,7 @@ export const PaymentsItem = ({ payment, thanksMessage }: PaymentsItemProps) => {
         <div className="mx-auto aspect-square max-h-[200px] rounded-xl bg-blue/10 p-4">
           <FadeInImage
             className="mx-auto mt-2 w-full"
-            src={imageUrl}
+            src={'/LCPlus/other.png'}
             alt={username}
             height={256}
             width={256}

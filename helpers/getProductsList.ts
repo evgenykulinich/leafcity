@@ -19,6 +19,6 @@ export async function getProductsList() {
     const productList = await productsResponse.json()
     return productList
   } catch (error) {
-    throw new Error(`Ошибка при попытке получения списка товаров: ${error.message}`)
+    return notFound()
   }
 }
