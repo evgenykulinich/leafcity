@@ -4,6 +4,7 @@ import { Product } from '@/interfaces/shop'
 
 export const ProductsList = async () => {
   const productList = await getProductsList()
+  if (productList.length === 0) return
 
   return (
     <div className="align-start mt-8 grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:mt-12 xl:grid-cols-3">

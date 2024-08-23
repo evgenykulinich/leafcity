@@ -16,11 +16,7 @@ export async function getRedirectPayment(values: z.infer<typeof PaymentSchema>) 
     })
 
     if (!redirectResponse.ok) {
-      if (redirectResponse.status === 404) {
-        return notFound()
-      } else {
-        throw new Error(`Ошибка: сервер вернул статус ${redirectResponse.status}`)
-      }
+      throw new Error(`Ошибка: сервер вернул статус ${redirectResponse.status}`)
     }
 
     const { confirmation_url } = await redirectResponse.json()

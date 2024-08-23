@@ -27,7 +27,7 @@ export const PaymentCarousel = ({ lastPayments }) => {
       opts={{ align: 'start', loop: true }}
       plugins={[
         Autoplay({
-          delay: 2500
+          delay: 4000
         })
       ]}
     >
