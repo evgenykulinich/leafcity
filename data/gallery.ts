@@ -10,7 +10,8 @@ const authors = {
   blinks10: 'BLINKS10',
   chimi4angi: 'ch1m14ang1',
   theshowergel1: 'THESHOWERGEL1',
-  vityalik2321231: 'vityalik2321231'
+  vityalik2321231: 'vityalik2321231',
+  sopokky: 'SoPokky'
 }
 
 export const projects = [
@@ -87,6 +88,10 @@ export const projects = [
     author: authors.ini_ga
   },
   {
+    url: '/gallery/projects/ch1m14ang1_4',
+    author: authors.chimi4angi
+  },
+  {
     url: '/gallery/projects/crucesaureae_1',
     author: authors.crucesaureae
   },
@@ -113,6 +118,10 @@ export const projects = [
   {
     url: '/gallery/projects/list_tw_3',
     author: authors.list_tw
+  },
+  {
+    url: '/gallery/projects/Ini_ga_13',
+    author: authors.ini_ga
   },
   {
     url: '/gallery/projects/Crazy_lady51_2',
@@ -184,5 +193,9 @@ export const generation = [
   {
     url: '/gallery/generation/OuiKing_1',
     author: authors.ouiking
+  },
+  {
+    url: '/gallery/generation/SoPokky_1',
+    author: authors.sopokky
   }
 ]

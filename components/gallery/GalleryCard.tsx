@@ -34,7 +34,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Galler
       <Dialog>
         <DialogTrigger className="relative mt-4 w-full overflow-hidden rounded-xl outline-none">
           <FadeInImage
-            className={'h-full w-full rounded-xl'}
+            className={'h-full w-full rounded-xl lg:hover:scale-110'}
             src={`${screenshots[0].url}.png`}
             alt={'Скриншот'}
             height={1080}

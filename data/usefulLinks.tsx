@@ -44,7 +44,7 @@ export const usefulShopLink = [
   },
   {
     title: 'Иконки',
-    description: 'Ознакомиться со списком команд для смена кастомной иконки',
+    description: 'Ознакомиться со списком команд для смены кастомной иконки',
     color: 'blue',
     href: `/wiki/features/icons`,
     children: <Heart className="h-auto w-[40px]" strokeWidth={1.5} />

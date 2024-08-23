@@ -30,12 +30,12 @@ export const Server = () => {
           <TooltipProvider>
             <Tooltip delayDuration={200}>
               <TooltipTrigger asChild>
-                <p className="visible cursor-default text-nowrap rounded-2xl bg-green/10 px-3 text-center text-lg font-normal lg:hidden xl:block">
+                <span className="visible cursor-default text-nowrap rounded-2xl bg-green/10 px-3 text-center text-lg font-normal lg:hidden xl:block">
                   1.13 − 1.21
-                </p>
+                </span>
               </TooltipTrigger>
               <TooltipContent className="bg-black/[0.69] text-white">
-                <p>Допустимые версии</p>
+                Допустимые версии
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
