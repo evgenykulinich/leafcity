@@ -33,7 +33,8 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
     mode: 'onChange',
     defaultValues: {
       productId,
-      username: ''
+      username: '',
+      redirectUrl: process.env.NEXT_PUBLIC_PAYMENT_REDIRECT_URL
     }
   })
 
