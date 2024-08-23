@@ -10,7 +10,6 @@ export async function getLastPaymentsList() {
 
     if (!lastPaymentsResponse.ok) {
       if (lastPaymentsResponse.status === 404) {
-        console.log(lastPaymentsResponse)
         return notFound()
       } else {
         throw new Error(`Ошибка: сервер вернул статус ${lastPaymentsResponse.status}`)
@@ -20,7 +19,6 @@ export async function getLastPaymentsList() {
     const lastPaymentsList = await lastPaymentsResponse.json()
     return lastPaymentsList
   } catch (error) {
-    console.log(error)
     return notFound()
   }
 }
