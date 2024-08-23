@@ -3,6 +3,7 @@ import { getLastPaymentsList } from '@/helpers/getLastPayments'
 
 export const LastPayments = async () => {
   const lastPayments = await getLastPaymentsList()
+  if (lastPayments.length === 0) return
 
   return (
     <section className="mt-16 overflow-hidden lg:mt-24">

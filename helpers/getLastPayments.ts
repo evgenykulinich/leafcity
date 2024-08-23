@@ -1,5 +1,3 @@
-import { notFound } from 'next/navigation'
-
 export async function getLastPaymentsList() {
   try {
     const getLastPaymentsUrl = `${process.env.NEXT_PUBLIC_API_URL}/payment/getLastPayments`
@@ -9,16 +7,12 @@ export async function getLastPaymentsList() {
     })
 
     if (!lastPaymentsResponse.ok) {
-      if (lastPaymentsResponse.status === 404) {
-        return notFound()
-      } else {
-        throw new Error(`Ошибка: сервер вернул статус ${lastPaymentsResponse.status}`)
-      }
+      throw new Error(`Ошибка: сервер вернул статус ${lastPaymentsResponse.status}`)
     }
 
     const lastPaymentsList = await lastPaymentsResponse.json()
     return lastPaymentsList
   } catch (error) {
-    return notFound()
+    return
   }
 }
