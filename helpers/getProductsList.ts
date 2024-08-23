@@ -10,6 +10,7 @@ export async function getProductsList() {
 
     if (!productsResponse.ok) {
       if (productsResponse.status === 404) {
+        console.log(productsResponse)
         return notFound()
       } else {
         throw new Error(`Ошибка: сервер вернул статус ${productsResponse.status}`)
@@ -19,6 +20,7 @@ export async function getProductsList() {
     const productList = await productsResponse.json()
     return productList
   } catch (error) {
+    console.log(error)
     return notFound()
   }
 }
