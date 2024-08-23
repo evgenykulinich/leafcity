@@ -24,7 +24,7 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
         <div className="flex w-full flex-row items-center justify-between px-4 text-white">
           <p className="flex items-center gap-2 text-xl font-bold leading-[1.5rem] text-white lg:mx-0">
             <span>{name}</span>
-            {sale && (
+            {sale !== 0 && (
               <span className="ml-2 text-nowrap rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
                 - {sale}%
               </span>

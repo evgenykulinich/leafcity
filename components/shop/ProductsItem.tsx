@@ -8,15 +8,19 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { ProductsItemProps } from '@/interfaces/shop'
 
 export const ProductsItem = ({ product }: ProductsItemProps) => {
+  const { name, sale, duration, price } = product
+
   return (
     <Card className="product-card flex flex-col justify-between gap-4 rounded-3xl border-2 border-purple bg-purple/10 p-2 pt-4 transition lg:gap-0 lg:hover:bg-purple/20">
       <Dialog>
         <div className="flex flex-col">
           <CardTitle className="leading-height cursor-default text-center text-xl">
-            {product.name}{' '}
-            <span className="ml-2 text-nowrap rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
-              - {product.sale}%
-            </span>
+            {name}{' '}
+            {sale !== 0 && (
+              <span className="ml-2 text-nowrap rounded-lg bg-danger/10 px-2 py-1 text-xl font-normal">
+                - {sale}%
+              </span>
+            )}
           </CardTitle>
         </div>
 
@@ -28,7 +32,7 @@ export const ProductsItem = ({ product }: ProductsItemProps) => {
                   <FadeInImage
                     className="rounded-xl transition hover:scale-105"
                     id="product-card-image"
-                    alt={product.name}
+                    alt={name}
                     src={'/LCPlus/other.png'}
                     width={250}
                     height={250}
@@ -45,11 +49,11 @@ export const ProductsItem = ({ product }: ProductsItemProps) => {
         <CardFooter className="flex justify-between lg:mt-4">
           <p className="flex w-fit cursor-default items-center justify-center gap-2 rounded-xl bg-purple/10 px-2 py-1 text-lg">
             <Clock8 className="text-green" size={18} strokeWidth={1.5} />
-            <span>{product.duration.description}</span>
+            <span>{duration.description}</span>
           </p>
           <p className="flex items-center gap-2 text-nowrap rounded-xl bg-purple/10 px-2 py-1 text-lg font-semibold">
             <Tag className="text-green" strokeWidth={2} size={18} />
-            <span>{product.price} ₽</span>
+            <span>{price} ₽</span>
           </p>
           <ProductDialogContent product={product} />
         </CardFooter>
