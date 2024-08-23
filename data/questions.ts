@@ -28,7 +28,7 @@ export const questions: Question[] = [
   {
     value: 'question-5',
     question: 'Какой онлайн?',
-    answer: 'Средний - 70-110 игроков, рекорд - 138'
+    answer: 'Средний – 50-70 игроков, рекорд - 138'
   },
   {
     value: 'question-6',

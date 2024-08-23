@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://leafcity.ru/">
-      <img src="./public/preview/preview.png" height="500" />
+      <img src="./public/preview/preview.png" width="700" />
   </a>
 </p>
 

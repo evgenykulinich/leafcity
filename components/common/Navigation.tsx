@@ -56,7 +56,7 @@ export const Navigation = () => {
         </DialogTitle>
         <nav className="flex flex-col gap-5 pt-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
+            <Link className="flex items-center gap-2" href={routes.main}>
               <Image
                 className="h-[28px] w-auto"
                 src="/logo/lc.png"
@@ -64,8 +64,8 @@ export const Navigation = () => {
                 height={100}
                 width={100}
               />
-              <span className="text-xl font-bold">LEAF CITY</span>
-            </div>
+              <span className="text-2xl font-bold">LEAF CITY</span>
+            </Link>
             <SheetClose className="outline-none">
               <X className="size-[1.75rem] transition hover:text-green lg:size-[1.5rem]" />
             </SheetClose>
