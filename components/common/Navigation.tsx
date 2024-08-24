@@ -26,13 +26,13 @@ export const Navigation = () => {
     return (
       <ul className="flex flex-col gap-5">
         {navigation.map(link => (
-          <li className="cursor-pointer text-2xl" key={link.label}>
+          <li className="cursor-pointer" key={link.label}>
             <Link
-              className={`text-md flex items-center gap-2 hover:text-green ${pathname === link.href || (pathname.startsWith(routes.wiki) && link.href.startsWith(routes.wiki)) ? 'text-green' : ''}`}
+              className={`flex items-center gap-2 text-lg hover:text-green ${pathname === link.href || (pathname.startsWith(routes.wiki) && link.href.startsWith(routes.wiki)) ? 'text-green' : ''}`}
               href={link.href}
               onClick={handleClose}
             >
-              {link.icon()}
+              {link.icon}
               {link.label}
             </Link>
           </li>
@@ -71,7 +71,7 @@ export const Navigation = () => {
             </SheetClose>
           </div>
           <Link
-            className="flex items-center justify-center rounded-lg border-none bg-purple/80 px-4 py-3 font-semibold no-underline outline-none transition active:bg-purple/60"
+            className="flex items-center justify-center rounded-lg border-none bg-purple/80 px-4 py-3 text-lg font-semibold no-underline outline-none transition active:bg-purple/60"
             href={routes.discord}
           >
             <FaDiscord className="mr-2 h-auto w-[30px]" />

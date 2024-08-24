@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { Copyright } from '@/components/common/Copyright'
 import { Header } from '@/components/common/Header'
 import { PageTitle } from '@/components/common/PageTitle'
@@ -54,6 +56,17 @@ export default function Shop() {
         Лучший способ <span className="text-green">выделить</span> себя и{' '}
         <span className="text-blue">поддержать</span> проект
       </PageTitle>
+      <p className="mx-auto mt-4 text-center">
+        Магазин находится в разработке. Совершать покупки можно{' '}
+        <Link
+          className="hover-underline underline-green text-green"
+          href={'https://shop.leafcity.ru/'}
+          target={'_blank'}
+        >
+          здесь
+        </Link>
+        .
+      </p>
       <div className="flex-grow">
         <ProductsList />
         <UsefulLinks linksList={usefulShopLink} />
