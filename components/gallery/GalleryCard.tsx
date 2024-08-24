@@ -60,14 +60,14 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Galler
             <VisuallyHidden.Root />
           </DialogTitle>
           <Carousel
-            className="relative overflow-hidden rounded-lg lg:rounded-xl"
+            className="relative w-full overflow-hidden rounded-lg lg:rounded-xl"
             opts={{ loop: true }}
           >
             <CarouselContent>
               {screenshots.map(item => (
-                <CarouselItem className="relative gap-2" key={item.url}>
+                <CarouselItem className="relative mx-1 gap-2 overflow-hidden" key={item.url}>
                   <FadeInImage
-                    className={'aspect-video h-full w-full rounded-lg lg:rounded-xl'}
+                    className={'aspect-video h-full max-h-dvh w-full rounded-lg lg:rounded-xl'}
                     src={`${item.url}.png`}
                     alt="Скриншот"
                     height={1080}
