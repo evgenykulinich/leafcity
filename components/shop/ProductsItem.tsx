@@ -8,7 +8,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { ProductsItemProps } from '@/interfaces/shop'
 
 export const ProductsItem = ({ product }: ProductsItemProps) => {
-  const { name, sale, duration, price } = product
+  const { name, sale, imageUrl, duration, price } = product
 
   return (
     <Card className="product-card flex flex-col justify-between gap-4 rounded-3xl border-2 border-purple bg-purple/10 p-2 pt-4 transition lg:gap-0 lg:hover:bg-purple/20">
@@ -33,7 +33,7 @@ export const ProductsItem = ({ product }: ProductsItemProps) => {
                     className="rounded-xl transition hover:scale-105"
                     id="product-card-image"
                     alt={name}
-                    src={'/LCPlus/other.png'}
+                    src={imageUrl}
                     width={250}
                     height={250}
                   />
