@@ -64,7 +64,7 @@ export const Server = () => {
             width={100}
             height={100}
           />
-          {minecraftUsers ? `${minecraftUsers} из 200` : 'Сервер оффлайн'}
+          {minecraftUsers ? `${minecraftUsers} из 120` : 'Сервер оффлайн'}
         </p>
         <ProgressRoot className="mt-4 w-full bg-white" value={minecraftUsers} max={200}>
           <ProgressIndicator className="bg-green" />

@@ -1,5 +1,3 @@
-import { routes } from '@/constants/routes'
-
 export const worlds = [
   {
     title: 'survival',
@@ -25,4 +23,4 @@ export const worlds = [
 ]
 
 export const noCacheUrl = (world: string) =>
-  `${routes.baseUrl}/backend/${world}?nocache=${new Date().getTime()}`
+  `${process.env.NEXT_PUBLIC_API_URL}/map/${world}?nocache=${new Date().getTime()}`
