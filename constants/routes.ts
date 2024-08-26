@@ -1,6 +1,6 @@
 export const routes = {
   baseUrl: 'https://leafcity.ru',
-  head: 'https://leafcity.ru/head',
+  head: `${process.env.NEXT_PUBLIC_API_URL}/head`,
   main: '/',
   shop: '/shop',
   map: '/map',
