@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { FaDiscord } from 'react-icons/fa'
 
 import { Button } from '@/components/ui/button'
@@ -10,6 +11,8 @@ import { routes } from '@/constants/routes'
 import { useScrollToTop } from '@/hooks/useScroll'
 
 export function Copyright() {
+  const pathname = usePathname()
+
   return (
     <div className="mt-8 flex flex-col justify-between gap-2 border-t-2 border-white/10 pb-8 pt-4 lg:mt-12 lg:flex-row lg:gap-0 lg:pt-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
@@ -70,6 +73,21 @@ export function Copyright() {
           <br className="lg:hidden" />
           <span>Проект LEAF CITY не относится к Mojang Studios</span>
         </p>
+
+        {pathname === '/shop' && (
+          <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-8">
+            <p className="gap-2 self-center text-center text-sm text-white/40 lg:flex lg:flex-col lg:items-start lg:text-start">
+              <span>ИП Русаков Андрей Васильевич</span>
+              <br className="lg:hidden" />
+              <span>ИНН: 381113698877</span>
+            </p>
+            <p className="mb-4 gap-2 self-center text-center text-sm text-white/40 lg:mb-0 lg:flex lg:flex-col lg:items-start lg:text-start">
+              <span>ОГРНИП: 323237500107113</span>
+              <br className="lg:hidden" />
+              <span>fylhtqhecfrjd@gmail.com</span>
+            </p>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-col items-center gap-1 lg:items-end">
