@@ -259,55 +259,66 @@ export const modpack = [
 
 export const icons = [
   {
-    command: '/banana',
+    icon: 'banana',
     img: '/wiki/icons/banana.png'
   },
   {
-    command: '/death',
+    icon: 'death',
     img: '/wiki/icons/death.png'
   },
   {
-    command: '/fire',
+    icon: 'fire',
     img: '/wiki/icons/fire.png'
   },
   {
-    command: '/light',
+    icon: 'light',
     img: '/wiki/icons/light.png'
   },
   {
-    command: '/heart',
+    icon: 'heart',
     img: '/wiki/icons/heart.png'
   },
   {
-    command: '/meteorite',
+    icon: 'meteorite',
     img: '/wiki/icons/meteorite.png'
   },
   {
-    command: '/radiation',
+    icon: 'radiation',
     img: '/wiki/icons/radiation.png'
   },
   {
-    command: '/pickaxe',
+    icon: 'pickaxe',
     img: '/wiki/icons/pickaxe.png'
   },
   {
-    command: '/plane',
+    icon: 'plane',
     img: '/wiki/icons/plane.png'
   },
   {
-    command: '/snowflake',
+    icon: 'snowflake',
     img: '/wiki/icons/snowflake.png'
   },
   {
-    command: '/star',
+    icon: 'star',
     img: '/wiki/icons/star.png'
   },
   {
-    command: '/sword',
+    icon: 'sword',
     img: '/wiki/icons/sword.png'
   },
   {
-    command: '/ussr',
+    icon: 'ussr',
     img: '/wiki/icons/ussr.png'
+  }
+]
+
+export const uniqueIcons = [
+  {
+    icon: 'подписчик LC+',
+    img: '/wiki/icons/lcplus.png'
+  },
+  {
+    icon: 'разработчик',
+    img: '/wiki/icons/dev.png'
   }
 ]

@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { routes } from '@/constants/routes'
-import { icons } from '@/data/wiki'
+import { icons, uniqueIcons } from '@/data/wiki'
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 
-const updateDate = '3 Aug 2024'
-const sortedIconsList = icons.sort((prev, next) => (prev.command > next.command ? 1 : -1))
+const updateDate = '31 Aug 2024'
+const sortedIconsList = icons.sort((prev, next) => (prev.icon > next.icon ? 1 : -1))
 
 export default function Icons() {
   const lastUpdateDate = getLastUpdateDate(updateDate)
@@ -43,21 +43,47 @@ export default function Icons() {
         </li>
       </ul>
 
+      <h2 className="text-subheading" id="команда-для-смена-иконки">
+        Команда для смены иконки
+      </h2>
+      <p className="mt-4">
+        <span className="text-note note-purple">{'/icon <иконка>'}</span>
+      </p>
+
       <h2 className="text-subheading" id="доступные-иконки">
         Доступные иконки
       </h2>
       <div className="mt-4">
         {sortedIconsList.map(icon => (
-          <div className="flex items-center gap-2 py-2" key={icon.command}>
+          <div className="flex items-center gap-2 py-2" key={icon.icon}>
             <Image
               className="h-auto w-[30px]"
               src={icon.img}
-              alt={icon.command}
+              alt={icon.icon}
               width={100}
               height={100}
             />
             <span className="font-bold">•</span>
-            <span className="rounded bg-purple/20 px-2 py-1 font-bold">{icon.command}</span>
+            <span className="rounded bg-blue/20 px-2 py-1 font-bold">{icon.icon}</span>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="text-subheading" id="уникальные-иконки">
+        Уникальные иконки
+      </h2>
+      <div className="mt-4">
+        {uniqueIcons.map(icon => (
+          <div className="flex items-center gap-2 py-2" key={icon.icon}>
+            <Image
+              className="h-auto w-[30px]"
+              src={icon.img}
+              alt={icon.icon}
+              width={100}
+              height={100}
+            />
+            <span className="font-bold">•</span>
+            <span className="rounded bg-blue/20 px-2 py-1 font-bold">{icon.icon}</span>
           </div>
         ))}
       </div>
