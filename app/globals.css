@@ -355,14 +355,10 @@ h2, h3, h4, h5, h6 {
 @media (width > 1024px) {
   .member-list_tw,
   .member-dashka17,
-  .member-ouiking,
-  .member-badtrip,
   .member-nokarena,
   .member-soraispania,
   .member-istork,
   .member-crucesaureae,
-  .member-mireraqq,
-  .member-kristopher,
   .member-muz0ku,
   .member-drainedgod,
   .member-masha,
@@ -391,18 +387,6 @@ h2, h3, h4, h5, h6 {
   --member-role: 'Ненормальная';
 }
 
-.member-ouiking {
-  color: #9932CC;
-  --member-nickname: 'Даниэлиус';
-  --member-role: 'Администратор';
-}
-
-.member-badtrip {
-  color: #01fff1;
-  --member-nickname: 'badtrip_';
-  --member-role: 'Блудный сын';
-}
-
 .member-nokarena {
   color: #1c872f;
   --member-nickname: 'lol12';
@@ -424,25 +408,13 @@ h2, h3, h4, h5, h6 {
 .member-crucesaureae {
   color: #fdb3fc;
   --member-nickname: 'crucesaureae';
-  --member-role: 'Модер';
-}
-
-.member-mireraqq {
-  color: #779e23;
-  --member-nickname: 'Лео бравл старс';
-  --member-role: 'Менеджер ивентов';
-}
-
-.member-kristopher {
-  color: #c42389;
-  --member-nickname: '_Kristopher_';
-  --member-role: 'На все руки мастер';
+  --member-role: 'крукесауреае';
 }
 
 .member-muz0ku {
   color: #00fec3;
   --member-nickname: 'muz0ku';
-  --member-role: 'Любит хайперлупы';
+  --member-role: 'Рейтинг 3.67';
 }
 
 .member-drainedgod {

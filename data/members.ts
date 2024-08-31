@@ -12,16 +12,6 @@ export const members = [
     styles: 'member-dashka17'
   },
   {
-    nickname: 'OuiKing',
-    image: `${routes.head}/OuiKing`,
-    styles: 'member-ouiking'
-  },
-  {
-    nickname: 'badtrip_',
-    image: `${routes.head}/_BaD_TriP_`,
-    styles: 'member-badtrip'
-  },
-  {
     nickname: 'Nokarena',
     image: `${routes.head}/Nokarena`,
     styles: 'member-nokarena'
@@ -40,16 +30,6 @@ export const members = [
     nickname: 'crucesaureae',
     image: `${routes.head}/crucesaureae`,
     styles: 'member-crucesaureae'
-  },
-  {
-    nickname: 'Mireraqq',
-    image: `${routes.head}/Mireraqq`,
-    styles: 'member-mireraqq'
-  },
-  {
-    nickname: '_Kristopher_',
-    image: `${routes.head}/_Kristopher_`,
-    styles: 'member-kristopher'
   },
   {
     nickname: 'muz0ku',
