@@ -37,11 +37,6 @@ export const members = [
     styles: 'member-muz0ku'
   },
   {
-    nickname: 'drainedgod',
-    image: `${routes.head}/drainedgod`,
-    styles: 'member-drainedgod'
-  },
-  {
     nickname: 'Masha',
     image: `${routes.head}/Masha`,
     styles: 'member-masha'
