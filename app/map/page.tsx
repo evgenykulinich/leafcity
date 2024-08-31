@@ -1,4 +1,4 @@
-import MapWorlds from '@/components/map/MapWorlds'
+import OpenedMap from '@/components/map/OpenedMap'
 import { routes } from '@/constants/routes'
 
 import type { Metadata } from 'next'
@@ -42,5 +42,5 @@ export const metadata: Metadata = {
 }
 
 export default function MapPage() {
-  return <MapWorlds />
+  return <OpenedMap />
 }
