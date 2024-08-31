@@ -360,7 +360,6 @@ h2, h3, h4, h5, h6 {
   .member-istork,
   .member-crucesaureae,
   .member-muz0ku,
-  .member-drainedgod,
   .member-masha,
   .member-tryxan,
   .member-vortex,
@@ -415,12 +414,6 @@ h2, h3, h4, h5, h6 {
   color: #00fec3;
   --member-nickname: 'muz0ku';
   --member-role: 'Рейтинг 3.67';
-}
-
-.member-drainedgod {
-  color: #9459ff;
-  --member-nickname: 'drainedпёс';
-  --member-role: 'Продаст родину за обсу';
 }
 
 .member-masha {
