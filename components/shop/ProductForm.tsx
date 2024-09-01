@@ -33,6 +33,7 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
     mode: 'onChange',
     defaultValues: {
       productId,
+      email: '',
       username: '',
       redirectUrl: process.env.NEXT_PUBLIC_PAYMENT_REDIRECT_URL
     }
@@ -51,7 +52,28 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
         <div className="text-black">
           <Form {...form}>
             <form className="flex flex-col gap-4" onSubmit={form.handleSubmit(onSubmit)}>
-              <div className="rounded-xl bg-purple/10 px-2 py-3 lg:px-3 lg:py-4">
+              <div className="flex flex-col gap-4 rounded-xl bg-purple/10 px-2 py-3 lg:px-3 lg:py-4">
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field, fieldState }) => (
+                    <FormItem>
+                      <FormLabel className="inline text-lg text-white">Почта:</FormLabel>
+                      {fieldState.error && (
+                        <FormMessage className="inline text-mango">
+                          {fieldState.error.message}
+                        </FormMessage>
+                      )}
+                      <FormControl>
+                        <Input
+                          className="w-full rounded-xl border-[3px] border-transparent px-4 py-6 text-[1rem] font-semibold caret-purple outline-none transition focus:border-purple"
+                          {...field}
+                          placeholder="email@leafcity.ru"
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
                 <FormField
                   control={form.control}
                   name="username"

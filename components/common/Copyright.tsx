@@ -8,13 +8,14 @@ import { FaDiscord } from 'react-icons/fa'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
+import { paymethods } from '@/data/paymethods'
 import { useScrollToTop } from '@/hooks/useScroll'
 
 export function Copyright() {
   const pathname = usePathname()
 
   return (
-    <div className="mt-8 flex flex-col justify-between gap-2 border-t-2 border-white/10 pb-8 pt-4 lg:mt-12 lg:flex-row lg:gap-0 lg:pt-8">
+    <div className="mt-8 flex flex-col justify-between gap-4 border-t-2 border-white/10 pb-8 pt-4 lg:mt-12 lg:flex-row lg:gap-0 lg:pt-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
         <div className="flex items-center gap-4">
           <div className="w-full">
@@ -75,17 +76,24 @@ export function Copyright() {
         </p>
 
         {pathname === '/shop' && (
-          <div className="flex flex-col items-center gap-2 lg:flex-row lg:gap-8">
-            <p className="gap-2 self-center text-center text-sm text-white/40 lg:flex lg:flex-col lg:items-start lg:text-start">
-              <span>ИП Русаков Андрей Васильевич</span>
-              <br className="lg:hidden" />
-              <span>ИНН: 381113698877</span>
-            </p>
-            <p className="mb-4 gap-2 self-center text-center text-sm text-white/40 lg:mb-0 lg:flex lg:flex-col lg:items-start lg:text-start">
-              <span>ОГРНИП: 323237500107113</span>
-              <br className="lg:hidden" />
-              <span>fylhtqhecfrjd@gmail.com</span>
-            </p>
+          <div className="flex items-center justify-center gap-4">
+            {paymethods.map(method => (
+              <TooltipProvider key={method.name}>
+                <Tooltip delayDuration={200}>
+                  <TooltipTrigger asChild>
+                    <Image
+                      className="w-[30px]"
+                      src={method.image}
+                      alt="mir"
+                      height={1000}
+                      width={1000}
+                      key={method.name}
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent className="p-1">{method.name}</TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            ))}
           </div>
         )}
       </div>
@@ -112,14 +120,13 @@ export function Copyright() {
           </Tooltip>
         </TooltipProvider>
         <p className="text-sm text-white/40">
-          Разработано под брендом{' '}
+          Под авторством{' '}
           <Link
             className="hover-underline underline-mango transition hover:text-mango"
             href="https://t.me/ratmoodfrontend"
           >
             RatMood
-          </Link>{' '}
-          🤍
+          </Link>
         </p>
       </div>
     </div>

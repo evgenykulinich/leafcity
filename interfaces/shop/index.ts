@@ -9,15 +9,27 @@ type ProductCategory = {
   name: string
 }
 
+type ProductAbout = {
+  name: number
+  description: string
+}
+
+type ProductAbilities = {
+  name: number
+  description: string
+}
+
 export interface Product {
   id: number
   name: string
-  price: number
-  description: string
+  realPrice: number
+  about: ProductAbout[]
   sale: number
   imageUrl: string
   duration: ProductDuration
   category?: ProductCategory
+  abilities?: ProductAbilities[]
+  features?: string[]
 }
 
 export interface ProductsItemProps {
