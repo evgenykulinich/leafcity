@@ -1,6 +1,7 @@
 'use client'
 
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import { X } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -13,7 +14,13 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '@/components/ui/carousel'
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger
+} from '@/components/ui/dialog'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
 import { GalleryCardProps } from '@/interfaces/gallery'
@@ -60,12 +67,21 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Galler
             <VisuallyHidden.Root />
           </DialogTitle>
           <Carousel
-            className="relative w-full overflow-hidden rounded-lg lg:rounded-xl"
+            className="w-full overflow-hidden rounded-lg lg:rounded-xl"
             opts={{ loop: true }}
           >
             <CarouselContent>
               {screenshots.map(item => (
-                <CarouselItem className="relative mx-1 gap-2 overflow-hidden" key={item.url}>
+                <CarouselItem
+                  className="relative mx-1 max-h-[90dvh] gap-2 overflow-hidden"
+                  key={item.url}
+                >
+                  <DialogClose
+                    className="hover:opacity-1 absolute right-1 top-1 cursor-pointer p-0 text-white/30 transition"
+                    asChild
+                  >
+                    <X className="ml-2 size-[20px] transition hover:text-green lg:size-[28px]" />
+                  </DialogClose>
                   <FadeInImage
                     className={'aspect-video h-full max-h-dvh w-full rounded-lg lg:rounded-xl'}
                     src={`${item.url}.png`}
@@ -73,10 +89,11 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Galler
                     height={1080}
                     width={1920}
                   />
+
                   <TooltipProvider>
                     <Tooltip delayDuration={200}>
                       <TooltipTrigger asChild>
-                        <div className="absolute bottom-1 left-5 flex cursor-default items-center gap-1 rounded-[6px] bg-black/60 p-1 transition hover:bg-black/90 lg:bottom-1 lg:gap-2 lg:rounded-[8px] lg:px-2 lg:py-2">
+                        <div className="absolute bottom-1 left-1 flex cursor-default items-center gap-1 rounded-[6px] bg-black/60 p-1 transition hover:bg-black/90 lg:gap-2 lg:rounded-[8px] lg:px-2 lg:py-2">
                           {imgError ? (
                             <FadeInImage
                               className="w-[20px] rounded"

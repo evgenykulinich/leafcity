@@ -36,10 +36,10 @@ export default function Icons() {
           <span className="text-note note-purple">Bedrock</span>
         </li>
         <li>
-          <span className="font-bold">• </span>Иконки будут показываться в чате и табе.
+          <span className="font-bold">• </span>Иконки будут показываться в чате и табе
         </li>
         <li>
-          <span className="font-bold">• </span>Товар приобретается навсегда.
+          <span className="font-bold">• </span>Товар приобретается навсегда
         </li>
       </ul>
 
