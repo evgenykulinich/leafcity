@@ -15,7 +15,7 @@ export const ProductsItem = ({ product }: ProductsItemProps) => {
       <Dialog>
         <div className="flex flex-col">
           <CardTitle className="leading-height cursor-default text-center text-xl">
-            <span className="ml-2 text-nowrap rounded-lg bg-purple/10 px-2 py-1 text-xl font-normal">
+            <span className="ml-2 text-nowrap rounded-lg bg-purple/10 px-2 py-1 text-xl font-semibold">
               {name}
             </span>
             {sale !== 0 && (
