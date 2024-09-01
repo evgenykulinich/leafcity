@@ -26,7 +26,7 @@ export const PaymentsItem = ({ payment, thanksMessage }: PaymentsItemProps) => {
       <CardContent className="mt-0 flex flex-col gap-4 py-0 lg:mt-0">
         <div className="mx-auto flex aspect-square max-w-[100px] items-center justify-center rounded-xl bg-blue/10 p-4">
           <FadeInImage
-            className="mx-auto mt-2 h-auto w-full"
+            className="mx-auto h-auto w-full"
             src={imageUrl}
             alt={username}
             height={256}
