@@ -1,10 +1,6 @@
 import GalleryCard from '@/components/gallery/GalleryCard'
-import { getGenerationImagesList, getProjectsImagesList } from '@/helpers/getGalleryImages'
 
-export default async function GalleryList() {
-  const generationImages = await getGenerationImagesList()
-  const projectsImages = await getProjectsImagesList()
-
+export const GalleryList = ({ generationImages, projectsImages }) => {
   return (
     <div className="mt-8 flex cursor-default flex-col gap-4 text-center text-xl lg:mt-12 lg:flex-row lg:text-2xl">
       <GalleryCard
