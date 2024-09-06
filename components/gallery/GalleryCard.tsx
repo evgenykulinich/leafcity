@@ -25,7 +25,14 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { routes } from '@/constants/routes'
 import { GalleryCardProps } from '@/interfaces/gallery'
 
-const GalleryCard = ({ className = '', screenshots, title, icon, color }: GalleryCardProps) => {
+const GalleryCard = ({
+  className = '',
+  screenshots,
+  title,
+  icon,
+  color,
+  preview
+}: GalleryCardProps) => {
   const [imgError, setImgError] = useState(false)
 
   const handleError = () => {
@@ -42,7 +49,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Galler
         <DialogTrigger className="relative mt-4 w-full overflow-hidden rounded-xl outline-none">
           <FadeInImage
             className={'h-full w-full rounded-xl lg:hover:scale-110'}
-            src={screenshots[0].url}
+            src={preview}
             alt={'Скриншот'}
             height={1080}
             width={1920}
