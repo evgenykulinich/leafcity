@@ -24,7 +24,7 @@ export const Discord = () => {
           </div>
           <CardTitle>Остались вопросы?</CardTitle>
         </CardHeader>
-        <CardContent className="mt-4">
+        <CardContent className="mt-4 text-balance">
           Заходи на наш Discord сервер и задавай вопросы в канале поддержки. Администратор Дашенька
           обязательно тебе поможет!
         </CardContent>

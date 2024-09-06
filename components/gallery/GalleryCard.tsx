@@ -42,7 +42,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Galler
         <DialogTrigger className="relative mt-4 w-full overflow-hidden rounded-xl outline-none">
           <FadeInImage
             className={'h-full w-full rounded-xl lg:hover:scale-110'}
-            src={`${screenshots[0].url}.png`}
+            src={screenshots[0].url}
             alt={'Скриншот'}
             height={1080}
             width={1920}
@@ -84,7 +84,7 @@ const GalleryCard = ({ className = '', screenshots, title, icon, color }: Galler
                   </DialogClose>
                   <FadeInImage
                     className={'aspect-video h-full max-h-dvh w-full rounded-lg lg:rounded-xl'}
-                    src={`${item.url}.png`}
+                    src={item.url}
                     alt="Скриншот"
                     height={1080}
                     width={1920}

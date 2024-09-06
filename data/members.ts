@@ -32,9 +32,24 @@ export const members = [
     styles: 'member-crucesaureae'
   },
   {
+    nickname: 'Puha',
+    image: `${routes.head}/Puha`,
+    styles: 'member-puha'
+  },
+  {
     nickname: 'muz0ku',
     image: `${routes.head}/muz0ku`,
     styles: 'member-muz0ku'
+  },
+  {
+    nickname: 'meld0sha734',
+    image: `${routes.head}/meld0sha734`,
+    styles: 'member-meld0sha734'
+  },
+  {
+    nickname: 'reways88',
+    image: `${routes.head}/reways88`,
+    styles: 'member-reways88'
   },
   {
     nickname: 'Masha',
@@ -53,7 +68,7 @@ export const members = [
   },
   {
     nickname: 'Tpyxan',
-    image: `${routes.head}/xareht`,
+    image: `${routes.head}/NastyD`,
     styles: 'member-tryxan'
   }
 ]

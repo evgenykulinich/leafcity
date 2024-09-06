@@ -40,7 +40,7 @@ export function AchievementItem({ achievement }: AchievementItemProps) {
         <Image className="mb-4 size-[40px] lg:mb-8" src={icon} alt={title} width={50} height={50} />
         <CardTitle>{title}</CardTitle>
       </CardHeader>
-      <CardContent>{content}</CardContent>
+      <CardContent className="text-pretty">{content}</CardContent>
     </Card>
   )
 }
