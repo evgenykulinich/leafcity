@@ -9,4 +9,5 @@ export interface GalleryCardProps {
   title: string
   icon: string
   color: string
+  preview: string
 }
