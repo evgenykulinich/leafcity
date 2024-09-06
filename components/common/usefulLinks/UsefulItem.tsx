@@ -44,7 +44,7 @@ export const UsefulItem = ({ title, description, color, href, children }: Useful
                 </div>
                 <CardTitle>{title}</CardTitle>
               </CardHeader>
-              <CardContent>{description}</CardContent>
+              <CardContent className="text-pretty">{description}</CardContent>
             </Card>
           </TooltipTrigger>
           <TooltipContent className="p-1">Перейти</TooltipContent>

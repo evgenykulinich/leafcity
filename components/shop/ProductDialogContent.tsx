@@ -53,7 +53,7 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
             <Image className="h-auto w-full" alt={name} src={imageUrl} width={150} height={150} />
           </div>
           <div className="flex w-full flex-col items-start gap-4 text-white lg:flex-row">
-            <div className="flex flex-col gap-4 text-white">
+            <div className="flex flex-1 flex-col gap-4 text-white">
               {about.map(paragraph => (
                 <p className="rounded-xl bg-purple/10 px-2 py-3" key={paragraph.name}>
                   {paragraph.description}

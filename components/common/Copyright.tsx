@@ -15,7 +15,7 @@ export function Copyright() {
   const pathname = usePathname()
 
   return (
-    <div className="mt-8 flex flex-col justify-between gap-4 border-t-2 border-white/10 pb-8 pt-4 lg:mt-12 lg:flex-row lg:gap-0 lg:pt-8">
+    <div className="mt-8 flex flex-col justify-between gap-2 border-t-2 border-white/10 pb-8 pt-4 lg:mt-12 lg:flex-row lg:gap-0 lg:pt-8">
       <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
         <div className="flex items-center gap-4">
           <div className="w-full">
@@ -98,12 +98,12 @@ export function Copyright() {
         )}
       </div>
 
-      <div className="flex flex-col items-center gap-1 lg:items-end">
+      <div className="flex flex-col items-center gap-2 lg:items-end lg:gap-0">
         <TooltipProvider>
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <Button
-                className="order-1 transition-all duration-300 active:scale-95 lg:order-none lg:w-auto"
+                className="order-1 p-0 transition-all duration-300 active:scale-95 lg:order-none lg:w-auto"
                 onClick={useScrollToTop}
               >
                 <Image

@@ -275,7 +275,7 @@ h2, h3, h4, h5, h6 {
       background-size: contain;
       position: absolute;
       pointer-events: none;
-      top: 35%;
+      top: 33%;
       width: 100%;
       height: 100%;
       opacity: 0;
@@ -359,7 +359,10 @@ h2, h3, h4, h5, h6 {
   .member-soraispania,
   .member-istork,
   .member-crucesaureae,
+  .member-puha,
   .member-muz0ku,
+  .member-meld0sha734,
+  .member-reways88,
   .member-masha,
   .member-tryxan,
   .member-vortex,
@@ -416,6 +419,24 @@ h2, h3, h4, h5, h6 {
   --member-role: 'Рейтинг 3.67';
 }
 
+.member-puha {
+  color: #a6260d;
+  --member-nickname: 'Puhaвичок';
+  --member-role: 'Модератор';
+}
+
+.member-meld0sha734 {
+  color: #f5a7fe;
+  --member-nickname: 'meld0sha734';
+  --member-role: 'Лохматый шмель';
+}
+
+.member-reways88 {
+  color: #fedc00;
+  --member-nickname: 'reways88';
+  --member-role: 'Тайландский босс';
+}
+
 .member-masha {
   color: #0cb4c4;
   --member-nickname: 'Masha';
@@ -423,21 +444,21 @@ h2, h3, h4, h5, h6 {
 }
 
 .member-tryxan {
-  color: #aabdd9;
-  --member-nickname: 'Tpyxan';
+  color: #02febc;
+  --member-nickname: 'Трухан';
   --member-role: 'Дискорд кук';
 }
 
 .member-vortex {
-  color: #cd2217;
-  --member-nickname: 'Рот в пиве';
-  --member-role: 'Трусы в мыле';
+  color: #fec4c6;
+  --member-nickname: 'NebulousVortex';
+  --member-role: 'Сеньор JSON дев';
 }
 
 .member-ratkea {
   color: #bfb1df;
   --member-nickname: 'женечка';
-  --member-role: 'Ищу работу';
+  --member-role: 'ищу работу';
 }
 
 /* World selection cards - Map page */
