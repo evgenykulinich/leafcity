@@ -1,7 +1,9 @@
 import { Header } from '@/components/common/Header'
-import { noCacheUrl } from '@/data/worlds'
 
 export default function MapFrame() {
+  const noCacheUrl = (world: string) =>
+    `${process.env.NEXT_PUBLIC_API_URL}/map/${world}?nocache=${new Date().getTime()}`
+
   return (
     <>
       <Header className="fixed touch-none px-4 lg:px-8" />

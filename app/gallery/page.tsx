@@ -3,9 +3,10 @@ import Link from 'next/link'
 import { Copyright } from '@/components/common/Copyright'
 import { Header } from '@/components/common/Header'
 import { PageTitle } from '@/components/common/PageTitle'
-import GalleryList from '@/components/gallery/GalleryList'
+import { GalleryList } from '@/components/gallery/GalleryList'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { routes } from '@/constants/routes'
+import { getGenerationImagesList, getProjectsImagesList } from '@/helpers/getGalleryImages'
 
 import type { Metadata } from 'next'
 
@@ -45,7 +46,10 @@ export const metadata: Metadata = {
   }
 }
 
-export default function Gallery() {
+export default async function Gallery() {
+  const generationImages = await getGenerationImagesList()
+  const projectsImages = await getProjectsImagesList()
+
   return (
     <div className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_1fr_auto] flex-col px-4 lg:px-8">
       <Header />
@@ -56,7 +60,7 @@ export default function Gallery() {
             <span className="text-green">генерации</span> мира
           </span>
         </PageTitle>
-        <GalleryList />
+        <GalleryList generationImages={generationImages} projectsImages={projectsImages} />
         <div className="mt-8 text-center text-lg lg:mt-12 lg:text-xl">
           Поделиться своими скриншотами можно в{' '}
           <Link className="hover-underline underline-purple text-purple" href={routes.discord}>
