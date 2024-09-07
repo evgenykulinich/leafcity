@@ -361,7 +361,6 @@ h2, h3, h4, h5, h6 {
   .member-crucesaureae,
   .member-puha,
   .member-muz0ku,
-  .member-meld0sha734,
   .member-reways88,
   .member-masha,
   .member-tryxan,
@@ -410,7 +409,7 @@ h2, h3, h4, h5, h6 {
 .member-crucesaureae {
   color: #fdb3fc;
   --member-nickname: 'crucesaureae';
-  --member-role: 'крукесауреае';
+  --member-role: 'круасан';
 }
 
 .member-muz0ku {
@@ -423,12 +422,6 @@ h2, h3, h4, h5, h6 {
   color: #a6260d;
   --member-nickname: 'Puhaвичок';
   --member-role: 'Модератор';
-}
-
-.member-meld0sha734 {
-  color: #f5a7fe;
-  --member-nickname: 'meld0sha734';
-  --member-role: 'Лохматый шмель';
 }
 
 .member-reways88 {

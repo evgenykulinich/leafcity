@@ -42,11 +42,6 @@ export const members = [
     styles: 'member-muz0ku'
   },
   {
-    nickname: 'meld0sha734',
-    image: `${routes.head}/meld0sha734`,
-    styles: 'member-meld0sha734'
-  },
-  {
     nickname: 'reways88',
     image: `${routes.head}/reways88`,
     styles: 'member-reways88'
