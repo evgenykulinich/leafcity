@@ -2,7 +2,10 @@ import { routes } from '@/constants/routes'
 
 export async function getGenerationImagesList() {
   try {
-    const imageResponse = await fetch(routes.generationImagesUrl)
+    const imageResponse = await fetch(routes.generationImagesUrl, {
+      method: 'GET',
+      cache: 'no-cache'
+    })
 
     if (!imageResponse.ok) {
       throw new Error(`Ошибка: сервер вернул статус ${imageResponse.status}`)
@@ -18,7 +21,10 @@ export async function getGenerationImagesList() {
 
 export async function getProjectsImagesList() {
   try {
-    const imageResponse = await fetch(routes.projectsImagesUrl)
+    const imageResponse = await fetch(routes.projectsImagesUrl, {
+      method: 'GET',
+      cache: 'no-cache'
+    })
 
     if (!imageResponse.ok) {
       throw new Error(`Ошибка: сервер вернул статус ${imageResponse.status}`)
