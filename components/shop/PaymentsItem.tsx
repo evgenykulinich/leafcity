@@ -33,7 +33,9 @@ export const PaymentsItem = ({ payment, thanksMessage }: PaymentsItemProps) => {
             width={256}
           />
         </div>
-        <span className="text-nowrap text-center font-semibold">{productName}</span>
+        <span className="text-nowrap rounded-xl bg-blue/10 px-2 py-1 text-center font-semibold">
+          {productName}
+        </span>
       </CardContent>
       <CardFooter className="mt-0 flex items-center gap-2 rounded-xl bg-blue/10 px-2 py-1 lg:mt-0">
         {imgError ? (
