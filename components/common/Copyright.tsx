@@ -15,7 +15,7 @@ export function Copyright() {
 
   return (
     <div className="mt-8 flex flex-col justify-between gap-4 border-t-2 border-white/10 pb-8 pt-4 lg:mt-12 lg:flex-row lg:gap-0 lg:pt-8">
-      <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
+      <div className="flex flex-col gap-4 lg:flex-row">
         <div className="flex items-center gap-4">
           <div className="w-full">
             <TooltipProvider>
@@ -69,14 +69,23 @@ export function Copyright() {
           </div>
         </div>
 
-        <p className="flex flex-col self-center text-center text-sm text-white/40 lg:items-start lg:gap-2 lg:text-start">
-          <span>© Все права защищены. LEAF CITY, 2023-2024.</span>
-          <span>Проект LEAF CITY не относится к Mojang Studios</span>
-        </p>
-        {pathname === '/shop' && (
-          <p className="flex flex-col justify-center text-center text-sm text-white/40 lg:mb-0 lg:gap-2 lg:text-start">
-            <span>ИП Русаков Андрей Васильевич</span>
-            <span>ИНН: 381113698877</span>
+        <div className="hidden h-full w-[2px] rounded-2xl bg-white/10 lg:block" />
+
+        {pathname === '/shop' ? (
+          <div className="flex flex-col gap-2 lg:flex-row lg:gap-4">
+            <p className="flex flex-col justify-center text-center text-sm text-white/40 lg:mb-0 lg:gap-2 lg:text-start">
+              <span>ИП Русаков Андрей Васильевич</span>
+              <span>ИНН: 381113698877</span>
+            </p>
+            <p className="flex flex-col justify-center text-center text-sm text-white/40 lg:mb-0 lg:gap-2 lg:text-start">
+              <span>ОГРНИП: 323237500107113</span>
+              <span>fylhtqhecfrjd@gmail.com</span>
+            </p>
+          </div>
+        ) : (
+          <p className="flex flex-col self-center text-center text-sm text-white/40 lg:items-start lg:gap-2 lg:text-start">
+            <span>© Все права защищены. LEAF CITY, 2023-2024.</span>
+            <span>Проект LEAF CITY не относится к Mojang Studios</span>
           </p>
         )}
       </div>
