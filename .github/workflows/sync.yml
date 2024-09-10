@@ -27,9 +27,9 @@ jobs:
           git remote add org-repo git@github.com:Leaf-City/leafcity.git
           git fetch org-repo
 
-      - name: Merge remote changes
+      - name: Merge remote changes with unrelated histories
         run: |
-          git merge org-repo/main
+          git merge org-repo/main --allow-unrelated-histories
 
       - name: Push to LEAF CITY Organization Repo
         run: |
