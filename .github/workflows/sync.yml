@@ -1,0 +1,21 @@
+name: Sync to LEAF CITY Organization Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Push to LEAF CITY Organization Repo
+        run: |
+          git remote add org-repo https://github.com/Leaf-City/leafcity.git
+          git push org-repo main
+        env:
+          GITHUB_TOKEN: ${{ secrets.LC_ACCESS_TOKEN }}
