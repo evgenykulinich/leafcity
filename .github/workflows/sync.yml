@@ -13,11 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
       - name: Push to LEAF CITY Organization Repo
-        env:
-          GIT_ASKPASS: echo
-          GIT_PASSWORD: ${{ secrets.LC_ACCESS_TOKEN }}
         run: |
-          git remote add org-repo https://github.com/Leaf-City/leafcity.git
-          git push https://github.com/Leaf-City/leafcity.git main
-      
+          git remote add org-repo git@github.com:Leaf-City/leafcity.git
+          git push org-repo main
