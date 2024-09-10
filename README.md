@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://leafcity.ru/">
-      <img src="./public/preview/lighthouse.png" width="500" />
+      <img src="./public/preview/lighthouse.png" width="550" />
   </a>
 </p>
 
