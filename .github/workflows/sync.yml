@@ -26,6 +26,15 @@ jobs:
         run: |
           git remote add org-repo git@github.com:Leaf-City/leafcity.git
 
+      - name: Create branch if it does not exist
+        run: |
+          git branch -r | grep 'origin/main' || git push org-repo main || true
+
+      - name: Fetch and merge from LEAF CITY Organization Repo
+        run: |
+          git fetch org-repo || true
+          git merge org-repo/main --allow-unrelated-histories || true
+
       - name: Push to LEAF CITY Organization Repo
         run: |
-          git push org-repo main
+          git push org-repo main --force
