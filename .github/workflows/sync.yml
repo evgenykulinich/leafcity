@@ -16,6 +16,6 @@ jobs:
       - name: Push to LEAF CITY Organization Repo
         run: |
           git remote add org-repo https://github.com/Leaf-City/leafcity.git
-          git push org-repo main
+          git push https://${{ secrets.LC_ACCESS_TOKEN }}@github.com/Leaf-City/leafcity.git main
         env:
           GITHUB_TOKEN: ${{ secrets.LC_ACCESS_TOKEN }}
