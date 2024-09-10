@@ -22,7 +22,15 @@ jobs:
         run: |
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Push to LEAF CITY Organization Repo
+      - name: Fetch from LEAF CITY Organization Repo
         run: |
           git remote add org-repo git@github.com:Leaf-City/leafcity.git
+          git fetch org-repo
+
+      - name: Merge remote changes
+        run: |
+          git merge org-repo/main
+
+      - name: Push to LEAF CITY Organization Repo
+        run: |
           git push org-repo main
