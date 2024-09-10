@@ -34,7 +34,7 @@ jobs:
 
       - name: Merge remote changes with unrelated histories
         run: |
-          git merge org-repo/main --allow-unrelated-histories
+          git merge org-repo/main --allow-unrelated-histories --strategy-option theirs
 
       - name: Push to LEAF CITY Organization Repo
         run: |
