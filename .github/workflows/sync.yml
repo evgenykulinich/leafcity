@@ -47,4 +47,4 @@ jobs:
 
       - name: Push to LEAF CITY Organization Repo
         run: |
-          git push org-repo main --force
+          git push org-repo main
