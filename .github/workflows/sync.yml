@@ -18,6 +18,10 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      - name: Add known hosts
+        run: |
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - name: Push to LEAF CITY Organization Repo
         run: |
           git remote add org-repo git@github.com:Leaf-City/leafcity.git
