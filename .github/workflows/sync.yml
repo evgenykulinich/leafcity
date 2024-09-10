@@ -14,8 +14,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Push to LEAF CITY Organization Repo
+        env:
+          GIT_ASKPASS: echo
+          GIT_PASSWORD: ${{ secrets.LC_ACCESS_TOKEN }}
         run: |
           git remote add org-repo https://github.com/Leaf-City/leafcity.git
-          git push https://${{ secrets.LC_ACCESS_TOKEN }}@github.com/Leaf-City/leafcity.git main
-        env:
-          GITHUB_TOKEN: ${{ secrets.LC_ACCESS_TOKEN }}
+          git push https://github.com/Leaf-City/leafcity.git main
+      
