@@ -33,8 +33,18 @@ jobs:
 
       - name: Fetch from LEAF CITY Organization Repo
         run: |
-          git fetch org-repo
+          git fetch org-repo || true
+
+      - name: Create initial commit if necessary
+        run: |
+          if [ ! -d ".git" ]; then
+            git init
+            touch README.md
+            git add README.md
+            git commit -m "Initial commit"
+            git branch -M main
+          fi
 
       - name: Push to LEAF CITY Organization Repo
         run: |
-          git push --force org-repo main
+          git push org-repo main --force
