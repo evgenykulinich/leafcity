@@ -362,10 +362,10 @@ h2, h3, h4, h5, h6 {
   .member-puha,
   .member-muz0ku,
   .member-reways88,
-  .member-masha,
   .member-tryxan,
   .member-vortex,
-  .member-ratkea {
+  .member-defektive,
+  .member-masha {
     &::before {
       content: var(--member-nickname)
     }
@@ -389,7 +389,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .member-nokarena {
-  color: #1c872f;
+  color: #2b973e;
   --member-nickname: 'lol12';
   --member-role: 'Модератор';
 }
@@ -419,7 +419,7 @@ h2, h3, h4, h5, h6 {
 }
 
 .member-puha {
-  color: #a6260d;
+  color: #ffe4e4;
   --member-nickname: 'Puhaвичок';
   --member-role: 'Модератор';
 }
@@ -428,12 +428,6 @@ h2, h3, h4, h5, h6 {
   color: #fedc00;
   --member-nickname: 'reways88';
   --member-role: 'Тайландский босс';
-}
-
-.member-masha {
-  color: #0cb4c4;
-  --member-nickname: 'Masha';
-  --member-role: 'Талисман проекта';
 }
 
 .member-tryxan {
@@ -448,10 +442,16 @@ h2, h3, h4, h5, h6 {
   --member-role: 'Сеньор JSON дев';
 }
 
-.member-ratkea {
-  color: #bfb1df;
-  --member-nickname: 'Гений';
-  --member-role: 'Евгений';
+.member-defektive {
+  color: #f8cda1;
+  --member-nickname: 'DefektiveDed';
+  --member-role: 'Designer';
+}
+
+.member-masha {
+  color: #0db6bf;
+  --member-nickname: 'Masha';
+  --member-role: 'Талисман проекта';
 }
 
 /* World selection cards - Map page */

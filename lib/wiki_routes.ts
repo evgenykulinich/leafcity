@@ -13,7 +13,7 @@ export const WIKI_ROUTES = [
     href: 'features',
     items: [
       { title: 'Миры', href: '/worlds' },
-      { title: 'Напитки', href: '/drinks' },
+      // { title: 'Напитки', href: '/drinks' },
       { title: 'Пластинки', href: '/records' },
       { title: 'Цвет ника', href: '/nickcolor' },
       { title: 'Иконки', href: '/icons' },
@@ -26,7 +26,7 @@ export const WIKI_ROUTES = [
     items: [
       { title: 'Команды', href: '/commands' },
       { title: 'Крафты', href: '/crafts' },
-      { title: 'Регистрация', href: '/registration' },
+      // { title: 'Регистрация', href: '/registration' },
       { title: 'Карта', href: '/map' },
       { title: 'Голосовой чат', href: '/voicechat' }
     ]
