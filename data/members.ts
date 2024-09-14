@@ -47,14 +47,9 @@ export const members = [
     styles: 'member-reways88'
   },
   {
-    nickname: 'Masha',
-    image: `${routes.head}/Masha`,
-    styles: 'member-masha'
-  },
-  {
-    nickname: 'ratkea',
-    image: `${routes.head}/ratkea`,
-    styles: 'member-ratkea'
+    nickname: 'Tpyxan',
+    image: `${routes.head}/NastyD`,
+    styles: 'member-tryxan'
   },
   {
     nickname: 'NebulousVortex',
@@ -62,8 +57,13 @@ export const members = [
     styles: 'member-vortex'
   },
   {
-    nickname: 'Tpyxan',
-    image: `${routes.head}/NastyD`,
-    styles: 'member-tryxan'
+    nickname: 'DefektiveDed',
+    image: `${routes.head}/DefektiveDed`,
+    styles: 'member-defektive'
+  },
+  {
+    nickname: 'Masha',
+    image: `${routes.head}/Masha`,
+    styles: 'member-masha'
   }
 ]
