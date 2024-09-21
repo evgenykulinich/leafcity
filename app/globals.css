@@ -357,7 +357,6 @@ h2, h3, h4, h5, h6 {
   .member-dashka17,
   .member-nokarena,
   .member-soraispania,
-  .member-istork,
   .member-crucesaureae,
   .member-puha,
   .member-muz0ku,
@@ -398,12 +397,6 @@ h2, h3, h4, h5, h6 {
   color: #f8a382;
   --member-nickname: 'SoraIspania';
   --member-role: 'Наконец со скином';
-}
-
-.member-istork {
-  color: #ff4c3b;
-  --member-nickname: 'iStork';
-  --member-role: 'Модератор';
 }
 
 .member-crucesaureae {

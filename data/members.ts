@@ -22,11 +22,6 @@ export const members = [
     styles: 'member-soraispania'
   },
   {
-    nickname: 'iStork',
-    image: `${routes.head}/iStork`,
-    styles: 'member-istork'
-  },
-  {
     nickname: 'crucesaureae',
     image: `${routes.head}/crucesaureae`,
     styles: 'member-crucesaureae'
