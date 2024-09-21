@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import IconColorPicker from '@/components/wiki/IconColorPicker'
 import { routes } from '@/constants/routes'
 import { icons, uniqueIcons } from '@/data/wiki'
 import { getLastUpdateDate } from '@/helpers/getLastUpdateDate'
 
-const updateDate = '31 Aug 2024'
+const updateDate = '21 Sep 2024'
 const sortedIconsList = icons.sort((prev, next) => (prev.icon > next.icon ? 1 : -1))
 
 export default function Icons() {
@@ -46,9 +47,8 @@ export default function Icons() {
       <h2 className="text-subheading" id="команда-для-смена-иконки">
         Команда для смены иконки
       </h2>
-      <p className="mt-4">
-        <span className="text-note note-purple">{'/icon <иконка>'}</span>
-      </p>
+
+      <IconColorPicker />
 
       <h2 className="text-subheading" id="доступные-иконки">
         Доступные иконки

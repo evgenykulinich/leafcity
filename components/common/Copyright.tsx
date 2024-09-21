@@ -14,7 +14,7 @@ export function Copyright() {
   const pathname = usePathname()
 
   return (
-    <div className="mt-8 flex flex-col justify-between gap-4 border-t-2 border-white/10 pb-8 pt-4 lg:mt-12 lg:flex-row lg:gap-0 lg:pt-8">
+    <div className="mt-8 flex flex-col justify-between gap-2 border-t-2 border-white/10 pb-8 pt-4 lg:mt-12 lg:flex-row lg:gap-0 lg:pt-8">
       <div className="flex flex-col gap-4 lg:flex-row">
         <div className="flex items-center gap-4">
           <div className="w-full">
