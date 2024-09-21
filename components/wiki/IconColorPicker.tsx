@@ -1,6 +1,5 @@
 'use client'
 
-import { VT323 } from 'next/font/google'
 import { useState } from 'react'
 import { HexColorPicker } from 'react-colorful'
 
@@ -17,7 +16,7 @@ const IconColorPicker = () => {
     <>
       <div className="flex w-full flex-col gap-8 lg:w-full">
         <div>
-          <p className="mb-4 mt-4">
+          <p className="mb-4 mt-4 text-center">
             <span className="text-note note-purple">
               {'/icon <иконка> '}
               <span style={{ color: `${color}` }}>{'<#цвет>'}</span>
@@ -35,7 +34,7 @@ const IconColorPicker = () => {
           <Tooltip delayDuration={200}>
             <TooltipTrigger asChild>
               <Button
-                className="mx-auto w-full rounded-xl border-none bg-purple px-24 py-8 text-[20px] transition hover:bg-purple/80 active:scale-95 lg:w-fit"
+                className="mx-auto w-full max-w-[480px] rounded-xl border-none bg-purple px-24 py-8 text-[20px] transition hover:bg-purple/80 active:scale-95 lg:w-fit"
                 onClick={() => copyHex(color)}
               >
                 <span className="text-lg font-bold">Скопировать</span>
