@@ -27,19 +27,9 @@ export const members = [
     styles: 'member-crucesaureae'
   },
   {
-    nickname: 'Puha',
-    image: `${routes.head}/Puha`,
-    styles: 'member-puha'
-  },
-  {
     nickname: 'muz0ku',
     image: `${routes.head}/muz0ku`,
     styles: 'member-muz0ku'
-  },
-  {
-    nickname: 'reways88',
-    image: `${routes.head}/reways88`,
-    styles: 'member-reways88'
   },
   {
     nickname: 'Tpyxan',

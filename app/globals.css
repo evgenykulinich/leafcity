@@ -411,18 +411,6 @@ h2, h3, h4, h5, h6 {
   --member-role: 'Рейтинг 3.67';
 }
 
-.member-puha {
-  color: #ffe4e4;
-  --member-nickname: 'Puhaвичок';
-  --member-role: 'Модератор';
-}
-
-.member-reways88 {
-  color: #fedc00;
-  --member-nickname: 'reways88';
-  --member-role: 'Тайландский босс';
-}
-
 .member-tryxan {
   color: #02febc;
   --member-nickname: 'Трухан';
