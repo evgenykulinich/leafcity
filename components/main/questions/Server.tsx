@@ -64,9 +64,13 @@ export const Server = () => {
             width={100}
             height={100}
           />
-          {minecraftUsers ? `${minecraftUsers} из 120` : 'Сервер оффлайн'}
+          {minecraftUsers ? `${minecraftUsers} из ${minecraftUsers + 10}` : 'Сервер оффлайн'}
         </p>
-        <ProgressRoot className="mt-4 w-full bg-white" value={minecraftUsers} max={120}>
+        <ProgressRoot
+          className="mt-4 w-full bg-white"
+          value={minecraftUsers}
+          max={minecraftUsers + 10}
+        >
           <ProgressIndicator className="bg-green" />
         </ProgressRoot>
       </CardContent>
