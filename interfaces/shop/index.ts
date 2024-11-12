@@ -30,6 +30,8 @@ export interface Product {
   category?: ProductCategory
   abilities?: ProductAbilities[]
   features?: string[]
+  canApplyPromoCode?: boolean
+  canEnterQuantity?: boolean
 }
 
 export interface ProductsItemProps {
@@ -43,6 +45,8 @@ export interface ProductDialogContentProps {
 export interface PaymentFormProps {
   productId: number
   price: number
+  canApplyPromoCode: boolean
+  canEnterQuantity: boolean
 }
 
 export interface Payment {

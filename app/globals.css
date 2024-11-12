@@ -53,6 +53,16 @@ h2, h3, h4, h5, h6 {
   border-radius: 8px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .transition-all {
   transition: all 0.2s ease-in;
 }
