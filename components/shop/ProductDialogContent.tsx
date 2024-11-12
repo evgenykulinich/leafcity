@@ -10,7 +10,18 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { ProductDialogContentProps } from '@/interfaces/shop'
 
 export const ProductDialogContent = ({ product }: ProductDialogContentProps) => {
-  const { id, name, about, realPrice, imageUrl, sale, abilities, features } = product
+  const {
+    id,
+    name,
+    about,
+    realPrice,
+    imageUrl,
+    sale,
+    abilities,
+    features,
+    canApplyPromoCode,
+    canEnterQuantity
+  } = product
 
   return (
     <DialogContent className="product-dialog flex h-full w-full flex-col items-stretch justify-stretch bg-black p-0 lg:max-w-[1280px] lg:rounded-2xl lg:border-2 lg:border-purple lg:p-2">
@@ -84,7 +95,12 @@ export const ProductDialogContent = ({ product }: ProductDialogContentProps) => 
                 </ul>
               ) : null}
             </div>
-            <ProductForm productId={id} price={realPrice} />
+            <ProductForm
+              productId={id}
+              price={realPrice}
+              canApplyPromoCode={canApplyPromoCode}
+              canEnterQuantity={canEnterQuantity}
+            />
           </div>
         </CardContent>
       </Card>

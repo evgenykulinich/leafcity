@@ -15,5 +15,17 @@ export const PaymentSchema = z.object({
     .max(69, ' • Превышен лимит')
     .regex(/^\S+$/, ' • Без пробелов')
     .regex(/^[a-zA-Z0-9_]+$/, ' • Только латиница'),
+  promoCode: z
+    .string()
+    .max(69, ' • Превышен лимит')
+    .refine(value => value === '' || /^\S+$/.test(value), ' • Без пробелов')
+    .refine(value => value === '' || /^[a-zA-Z0-9_]+$/.test(value), ' • Только латиница')
+    .optional(),
+  count: z.coerce
+    .number()
+    .int()
+    .positive(' • Минимум 1 ₽')
+    .max(100000, ' • Максимум 100 000 ₽')
+    .optional(),
   redirectUrl: z.string()
 })

@@ -1,6 +1,12 @@
 import { routes } from '@/constants/routes'
 
-export const members = [
+interface Member {
+  nickname: string
+  image: string
+  styles: string
+}
+
+export const members: Member[] = [
   {
     nickname: 'list_tw',
     image: `${routes.head}/list_tw`,
@@ -12,24 +18,34 @@ export const members = [
     styles: 'member-dashka17'
   },
   {
-    nickname: 'Nokarena',
-    image: `${routes.head}/Nokarena`,
-    styles: 'member-nokarena'
+    nickname: 'wahka_',
+    image: `${routes.head}/wahka_`,
+    styles: 'member-wahka'
   },
   {
-    nickname: 'SoraIspania',
-    image: `${routes.head}/SoraIspania`,
-    styles: 'member-soraispania'
+    nickname: 'SoraFreak',
+    image: `${routes.head}/SoraFreak`,
+    styles: 'member-sorafreak'
   },
   {
-    nickname: 'crucesaureae',
-    image: `${routes.head}/crucesaureae`,
-    styles: 'member-crucesaureae'
+    nickname: 'iv0xy',
+    image: `${routes.head}/iv0xy`,
+    styles: 'member-iv0xy'
   },
   {
     nickname: 'muz0ku',
     image: `${routes.head}/muz0ku`,
     styles: 'member-muz0ku'
+  },
+  {
+    nickname: 'zevep',
+    image: `${routes.head}/zevep`,
+    styles: 'member-zevep'
+  },
+  {
+    nickname: 'BiggishPark70',
+    image: `${routes.head}/BiggishPark70`,
+    styles: 'member-biggishpark70'
   },
   {
     nickname: 'Tpyxan',
@@ -42,13 +58,18 @@ export const members = [
     styles: 'member-vortex'
   },
   {
-    nickname: 'DefektiveDed',
-    image: `${routes.head}/DefektiveDed`,
-    styles: 'member-defektive'
+    nickname: 'ratkea',
+    image: `${routes.head}/ratkea`,
+    styles: 'member-ratkea'
   },
   {
     nickname: 'Masha',
     image: `${routes.head}/Masha`,
     styles: 'member-masha'
+  },
+  {
+    nickname: 'DefektiveDed',
+    image: `${routes.head}/DefektiveDed`,
+    styles: 'member-defektive'
   }
 ]

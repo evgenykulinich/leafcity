@@ -5,7 +5,7 @@ import { FileText, Tag } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
@@ -24,7 +24,12 @@ import { getRedirectPayment } from '@/helpers/getPaymentUrl'
 import { PaymentFormProps } from '@/interfaces/shop'
 import { PaymentSchema } from '@/schemas'
 
-export function ProductForm({ productId, price }: PaymentFormProps) {
+export function ProductForm({
+  productId,
+  price,
+  canApplyPromoCode,
+  canEnterQuantity
+}: PaymentFormProps) {
   const router = useRouter()
   const [isPaymentDisabled, setIsPaymentDisabled] = useState(true)
 
@@ -35,9 +40,13 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
       productId,
       email: '',
       username: '',
+      promoCode: '',
+      count: 1,
       redirectUrl: process.env.NEXT_PUBLIC_PAYMENT_REDIRECT_URL
     }
   })
+
+  const count = form.watch('count') || 1
 
   const onSubmit = async (values: z.infer<typeof PaymentSchema>) => {
     const confirmation_url = await getRedirectPayment(values)
@@ -95,6 +104,60 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
                     </FormItem>
                   )}
                 />
+                {canApplyPromoCode ? (
+                  <FormField
+                    control={form.control}
+                    name="promoCode"
+                    render={({ field, fieldState }) => (
+                      <FormItem>
+                        <FormLabel className="inline text-lg text-white">Промокод:</FormLabel>
+                        {fieldState.error && (
+                          <FormMessage className="inline text-mango">
+                            {fieldState.error.message}
+                          </FormMessage>
+                        )}
+                        <FormControl>
+                          <Input
+                            className="w-full rounded-xl border-[3px] border-transparent px-4 py-6 text-[1rem] font-semibold caret-purple outline-none transition focus:border-purple"
+                            {...field}
+                            placeholder="MEGAPROMO69"
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                ) : null}
+                {canEnterQuantity ? (
+                  <FormField
+                    control={form.control}
+                    name="count"
+                    render={({ field, fieldState }) => (
+                      <FormItem>
+                        <FormLabel className="inline text-lg text-white">Сумма:</FormLabel>
+                        {fieldState.error && (
+                          <FormMessage className="inline text-mango">
+                            {fieldState.error.message}
+                          </FormMessage>
+                        )}
+                        <FormControl>
+                          <Input
+                            className="w-full rounded-xl border-[3px] border-transparent px-4 py-6 text-[1rem] font-semibold caret-purple outline-none transition focus:border-purple"
+                            {...field}
+                            placeholder="Добавь побольше"
+                            type="number"
+                            inputMode="numeric"
+                            min={1}
+                            onKeyDown={e => {
+                              if (e.key === '-' || e.key === 'e') {
+                                e.preventDefault()
+                              }
+                            }}
+                          />
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                ) : null}
               </div>
 
               <div className="flex flex-col items-start justify-between gap-3 rounded-xl bg-purple/10 px-2 py-3 text-white lg:gap-4 lg:px-3 lg:py-4">
@@ -103,7 +166,9 @@ export function ProductForm({ productId, price }: PaymentFormProps) {
                   <p className="text-nowrap text-center text-lg text-white">Стоимость:</p>
                   <p className="flex items-center gap-2 text-nowrap text-lg">
                     <Tag className="text-green" strokeWidth={2} size={18} />
-                    <span className="font-semibold text-white">{price} ₽</span>
+                    <span className="font-semibold text-white">
+                      {canEnterQuantity ? count : price} ₽
+                    </span>
                   </p>
                 </div>
                 <Button

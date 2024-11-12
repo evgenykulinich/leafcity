@@ -27,16 +27,11 @@ export const questions: Question[] = [
   },
   {
     value: 'question-5',
-    question: 'Какой онлайн?',
-    answer: 'Средний – 50-70 игроков, рекорд - 138'
-  },
-  {
-    value: 'question-6',
     question: 'Когда происходят вайпы?',
     answer: 'В среднем раз 6 месяцев.  В зависимости от желания игроков'
   },
   {
-    value: 'question-7',
+    value: 'question-6',
     question: 'Проходка бесплатная?',
     answer: 'Да, проходка бесплатная, но ты можешь купить её чтобы не подавать заявку'
   }

@@ -53,6 +53,16 @@ h2, h3, h4, h5, h6 {
   border-radius: 8px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .transition-all {
   transition: all 0.2s ease-in;
 }
@@ -355,16 +365,18 @@ h2, h3, h4, h5, h6 {
 @media (width > 1024px) {
   .member-list_tw,
   .member-dashka17,
-  .member-nokarena,
-  .member-soraispania,
-  .member-crucesaureae,
-  .member-puha,
+  .member-wahka,
+  .member-sorafreak,
+  .member-iv0xy,
   .member-muz0ku,
+  .member-zevep,
+  .member-biggishpark70,
   .member-reways88,
   .member-tryxan,
   .member-vortex,
-  .member-defektive,
-  .member-masha {
+  .member-ratkea,
+  .member-masha,
+  .member-defektive {
     &::before {
       content: var(--member-nickname)
     }
@@ -387,21 +399,21 @@ h2, h3, h4, h5, h6 {
   --member-role: 'Ненормальная';
 }
 
-.member-nokarena {
-  color: #2b973e;
+.member-wahka {
+  color: #af0b0a;
   --member-nickname: 'lol12';
   --member-role: 'Модератор';
 }
 
-.member-soraispania {
+.member-sorafreak {
   color: #f8a382;
   --member-nickname: 'SoraIspania';
-  --member-role: 'Наконец со скином';
+  --member-role: 'Модератор';
 }
 
-.member-crucesaureae {
+.member-iv0xy {
   color: #fdb3fc;
-  --member-nickname: 'crucesaureae';
+  --member-nickname: 'iv0xy';
   --member-role: 'круасан';
 }
 
@@ -409,6 +421,18 @@ h2, h3, h4, h5, h6 {
   color: #00fec3;
   --member-nickname: 'muz0ku';
   --member-role: 'Рейтинг 3.67';
+}
+
+.member-zevep {
+  color: #79b15a;
+  --member-nickname: 'zevep';
+  --member-role: 'Ивент менеджер';
+}
+
+.member-biggishpark70 {
+  color: #50f887;
+  --member-nickname: 'BiggishPark70';
+  --member-role: 'Мамин строитель';
 }
 
 .member-tryxan {
@@ -423,10 +447,16 @@ h2, h3, h4, h5, h6 {
   --member-role: 'Сеньор JSON дев';
 }
 
+.member-ratkea {
+  color: #bfb1df;
+  --member-nickname: 'Женечка';
+  --member-role: 'Ищу работу';
+}
+
 .member-defektive {
   color: #f8cda1;
   --member-nickname: 'DefektiveDed';
-  --member-role: 'Designer';
+  --member-role: 'Дизайнер';
 }
 
 .member-masha {
