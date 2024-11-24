@@ -8,7 +8,7 @@ export const questions: Question[] = [
   {
     value: 'question-1',
     question: 'На какой версии сервера?',
-    answer: 'Сервера стоят на 1.21 purpur. Зайти можно с Java 1.13-1.21 и Bedrock'
+    answer: 'Сервера стоят на 1.21 purpur. Зайти можно с Java 1.13-1.21.1 и Bedrock'
   },
   {
     value: 'question-2',
