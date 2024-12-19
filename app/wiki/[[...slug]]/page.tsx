@@ -50,7 +50,11 @@ export const metadata: Metadata = {
 
 const cachedGetComponentForSlug = cache(getComponentForSlug)
 
-export default async function WikiPage({ params: { slug = [] } }: WikiPageProps) {
+export default async function WikiPage(props: WikiPageProps) {
+  const params = await props.params
+
+  const { slug = [] } = params
+
   const pathName = slug.join('/')
   const Component = await cachedGetComponentForSlug(pathName)
 

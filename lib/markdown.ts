@@ -11,7 +11,7 @@ const idRegex = /id=["']([^"']+)["']/
 
 export const getComponentForSlug = async (slug: string) => {
   try {
-    const Component = dynamic(() => import(`@/contents/wiki/${slug}`), { ssr: false })
+    const Component = dynamic(() => import(`@/contents/wiki/${slug}`))
     return Component
   } catch (error) {
     return null
