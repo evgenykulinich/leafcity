@@ -46,9 +46,17 @@ export const metadata: Metadata = {
   }
 }
 
+async function getImages() {
+  const [generationImages, projectsImages] = await Promise.all([
+    getGenerationImagesList(),
+    getProjectsImagesList()
+  ])
+
+  return [generationImages, projectsImages]
+}
+
 export default async function Gallery() {
-  const generationImages = await getGenerationImagesList()
-  const projectsImages = await getProjectsImagesList()
+  const [generationImages, projectsImages] = await getImages()
 
   return (
     <div className="mx-auto grid min-h-dvh max-w-screen-2xl grid-rows-[auto_1fr_auto] flex-col px-4 lg:px-8">

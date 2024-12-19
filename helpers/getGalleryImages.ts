@@ -4,7 +4,7 @@ export async function getGenerationImagesList() {
   try {
     const imageResponse = await fetch(routes.generationImagesUrl, {
       method: 'GET',
-      cache: 'no-cache'
+      cache: 'force-cache'
     })
 
     if (!imageResponse.ok) {
@@ -23,7 +23,7 @@ export async function getProjectsImagesList() {
   try {
     const imageResponse = await fetch(routes.projectsImagesUrl, {
       method: 'GET',
-      cache: 'no-cache'
+      cache: 'force-cache'
     })
 
     if (!imageResponse.ok) {
